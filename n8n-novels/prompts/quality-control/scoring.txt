@@ -1,0 +1,107 @@
+ตรวจสอบและให้คะแนนคุณภาพบทนิยายนี้
+
+## บทที่ตรวจ
+- เรื่อง: {{title}}
+- บทที่: {{chapter_number}}
+- แนว: {{genre}}
+- ความยาวที่คาดหวัง: {{expected_words}} คำ
+
+## เนื้อหาบท
+{{chapter_content}}
+
+## เกณฑ์การให้คะแนน
+
+### 1. Grammar & Language (0-20 คะแนน)
+- ไวยากรณ์ถูกต้อง
+- การใช้ภาษาเหมาะสม
+- ไม่มี typo
+- Flow ของประโยค
+- ความหลากหลายของโครงสร้างประโยค
+
+### 2. Character Consistency (0-20 คะแนน)
+- ตัวละครทำตัวสอดคล้องกับบุคลิก
+- Dialogue ตรงกับ character voice
+- การตัดสินใจสมเหตุสมผล
+- Character development เป็นธรรมชาติ
+
+### 3. Plot Coherence (0-20 คะแนน)
+- เรื่องดำเนินไปอย่างมีตรรกะ
+- Cause และ effect สัมพันธ์กัน
+- ไม่มี plot holes
+- ต่อเนื่องจากบทก่อน
+- Setup สำหรับบทต่อไป
+
+### 4. Emotional Impact (0-20 คะแนน)
+- สร้างอารมณ์ได้
+- Show don't tell
+- Pacing เหมาะสม
+- ผู้อ่านรู้สึกร่วม
+- Tension/Release balance
+
+### 5. Genre Appropriateness (0-20 คะแนน)
+- ตรงกับแนวเรื่อง
+- Elements ของ genre ครบ
+- Tone เหมาะสม
+- ตอบสนอง genre expectations
+
+## Output Format (JSON)
+```json
+{
+  "overall_score": 0-100,
+  "breakdown": {
+    "grammar": 0-20,
+    "character_consistency": 0-20,
+    "plot_coherence": 0-20,
+    "emotional_impact": 0-20,
+    "genre_appropriateness": 0-20
+  },
+  "word_count": 0,
+  "word_count_status": "ok/short/long",
+
+  "strengths": [
+    "จุดแข็ง 1",
+    "จุดแข็ง 2"
+  ],
+
+  "issues": [
+    {
+      "type": "grammar/character/plot/pacing/other",
+      "severity": "critical/major/minor",
+      "description": "คำอธิบายปัญหา",
+      "location": "paragraph/section",
+      "suggestion": "คำแนะนำการแก้ไข"
+    }
+  ],
+
+  "suggestions": [
+    "คำแนะนำทั่วไป 1",
+    "คำแนะนำทั่วไป 2"
+  ],
+
+  "verdict": "approve/review/regenerate",
+  "verdict_reason": "เหตุผล",
+
+  "flags": {
+    "contains_placeholder": false,
+    "too_short": false,
+    "too_long": false,
+    "major_inconsistency": false,
+    "needs_human_review": false
+  }
+}
+```
+
+## เกณฑ์การตัดสิน
+- **80-100 (approve):** คุณภาพดี พร้อม publish
+- **70-79 (approve with notes):** ดี อาจมีปรับเล็กน้อย
+- **60-69 (review):** ต้องตรวจสอบเพิ่มเติม
+- **<60 (regenerate):** ต้องเขียนใหม่
+
+## ข้อควรระวัง
+- ตรวจ placeholder text (เช่น [ใส่ชื่อ], TODO)
+- ตรวจว่าบทจบสมบูรณ์หรือตัดกลางคัน
+- ตรวจความยาวตาม requirement
+- ตรวจ character names ถูกต้อง
+- ตรวจ timeline consistency
+
+ให้คะแนนอย่างเที่ยงธรรมและให้ feedback ที่เป็นประโยชน์

@@ -1,0 +1,1997 @@
+{
+  "generated_at": "2026-02-10T13:14:13.004555",
+  "total_novels": 24,
+  "total_chapters": 341,
+  "summary": {
+    "regular": 10,
+    "nc": 14,
+    "chapters_regular": 326,
+    "chapters_nc": 15
+  },
+  "novels": [
+    {
+      "id": 1,
+      "title": "ท่านประธานหัวใจไลฟ์สด",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 50,
+      "chapters_target": 50,
+      "progress": 1.0,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/1-ท่านประธานหัวใจไลฟ์สด",
+      "status": "ผลิตแล้ว",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-คืนที่หัวใจเริ่มเต้น.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ยัยแม่ค้าปากแซ่บ.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-คุณทีปริศนา.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-แชทยามดึก.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-เบื้องหลังรอยยิ้ม.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-คำปรึกษาจากคนแปลกหน้า.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-หัวใจที่เริ่มโยกคลอน.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-วันที่ท่านประธานโกรธ.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-นัดเจอครั้งแรก.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-หัวใจเต้นแรง.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-ความลับของท่านประธาน.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-รักแรกของยัยไลฟ์สด.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-เดทลับๆ.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-จูบแรก.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-คบกันอย่างลับๆ.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-พายุกำลังก่อตัว.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-วันที่โลกพังทลาย.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-ศัตรูที่ไม่เคยเห็นหน้า.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-ความลับที่หนักอึ้ง.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-ณิชาลงมือ.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-รอยร้าวเล็กๆ.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-วันครบรอบ1เดือน.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-แม่ล้มป่วย.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-เงินที่ไม่พอ.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-ความช่วยเหลือลับๆ.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-ณิชาพบความจริง.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-งานเปิดตัวTRP.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-หน้ากากถูกเปิด.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-ความจริงที่โหดร้าย.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-คุณมาสอดแนมฉันใช่ไหม.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-หัวใจที่แตกสลาย.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-ณิชาซ้ำเติม.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-ข่าวลือแพร่สะพัด.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-จุดต่ำสุด.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-ธีรัตน์ลุกขึ้นสู้.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-การต่อสู้เริ่มต้น.txt"
+        },
+        {
+          "number": 37,
+          "filename": "ตอนที่37-เลือกทางของตัวเอง.txt"
+        },
+        {
+          "number": 38,
+          "filename": "ตอนที่38-พันธมิตรใหม่.txt"
+        },
+        {
+          "number": 39,
+          "filename": "ตอนที่39-มิ้นท์กลับมาสู้.txt"
+        },
+        {
+          "number": 40,
+          "filename": "ตอนที่40-ความจริงเริ่มเผยแพร่.txt"
+        },
+        {
+          "number": 41,
+          "filename": "ตอนที่41-ณิชาถูกเปิดโปง.txt"
+        },
+        {
+          "number": 42,
+          "filename": "ตอนที่42-แม่ต้องผ่าตัดอีกครั้ง.txt"
+        },
+        {
+          "number": 43,
+          "filename": "ตอนที่43-ความช่วยเหลือจากครอบครัว.txt"
+        },
+        {
+          "number": 44,
+          "filename": "ตอนที่44-ความจริงที่มายด์รู้.txt"
+        },
+        {
+          "number": 45,
+          "filename": "ตอนที่45-หัวใจที่เริ่มอ่อนลง.txt"
+        },
+        {
+          "number": 46,
+          "filename": "ตอนที่46-ชัยชนะของธีรัตน์.txt"
+        },
+        {
+          "number": 47,
+          "filename": "ตอนที่47-ไลฟ์สดที่เปลี่ยนทุกอย่าง.txt"
+        },
+        {
+          "number": 48,
+          "filename": "ตอนที่48-การกลับมาของคุณที.txt"
+        },
+        {
+          "number": 49,
+          "filename": "ตอนที่49-รักครั้งใหม่ที่แข็งแกร่งกว่าเดิม.txt"
+        },
+        {
+          "number": 50,
+          "filename": "ตอนที่50-HappyEnding-หัวใจไลฟ์สดตลอดไป.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "title": "คืนนั้นท้องลูกมาเฟีย",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 15,
+      "chapters_target": 50,
+      "progress": 0.3,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [
+        "NC17"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/10-คืนนั้นท้องลูกมาเฟีย",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-คืนที่ตายไปกับลูก.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ตื่นขึ้นมาอีกครั้ง.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-ผู้ชายที่ตามหา5ปี.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-สัญญาของมาเฟีย.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-เมียชั่วคราวของเจ้าพ่อ.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-ความลับที่ซ่อนไว้.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-การเผชิญหน้าครั้งแรก.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-เลือดข้นกว่าน้ำ.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-คืนที่สองคนเป็นหนึ่ง.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-ความจริงที่โหดร้าย.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-พันธมิตรที่ไม่คาดคิด.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-การโจมตีครั้งแรก.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ความริษยาของน้องสาว.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-ความลับที่เกือบถูกเปิดเผย.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ผลอัลตราซาวด์.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "title": "ข้อมูลนิยาย",
+      "genre": "โรแมนติกคอมเมดี้ / ดราม่า / CEO Romance",
+      "type": "regular",
+      "chapters_written": 36,
+      "chapters_target": 50,
+      "progress": 0.72,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/2-จอมวายร้ายหัวใจละลาย",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-วันแรกในนรก.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ซาตานในคราบสูท.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-หัวใจดวงน้อยที่เปิดออก.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ภารกิจพิเศษ.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-กฎเหล็กของท่านประธาน.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-รอยยิ้มที่หายไป.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-อีกด้านของซาตาน.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-ความลับของน้องปลื้ม.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-แผลเป็นที่ไม่เคยหาย.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-วันหยุดสุดพิเศษ.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-ความรู้สึกที่ซ่อนไว้.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-คนแปลกหน้าที่ไม่ต้อนรับ.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-พายุที่ซัดเข้ามา.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-การต่อสู้.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ความเข้าใจผิด.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-หัวใจที่แตกสลาย.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-วันตัดสิน.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-คืนที่ยาวนานที่สุด.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-ความหวัง.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-การปกป้อง.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-วันแต่งงาน.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-ชีวิตคู่.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-ความสุขที่รอคอย.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-ของขวัญจากฟ้า.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-ครอบครัวที่สมบูรณ์.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-วันเวลาแห่งความสุข.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-วันเกิดพิเศษ.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-บทเรียนของชีวิต.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-ความฝันของลูก.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-สัญญาของหัวใจ.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-อนาคตที่สดใส.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-มรดกแห่งความรัก.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-วงจรแห่งความสุข.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-หลานตัวน้อย.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-บทสรุปแห่งชีวิต.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-ตอนจบ-รักนิรันดร์.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "title": "ข้อมูลเรื่อง",
+      "genre": "เรื่อง                           │",
+      "type": "regular",
+      "chapters_written": 48,
+      "chapters_target": 48,
+      "progress": 1.0,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/3-รุ่นพี่วิศวะ-รักนี้คำนวณไม่ได้",
+      "status": "ผลิตแล้ว",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-วันแรกที่มหา'ลัย.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ค่ายรับน้องรวม.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-ปะทะกันครั้งแรก.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ลุยไม่กลัวเลอะ.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-สายตาที่เปลี่ยนไป.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-ดูดาวบนดาดฟ้า.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-ข่าวลือในมหา'ลัย.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-แอบตามไปดู.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-เพื่อนสนิทเริ่มแซว.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-ขอบคุณที่ช่วย.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-แลกไลน์.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-ค่ายจบ แต่ความรู้สึกเพิ่งเริ่ม.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-โปรเจคสัมภาษณ์.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-ไปหาพี่ที่ตึกวิศวะ.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ห้องแล็บ.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-กินข้าวด้วยกัน.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-สอบแคลคูลัสไม่ผ่าน.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-ติวที่ห้องสมุด.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-เพื่อนสังเกตเห็น.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-งานกีฬาสี.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-รุ่นพี่สาวไม่พอใจ.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-ดูดาวบนดาดฟ้าอีกครั้ง.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-รู้ตัวว่าชอบ.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-ภูมิก็เช่นกัน.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-พิมเริ่มเข้าหา.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-ข่าวลือว่ามีแฟน.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-เริ่มถอยห่าง.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-ไม่เข้าใจว่าทำไม.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-มิ้นท์มาบอก.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-พยายามอธิบาย.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-งานประกวดดาวมหา'ลัย.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-สายตาประสานกัน.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-ดาวมหา'ลัยคนใหม่.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-คนรุมจีบ.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-แผนของพิม.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-ร้องไห้และตัดสินใจลืม.txt"
+        },
+        {
+          "number": 37,
+          "filename": "ตอนที่37-รู้ความจริง.txt"
+        },
+        {
+          "number": 38,
+          "filename": "ตอนที่38-ก้องช่วยหาหลักฐาน.txt"
+        },
+        {
+          "number": 39,
+          "filename": "ตอนที่39-ไปหาแต่เธอไม่ยอมฟัง.txt"
+        },
+        {
+          "number": 40,
+          "filename": "ตอนที่40-จดหมายจากใจ.txt"
+        },
+        {
+          "number": 41,
+          "filename": "ตอนที่41-อ่านจดหมาย.txt"
+        },
+        {
+          "number": 42,
+          "filename": "ตอนที่42-ไปหาที่ห้องแล็บ.txt"
+        },
+        {
+          "number": 43,
+          "filename": "ตอนที่43-คืนดี.txt"
+        },
+        {
+          "number": 44,
+          "filename": "ตอนที่44-แฟนกันแล้ว แต่ยังไม่ประกาศ.txt"
+        },
+        {
+          "number": 45,
+          "filename": "ตอนที่45-งานลอยกระทง.txt"
+        },
+        {
+          "number": 46,
+          "filename": "ตอนที่46-สารภาพรักริมน้ำ.txt"
+        },
+        {
+          "number": 47,
+          "filename": "ตอนที่47-คบกันอย่างเปิดเผย.txt"
+        },
+        {
+          "number": 48,
+          "filename": "ตอนที่48-Epilogue — หนึ่งปีต่อมา.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "title": "ท่านประธานครับ รักไม่อยู่ในสัญญาจ้าง",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 48,
+      "chapters_target": 50,
+      "progress": 0.96,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/4-ท่านประธานครับ รักไม่อยู่ในสัญญาจ้าง",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-ท่านประธานลงสนาม.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-หมอหัวแข็งแห่งวรินทร์.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-คำสั่งที่หมอไม่ยอมรับ.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ปะทะครั้งแรกกลางที่ประชุม.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-คำสั่งย้ายที่ไร้ผล.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-คนไข้เลือกหมอไม่ใช่เงิน.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-สายตาที่จับจ้อง.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-ศึกในลิฟต์.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-วันที่ท่านประธานล้มลง.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-หมอเวรวันนั้น.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-คนไข้ไม่มีสิทธิ์เลือกหมอ.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-ประธานติดเตียง.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-โรงพยาบาลจากมุมคนไข้.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-แอบทำงานโดนจับได้.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ความเท่าเทียมในสายตาหมอ.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-หัวใจที่เริ่มเข้าใจ.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-นัดตรวจหรือนัดเจอ.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-หมอสอนทำครัว.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-มุมมองที่เปลี่ยนไป.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-เบื้องหลังท่านประธาน.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-ข้ออ้างมาโรงพยาบาล.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-หัวใจของหมอ.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-ทุนวิจัยจากใจ.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-เกือบจูบ.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-ศัตรูในที่แจ้ง.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-รวบรวมหลักฐาน.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-ข่าวลือระบาด.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-บอร์ดสอบสวน.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-ธุรกิจหรือหัวใจ.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-สัญญาปิดปาก.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-คำสั่งเลิกจ้าง.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-เราอยู่คนละโลก.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-วิกฤตครั้งใหม่.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-ความจริงที่ซ่อนไว้.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-รวมพลังต่อสู้.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-ความสำเร็จของโครงการวิจัย.txt"
+        },
+        {
+          "number": 37,
+          "filename": "ตอนที่37-การเตรียมงานแต่ง.txt"
+        },
+        {
+          "number": 38,
+          "filename": "ตอนที่38-วันมงคล.txt"
+        },
+        {
+          "number": 39,
+          "filename": "ตอนที่39-ชีวิตคู่.txt"
+        },
+        {
+          "number": 40,
+          "filename": "ตอนที่40-ข่าวดี.txt"
+        },
+        {
+          "number": 41,
+          "filename": "ตอนที่41-การรอคอย.txt"
+        },
+        {
+          "number": 42,
+          "filename": "ตอนที่42-วันคลอด.txt"
+        },
+        {
+          "number": 43,
+          "filename": "ตอนที่43-ครอบครัวใหม่.txt"
+        },
+        {
+          "number": 44,
+          "filename": "ตอนที่44-ความสมดุล.txt"
+        },
+        {
+          "number": 45,
+          "filename": "ตอนที่45-มรดกแห่งความรัก.txt"
+        },
+        {
+          "number": 46,
+          "filename": "ตอนที่46-บทเรียนจากหัวใจ.txt"
+        },
+        {
+          "number": 47,
+          "filename": "ตอนที่47-สัญญาจากใจ.txt"
+        },
+        {
+          "number": 48,
+          "filename": "ตอนที่48-รักไม่อยู่ในสัญญาจ้าง.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "title": "รุ่นพี่ CEO รักนี้โครงสร้างไม่พัง",
+      "genre": "โรแมนติก, ดราม่า, วิศวกรรม",
+      "type": "regular",
+      "chapters_written": 48,
+      "chapters_target": 50,
+      "progress": 0.96,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/5-รุ่นพี่CEO-รักนี้โครงสร้างไม่พัง",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-วันแรกที่ไซต์งาน.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ขุดดินกลางดึก.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-ผลแล็บออกแล้ว.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-เริ่มโปรเจคซ่อมแซม.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-เดินทางไปต่างจังหวัด.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-ข่าวลือเริ่มแพร่.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-โปรเจคเสร็จสมบูรณ์.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-ความรู้สึกที่ซ่อนไว้.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-นั่งร้านถล่ม.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-พักงาน.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-กลับบ้านเกิด.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-ก้องสืบหาความจริง.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ภูมิกลับมา.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-คำสัญญาใต้แสงจันทร์.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-หลักฐานใหม่.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-ความจริงปรากฏ.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-กลับมาหาเธอ.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-กลับสู่ออฟฟิศ.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-โปรเจคใหม่.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-คู่รักในที่ทำงาน.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-เยี่ยมไซต์ด้วยกัน.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-พบครอบครัวก้อง.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-โปรเจคใกล้เสร็จ.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-ประกาศความสัมพันธ์.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-ปารีสเมืองแห่งรัก.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-สัญญาใต้หอไอเฟล.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-บอกข่าวดี.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-เตรียมงานแต่ง.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-ปาร์ตี้สละโสด.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-วันก่อนแต่งงาน.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-พิธีแต่งงาน.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-ฮันนีมูน.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-ชีวิตคู่.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-ข่าวดี.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-เก้าเดือนแห่งการรอคอย.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-วันที่รอคอย.txt"
+        },
+        {
+          "number": 37,
+          "filename": "ตอนที่37-ชีวิตใหม่กับสมาชิกใหม่.txt"
+        },
+        {
+          "number": 38,
+          "filename": "ตอนที่38-กลับมาทำงาน.txt"
+        },
+        {
+          "number": 39,
+          "filename": "ตอนที่39-ครบรอบหนึ่งขวบ.txt"
+        },
+        {
+          "number": 40,
+          "filename": "ตอนที่40-ความสำเร็จครั้งใหญ่.txt"
+        },
+        {
+          "number": 41,
+          "filename": "ตอนที่41-ครอบครัวที่สมบูรณ์.txt"
+        },
+        {
+          "number": 42,
+          "filename": "ตอนที่42-มิตรภาพข้ามเวลา.txt"
+        },
+        {
+          "number": 43,
+          "filename": "ตอนที่43-มรดกแห่งความรัก.txt"
+        },
+        {
+          "number": 44,
+          "filename": "ตอนที่44-ครบรอบแต่งงาน.txt"
+        },
+        {
+          "number": 45,
+          "filename": "ตอนที่45-รุ่นต่อไป.txt"
+        },
+        {
+          "number": 46,
+          "filename": "ตอนที่46-ก้าวใหม่.txt"
+        },
+        {
+          "number": 47,
+          "filename": "ตอนที่47-วงจรแห่งความรัก.txt"
+        },
+        {
+          "number": 48,
+          "filename": "ตอนที่48-รักนี้โครงสร้างไม่พัง.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "title": "ผัวผีของฉันเป็นท่านประธาน",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 15,
+      "chapters_target": 50,
+      "progress": 0.3,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/6-ผัวผีของฉันเป็นท่านประธาน",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-คืนที่หนีตาย.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ข้อเสนอจากผีหนุ่ม.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-เมื่อความจริงบังคับ.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-สัญญาวิญญาณ.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-ชีวิตคู่กับผี.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-วันแรกที่TKCorporation.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-ผีติดตามไปออฟฟิศ.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-เบาะแสแรก.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-ความลับของห้องใต้ดิน.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-ผู้ต้องสงสัยคนแรก.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-อดีตคนรัก.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-งานรำลึก1ปี.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ผีเริ่มมีตัวตน.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-หุ้นส่วนปริศนา.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-คืนที่หัวใจเต้น.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "title": "ท่านประธานหมื่นล้าน หลงรักยัยคนตาย",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 36,
+      "chapters_target": 50,
+      "progress": 0.72,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/7-ท่านประธานหมื่นล้านหลงรักยัยคนตาย",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-คืนสุดท้าย.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-ความจริงที่ถูกซ่อน.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-ตื่นขึ้นมาอีกครั้ง.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-นี่ไม่ใช่ความฝัน.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-ยกเลิกงานแต่ง.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-พายุหลังยกเลิกงาน.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-กลับมาทวงคืน.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-ศัตรูเริ่มขยับ.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-พันธมิตรไม่คาดคิด.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-CEOลึกลับ.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-ข้อเสนอที่ปฏิเสธไม่ได้.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-หมากตัวแรก.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ความสงสัยของภิรญา.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-ข่าวลือแพร่สะพัด.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-อดีตพบปัจจุบัน.txt"
+        },
+        {
+          "number": 16,
+          "filename": "ตอนที่16-จูบเพื่อยั่วยุ.txt"
+        },
+        {
+          "number": 17,
+          "filename": "ตอนที่17-หลักฐานชิ้นแรก.txt"
+        },
+        {
+          "number": 18,
+          "filename": "ตอนที่18-พี่สาวที่รัก.txt"
+        },
+        {
+          "number": 19,
+          "filename": "ตอนที่19-ความลับของธนกฤต.txt"
+        },
+        {
+          "number": 20,
+          "filename": "ตอนที่20-แผนของภิรญาล้มเหลว.txt"
+        },
+        {
+          "number": 21,
+          "filename": "ตอนที่21-ข่าวใหญ่.txt"
+        },
+        {
+          "number": 22,
+          "filename": "ตอนที่22-ป่วยกลางดึก.txt"
+        },
+        {
+          "number": 23,
+          "filename": "ตอนที่23-อดีตที่ไม่อาจลืม.txt"
+        },
+        {
+          "number": 24,
+          "filename": "ตอนที่24-หึงหวง.txt"
+        },
+        {
+          "number": 25,
+          "filename": "ตอนที่25-คำสารภาพ.txt"
+        },
+        {
+          "number": 26,
+          "filename": "ตอนที่26-กำแพงหัวใจ.txt"
+        },
+        {
+          "number": 27,
+          "filename": "ตอนที่27-เปิดใจ.txt"
+        },
+        {
+          "number": 28,
+          "filename": "ตอนที่28-แผนสุดท้ายของศัตรู.txt"
+        },
+        {
+          "number": 29,
+          "filename": "ตอนที่29-เจ้าพ่อบุกช่วย.txt"
+        },
+        {
+          "number": 30,
+          "filename": "ตอนที่30-เผชิญหน้าครั้งสุดท้าย.txt"
+        },
+        {
+          "number": 31,
+          "filename": "ตอนที่31-ความยุติธรรม.txt"
+        },
+        {
+          "number": 32,
+          "filename": "ตอนที่32-ชาตินี้ของเรา.txt"
+        },
+        {
+          "number": 33,
+          "filename": "ตอนที่33-คืนแรกของสามีภรรยา.txt"
+        },
+        {
+          "number": 34,
+          "filename": "ตอนที่34-ฮันนีมูนหวานซึ้ง.txt"
+        },
+        {
+          "number": 35,
+          "filename": "ตอนที่35-ข่าวดี.txt"
+        },
+        {
+          "number": 36,
+          "filename": "ตอนที่36-ความสุขที่แท้จริง.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "title": "รอยจูบจากเงา",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 15,
+      "chapters_target": 50,
+      "progress": 0.3,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/8-รอยจูบจากเงา",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-มรดกต้องสาป.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-เสียงในความมืด.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-เงาในกระจก.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ความทรงจำที่หายไป.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-ครั้งแรกที่พบกัน.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-ข้อตกลง.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-เบาะแสแรก.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-วิญญาณไม่ได้มีแค่เขา.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-ความไว้ใจเริ่มก่อตัว.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-นักล่าผีปริศนา.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-สามเหลี่ยมอันตราย.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-ความจริงที่ซ่อนไว้.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-คืนจันทร์เต็มดวง.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-ศัตรูจากอดีต.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ความลับของตระกูล.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "title": "หลงภพ ณ วังหลวง",
+      "genre": "เรื่อง",
+      "type": "regular",
+      "chapters_written": 15,
+      "chapters_target": 50,
+      "progress": 0.3,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels/9-หลงภพ ณ วังหลวง",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-ตื่นขึ้นในร่างคนอื่น.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-กฎเหล็กแห่งวังหลวง.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-ท่านหญิงศศิธร.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ความลับของเจ้าพระยา.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-เล่ห์ร้ายในวังหลวง.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-หัวใจที่เริ่มสั่นคลอน.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-คุณหญิงนวลโจมตี.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-ศึกชิงรักเริ่มขึ้น.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-พายุกำลังก่อตัว.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-ข้อกล่าวหา.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-ความรักที่ลึกซึ้งขึ้น.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-ความลับของสร้อยคอ.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ศัตรูกลับมา.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-แผนตอบโต้.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-วันแห่งการเผชิญหน้า.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 11,
+      "title": "เจ้านายร้ายกับสาวออฟฟิศ",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 30,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/1-ตัวอย่างนิยายNC",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 12,
+      "title": "จูบลับบนรันเวย์",
+      "genre": "นิยาย:            [ ] Romance  [ ] BL  [x] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18",
+        "🔥"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/10. จูบลับ-บนรันเวย์",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 13,
+      "title": "สวาทลับในวังหลวง",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 15,
+      "chapters_target": 36,
+      "progress": 0.42,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/11. สวาทลับในวังหลวง",
+      "status": "กำลังผลิต",
+      "chapter_list": [
+        {
+          "number": 1,
+          "filename": "ตอนที่01-นางสนมคนใหม่.txt"
+        },
+        {
+          "number": 2,
+          "filename": "ตอนที่02-กฎแห่งฝ่ายใน.txt"
+        },
+        {
+          "number": 3,
+          "filename": "ตอนที่03-บังเอิญเจอจอมทัพ.txt"
+        },
+        {
+          "number": 4,
+          "filename": "ตอนที่04-ตัวตนที่แท้จริง.txt"
+        },
+        {
+          "number": 5,
+          "filename": "ตอนที่05-งานสมโภช.txt"
+        },
+        {
+          "number": 6,
+          "filename": "ตอนที่06-ราตรีในเรือนรับรอง.txt"
+        },
+        {
+          "number": 7,
+          "filename": "ตอนที่07-ในพระตำหนัก.txt"
+        },
+        {
+          "number": 8,
+          "filename": "ตอนที่08-เงาในความมืด.txt"
+        },
+        {
+          "number": 9,
+          "filename": "ตอนที่09-สระน้ำกลางจันทร์.txt"
+        },
+        {
+          "number": 10,
+          "filename": "ตอนที่10-แผนร้ายในวัง.txt"
+        },
+        {
+          "number": 11,
+          "filename": "ตอนที่11-ดูแลยามป่วย.txt"
+        },
+        {
+          "number": 12,
+          "filename": "ตอนที่12-คืนที่ดาวร่วง.txt"
+        },
+        {
+          "number": 13,
+          "filename": "ตอนที่13-ความลับในม่านไหม.txt"
+        },
+        {
+          "number": 14,
+          "filename": "ตอนที่14-พระตำหนักลับ.txt"
+        },
+        {
+          "number": 15,
+          "filename": "ตอนที่15-ขุนนางชิงอำนาจ.txt"
+        }
+      ],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 14,
+      "title": "สืบสวาท รักซ่อนคดี",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/12. สืบสวาท-รักซ่อนคดี",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 15,
+      "title": "เกิดใหม่ยั่วสวาทมาเฟีย",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [x] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/13. เกิดใหม่ยั่วสวาทมาเฟีย",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 16,
+      "title": "พันธนาการรัตติกาล #เจ้าเชื้ออย่าเผลอใจ",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 35,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/14. พันธนาการรัตติกาล",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 17,
+      "title": "สวาทลับคุณหนูมาเฟีย",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [x] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/2. สวาทลับคุณหนูมาเฟีย",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 18,
+      "title": "สัญญารักลับห้องประธาน",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/3. สัญญารักลับห้องประธาน",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 19,
+      "title": "คุณหนูร้อนรักกับนายมาเฟีย-ภาค2",
+      "genre": "มาเฟีย",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 50,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": null,
+      "tags": [],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/4. คุณหนูร้อนรักกับนายมาเฟีย-ภาค2",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 20,
+      "title": "ยั่วสวาทพ่อเลี้ยง",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18",
+        "🔥"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/5. ยั่วสวาทพ่อเลี้ยง",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 21,
+      "title": "สวาทหลังจอ เจ้าชายเพลย์บอย",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18",
+        "🔥"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/6. สวาทหลังจอ-เจ้าชายเพลย์บอย",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 22,
+      "title": "หมอสูติ...หัวใจไม่ตายด้าน",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/7. หมอสูติ-หัวใจไม่ตายด้าน",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 23,
+      "title": "สาวแว่นป้ายแดง ท่านประธานสอนรัก",
+      "genre": "นิยาย:            [x] Romance  [ ] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18",
+        "🔥"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/8. สาวแว่นป้ายแดง-ท่านประธานสอนรัก",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    },
+    {
+      "id": 24,
+      "title": "เบื้องหลังสวาท ผู้จัดการกับโปรดิวเซอร์",
+      "genre": "นิยาย:            [ ] Romance  [x] BL  [ ] GL  [ ] Mafia",
+      "type": "nc",
+      "chapters_written": 0,
+      "chapters_target": 36,
+      "progress": 0.0,
+      "paywall": 20,
+      "nc_rating": "NC18",
+      "tags": [
+        "NC18",
+        "🔥"
+      ],
+      "path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novels-nc/9. เบื้องหลังสวาท-ผู้จัดการกับโปรดิวเซอร์",
+      "status": "กำลังผลิต",
+      "chapter_list": [],
+      "platforms": {
+        "ธัญวลัย": 0,
+        "readAwrite": 0,
+        "Dek-D": 0,
+        "Fictionlog": 0
+      },
+      "qc_score": null,
+      "launch_date": null,
+      "notes": ""
+    }
+  ]
+}

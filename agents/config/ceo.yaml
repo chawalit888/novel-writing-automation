@@ -1,0 +1,225 @@
+# ===========================================
+# Novel Empire CEO Agent Configuration
+# Strategic oversight and coordination
+# ===========================================
+
+agent:
+  id: "ceo-001"
+  name: "NovelEmpireCEO"
+  role: "CEO"
+  model: "claude-opus-4"
+  description: "Strategic AI that oversees the entire novel writing empire"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - receive_user_requests
+  - analyze_task_requirements
+  - distribute_to_managers
+  - monitor_progress
+  - handle_escalations
+  - generate_reports
+  - coordinate_cross_team
+  - review_market_research          # รับรายงานวิเคราะห์ตลาดจาก Research Agent
+  - approve_novel_concepts          # อนุมัติแนวคิดนิยายใหม่จาก Research
+  - strategic_content_planning      # วางแผนเนื้อหาตามเทรนด์ตลาด
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "strategic-planning"
+    path: "agents/skills/strategic-planning.md"
+  - name: "resource-allocation"
+    path: "agents/skills/resource-allocation.md"
+  - name: "reporting"
+    path: "agents/skills/reporting.md"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  inbox: "agents/messages/ceo-inbox/"
+  outbox: "agents/messages/"
+  can_message:
+    - "mgr-claude-001"      # Production Team - Claude Code
+    - "mgr-n8n-001"         # Production Team - N8n Batch
+    - "mgr-marketing-001"   # Marketing Team (NEW!)
+    - "research-001"        # Research Agent สำหรับวิเคราะห์ตลาด
+  broadcast_channel: "agents/messages/broadcasts/"
+  receives_from:
+    - "research-001"        # รับรายงานเทรนด์จาก Research Agent
+    - "mgr-marketing-001"   # รับรายงานการตลาดประจำสัปดาห์
+
+# ===========================================
+# Teams Under CEO
+# ===========================================
+teams:
+  production:
+    manager: "mgr-claude-001"
+    description: "ทีมเขียนนิยาย Premium Quality"
+    subagents:
+      - "claude-writer-001"
+      - "claude-quality-001"
+
+  batch_production:
+    manager: "mgr-n8n-001"
+    description: "ทีมเขียนนิยาย Batch/Volume"
+    subagents:
+      - "n8n-generator-001"
+      - "n8n-writer-001"
+      - "n8n-quality-001"
+
+  marketing:
+    manager: "mgr-marketing-001"
+    description: "ทีมการตลาด - LINE OA Funnel Strategy"
+    subagents:
+      - "social-media-001"
+      - "content-creator-001"
+      - "line-specialist-001"
+      - "ads-manager-001"
+      - "analytics-001"
+    budget:
+      monthly: 5000  # บาท
+      primary_goal: "พาคนเข้า LINE OA แล้ว Broadcast"
+
+  research:
+    agent: "research-001"
+    description: "วิเคราะห์ตลาด เทรนด์นิยาย"
+
+# ===========================================
+# Decision Rules
+# ===========================================
+decision_rules:
+  # Route to Claude Code team for premium quality
+  premium_quality:
+    conditions:
+      - "quality_requirement == 'high'"
+      - "quality_requirement == 'premium'"
+      - "novel_count <= 3"
+    action: "assign_to_claude_manager"
+    message_template: |
+      New premium novel project assigned.
+      Please create high-quality content with full consistency checking.
+
+  # Route to n8n team for volume work
+  high_volume:
+    conditions:
+      - "novel_count > 3"
+      - "quality_requirement == 'standard'"
+      - "batch_mode == true"
+    action: "assign_to_n8n_manager"
+    message_template: |
+      Batch novel project assigned.
+      Please orchestrate multi-AI workflows for efficient production.
+
+  # Use both teams for urgent deadlines
+  urgent:
+    conditions:
+      - "deadline_days < 7"
+      - "priority == 'urgent'"
+    action: "parallel_both_teams"
+    message_template: |
+      URGENT: Parallel processing required.
+      Both teams should work simultaneously.
+
+  # Escalate quality issues to human
+  quality_failure:
+    conditions:
+      - "quality_score < 60"
+      - "retry_count >= 3"
+    action: "escalate_to_human"
+    message_template: |
+      Quality threshold not met after multiple attempts.
+      Human review required.
+
+# ===========================================
+# Reporting Configuration
+# ===========================================
+reporting:
+  frequency: "daily"
+  time: "18:00"
+  timezone: "Asia/Bangkok"
+
+  metrics:
+    - name: "chapters_completed"
+      source: "both_teams"
+      aggregation: "sum"
+
+    - name: "quality_scores"
+      source: "both_teams"
+      aggregation: "average"
+
+    - name: "api_costs"
+      source: "both_teams"
+      aggregation: "sum"
+      alert_threshold: 25.00  # USD per day
+
+    - name: "projects_active"
+      source: "both_teams"
+      aggregation: "count"
+
+    - name: "error_rate"
+      source: "both_teams"
+      aggregation: "percentage"
+      alert_threshold: 10  # percent
+
+  report_format: |
+    # Daily Empire Report - {{date}}
+
+    ## Overview
+    - Total Chapters: {{chapters_completed}}
+    - Average Quality: {{quality_scores}}/100
+    - API Cost: ${{api_costs}}
+
+    ## Claude Code Team (Premium)
+    {{claude_team_summary}}
+
+    ## N8n Team (Volume)
+    {{n8n_team_summary}}
+
+    ## Alerts
+    {{alerts}}
+
+    ## Tomorrow's Plan
+    {{tomorrow_plan}}
+
+# ===========================================
+# Escalation Paths
+# ===========================================
+escalation:
+  levels:
+    - level: 1
+      handler: "manager"
+      conditions: ["minor_issue", "resource_question"]
+
+    - level: 2
+      handler: "ceo"
+      conditions: ["quality_failure", "budget_exceeded", "deadline_risk"]
+
+    - level: 3
+      handler: "human"
+      conditions: ["critical_error", "policy_violation", "repeated_failure"]
+
+# ===========================================
+# Budget Controls
+# ===========================================
+budget:
+  daily_limit: 25.00  # USD
+  monthly_limit: 500.00  # USD
+  alert_at_percentage: 80
+
+  cost_allocation:
+    claude_team: 60  # percent
+    n8n_team: 40  # percent
+
+# ===========================================
+# Logging
+# ===========================================
+logging:
+  path: "agents/logs/ceo.log"
+  level: "INFO"
+  format: "[{{timestamp}}] [{{level}}] {{message}}"
+  rotate: "daily"
+  keep_days: 30

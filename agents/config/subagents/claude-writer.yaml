@@ -1,0 +1,303 @@
+# ===========================================
+# Claude Writer Subagent Configuration
+# Premium Quality Novel Writer
+# ===========================================
+
+agent:
+  id: "claude-writer-001"
+  name: "ClaudeWriter"
+  role: "Subagent"
+  team: "claude-code"
+  model: "claude-sonnet-4"
+  description: "High-quality novel writer using Claude Code skills"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-claude-001"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  # Character Creation
+  - name: "character-creator"
+    path: "claude-code-novels/skills/character-creator/SKILL.md"
+    templates:
+      - "claude-code-novels/skills/character-creator/templates/protagonist.json"
+      - "claude-code-novels/skills/character-creator/templates/supporting.json"
+    output_format: "json"
+
+  # Plot Management
+  - name: "plot-manager"
+    path: "claude-code-novels/skills/plot-manager/SKILL.md"
+    templates:
+      - "claude-code-novels/skills/plot-manager/templates/three-act.md"
+      - "claude-code-novels/skills/plot-manager/templates/heros-journey.md"
+    output_format: "markdown"
+
+  # Novel Writing
+  - name: "novel-writer"
+    path: "claude-code-novels/skills/novel-writer/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/novel-writer/prompts/chapter-writing.txt"
+      - "claude-code-novels/skills/novel-writer/prompts/dialogue.txt"
+      - "claude-code-novels/skills/novel-writer/prompts/action-scene.txt"
+    output_format: "text"
+
+  # Hook & Cliffhanger Specialist (NEW)
+  - name: "hook-cliffhanger-specialist"
+    path: "claude-code-novels/skills/hook-cliffhanger-specialist/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/hook-cliffhanger-specialist/prompts/hook-generator.txt"
+      - "claude-code-novels/skills/hook-cliffhanger-specialist/prompts/paywall-hook.txt"
+    output_format: "text"
+    priority: "high"  # สำคัญมากสำหรับ Freemium Model
+
+  # Emotional Scene (NEW)
+  - name: "emotional-scene"
+    path: "claude-code-novels/skills/emotional-scene/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/emotional-scene/prompts/romantic-scene.txt"
+      - "claude-code-novels/skills/emotional-scene/prompts/touching-scene.txt"
+      - "claude-code-novels/skills/emotional-scene/prompts/emotional-peak.txt"
+    output_format: "text"
+
+  # Tension Building (NEW)
+  - name: "tension-building"
+    path: "claude-code-novels/skills/tension-building/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/tension-building/prompts/suspense-scene.txt"
+      - "claude-code-novels/skills/tension-building/prompts/mystery-reveal.txt"
+      - "claude-code-novels/skills/tension-building/prompts/countdown.txt"
+    output_format: "text"
+
+  # Dialogue Master (NEW)
+  - name: "dialogue-master"
+    path: "claude-code-novels/skills/dialogue-master/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/dialogue-master/prompts/character-voice.txt"
+      - "claude-code-novels/skills/dialogue-master/prompts/conversation-flow.txt"
+      - "claude-code-novels/skills/dialogue-master/prompts/subtext-dialogue.txt"
+    output_format: "text"
+
+  # World Building (NEW)
+  - name: "world-building"
+    path: "claude-code-novels/skills/world-building/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/world-building/prompts/magic-system.txt"
+      - "claude-code-novels/skills/world-building/prompts/geography-culture.txt"
+      - "claude-code-novels/skills/world-building/prompts/history-lore.txt"
+    output_format: "text"
+
+  # Thai Language Polish (NEW)
+  - name: "thai-language-polish"
+    path: "claude-code-novels/skills/thai-language-polish/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/thai-language-polish/prompts/prose-polish.txt"
+      - "claude-code-novels/skills/thai-language-polish/prompts/word-choice.txt"
+      - "claude-code-novels/skills/thai-language-polish/prompts/rhythm-flow.txt"
+    output_format: "text"
+
+  # Pacing Analyzer (NEW)
+  - name: "pacing-analyzer"
+    path: "claude-code-novels/skills/pacing-analyzer/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/pacing-analyzer/prompts/chapter-pacing.txt"
+      - "claude-code-novels/skills/pacing-analyzer/prompts/story-arc-pacing.txt"
+      - "claude-code-novels/skills/pacing-analyzer/prompts/scene-transition.txt"
+    output_format: "text"
+
+  # Flashback Handler (NEW)
+  - name: "flashback-handler"
+    path: "claude-code-novels/skills/flashback-handler/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/flashback-handler/prompts/flashback-entry.txt"
+      - "claude-code-novels/skills/flashback-handler/prompts/flashback-exit.txt"
+      - "claude-code-novels/skills/flashback-handler/prompts/memory-fragment.txt"
+    output_format: "text"
+
+  # Ending Checker (NEW)
+  - name: "ending-checker"
+    path: "claude-code-novels/skills/ending-checker/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/ending-checker/prompts/ending-analysis.txt"
+      - "claude-code-novels/skills/ending-checker/prompts/loose-ends.txt"
+      - "claude-code-novels/skills/ending-checker/prompts/reader-satisfaction.txt"
+    output_format: "text"
+
+  # Cover Generator (06) - Typography-Focused
+  - name: "cover-generator"
+    path: "claude-code-novels/skills/cover-generator/SKILL.md"
+    prompts:
+      - "claude-code-novels/skills/cover-generator/prompts/typography-cover.txt"
+      - "claude-code-novels/skills/cover-generator/prompts/color-schemes.txt"
+      - "claude-code-novels/skills/cover-generator/prompts/elements-library.txt"
+    output_format: "text"
+    settings:
+      image_size: "900x900"
+      style: "typography-focused"
+      target_tool: "nanobanana-pro"
+
+# ===========================================
+# Genre Templates
+# ===========================================
+templates:
+  fantasy:
+    structure: "claude-code-novels/templates/fantasy/structure.md"
+    world: "claude-code-novels/templates/fantasy/world-template.json"
+
+  horror:
+    structure: "claude-code-novels/templates/horror/structure.md"
+    atmosphere: "claude-code-novels/templates/horror/atmosphere-guide.md"
+
+  romantic-comedy:
+    structure: "claude-code-novels/templates/romantic-comedy/structure.md"
+    archetypes: "claude-code-novels/templates/romantic-comedy/character-archetypes.json"
+
+  mystery:
+    structure: "claude-code-novels/templates/mystery/structure.md"
+    clues: "claude-code-novels/templates/mystery/clue-template.json"
+
+  bl-gl:
+    structure: "claude-code-novels/templates/bl-gl/structure.md"
+    relationship: "claude-code-novels/templates/bl-gl/relationship-template.json"
+
+# ===========================================
+# Writing Configuration
+# ===========================================
+writing:
+  chapter:
+    # ใช้จำนวนตัวอักษร (characters) ไม่ใช่คำ
+    min_characters: 4800  # ⚠️ กฎบังคับ - ขั้นต่ำ 4,800 ตัวอักษร
+    max_characters: 6000  # ⚠️ กฎบังคับ - สูงสุด 6,000 ตัวอักษร
+    target_characters: 5200
+
+    # ห้ามรับงานที่น้อยกว่า 4,800 ตัวอักษร
+    strict_minimum: true
+    reject_below_minimum: true
+
+  style:
+    language: "thai"
+    pov: "third_person"  # default, can be overridden
+    tense: "past"  # default
+
+  quality_checks:
+    before_submit:
+      - "check_character_count"  # ตรวจสอบขั้นต่ำ 4,800 ตัวอักษร
+      - "check_no_placeholders"
+      - "check_character_names"
+      - "verify_continuity"
+      - "verify_minimum_length"  # เพิ่มการตรวจสอบความยาวขั้นต่ำ
+      - "check_freemium_hook"    # ตรวจสอบ hook สำหรับตอน 1-10
+
+# ===========================================
+# ⭐ Freemium Model Strategy
+# ===========================================
+freemium:
+  # โมเดลการเผยแพร่
+  free_zone:
+    chapters: "1-10"           # ตอนที่ 1-10 ฟรี
+    purpose: "ดึงดูดผู้อ่านให้ยอมจ่ายต่อ"
+
+  paid_zone:
+    chapters: "11+"            # ตอนที่ 11 เป็นต้นไปเสียเงิน
+    purpose: "รักษาคุณภาพให้อ่านจนจบ"
+
+  # กฎสำหรับ FREE ZONE (ตอน 1-10)
+  free_zone_rules:
+    intensity: "maximum"       # ความเข้มข้นสูงสุด
+    no_filler_chapters: true   # ห้ามตอนน้ำ
+    fast_pacing: true          # จังหวะเร็ว
+    strong_hooks: true         # hook แรงทุกตอน
+
+    # ตอนที่ 1: เปิดเรื่อง
+    chapter_1:
+      requirement: "strong_opening_hook"
+      description: "ดึงดูดตั้งแต่ประโยคแรก"
+
+    # ตอนที่ 10: Paywall Hook
+    chapter_10:
+      requirement: "strongest_cliffhanger"
+      description: "cliffhanger แรงที่สุด ต้องอ่านต่อ"
+      forbidden:
+        - "จบแบบลงตัว"
+        - "ไม่มีค้างคา"
+
+  # Checklist สำหรับตอน 1-10
+  free_zone_checklist:
+    - "ทุกตอนมี hook ท้ายตอน (แรงกว่าปกติ)"
+    - "ตัวละครหลักมีเสน่ห์ตั้งแต่ตอนแรก"
+    - "มีความขัดแย้งชัดเจน"
+    - "ไม่มีตอนน้ำ"
+    - "ตอนที่ 10 จบด้วย cliffhanger สุดแรง"
+    - "ผู้อ่านจะรู้สึก ต้องอ่านต่อ"
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  character_creation:
+    steps:
+      - read_project_brief
+      - select_genre_template
+      - create_protagonist
+      - create_supporting_cast
+      - define_relationships
+      - output_characters_json
+    timeout_minutes: 30
+
+  plot_creation:
+    steps:
+      - read_characters
+      - select_structure  # three-act or hero's journey
+      - create_act_breakdown
+      - create_chapter_outline
+      - output_outline_md
+    timeout_minutes: 45
+
+  chapter_writing:
+    steps:
+      - read_outline
+      - read_previous_chapter
+      - read_characters
+      - write_chapter_draft
+      - self_review
+      - submit_for_qc
+    timeout_minutes: 60
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-claude-001"
+  reports_to:
+    - "mgr-claude-001"
+
+  status_updates:
+    on_start: true
+    on_completion: true
+    on_error: true
+    progress_interval: 25  # percent
+
+# ===========================================
+# Output Paths
+# ===========================================
+outputs:
+  characters: "{{project_path}}/characters/"
+  outlines: "{{project_path}}/outlines/"
+  chapters: "{{project_path}}/chapters/"
+  metadata: "{{project_path}}/metadata/"
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_failure:
+    notify: "mgr-claude-001"
+    save_draft: true
+    log_error: true
+
+  max_retries: 2
+  retry_delay_seconds: 30

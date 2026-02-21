@@ -1,0 +1,240 @@
+# ===========================================
+# N8n Manager Agent Configuration
+# High Volume Team Leader
+# ===========================================
+
+agent:
+  id: "mgr-n8n-001"
+  name: "N8nManager"
+  role: "Manager"
+  team: "n8n"
+  model: "gpt-4o-mini"  # Cost-efficient for coordination
+  description: "Manages high-volume automated novel writing using n8n workflows"
+
+# ===========================================
+# Team Structure
+# ===========================================
+team:
+  name: "N8n Multi-AI Team"
+  focus: "High-volume, automated novel production"
+  capacity: "10-15 novels simultaneously"
+
+  subagents:
+    - id: "n8n-generator-001"
+      config: "agents/config/subagents/n8n-generator.yaml"
+    - id: "n8n-writer-001"
+      config: "agents/config/subagents/n8n-writer.yaml"
+    - id: "n8n-quality-001"
+      config: "agents/config/subagents/n8n-quality.yaml"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - receive_batch_tasks
+  - orchestrate_workflows
+  - monitor_parallel_jobs
+  - handle_failures
+  - optimize_ai_selection
+  - track_costs
+  - report_progress
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "workflow-orchestration"
+    path: "agents/skills/workflow-orchestration.md"
+  - name: "batch-processing"
+    path: "agents/skills/batch-processing.md"
+  - name: "error-handling"
+    description: "Handle workflow failures and retries"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  inbox: "agents/messages/n8n-manager/"
+  reports_to: "ceo-001"
+  manages:
+    - "n8n-generator-001"
+    - "n8n-writer-001"
+    - "n8n-quality-001"
+
+# ===========================================
+# Workflow Orchestration
+# ===========================================
+orchestration:
+  # n8n workflow triggers
+  workflows:
+    character_generation:
+      workflow_id: "character-generator"
+      trigger: "webhook"
+      assigned_to: "n8n-generator-001"
+
+    plot_outlining:
+      workflow_id: "plot-outliner"
+      trigger: "webhook"
+      assigned_to: "n8n-generator-001"
+
+    chapter_writing:
+      workflows:
+        - "chapter-writer-gemini"
+        - "chapter-writer-gpt"
+        - "chapter-writer-claude"
+      selection: "by_genre"
+      assigned_to: "n8n-writer-001"
+
+    quality_control:
+      workflows:
+        - "qc-basic"
+        - "qc-ai-scorer"
+        - "qc-deep-check"
+      sequential: true
+      assigned_to: "n8n-quality-001"
+
+    batch_processing:
+      workflow_id: "batch-writer"
+      trigger: "manual"
+      parallel_projects: 5
+
+# ===========================================
+# AI Model Selection by Genre
+# ===========================================
+ai_selection:
+  romantic-comedy:
+    primary: "gemini-pro"
+    backup: "gpt-4o-mini"
+    reason: "Gemini excels at light, witty content"
+
+  fantasy:
+    primary: "gpt-4o"
+    backup: "claude-haiku"
+    reason: "GPT-4o for creative world-building"
+
+  horror:
+    primary: "claude-haiku"
+    backup: "gpt-4o"
+    reason: "Claude for atmospheric tension"
+
+  mystery:
+    primary: "gpt-4o"
+    backup: "claude-haiku"
+    reason: "GPT-4o for complex plot logic"
+
+  bl-gl:
+    primary: "claude-haiku"
+    backup: "gemini-pro"
+    reason: "Claude for emotional depth"
+
+# ===========================================
+# Batch Processing
+# ===========================================
+batch:
+  max_parallel_projects: 5
+  chapters_per_day: 15
+
+  scheduling:
+    daily_start: "00:00"
+    daily_end: "06:00"
+    timezone: "Asia/Bangkok"
+
+  rate_limiting:
+    gemini: 60  # requests per minute
+    gpt: 60
+    claude: 40
+
+# ===========================================
+# Quality Pipeline
+# ===========================================
+quality:
+  pipeline:
+    - stage: "basic"
+      workflow: "qc-basic"
+      checks:
+        - "word_count"
+        - "no_placeholders"
+        - "format_correct"
+      pass_threshold: 100  # must pass all
+
+    - stage: "ai_scoring"
+      workflow: "qc-ai-scorer"
+      model: "gemini-flash"
+      pass_threshold: 70
+
+    - stage: "deep_check"
+      workflow: "qc-deep-check"
+      model: "claude-haiku"
+      only_if: "score < 80"
+
+  on_failure:
+    regenerate_if: "score < 70"
+    max_regenerations: 3
+    escalate_after: 3
+
+# ===========================================
+# Resource Paths
+# ===========================================
+resources:
+  workflows_dir: "n8n-novels/n8n-data/workflows/"
+  prompts_dir: "n8n-novels/prompts/"
+  scripts_dir: "n8n-novels/scripts/"
+  stories_dir: "n8n-novels/stories/"
+  outputs_dir: "n8n-novels/outputs/"
+
+# ===========================================
+# Cost Tracking
+# ===========================================
+costs:
+  daily_budget: 15.00  # USD
+
+  per_model:
+    gemini-pro: 0.001  # per 1K tokens
+    gemini-flash: 0.0005
+    gpt-4o: 0.01
+    gpt-4o-mini: 0.0005
+    claude-haiku: 0.001
+
+  alerts:
+    at_percentage: 80
+    action: "notify_ceo"
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  workflow_failure:
+    - log_error: true
+    - retry_count: 2
+    - switch_to_backup_model: true
+    - if_still_fails: "mark_for_review"
+
+  rate_limit:
+    - wait_seconds: 60
+    - switch_model: true
+
+  api_error:
+    - retry_with_backoff: true
+    - max_retries: 3
+
+# ===========================================
+# Reporting
+# ===========================================
+reporting:
+  to: "ceo-001"
+  frequency: "daily"
+
+  metrics:
+    - chapters_written
+    - total_words
+    - average_quality
+    - api_cost
+    - success_rate
+    - models_used
+
+# ===========================================
+# Logging
+# ===========================================
+logging:
+  path: "agents/logs/n8n-team.log"
+  level: "INFO"

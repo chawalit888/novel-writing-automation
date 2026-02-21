@@ -1,0 +1,205 @@
+# Story Arc Pacing Prompt (วิเคราะห์จังหวะโครงเรื่อง)
+
+## Context Variables
+- {{total_chapters}}: จำนวนบททั้งหมด
+- {{chapter_summaries}}: สรุปแต่ละบท
+- {{structure_type}}: โครงสร้าง (Three-Act, Hero's Journey)
+- {{genre}}: แนวนิยาย
+
+---
+
+## Prompt Template
+
+คุณคือผู้เชี่ยวชาญด้าน Story Structure วิเคราะห์ Pacing ของโครงเรื่องทั้งหมด
+
+### ข้อมูล:
+- จำนวนบท: {{total_chapters}}
+- โครงสร้าง: {{structure_type}}
+- แนว: {{genre}}
+
+### สรุปบท:
+{{chapter_summaries}}
+
+---
+
+## Three-Act Structure Analysis
+
+### Act 1: Setup (25%)
+```
+เป้าหมาย:
+- แนะนำตัวละคร
+- สร้าง ordinary world
+- Inciting Incident
+- ตัดสินใจเข้าสู่ adventure
+
+ตรวจสอบ:
+□ ใช้กี่บท? ____ (ควรเป็น 25% ของทั้งหมด)
+□ มี Inciting Incident ชัดเจน?
+□ ผู้อ่านเข้าใจ stakes?
+□ จบ Act 1 ด้วย turning point?
+```
+
+### Act 2: Confrontation (50%)
+```
+เป้าหมาย:
+- Rising Action
+- Midpoint (twist)
+- ความยากลำบากเพิ่มขึ้น
+- All is Lost moment
+
+ตรวจสอบ:
+□ ใช้กี่บท? ____ (ควรเป็น 50%)
+□ มี Midpoint twist?
+□ Tension เพิ่มขึ้นเรื่อยๆ?
+□ ไม่มี Sagging Middle?
+□ มี subplot ช่วยพยุง?
+```
+
+### Act 3: Resolution (25%)
+```
+เป้าหมาย:
+- Climax
+- Final Battle/Confrontation
+- Resolution
+- New Normal
+
+ตรวจสอบ:
+□ ใช้กี่บท? ____ (ควรเป็น 25%)
+□ Climax ได้เวลาเพียงพอ?
+□ ปมทุกปมถูกคลี่คลาย?
+□ Ending satisfying?
+```
+
+---
+
+## Pacing Map
+
+### Template
+
+```
+บท    Intensity    Events
+─────────────────────────────────
+1     ██░░░░░░░░   Setup
+2     ███░░░░░░░   Inciting Incident
+3     ████░░░░░░   Enter Adventure
+...
+15    ███████░░░   Midpoint Twist
+...
+25    ██████████   Climax
+26    ███████░░░   Falling Action
+27    █████░░░░░   Resolution
+```
+
+### Ideal Pattern
+
+```
+           ★ Climax
+          /│\
+         / │ \
+        /  │  \
+       /   │   \
+      / ★  │    \
+     / Mid │     \
+    /      │      \
+───/───────│───────\───
+Act 1   Act 2   Act 3
+```
+
+---
+
+## Common Pacing Problems
+
+### 1. Front-Heavy (หนักหน้า)
+```
+ปัญหา: Act 1 ยาวเกินไป
+
+Pattern:
+████████████████░░░░░░░░░░░░░░
+        ↑
+     ยาวเกิน
+
+แก้ไข:
+- ตัด backstory
+- เริ่มที่ action
+- World-build ระหว่างทาง
+```
+
+### 2. Sagging Middle (กลางหย่อน)
+```
+ปัญหา: Act 2 ไม่มีอะไร
+
+Pattern:
+████░░░░░░░░░░░░░░░░░░████████
+         ↑
+      flat
+
+แก้ไข:
+- เพิ่ม mini-conflicts
+- เพิ่ม subplot
+- เพิ่ม revelations
+```
+
+### 3. Rushed Ending (จบรีบ)
+```
+ปัญหา: Act 3 สั้นเกินไป
+
+Pattern:
+████████████████████████████░░
+                            ↑
+                         รีบเกิน
+
+แก้ไข:
+- ให้เวลา climax
+- ให้เวลา emotional moments
+- Resolution ที่สมบูรณ์
+```
+
+---
+
+## รูปแบบ Output
+
+```
+## Story Arc Pacing Analysis
+
+### Structure Overview
+- โครงสร้าง: [Three-Act/Hero's Journey]
+- จำนวนบททั้งหมด: [จำนวน]
+
+### Act Breakdown
+| Act | Expected | Actual | Status |
+|-----|----------|--------|--------|
+| Act 1 | 25% (X บท) | Y บท (Z%) | ✅/⚠️/❌ |
+| Act 2 | 50% (X บท) | Y บท (Z%) | ✅/⚠️/❌ |
+| Act 3 | 25% (X บท) | Y บท (Z%) | ✅/⚠️/❌ |
+
+### Pacing Map
+[Visual representation]
+
+### Key Turning Points
+1. Inciting Incident: บทที่ __ (ควรเป็นบท __)
+2. Midpoint: บทที่ __ (ควรเป็นบท __)
+3. All is Lost: บทที่ __ (ควรเป็นบท __)
+4. Climax: บทที่ __ (ควรเป็นบท __)
+
+### Issues Found
+1. [ปัญหา 1]
+2. [ปัญหา 2]
+
+### Recommendations
+1. [คำแนะนำ 1]
+2. [คำแนะนำ 2]
+
+### Suggested Restructure
+[ถ้าต้องปรับโครงสร้าง]
+```
+
+---
+
+## Checklist
+
+- [ ] โครงสร้าง 3 Act สมดุล
+- [ ] มี Turning Points ครบ
+- [ ] ไม่มี Sagging Middle
+- [ ] Climax ได้เวลาเพียงพอ
+- [ ] Resolution สมบูรณ์
+- [ ] Subplot integrate ดี

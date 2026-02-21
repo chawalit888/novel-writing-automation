@@ -1,0 +1,278 @@
+# ===========================================
+# Layout Designer Subagent Configuration
+# ผู้เชี่ยวชาญออกแบบ Layout และ Typography
+# ===========================================
+
+agent:
+  id: "cover-layout-001"
+  name: "LayoutDesigner"
+  role: "Subagent"
+  team: "cover-design"
+  model: "claude-sonnet-4"
+  description: "ผู้เชี่ยวชาญในการออกแบบ Layout ปกนิยายและ Typography"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-cover-001"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - ออกแบบ layout สำหรับปกนิยาย
+  - เลือก font ที่เหมาะกับแนวเรื่อง
+  - กำหนด color scheme
+  - วางตำแหน่ง text elements
+  - สร้าง visual hierarchy
+  - ออกแบบ gradient/overlay สำหรับ text readability
+
+# ===========================================
+# Default Dimensions
+# ===========================================
+default_dimensions: "900x900"
+default_aspect_ratio: "1:1"
+
+# ===========================================
+# Layout Templates
+# ===========================================
+layout_templates:
+  standard_square:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    zones:
+      image_zone:
+        position: "top 65%"
+        description: "พื้นที่สำหรับรูปภาพหลัก"
+
+      title_zone:
+        position: "bottom 35%"
+        description: "พื้นที่สำหรับชื่อเรื่องและคำโปรย"
+        gradient: "dark gradient from bottom"
+
+    elements:
+      - name: "title"
+        position: "bottom-center"
+        margin_bottom: "18%"
+
+      - name: "tagline"
+        position: "below title"
+        margin_bottom: "10%"
+
+      - name: "rating_badge"
+        position: "bottom-center"
+        margin_bottom: "4%"
+
+      - name: "author"
+        position: "bottom-center"
+        margin_bottom: "1%"
+
+  character_focused:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    zones:
+      left_character:
+        position: "left 45%"
+        description: "ตัวละครด้านซ้าย (เบลอเล็กน้อย)"
+
+      right_character:
+        position: "right 55%"
+        description: "ตัวละครด้านขวา (ชัด)"
+
+      title_zone:
+        position: "center-bottom"
+        overlay: "gradient"
+
+  minimalist:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    zones:
+      image_zone:
+        position: "full bleed"
+        treatment: "dark overlay 40%"
+
+      title_zone:
+        position: "center"
+        style: "large typography"
+
+# ===========================================
+# Typography Guide
+# ===========================================
+typography:
+  title:
+    thai_fonts:
+      serif:
+        - "Sarabun Bold"
+        - "Prompt Bold"
+        - "Kanit Bold"
+      display:
+        - "Chakra Petch"
+        - "Sriracha"
+
+    english_fonts:
+      serif:
+        - "Playfair Display"
+        - "Cormorant Garamond"
+        - "Bodoni"
+      display:
+        - "Bebas Neue"
+        - "Oswald"
+
+    size: "48-72px"
+    weight: "bold"
+    alignment: "center"
+
+  tagline:
+    fonts:
+      - "Sarabun Light"
+      - "Prompt Light"
+    size: "18-24px"
+    weight: "light"
+    style: "italic (optional)"
+
+  author:
+    fonts:
+      - "Sarabun Regular"
+    size: "14-18px"
+    weight: "regular"
+
+  rating_badge:
+    style: "bold, uppercase"
+    size: "12-14px"
+    background: "accent color"
+    padding: "4px 12px"
+    border_radius: "4px"
+
+# ===========================================
+# Color Schemes by Genre
+# ===========================================
+color_schemes:
+  mafia_romance:
+    primary: "#1a1a1a"      # ดำ
+    secondary: "#8B0000"    # แดงเข้ม
+    accent: "#D4AF37"       # ทอง
+    text: "#F5F5DC"         # ครีม
+    text_alt: "#FFFFFF"     # ขาว
+
+  fantasy:
+    primary: "#1a1a3e"      # น้ำเงินเข้ม
+    secondary: "#4a0080"    # ม่วง
+    accent: "#FFD700"       # ทอง
+    text: "#FFFFFF"
+
+  romance:
+    primary: "#2d1f3d"      # ม่วงเข้ม
+    secondary: "#c41e3a"    # แดงกุหลาบ
+    accent: "#ffd1dc"       # ชมพูอ่อน
+    text: "#FFFFFF"
+
+  horror:
+    primary: "#0d0d0d"      # ดำสนิท
+    secondary: "#8B0000"    # แดงเลือด
+    accent: "#2f2f2f"       # เทาเข้ม
+    text: "#FFFFFF"
+
+  bl_gl:
+    primary: "#1e3a5f"      # น้ำเงินเข้ม
+    secondary: "#4a90d9"    # ฟ้า
+    accent: "#e6f0ff"       # ฟ้าอ่อน
+    text: "#FFFFFF"
+
+# ===========================================
+# Visual Effects
+# ===========================================
+effects:
+  gradient_overlay:
+    purpose: "ทำให้ text อ่านง่าย"
+    styles:
+      bottom_up:
+        type: "linear-gradient"
+        direction: "to top"
+        colors: ["rgba(0,0,0,0.8)", "rgba(0,0,0,0)"]
+        height: "50%"
+
+      full_dark:
+        type: "solid"
+        color: "rgba(0,0,0,0.4)"
+
+  text_effects:
+    shadow:
+      light: "2px 2px 4px rgba(0,0,0,0.3)"
+      medium: "3px 3px 6px rgba(0,0,0,0.5)"
+      heavy: "4px 4px 8px rgba(0,0,0,0.7)"
+
+    glow:
+      gold: "0 0 10px rgba(212,175,55,0.5)"
+      white: "0 0 10px rgba(255,255,255,0.3)"
+
+# ===========================================
+# Output Format
+# ===========================================
+output:
+  format: "markdown"
+  template: |
+    # Layout Specification for: {{novel_title}}
+
+    ## Dimensions
+    - **Size:** {{width}} x {{height}} px
+    - **Aspect Ratio:** {{ratio}}
+
+    ## Layout Diagram
+    ```
+    {{ascii_diagram}}
+    ```
+
+    ## Color Scheme
+    | Element | Color | Hex |
+    |---------|-------|-----|
+    {{color_table}}
+
+    ## Typography
+    ### Title: "{{title}}"
+    - **Font:** {{title_font}}
+    - **Size:** {{title_size}}
+    - **Color:** {{title_color}}
+    - **Position:** {{title_position}}
+
+    ### Tagline: "{{tagline}}"
+    - **Font:** {{tagline_font}}
+    - **Size:** {{tagline_size}}
+
+    ## Effects
+    - **Gradient:** {{gradient_spec}}
+    - **Text Shadow:** {{shadow_spec}}
+
+    ## Implementation Notes
+    {{notes}}
+
+  deliver_to: "{{project_path}}/covers/layouts/"
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  steps:
+    - receive_brief_and_enhanced_image
+    - select_layout_template
+    - determine_color_scheme
+    - choose_typography
+    - design_text_placement
+    - specify_effects
+    - create_specification_document
+    - submit_to_manager
+
+  timeout_minutes: 25
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-cover-001"
+  reports_to:
+    - "mgr-cover-001"
+
+  status_updates:
+    on_start: true
+    on_completion: true
+    on_error: true

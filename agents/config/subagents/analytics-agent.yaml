@@ -1,0 +1,249 @@
+# ===========================================
+# Analytics Agent Subagent
+# วิเคราะห์ข้อมูลและรายงาน
+# ===========================================
+
+agent:
+  id: "analytics-001"
+  name: "AnalyticsAgent"
+  role: "Subagent"
+  team: "marketing"
+  model: "claude-sonnet-4"
+  description: "วิเคราะห์ performance และสร้างรายงาน"
+
+reports_to: "mgr-marketing-001"
+
+# ===========================================
+# Data Sources
+# ===========================================
+data_sources:
+  social_media:
+    facebook:
+      metrics:
+        - "Page Likes"
+        - "Post Reach"
+        - "Post Engagement"
+        - "Link Clicks"
+      access: "Facebook Insights"
+
+    instagram:
+      metrics:
+        - "Followers"
+        - "Reach"
+        - "Engagement Rate"
+        - "Profile Visits"
+      access: "Instagram Insights"
+
+    tiktok:
+      metrics:
+        - "Followers"
+        - "Video Views"
+        - "Likes"
+        - "Shares"
+      access: "TikTok Analytics"
+
+    twitter:
+      metrics:
+        - "Followers"
+        - "Impressions"
+        - "Engagements"
+        - "Link Clicks"
+      access: "Twitter Analytics"
+
+  line_oa:
+    metrics:
+      - "Followers"
+      - "Broadcast Open Rate"
+      - "Click Rate"
+      - "Unfollow Rate"
+    access: "LINE OA Manager"
+
+  novel_platforms:
+    joylada:
+      metrics:
+        - "ยอดอ่าน"
+        - "ยอด Coin"
+        - "Comments"
+        - "Favorites"
+
+    dek_d:
+      metrics:
+        - "ยอดอ่าน"
+        - "Votes"
+        - "Comments"
+
+  ads:
+    facebook_ads:
+      metrics:
+        - "Spend"
+        - "Reach"
+        - "Clicks"
+        - "CTR"
+        - "CPC"
+        - "Conversions"
+
+    tiktok_ads:
+      metrics:
+        - "Spend"
+        - "Impressions"
+        - "Clicks"
+        - "CTR"
+
+# ===========================================
+# KPIs Dashboard
+# ===========================================
+kpis:
+  growth:
+    - name: "LINE OA Followers"
+      target_weekly: "+50-100"
+      target_monthly: "+200-400"
+
+    - name: "Social Followers (รวม)"
+      target_monthly: "+500"
+
+  engagement:
+    - name: "Broadcast Open Rate"
+      target: ">30%"
+
+    - name: "Social Engagement Rate"
+      target: ">5%"
+
+  conversion:
+    - name: "Cost per LINE Follower"
+      target: "<25 บาท"
+
+    - name: "LINE → Reader Conversion"
+      target: ">10%"
+
+  revenue:
+    - name: "ยอดอ่านจาก LINE traffic"
+      track: true
+
+    - name: "Revenue from novels"
+      track: true
+
+# ===========================================
+# Reporting Schedule
+# ===========================================
+reporting:
+  daily:
+    time: "09:00"
+    format: "quick_summary"
+    includes:
+      - "ยอด followers ใหม่"
+      - "Top post yesterday"
+      - "Ad spend"
+
+  weekly:
+    day: "monday"
+    time: "10:00"
+    format: "detailed_report"
+    includes:
+      - "สรุป KPIs ทั้งหมด"
+      - "Performance by platform"
+      - "Top performing content"
+      - "Ad performance"
+      - "Recommendations"
+
+  monthly:
+    day: "1"
+    time: "10:00"
+    format: "comprehensive_report"
+    includes:
+      - "Month-over-month comparison"
+      - "Goal achievement"
+      - "ROI analysis"
+      - "Strategic recommendations"
+      - "Next month plan"
+
+# ===========================================
+# Report Templates
+# ===========================================
+templates:
+  weekly_report: |
+    # 📊 Weekly Marketing Report
+    ## สัปดาห์ที่ {{week_number}} ({{date_range}})
+
+    ### 📈 KPIs Overview
+    | Metric | เป้า | ผลจริง | สถานะ |
+    |--------|------|--------|-------|
+    | LINE Followers ใหม่ | +50 | {{line_new}} | {{status}} |
+    | Broadcast Open Rate | 30% | {{open_rate}} | {{status}} |
+    | Cost per LINE Follower | <25฿ | {{cplf}} | {{status}} |
+
+    ### 📱 Social Media Performance
+    {{social_performance_table}}
+
+    ### 💰 Ad Performance
+    - Total Spend: {{ad_spend}} บาท
+    - LINE Followers จาก Ads: {{ad_followers}}
+    - Cost per Follower: {{cplf}} บาท
+
+    ### 🏆 Top Content
+    {{top_content_list}}
+
+    ### 💡 Recommendations
+    {{recommendations}}
+
+  monthly_report: |
+    # 📊 Monthly Marketing Report
+    ## {{month}} {{year}}
+
+    ### Executive Summary
+    {{executive_summary}}
+
+    ### Goal Achievement
+    {{goal_table}}
+
+    ### Platform Breakdown
+    {{platform_breakdown}}
+
+    ### ROI Analysis
+    - Total Spend: {{total_spend}} บาท
+    - New LINE Followers: {{total_line_followers}}
+    - Estimated Revenue Impact: {{revenue_impact}}
+    - ROI: {{roi}}%
+
+    ### Next Month Strategy
+    {{next_month_strategy}}
+
+# ===========================================
+# Insights & Recommendations Engine
+# ===========================================
+insights:
+  triggers:
+    low_engagement:
+      condition: "engagement_rate < 3%"
+      recommendation: "ปรับ content ให้น่าสนใจขึ้น ลอง format ใหม่"
+
+    high_unfollow:
+      condition: "unfollow_rate > 5%"
+      recommendation: "ลด frequency broadcast หรือปรับ content"
+
+    good_performance:
+      condition: "ctr > 5%"
+      recommendation: "เพิ่มงบ boost โพสต์นี้"
+
+    budget_overrun:
+      condition: "spend > budget"
+      recommendation: "หยุด ads ที่ไม่ perform ดี"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "data-analyzer"
+    path: "marketing-team/skills/data-analyzer/SKILL.md"
+
+  - name: "report-generator"
+    path: "marketing-team/skills/report-generator/SKILL.md"
+
+  - name: "insight-engine"
+    path: "marketing-team/skills/insight-engine/SKILL.md"
+
+# ===========================================
+# Output
+# ===========================================
+outputs:
+  reports: "marketing-team/reports/"
+  dashboards: "marketing-team/dashboards/"

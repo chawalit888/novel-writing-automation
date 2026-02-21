@@ -1,0 +1,185 @@
+{
+  "name": "Character Generator",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "generate-characters",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json.body;\n\nconst novelTitle = input.novel_title || 'Untitled';\nconst genre = input.genre || 'romantic-comedy';\nconst setting = input.setting || 'Thailand, present day';\nconst mainTheme = input.main_theme || 'Love story';\nconst numberOfCharacters = input.number_of_characters || 5;\n\nconst systemPrompt = `คุณคือผู้เชี่ยวชาญในการสร้างตัวละครสำหรับนิยายแนว ${genre} ภาษาไทย\n\nกฎในการสร้างตัวละคร:\n1. ตัวละครต้องมีมิติ มีทั้งข้อดีและข้อเสีย\n2. ภูมิหลังต้องสมเหตุสมผลและน่าสนใจ\n3. แรงจูงใจต้องชัดเจน\n4. ความสัมพันธ์ระหว่างตัวละครต้องซับซ้อนและน่าติดตาม\n5. ชื่อต้องเป็นชื่อไทยที่สมจริง`;\n\nconst userPrompt = `สร้างตัวละครสำหรับนิยาย \"${novelTitle}\"\n\n## ข้อมูลเรื่อง:\n- แนว: ${genre}\n- ฉาก: ${setting}\n- ธีมหลัก: ${mainTheme}\n- จำนวนตัวละคร: ${numberOfCharacters} ตัว\n\n## คำสั่ง:\nสร้างตัวละคร ${numberOfCharacters} ตัว ในรูปแบบ JSON ดังนี้:\n\n\\`\\`\\`json\n{\n  \"characters\": [\n    {\n      \"role\": \"พระเอก/นางเอก/ตัวละครรอง/ตัวร้าย\",\n      \"name_th\": \"ชื่อไทยเต็ม\",\n      \"nickname\": \"ชื่อเล่น\",\n      \"age\": 25,\n      \"occupation\": \"อาชีพ\",\n      \"appearance\": {\n        \"height\": \"175 ซม.\",\n        \"build\": \"รูปร่าง\",\n        \"distinctive_features\": \"ลักษณะเด่น\"\n      },\n      \"personality\": [\"นิสัย1\", \"นิสัย2\", \"นิสัย3\"],\n      \"background\": \"ประวัติความเป็นมา\",\n      \"motivation\": \"แรงจูงใจหลัก\",\n      \"secrets\": \"ความลับ\",\n      \"character_arc\": \"การเปลี่ยนแปลงตลอดเรื่อง\",\n      \"relationships\": {\n        \"ชื่อตัวละครอื่น\": \"ความสัมพันธ์\"\n      }\n    }\n  ]\n}\n\\`\\`\\`\n\nสร้างตัวละครที่น่าสนใจและเหมาะกับแนว ${genre}:`;\n\nreturn {\n  novel_title: novelTitle,\n  genre: genre,\n  system_prompt: systemPrompt,\n  user_prompt: userPrompt\n};"
+      },
+      "id": "prepare-prompt",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "claude-sonnet-4-20250514",
+          "mode": "list"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.user_prompt }}"
+            }
+          ]
+        },
+        "options": {
+          "systemMessage": "={{ $json.system_prompt }}",
+          "maxTokensToSample": 4096,
+          "temperature": 0.9
+        }
+      },
+      "id": "anthropic-chat",
+      "name": "Claude Generator",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [690, 300],
+      "credentials": {
+        "anthropicApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Anthropic API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst content = input.text || input.content || '';\n\n// Try to extract JSON from the response\nlet characters = null;\nlet parseError = null;\n\ntry {\n  // Find JSON block in the response\n  const jsonMatch = content.match(/```json\\s*([\\s\\S]*?)```/) || \n                    content.match(/\\{[\\s\\S]*\"characters\"[\\s\\S]*\\}/);\n  \n  if (jsonMatch) {\n    const jsonStr = jsonMatch[1] || jsonMatch[0];\n    characters = JSON.parse(jsonStr);\n  } else {\n    // Try to parse the whole content as JSON\n    characters = JSON.parse(content);\n  }\n} catch (e) {\n  parseError = e.message;\n}\n\nreturn {\n  success: characters !== null,\n  characters: characters,\n  raw_content: content,\n  parse_error: parseError\n};"
+      },
+      "id": "parse-json",
+      "name": "Parse Characters JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.success }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-valid",
+      "name": "Parse Success?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1130, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"novel_title\": \"{{ $('Prepare Prompt').item.json.novel_title }}\",\n  \"genre\": \"{{ $('Prepare Prompt').item.json.genre }}\",\n  \"characters\": {{ JSON.stringify($json.characters) }}\n}",
+        "options": {}
+      },
+      "id": "response-success",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": false,\n  \"error\": \"Failed to parse characters JSON\",\n  \"parse_error\": \"{{ $json.parse_error }}\",\n  \"raw_content\": {{ JSON.stringify($json.raw_content) }}\n}",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "response-fail",
+      "name": "Fail Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "Claude Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Generator": {
+      "main": [
+        [
+          {
+            "node": "Parse Characters JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Characters JSON": {
+      "main": [
+        [
+          {
+            "node": "Parse Success?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Success?": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fail Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    {
+      "name": "novel-writing"
+    }
+  ]
+}

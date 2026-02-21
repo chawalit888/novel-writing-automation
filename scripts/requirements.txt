@@ -1,0 +1,3 @@
+# Blog Post Generator Dependencies
+google-genai>=1.0.0          # Gemini API (new package)
+requests>=2.31.0             # HTTP requests for Unsplash

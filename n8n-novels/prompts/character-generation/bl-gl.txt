@@ -1,0 +1,129 @@
+สร้างตัวละครสำหรับนิยาย BL/GL ในรูปแบบ JSON
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- ประเภท: {{bl_or_gl}} (BL/GL)
+- จำนวนตัวละครที่ต้องการ: {{num_characters}}
+- Setting: {{setting}}
+- Tone: {{tone}} (sweet/mature/angst)
+
+## Requirements
+
+### Lead Characters (คู่หลัก)
+- ต้องมี chemistry ชัดเจน
+- บุคลิกที่ complement กัน
+- ทั้งคู่ต้องมี agency และ arc
+- ไม่ใช่ stereotypes
+- Mutual attraction
+
+### Dynamic Options
+เลือกอย่างใดอย่างหนึ่ง:
+- Grumpy x Sunshine
+- Rivals to Lovers
+- Friends to Lovers
+- Cold x Warm
+- Senpai x Kouhai
+
+### Supporting Characters
+- Best friend ที่ supportive
+- อาจมี obstacle character
+- ครอบครัว (supportive หรือ obstacle)
+
+## Output Format (JSON)
+```json
+{
+  "couple_dynamic": "ประเภท dynamic",
+
+  "characters": [
+    {
+      "id": "char-001",
+      "name": "ชื่อ",
+      "nickname": "ชื่อเล่น",
+      "age": 0,
+      "gender": "male/female",
+      "role": "lead_1/lead_2/supporting",
+      "position_in_couple": "top/bottom/switch/verse (ถ้า applicable)",
+
+      "occupation": "อาชีพ/สถานะ",
+
+      "personality": {
+        "core_traits": ["trait1", "trait2", "trait3"],
+        "in_relationship": "ทำตัวอย่างไรในความสัมพันธ์",
+        "love_language": "ways of showing love",
+        "strengths": [],
+        "flaws": [],
+        "quirks": []
+      },
+
+      "appearance": {
+        "height": "",
+        "build": "",
+        "style": "",
+        "distinctive_features": [],
+        "what_partner_notices": "สิ่งที่อีกฝ่ายสังเกต"
+      },
+
+      "sexuality": {
+        "identity": "how they identify",
+        "out_status": "เปิดเผยหรือยัง",
+        "journey": "การค้นพบตัวเอง"
+      },
+
+      "background": {
+        "family_situation": "",
+        "past_relationships": "",
+        "defining_experience": "",
+        "secrets": []
+      },
+
+      "in_love": {
+        "how_they_fall": "ตกหลุมรักอย่างไร",
+        "fears_about_love": "กลัวอะไรเรื่องความรัก",
+        "what_they_need_from_partner": "",
+        "what_they_give": ""
+      },
+
+      "arc": {
+        "start": "สถานะเริ่มต้น",
+        "growth": "การเติบโต",
+        "end": "สถานะจบ"
+      },
+
+      "speech_pattern": "",
+      "terms_of_endearment": ["คำเรียกคนรัก"]
+    }
+  ],
+
+  "relationship_development": {
+    "how_they_meet": "",
+    "initial_impression": "",
+    "turning_point": "",
+    "main_conflict": "",
+    "resolution": ""
+  },
+
+  "chemistry_notes": {
+    "physical_attraction": "",
+    "emotional_connection": "",
+    "banter_style": "",
+    "tension_sources": []
+  }
+}
+```
+
+## เกณฑ์คุณภาพ
+- ทั้งคู่ต้องเป็น 3-dimensional characters
+- Chemistry ต้องรู้สึกได้
+- ไม่ fetishize ความสัมพันธ์
+- ทั้งคู่มี agency
+- Conflict ที่สมเหตุสมผล
+- Growth ที่เห็นได้
+
+## Sensitivity Notes
+- Avoid harmful stereotypes
+- Both characters should have depth
+- Consent is important
+- Realistic representation
+- Respect for LGBTQ+ community
+
+สร้างตัวละครที่มีเคมีดี น่าเอาใจช่วย และมีความลึก

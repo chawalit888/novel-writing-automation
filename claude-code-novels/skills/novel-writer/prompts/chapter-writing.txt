@@ -1,0 +1,49 @@
+เขียนบทที่ {{chapter_number}} ของนิยาย "{{title}}"
+
+## Context
+- แนว: {{genre}}
+- ตัวละครในบท: {{characters_in_chapter}}
+- สถานที่: {{location}}
+- บทก่อนหน้า (สรุป): {{previous_chapter_summary}}
+- เหตุการณ์สำคัญที่ต้องเกิด: {{key_events}}
+
+## Outline ของบทนี้
+{{chapter_outline}}
+
+## Requirements
+
+### ความยาว
+- Target: {{target_words}} คำ (4,000-6,000)
+
+### โครงสร้าง
+1. Opening (5-10%): ต่อจากบทที่แล้ว, hook ผู้อ่าน
+2. Rising Action (30-40%): พัฒนาเรื่องและตัวละคร
+3. Midpoint (10-15%): จุดเปลี่ยนหรือ revelation
+4. Falling Action (25-35%): ผลกระทบและดำเนินเรื่อง
+5. Ending (5-10%): Cliffhanger หรือทิ้งท้าย
+
+### คุณภาพ
+- Show, don't tell
+- Character voices ต้องแตกต่างกัน
+- Balance dialogue และ narration
+- ใช้ sensory details
+- Pacing เหมาะกับฉาก
+
+### Consistency Check
+- ตัวละครทำตัวตาม character sheet
+- Magic/Power system ตามกฎ
+- Timeline ต่อเนื่องถูกต้อง
+- สถานที่ตรงกับที่อธิบายไว้
+
+## โทนและบรรยากาศ
+{{tone_atmosphere}}
+
+## ข้อควรระวัง
+- ไม่ info dump
+- ไม่ทำให้ตัวละครโง่เพื่อ plot
+- ไม่ขัดแย้งกับข้อมูลที่ตั้งไว้
+- ไม่จบแบบ deus ex machina
+
+## Output Format
+เขียนบทนิยายเป็นภาษาไทย ไม่ต้องใส่หมายเลขบท หรือ metadata
+เริ่มต้นด้วยเนื้อเรื่องเลย

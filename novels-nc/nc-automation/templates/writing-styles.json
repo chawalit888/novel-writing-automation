@@ -1,0 +1,154 @@
+{
+  "$schema": "NC Writing Styles Template",
+  "version": "1.0",
+  "description": "สไตล์การเขียนฉาก NC - วรรณกรรม vs บ้านๆ vs ผสม",
+
+  "styles": {
+    "literary": {
+      "thai_name": "วรรณกรรม/สละสลวย",
+      "description": "ใช้ภาษาสวย เปรียบเทียบ metaphor เยอะ",
+      "characteristics": [
+        "ภาษาสละสลวย",
+        "เปรียบเทียบกับธรรมชาติ",
+        "Metaphor เยอะ",
+        "บรรยายอารมณ์ลึกซึ้ง"
+      ],
+      "example_phrases": [
+        "ร่างกายทั้งสองประสานกันดุจคลื่นซัดฝั่ง",
+        "เธอละลายในอ้อมกอดเขาราวกับหิมะกลางแดด",
+        "ความร้อนแผ่ซ่านไปทั่วสรรพางค์กาย",
+        "เขาพาเธอขึ้นสู่จุดสูงสุดของความสุข"
+      ],
+      "pros": ["อ่านแล้วไม่หยาบ", "เหมาะกับแนวโรแมนติก", "ดูมีคลาส"],
+      "cons": ["อาจไม่ตื่นเต้น", "บางคนรู้สึกห่างไกล"],
+      "best_for": ["Romance", "Historical", "Palace drama"]
+    },
+
+    "casual": {
+      "thai_name": "บ้านๆ/ตรงไปตรงมา",
+      "description": "ภาษาตรงๆ เหมือนพูดคุย ไม่อ้อมค้อม",
+      "characteristics": [
+        "ภาษาพูด",
+        "คำตรงๆ",
+        "เสียง onomatopoeia เยอะ",
+        "อ่านง่าย ลื่น"
+      ],
+      "example_phrases": [
+        "แรงขึ้น เร็วขึ้น จนเธอแทบขาดใจ",
+        "'อีกกกก' เธอร้อง",
+        "เขากระแทกเข้ามาแรงจนเธอร้องครวญ",
+        "มันเข้ามาลึกกกกจนเธอเกือบร้องไห้"
+      ],
+      "pros": ["ตื่นเต้น", "อ่านง่าย", "รู้สึกเข้าถึง"],
+      "cons": ["อาจดูหยาบ", "ไม่เหมาะกับทุกแนว"],
+      "best_for": ["Modern romance", "Mafia", "CEO", "BL/GL ทั่วไป"]
+    },
+
+    "mixed": {
+      "thai_name": "ผสม (แนะนำ)",
+      "description": "ใช้วรรณกรรมตอนสร้างอารมณ์ บ้านๆตอนพีค",
+      "characteristics": [
+        "Buildup = วรรณกรรม สร้างบรรยากาศ",
+        "Rising = ค่อยๆ ตรงขึ้น",
+        "Peak = บ้านๆ เต็มที่",
+        "Aftermath = กลับมาวรรณกรรม"
+      ],
+      "structure": {
+        "buildup": {
+          "style": "literary",
+          "example": "สายลมพัดม่านบางให้ปลิวไหว แสงจันทร์ส่องเข้ามาทาบทับร่างเปลือยของเธอราวกับภาพวาด"
+        },
+        "rising": {
+          "style": "transitioning",
+          "example": "มือของเขาสำรวจทุกส่วนของร่างกาย ไม่เหลือที่ใดที่ไม่ถูกสัมผัส เธอสั่นไหวใต้มือเขา"
+        },
+        "peak": {
+          "style": "casual",
+          "example": "'แรงอีก!' เธอร้อง เขากระแทกเข้ามาตามคำขอ ลึกขึ้น แรงขึ้น จนเธอแทบหมดสติ"
+        },
+        "aftermath": {
+          "style": "literary",
+          "example": "ทั้งคู่นอนกอดกันในความเงียบ เสียงหัวใจที่เต้นพร้อมกันเป็นเพลงที่ไพเราะที่สุด"
+        }
+      },
+      "pros": ["ได้ทั้งสองอย่าง", "ไม่น่าเบื่อ", "ทำเงินได้ดี"],
+      "cons": ["ต้องเขียนเป็น"],
+      "best_for": ["ทุกแนว - แนะนำสำหรับมืออาชีพ"]
+    }
+  },
+
+  "pov_styles": {
+    "first_person_female": {
+      "thai_name": "มุมมองบุรุษที่ 1 (ผู้หญิง)",
+      "characteristics": [
+        "เล่าจากความรู้สึกของนางเอก",
+        "Internal thoughts เยอะ",
+        "Physical reactions ของตัวเอง"
+      ],
+      "example": "หัวใจฉันเต้นแรงจนแทบจะระเบิด เมื่อเขาเอนตัวเข้ามาใกล้..."
+    },
+    "first_person_male": {
+      "thai_name": "มุมมองบุรุษที่ 1 (ผู้ชาย)",
+      "characteristics": [
+        "เล่าจากความรู้สึกของพระเอก",
+        "การมองดูนางเอก",
+        "ความต้องการของตัวเอง"
+      ],
+      "example": "ผมมองเธอ... สวยจนลืมหายใจ ทนไม่ไหวอีกต่อไปแล้ว"
+    },
+    "third_person": {
+      "thai_name": "มุมมองบุรุษที่ 3",
+      "characteristics": [
+        "เห็นทั้งสองฝ่าย",
+        "สลับมุมมองได้",
+        "บรรยายได้กว้างกว่า"
+      ],
+      "example": "เขามองเธอด้วยสายตาที่เต็มไปด้วยความต้องการ ในขณะที่เธอเองก็รู้สึกหัวใจเต้นแรง..."
+    }
+  },
+
+  "dialogue_styles": {
+    "minimal": {
+      "description": "พูดน้อย เน้นบรรยาย",
+      "ratio": "20% dialogue - 80% narration",
+      "example": "เขาไม่พูดอะไร แค่จูบเธอ... และนั่นก็เพียงพอแล้ว"
+    },
+    "balanced": {
+      "description": "บทสนทนาและบรรยายสมดุล",
+      "ratio": "40% dialogue - 60% narration",
+      "example": "'อยากให้ฉันหยุดไหม?' เขาถาม\nเธอส่ายหน้า\n'งั้นก็ดี' เขากระซิบก่อนจะจูบลงไปที่คอเธอ"
+    },
+    "dialogue_heavy": {
+      "description": "บทสนทนาเยอะ มีชีวิตชีวา",
+      "ratio": "60% dialogue - 40% narration",
+      "example": "'เร็วอีก'\n'แบบนี้?'\n'อือ... ใช่... อีกกกก!'\n'ทนได้อีกไหม?'\n'ได้ อย่าหยุด!'"
+    }
+  },
+
+  "recommended_combinations": {
+    "mafia_ceo": {
+      "main_style": "mixed",
+      "pov": "first_person_female",
+      "dialogue": "balanced",
+      "intensity": "8-9"
+    },
+    "bl_sweet": {
+      "main_style": "mixed",
+      "pov": "third_person",
+      "dialogue": "dialogue_heavy",
+      "intensity": "6-7"
+    },
+    "palace_historical": {
+      "main_style": "literary",
+      "pov": "third_person",
+      "dialogue": "minimal",
+      "intensity": "5-7"
+    },
+    "modern_romance": {
+      "main_style": "casual",
+      "pov": "first_person_female",
+      "dialogue": "balanced",
+      "intensity": "7-8"
+    }
+  }
+}

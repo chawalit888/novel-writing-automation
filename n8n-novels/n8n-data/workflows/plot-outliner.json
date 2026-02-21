@@ -1,0 +1,188 @@
+{
+  "name": "Plot Outliner",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "create-plot",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json.body;\n\nconst novelTitle = input.novel_title || 'Untitled';\nconst genre = input.genre || 'romantic-comedy';\nconst setting = input.setting || 'Thailand, present day';\nconst mainTheme = input.main_theme || 'Love and growth';\nconst numberOfChapters = input.number_of_chapters || 50;\nconst characters = input.characters || [];\nconst premise = input.premise || '';\n\nconst systemPrompt = `คุณคือผู้เชี่ยวชาญในการวางโครงเรื่องนิยายแนว ${genre}\n\nหลักการวางโครงเรื่อง:\n1. ใช้โครงสร้าง 3 องก์ (Three-Act Structure)\n2. ทุกตอนต้องมี hook หรือ cliffhanger\n3. พัฒนาความสัมพันธ์ตัวละครอย่างค่อยเป็นค่อยไป\n4. มีจุดหักมุมทุกๆ 10-15 ตอน\n5. ไคลแมกซ์อยู่ช่วง 80-90% ของเรื่อง`;\n\nconst userPrompt = `สร้างโครงเรื่องสำหรับนิยาย \"${novelTitle}\"\n\n## ข้อมูลเรื่อง:\n- แนว: ${genre}\n- ฉาก: ${setting}\n- ธีมหลัก: ${mainTheme}\n- จำนวนตอน: ${numberOfChapters} ตอน\n- แนวคิดหลัก: ${premise}\n\n## ตัวละคร:\n${JSON.stringify(characters, null, 2)}\n\n## คำสั่ง:\nสร้างโครงเรื่องในรูปแบบ JSON:\n\n\\`\\`\\`json\n{\n  \"novel_title\": \"ชื่อเรื่อง\",\n  \"total_chapters\": ${numberOfChapters},\n  \"structure\": {\n    \"act1\": {\n      \"name\": \"การเปิดเรื่อง\",\n      \"chapters\": \"1-${Math.floor(numberOfChapters * 0.25)}\",\n      \"summary\": \"สรุปองก์ 1\",\n      \"key_events\": [\"เหตุการณ์สำคัญ\"]\n    },\n    \"act2\": {\n      \"name\": \"การพัฒนาและความขัดแย้ง\",\n      \"chapters\": \"${Math.floor(numberOfChapters * 0.25) + 1}-${Math.floor(numberOfChapters * 0.75)}\",\n      \"summary\": \"สรุปองก์ 2\",\n      \"key_events\": [\"เหตุการณ์สำคัญ\"],\n      \"midpoint\": \"จุดกลางเรื่อง\"\n    },\n    \"act3\": {\n      \"name\": \"ไคลแมกซ์และตอนจบ\",\n      \"chapters\": \"${Math.floor(numberOfChapters * 0.75) + 1}-${numberOfChapters}\",\n      \"summary\": \"สรุปองก์ 3\",\n      \"key_events\": [\"เหตุการณ์สำคัญ\"],\n      \"climax\": \"จุดไคลแมกซ์\",\n      \"resolution\": \"การคลี่คลาย\"\n    }\n  },\n  \"chapter_outlines\": [\n    {\n      \"chapter\": 1,\n      \"title\": \"ชื่อตอน\",\n      \"summary\": \"สรุปเนื้อหา 2-3 ประโยค\",\n      \"key_events\": [\"เหตุการณ์\"],\n      \"characters_involved\": [\"ตัวละคร\"],\n      \"hook\": \"hook หรือ cliffhanger ท้ายตอน\"\n    }\n  ],\n  \"turning_points\": [\n    {\n      \"chapter\": 10,\n      \"description\": \"จุดหักมุม\"\n    }\n  ],\n  \"romance_progression\": [\n    {\n      \"chapter_range\": \"1-10\",\n      \"stage\": \"พบกัน/ขัดแย้ง\",\n      \"description\": \"รายละเอียด\"\n    }\n  ]\n}\n\\`\\`\\`\n\nสร้างโครงเรื่องที่สมบูรณ์สำหรับ ${numberOfChapters} ตอน:`;\n\nreturn {\n  novel_title: novelTitle,\n  genre: genre,\n  number_of_chapters: numberOfChapters,\n  system_prompt: systemPrompt,\n  user_prompt: userPrompt\n};"
+      },
+      "id": "prepare-prompt",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "claude-sonnet-4-20250514",
+          "mode": "list"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.user_prompt }}"
+            }
+          ]
+        },
+        "options": {
+          "systemMessage": "={{ $json.system_prompt }}",
+          "maxTokensToSample": 8192,
+          "temperature": 0.7
+        }
+      },
+      "id": "anthropic-plot",
+      "name": "Claude Plot Generator",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [690, 300],
+      "credentials": {
+        "anthropicApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Anthropic API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst content = input.text || input.content || '';\n\nlet plotOutline = null;\nlet parseError = null;\n\ntry {\n  const jsonMatch = content.match(/```json\\s*([\\s\\S]*?)```/) || \n                    content.match(/\\{[\\s\\S]*\"structure\"[\\s\\S]*\\}/);\n  \n  if (jsonMatch) {\n    const jsonStr = jsonMatch[1] || jsonMatch[0];\n    plotOutline = JSON.parse(jsonStr);\n  } else {\n    plotOutline = JSON.parse(content);\n  }\n} catch (e) {\n  parseError = e.message;\n}\n\nconst prevData = $('Prepare Prompt').item.json;\n\nreturn {\n  success: plotOutline !== null,\n  novel_title: prevData.novel_title,\n  genre: prevData.genre,\n  number_of_chapters: prevData.number_of_chapters,\n  plot_outline: plotOutline,\n  parse_error: parseError,\n  raw_content: content\n};"
+      },
+      "id": "parse-plot",
+      "name": "Parse Plot JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.success }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-valid",
+      "name": "Parse Success?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1130, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"novel_title\": \"{{ $json.novel_title }}\",\n  \"genre\": \"{{ $json.genre }}\",\n  \"number_of_chapters\": {{ $json.number_of_chapters }},\n  \"plot_outline\": {{ JSON.stringify($json.plot_outline) }}\n}",
+        "options": {}
+      },
+      "id": "response-success",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": false,\n  \"error\": \"Failed to parse plot outline JSON\",\n  \"parse_error\": \"{{ $json.parse_error }}\",\n  \"raw_content\": {{ JSON.stringify($json.raw_content) }}\n}",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "response-fail",
+      "name": "Fail Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "Claude Plot Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Plot Generator": {
+      "main": [
+        [
+          {
+            "node": "Parse Plot JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Plot JSON": {
+      "main": [
+        [
+          {
+            "node": "Parse Success?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Success?": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fail Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    {
+      "name": "novel-writing"
+    },
+    {
+      "name": "plotting"
+    }
+  ]
+}

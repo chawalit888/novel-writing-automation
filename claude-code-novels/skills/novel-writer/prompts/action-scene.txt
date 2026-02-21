@@ -1,0 +1,85 @@
+เขียนฉาก Action สำหรับ {{scene_type}}
+
+## Context
+- เรื่อง: {{title}}
+- แนว: {{genre}}
+- สถานที่: {{location}}
+- ตัวละครที่เกี่ยวข้อง: {{characters}}
+- สถานการณ์: {{situation}}
+
+## ประเภทฉาก Action
+{{action_type}}
+- [ ] ต่อสู้ระยะประชิด
+- [ ] ต่อสู้ด้วยอาวุธ
+- [ ] ใช้ magic/พลัง
+- [ ] ไล่ล่า/หนี
+- [ ] สู้รบขนาดใหญ่
+- [ ] ดวลทางจิต/อำนาจ
+
+## Stakes
+- ถ้าชนะ: {{win_consequence}}
+- ถ้าแพ้: {{lose_consequence}}
+
+## Power Levels
+{{power_comparison}}
+
+## Requirements
+
+### Pacing
+- ใช้ประโยคสั้น กระชับ
+- Paragraph สั้น
+- สร้าง rhythm: เร็ว-ช้า-เร็ว
+- ใช้ white space
+
+### Writing Techniques
+1. **Clarity** - ผู้อ่านต้องเข้าใจว่าเกิดอะไรขึ้น
+2. **Visceral** - ใช้ sensory details (เสียง, กลิ่น, ความเจ็บปวด)
+3. **Stakes** - เน้นย้ำว่าทำไมถึงสำคัญ
+4. **Character** - แสดงบุคลิกผ่านการต่อสู้
+5. **Geography** - ผู้อ่านรู้ว่าใครอยู่ตรงไหน
+
+### โครงสร้างฉาก Action
+```
+1. Setup (10%)
+   - สถานการณ์ก่อนเริ่ม
+   - Stakes ชัดเจน
+
+2. Initial Clash (20%)
+   - การปะทะครั้งแรก
+   - ประเมินคู่ต่อสู้
+
+3. Escalation (30%)
+   - สถานการณ์รุนแรงขึ้น
+   - ปัญหาเพิ่มขึ้น
+
+4. Crisis Point (20%)
+   - ดูเหมือนจะแพ้
+   - ช่วงเวลาวิกฤต
+
+5. Resolution (20%)
+   - การตัดสินใจสำคัญ
+   - ผลลัพธ์
+```
+
+### สิ่งที่ต้องหลีกเลี่ยง
+- ❌ Blow-by-blow ทุกการเคลื่อนไหว
+- ❌ Power creep ไม่สมเหตุสมผล
+- ❌ Plot armor ชัดเจน
+- ❌ Geography สับสน
+- ❌ ลืม consequences
+
+### สิ่งที่ควรทำ
+- ✅ มี cost/sacrifice
+- ✅ แสดง character growth
+- ✅ ใช้ environment
+- ✅ มี unexpected moments
+- ✅ Emotional impact
+
+## Magic/Power System Rules
+{{magic_rules}}
+
+## ความยาว
+ประมาณ {{word_count}} คำ
+
+## Output
+เขียนฉาก action ภาษาไทย ที่ตื่นเต้น เข้าใจง่าย และมีผลกระทบทางอารมณ์

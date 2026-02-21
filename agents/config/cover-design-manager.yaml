@@ -1,0 +1,215 @@
+# ===========================================
+# Cover Design Manager Configuration
+# ผู้จัดการทีมออกแบบปกนิยาย
+# ===========================================
+
+agent:
+  id: "mgr-cover-001"
+  name: "CoverDesignManager"
+  role: "Manager"
+  team: "cover-design"
+  model: "claude-sonnet-4"
+  description: "ผู้จัดการทีมออกแบบปกนิยาย ดูแลการหารูป สร้าง prompt และออกแบบ layout"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "ceo-001"
+
+# ===========================================
+# Team Members (Subagents)
+# ===========================================
+team_members:
+  - id: "cover-scout-001"
+    name: "ImageScout"
+    role: "หารูป Stock Photo"
+
+  - id: "cover-prompt-001"
+    name: "PromptEngineer"
+    role: "เขียน Prompt สำหรับ AI Enhance"
+
+  - id: "cover-layout-001"
+    name: "LayoutDesigner"
+    role: "ออกแบบ Layout และ Typography"
+
+  - id: "cover-qc-001"
+    name: "CoverQC"
+    role: "ตรวจสอบคุณภาพปก"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - รับ brief จาก CEO หรือผู้ใช้
+  - วิเคราะห์ข้อมูลนิยาย (แนว, ตัวละคร, mood)
+  - มอบหมายงานให้ subagents
+  - ประสานงานระหว่างทีม
+  - ตรวจสอบผลลัพธ์ก่อนส่งมอบ
+  - รายงานความคืบหน้าให้ CEO
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  cover_creation:
+    steps:
+      # Phase 1: วิเคราะห์
+      - step: "analyze_novel"
+        description: "วิเคราะห์ข้อมูลนิยาย"
+        actions:
+          - read_novel_synopsis
+          - read_character_profiles
+          - determine_mood_and_theme
+          - identify_key_visual_elements
+        output: "cover-brief.md"
+
+      # Phase 2: หารูป
+      - step: "find_images"
+        assigned_to: "cover-scout-001"
+        description: "หารูป Stock Photo ที่เหมาะสม"
+        input: "cover-brief.md"
+        output: "image-options/"
+
+      # Phase 3: สร้าง Prompt
+      - step: "create_prompts"
+        assigned_to: "cover-prompt-001"
+        description: "เขียน Prompt สำหรับ AI Enhance"
+        input:
+          - "cover-brief.md"
+          - "image-options/"
+        output: "ai-prompts.md"
+
+      # Phase 4: ออกแบบ Layout
+      - step: "design_layout"
+        assigned_to: "cover-layout-001"
+        description: "ออกแบบ Layout และ Typography"
+        input:
+          - "cover-brief.md"
+          - "ai-prompts.md"
+        output: "layout-specs.md"
+
+      # Phase 5: QC
+      - step: "quality_check"
+        assigned_to: "cover-qc-001"
+        description: "ตรวจสอบคุณภาพก่อนส่งมอบ"
+        input:
+          - "final-cover.jpg"
+          - "cover-brief.md"
+        output: "qc-report.md"
+
+    timeout_minutes: 120
+
+# ===========================================
+# Cover Brief Template
+# ===========================================
+brief_template:
+  novel_info:
+    - title           # ชื่อเรื่อง
+    - genre           # แนว
+    - target_audience # กลุ่มเป้าหมาย
+    - rating          # NC level
+
+  characters:
+    - protagonist     # ตัวละครหลัก
+    - love_interest   # คู่รัก (ถ้ามี)
+    - appearance      # รูปลักษณ์
+
+  mood:
+    - atmosphere      # บรรยากาศ
+    - color_tone      # โทนสี
+    - style           # สไตล์ (dark, bright, etc.)
+
+  requirements:
+    - platform        # ธันวลัย, ReadAWrite, etc.
+    - dimensions      # ขนาดปก
+    - restrictions    # ข้อจำกัด (no AI art, etc.)
+
+# ===========================================
+# Default Cover Settings
+# ===========================================
+default_settings:
+  dimensions: "900x900"
+  aspect_ratio: "1:1"
+  format: "jpg"
+  quality: 95
+
+# ===========================================
+# Platform Specifications
+# ===========================================
+platforms:
+  default:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    restrictions: []
+    format: "jpg"
+    max_size_mb: 5
+
+  thanwalai:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    restrictions:
+      - "no_ai_generated_images"
+      - "ai_enhance_allowed"
+    format: "jpg"
+    max_size_mb: 2
+
+  readawrite:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    restrictions: []
+    format: "jpg/png"
+    max_size_mb: 5
+
+  joylada:
+    dimensions: "900x900"
+    aspect_ratio: "1:1"
+    restrictions: []
+    format: "jpg"
+    max_size_mb: 3
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "ceo-001"
+    - "mgr-claude-001"  # อาจได้รับงานจาก Claude Manager ด้วย
+
+  reports_to:
+    - "ceo-001"
+
+  inbox: "agents/messages/cover-manager/"
+
+  status_updates:
+    on_start: true
+    on_phase_complete: true
+    on_completion: true
+    on_error: true
+
+# ===========================================
+# Output Paths
+# ===========================================
+outputs:
+  briefs: "{{project_path}}/covers/briefs/"
+  images: "{{project_path}}/covers/images/"
+  prompts: "{{project_path}}/covers/prompts/"
+  layouts: "{{project_path}}/covers/layouts/"
+  finals: "{{project_path}}/covers/finals/"
+  qc_reports: "{{project_path}}/covers/qc/"
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_failure:
+    notify: "ceo-001"
+    save_progress: true
+    log_error: true
+
+  max_retries: 2
+  retry_delay_seconds: 60
+
+  escalation:
+    - retry_with_different_images
+    - ask_user_for_input
+    - escalate_to_ceo

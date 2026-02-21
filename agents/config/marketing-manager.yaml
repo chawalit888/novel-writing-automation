@@ -1,0 +1,281 @@
+# ===========================================
+# Marketing Manager Agent Configuration
+# LINE OA Funnel Strategy
+# ===========================================
+
+agent:
+  id: "mgr-marketing-001"
+  name: "MarketingManager"
+  role: "Manager"
+  team: "marketing"
+  model: "claude-sonnet-4"
+  description: "ผู้จัดการทีมการตลาดนิยาย เน้นกลยุทธ์ LINE OA Funnel"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "ceo-001"
+
+# ===========================================
+# Core Strategy
+# ===========================================
+strategy:
+  primary_goal: "พาคนเข้า LINE OA แล้ว Broadcast"
+
+  funnel:
+    awareness:
+      platforms: ["facebook", "tiktok", "instagram", "twitter"]
+      objective: "สร้างการรับรู้ ดึงคนเข้า LINE"
+
+    conversion:
+      platform: "line_oa"
+      objective: "เปลี่ยนคนดูเป็น followers"
+
+    retention:
+      method: "broadcast"
+      objective: "แจ้งตอนใหม่ สร้าง engagement"
+
+    monetization:
+      platforms: ["joylada", "dek-d", "meb"]
+      objective: "พาไปอ่านนิยาย สร้างรายได้"
+
+# ===========================================
+# Budget Allocation
+# ===========================================
+budget:
+  monthly_total: 5000  # บาท (ปรับได้ 3,000-5,000)
+
+  allocation:
+    facebook_ig:
+      percentage: 50
+      amount: 2500
+      objective: "Reach + LINE OA conversion"
+
+    tiktok:
+      percentage: 30
+      amount: 1500
+      objective: "Viral content + younger audience"
+
+    twitter:
+      percentage: 10
+      amount: 500
+      objective: "Community + แฟนคลับ"
+
+    reserve:
+      percentage: 10
+      amount: 500
+      objective: "Boost โพสต์ที่ perform ดี"
+
+# ===========================================
+# Manages Subagents
+# ===========================================
+manages:
+  - id: "social-media-001"
+    name: "SocialMediaManager"
+    responsibilities:
+      - "โพสต์ทุกแพลตฟอร์ม"
+      - "ตอบคอมเมนต์"
+      - "จัดตารางโพสต์"
+
+  - id: "content-creator-001"
+    name: "ContentCreator"
+    responsibilities:
+      - "สร้าง content โปรโมท"
+      - "เขียน caption"
+      - "ทำ quote cards"
+
+  - id: "line-specialist-001"
+    name: "LineOASpecialist"
+    responsibilities:
+      - "จัดการ LINE OA"
+      - "สร้าง Broadcast"
+      - "Rich Menu"
+
+  - id: "ads-manager-001"
+    name: "AdsManager"
+    responsibilities:
+      - "ยิงโฆษณา Facebook/TikTok"
+      - "A/B Testing"
+      - "Optimize budget"
+
+  - id: "analytics-001"
+    name: "AnalyticsAgent"
+    responsibilities:
+      - "วิเคราะห์ยอด"
+      - "รายงานประจำสัปดาห์"
+      - "แนะนำปรับกลยุทธ์"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "campaign-planner"
+    path: "marketing-team/skills/campaign-planner/SKILL.md"
+
+  - name: "content-calendar"
+    path: "marketing-team/skills/content-calendar/SKILL.md"
+
+  - name: "line-broadcast-writer"
+    path: "marketing-team/skills/line-broadcast-writer/SKILL.md"
+
+  - name: "performance-analyzer"
+    path: "marketing-team/skills/performance-analyzer/SKILL.md"
+
+# ===========================================
+# LINE OA Configuration
+# ===========================================
+line_oa:
+  # ข้อมูล LINE OA (กรอกเมื่อมี)
+  channel_id: ""
+  channel_name: ""
+
+  # Broadcast Strategy
+  broadcast:
+    frequency: "เมื่อมีตอนใหม่ + สัปดาห์ละ 1-2 ครั้ง"
+    best_times:
+      - "12:00"  # พักเที่ยง
+      - "20:00"  # หลังเลิกงาน
+      - "22:00"  # ก่อนนอน
+
+    content_types:
+      - "แจ้งตอนใหม่"
+      - "Teaser ตอนหน้า"
+      - "Quote จากนิยาย"
+      - "Behind the scenes"
+      - "Poll/Survey"
+
+  # Rich Menu
+  rich_menu:
+    buttons:
+      - label: "📖 อ่านนิยาย"
+        action: "link_to_platform"
+      - label: "📚 รายชื่อเรื่อง"
+        action: "novel_list"
+      - label: "🔔 แจ้งเตือนตอนใหม่"
+        action: "notification_setting"
+      - label: "💬 ติดต่อนักเขียน"
+        action: "contact"
+
+# ===========================================
+# Content Pillars
+# ===========================================
+content_pillars:
+  - name: "Teaser"
+    percentage: 30
+    description: "ตัวอย่างนิยาย, quote, ฉากเด็ด"
+    cta: "อ่านต่อใน LINE"
+
+  - name: "Behind the Scenes"
+    percentage: 20
+    description: "เบื้องหลังการเขียน, inspiration"
+    cta: "ติดตามใน LINE"
+
+  - name: "Engagement"
+    percentage: 25
+    description: "Poll, คำถาม, ให้คอมเมนต์"
+    cta: "มาคุยกันใน LINE"
+
+  - name: "Promotion"
+    percentage: 15
+    description: "ตอนใหม่, โปรโมชั่น"
+    cta: "กดลิงก์เลย"
+
+  - name: "Community"
+    percentage: 10
+    description: "ขอบคุณ, ตอบแฟน, รีโพสต์"
+    cta: "รักทุกคน 💕"
+
+# ===========================================
+# KPIs
+# ===========================================
+kpis:
+  weekly:
+    - metric: "LINE OA Followers เพิ่ม"
+      target: "+50-100 คน"
+
+    - metric: "Broadcast Open Rate"
+      target: ">30%"
+
+    - metric: "Social Engagement Rate"
+      target: ">5%"
+
+  monthly:
+    - metric: "Total LINE Followers"
+      target: "+200-400 คน"
+
+    - metric: "Cost per LINE Follower"
+      target: "<25 บาท"
+
+    - metric: "Conversion to Reader"
+      target: ">10%"
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  daily:
+    - "ตรวจสอบ engagement ทุกแพลตฟอร์ม"
+    - "ตอบคอมเมนต์/DM สำคัญ"
+    - "โพสต์ตามตาราง"
+
+  weekly:
+    - "วางแผน content สัปดาห์หน้า"
+    - "วิเคราะห์ performance"
+    - "ปรับ budget ถ้าจำเป็น"
+    - "รายงาน CEO"
+
+  on_new_chapter:
+    - "สร้าง teaser content"
+    - "โพสต์ทุกแพลตฟอร์ม"
+    - "Broadcast LINE OA"
+    - "Boost โพสต์ (ถ้างบเหลือ)"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  inbox: "agents/messages/marketing-inbox/"
+  outbox: "agents/messages/"
+
+  receives_from:
+    - "ceo-001"
+    - "mgr-claude-001"  # รับแจ้งเมื่อมีตอนใหม่
+
+  reports_to:
+    - "ceo-001"
+
+  status_updates:
+    on_campaign_start: true
+    on_campaign_end: true
+    weekly_report: true
+
+# ===========================================
+# Output Paths
+# ===========================================
+outputs:
+  content: "marketing-team/content/"
+  reports: "marketing-team/reports/"
+  assets: "marketing-team/assets/"
+  calendar: "marketing-team/calendar/"
+
+# ===========================================
+# Cover Design (AI Temporary)
+# ===========================================
+cover_design:
+  current_method: "ai_generated"
+  tools:
+    - "Midjourney"
+    - "DALL-E"
+    - "Canva AI"
+    - "NanoBanana Pro"
+
+  guidelines:
+    - "หลีกเลี่ยงใบหน้าคนจริง"
+    - "เน้น typography"
+    - "ใช้ abstract/silhouette"
+    - "ตรวจสอบลิขสิทธิ์ก่อนใช้"
+
+  future_plan:
+    trigger: "เมื่อมีกำไร"
+    action: "จ้างนักวาดปก"
+    budget_range: "500-2000 บาท/ปก"

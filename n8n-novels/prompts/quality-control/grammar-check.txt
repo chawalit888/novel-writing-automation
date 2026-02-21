@@ -1,0 +1,87 @@
+ตรวจสอบไวยากรณ์และการใช้ภาษาของบทนิยาย
+
+## บทที่ตรวจ
+{{chapter_content}}
+
+## หมวดการตรวจสอบ
+
+### 1. ไวยากรณ์ภาษาไทย
+- ประโยคสมบูรณ์
+- การใช้คำถูกต้อง
+- การเว้นวรรคเหมาะสม
+- เครื่องหมายวรรคตอน
+
+### 2. การสะกดคำ
+- ไม่มี typo
+- ชื่อเฉพาะสะกดถูกต้อง
+- คำทับศัพท์ถูกต้อง
+
+### 3. Style และ Flow
+- ประโยคไหลลื่น
+- ไม่ซ้ำคำมากเกินไป
+- ความหลากหลายของโครงสร้าง
+- อ่านง่าย
+
+### 4. Dialogue
+- เครื่องหมายคำพูดถูกต้อง
+- Format dialogue เหมาะสม
+- ขึ้นบรรทัดใหม่เมื่อเปลี่ยนผู้พูด
+
+### 5. การใช้คำ
+- คำศัพท์เหมาะกับ tone
+- ไม่ใช้ภาษาปนกันโดยไม่จำเป็น
+- Register เหมาะสม
+
+## Output Format (JSON)
+```json
+{
+  "grammar_score": 0-100,
+
+  "errors": [
+    {
+      "type": "spelling/grammar/punctuation/style",
+      "severity": "error/warning/suggestion",
+      "text": "ข้อความที่มีปัญหา",
+      "correction": "การแก้ไขที่แนะนำ",
+      "explanation": "คำอธิบาย",
+      "location": "ตำแหน่งโดยประมาณ"
+    }
+  ],
+
+  "style_notes": [
+    {
+      "type": "repetition/flow/word_choice",
+      "description": "คำอธิบาย",
+      "suggestion": "คำแนะนำ"
+    }
+  ],
+
+  "statistics": {
+    "total_words": 0,
+    "average_sentence_length": 0,
+    "dialogue_percentage": 0,
+    "repeated_words": ["คำที่ซ้ำบ่อย"]
+  },
+
+  "summary": {
+    "errors_count": 0,
+    "warnings_count": 0,
+    "suggestions_count": 0,
+    "readability": "excellent/good/fair/poor"
+  },
+
+  "pass": true/false
+}
+```
+
+## เกณฑ์
+- **Error:** ผิดชัดเจน ต้องแก้
+- **Warning:** อาจมีปัญหา ควรพิจารณา
+- **Suggestion:** ทำให้ดีขึ้นได้
+
+## Pass Criteria
+- Errors < 5 per 1000 words
+- No critical grammar errors
+- Readability: good หรือดีกว่า
+
+ตรวจสอบอย่างละเอียดและให้ feedback ที่เป็นประโยชน์สำหรับการปรับปรุง

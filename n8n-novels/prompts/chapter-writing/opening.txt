@@ -1,0 +1,98 @@
+เขียนบทแรกของนิยาย "{{title}}"
+
+## ข้อมูลเรื่อง
+- แนว: {{genre}}
+- Protagonist: {{protagonist_name}}
+- Setting: {{setting}}
+- Tone: {{tone}}
+
+## ตัวละครที่ปรากฏ
+{{characters_info}}
+
+## Outline บทแรก
+{{chapter_outline}}
+
+## Requirements สำหรับบทแรก
+
+### เป้าหมายหลัก
+1. **Hook ผู้อ่าน** - ดึงดูดความสนใจตั้งแต่ประโยคแรก
+2. **แนะนำ Protagonist** - ให้รู้จักและเริ่มผูกพัน
+3. **Establish World** - แนะนำโลกแบบ subtle
+4. **Set Tone** - กำหนดบรรยากาศของเรื่อง
+5. **Plant Seeds** - วางเบาะแสสำหรับเรื่องที่จะตามมา
+
+### โครงสร้างบทแรก
+```
+Opening (First 500 words):
+- Hook ทันที
+- อย่าเริ่มด้วยการตื่นนอน/มองกระจก
+- แสดง protagonist ในสถานการณ์ที่แสดงบุคลิก
+
+Middle:
+- Ordinary world ของ protagonist
+- แนะนำ supporting characters
+- Hint ปัญหา/ความไม่พอใจ
+- World building ผ่าน action
+
+Ending:
+- Inciting incident หรือ hint
+- ทำให้อยากอ่านต่อ
+- Promise ว่าเรื่องจะน่าสนใจ
+```
+
+### เทคนิคสำหรับบทแรก
+
+**Opening Lines ที่ดี:**
+- เริ่มกลางเหตุการณ์ (in medias res)
+- คำถามที่น่าสนใจ
+- Statement ที่ท้าทาย
+- Sensory detail ที่ชัดเจน
+- Character voice ที่แข็งแรง
+
+**สิ่งที่ต้องหลีกเลี่ยงในบทแรก:**
+- ❌ Info dump ประวัติศาสตร์โลก
+- ❌ Character description แบบ catalog
+- ❌ เริ่มด้วยฝัน
+- ❌ เริ่มด้วยอากาศ
+- ❌ Prologue ที่ไม่จำเป็น
+- ❌ ตั้งคำถามแล้วไม่ตอบ
+
+**สิ่งที่ต้องทำ:**
+- ✅ ให้เหตุผลที่จะอ่านต่อ
+- ✅ แสดง protagonist มีปัญหา/ความต้องการ
+- ✅ สร้าง voice ที่ชัดเจน
+- ✅ Establish stakes (แม้จะเล็กน้อย)
+- ✅ ทิ้งท้ายให้อยากรู้
+
+### ความยาว
+- Target: {{target_words}} คำ
+- เน้นคุณภาพมากกว่าความยาว
+
+## Genre-Specific Tips
+
+### Romance
+- แสดง protagonist ที่ likeable
+- Hint ว่าชีวิตรักมีปัญหา
+- Setup สำหรับ meet-cute
+
+### Fantasy
+- แนะนำ magic อย่าง subtle
+- ไม่ต้องอธิบายระบบทั้งหมด
+- แสดงโลกผ่านตา protagonist
+
+### Horror
+- สร้างความไม่สบายใจเบาๆ
+- Normal ที่มี something wrong
+- Foreshadowing
+
+### Mystery
+- อาจเริ่มด้วย crime
+- หรือแนะนำ detective
+- Plant early clues
+
+## Output
+เขียนบทแรกภาษาไทยที่:
+- Hook ผู้อ่านตั้งแต่ประโยคแรก
+- แนะนำตัวละครและโลกอย่างน่าสนใจ
+- จบแบบให้อยากอ่านบทต่อไป
+- ไม่ต้องใส่หมายเลขบท

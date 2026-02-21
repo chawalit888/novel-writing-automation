@@ -1,0 +1,217 @@
+# Reader Satisfaction Prompt (ความพึงพอใจผู้อ่าน)
+
+## Context Variables
+- {{ending_summary}}: สรุปตอนจบ
+- {{genre}}: แนวนิยาย
+- {{target_audience}}: กลุ่มเป้าหมาย
+- {{emotional_journey}}: การเดินทางทางอารมณ์ของเรื่อง
+- {{promises_made}}: สิ่งที่สัญญาไว้กับผู้อ่าน
+
+---
+
+## Prompt Template
+
+คุณคือผู้เชี่ยวชาญด้าน Reader Experience ประเมินว่าผู้อ่านจะรู้สึกอย่างไรกับตอนจบ
+
+### ข้อมูล:
+- ตอนจบ: {{ending_summary}}
+- แนว: {{genre}}
+- กลุ่มเป้าหมาย: {{target_audience}}
+- Emotional Journey: {{emotional_journey}}
+- สัญญาที่ให้ไว้: {{promises_made}}
+
+---
+
+## Satisfaction Factors
+
+### 1. Promise Fulfillment (รักษาสัญญา)
+```
+นิยายทุกเรื่องให้สัญญากับผู้อ่าน:
+
+Romance → คู่รักจะได้อยู่ด้วยกัน
+Mystery → ความลับจะถูกเปิดเผย
+Action → ตัวร้ายจะพ่ายแพ้
+Horror → ความกลัวจะได้รับการเผชิญหน้า
+
+Checklist:
+□ Genre promise ถูกรักษา?
+□ Setup promise มี payoff?
+□ Character promise เป็นจริง?
+```
+
+### 2. Emotional Payoff (ผลตอบแทนทางอารมณ์)
+```
+ผู้อ่านลงทุนอารมณ์ → ต้องได้ผลตอบแทน
+
+ถ้าผู้อ่านลุ้น → ต้องได้ความสะใจ
+ถ้าผู้อ่านเศร้า → ต้องได้ catharsis
+ถ้าผู้อ่านรัก → ต้องได้ romantic payoff
+ถ้าผู้อ่านกลัว → ต้องได้ relief หรือ justified fear
+
+Checklist:
+□ มี emotional climax?
+□ อารมณ์ที่ build มาได้ release?
+□ ผู้อ่านจะรู้สึก "คุ้มค่า"?
+```
+
+### 3. Character Justice (ความยุติธรรมตัวละคร)
+```
+ผู้อ่านต้องการเห็น:
+- คนดีได้ดี (หรือได้ meaningful ending)
+- คนร้ายได้รับผลกรรม
+- ความพยายามได้รับการตอบแทน
+
+Checklist:
+□ ตัวเอกได้รับสิ่งที่สมควร?
+□ ตัวร้ายได้รับผลกรรม?
+□ Sacrifice มีความหมาย?
+```
+
+### 4. Intellectual Satisfaction (ความพอใจทางปัญญา)
+```
+ผู้อ่านต้องการ:
+- เข้าใจว่าเกิดอะไรขึ้น
+- รู้สึกว่าตอนจบ "make sense"
+- ไม่รู้สึกถูกโกง
+
+Checklist:
+□ ตอนจบสมเหตุสมผล?
+□ Twist มี fair play?
+□ คำถามสำคัญได้คำตอบ?
+```
+
+### 5. Memorable Impact (ความทรงจำ)
+```
+ตอนจบที่ดีจะ:
+- ติดอยู่ในใจ
+- ทำให้อยากพูดถึง
+- ทำให้อยากแนะนำคนอื่น
+
+Checklist:
+□ มี memorable moment?
+□ มี quotable line?
+□ มี lasting image?
+```
+
+---
+
+## Genre-Specific Expectations
+
+### Romance
+```
+ผู้อ่าน Romance ต้องการ:
+✅ คู่รักได้อยู่ด้วยกัน (HEA/HFN)
+✅ อุปสรรคถูกเอาชนะ
+✅ Romantic grand gesture
+✅ Emotional intimacy
+
+❌ อย่า: แยกคู่รักโดยไม่มีเหตุผล
+```
+
+### Mystery/Thriller
+```
+ผู้อ่าน Mystery ต้องการ:
+✅ ความลับถูกเปิดเผย
+✅ ผู้ร้ายถูกจับ/ได้รับโทษ
+✅ Clues ทั้งหมด connect
+✅ Fair play (หลักฐานมีมาก่อน)
+
+❌ อย่า: ใช้ข้อมูลที่ไม่เคยให้มาก่อน
+```
+
+### Fantasy/Sci-Fi
+```
+ผู้อ่าน Fantasy ต้องการ:
+✅ World rules ถูกรักษา
+✅ Magic/Tech มี consistent rules
+✅ Epic final battle (ถ้าเหมาะสม)
+✅ Hero's growth payoff
+
+❌ อย่า: แหกกฎที่ตั้งไว้
+```
+
+### Horror
+```
+ผู้อ่าน Horror ต้องการ:
+✅ Face the fear
+✅ Survival (หรือ meaningful death)
+✅ Explanation (ไม่จำเป็นต้องทุกอย่าง)
+✅ Lasting unease (ถ้าเหมาะสม)
+
+❌ อย่า: "แค่ฝัน" ending
+```
+
+---
+
+## รูปแบบ Output
+
+```
+## Reader Satisfaction Analysis
+
+### Target Reader Profile
+- แนว: [genre]
+- กลุ่มเป้าหมาย: [audience]
+- ความคาดหวังหลัก: [expectations]
+
+### Satisfaction Scores
+| Factor | Score | Notes |
+|--------|-------|-------|
+| Promise Fulfillment | _/10 | |
+| Emotional Payoff | _/10 | |
+| Character Justice | _/10 | |
+| Intellectual Satisfaction | _/10 | |
+| Memorable Impact | _/10 | |
+| **Average** | **_/10** | |
+
+### Genre Expectations Check
+□ [Genre expectation 1]: ✅/❌
+□ [Genre expectation 2]: ✅/❌
+□ [Genre expectation 3]: ✅/❌
+
+### Predicted Reader Reactions
+- จะรู้สึก: [อารมณ์]
+- จะพูดว่า: "[คำพูด]"
+- จะแนะนำ?: [ใช่/ไม่/ถ้า...]
+
+### Strengths (ทำให้ satisfied)
+1. [จุดแข็ง 1]
+2. [จุดแข็ง 2]
+
+### Weaknesses (ทำให้ unsatisfied)
+1. [จุดอ่อน 1]
+2. [จุดอ่อน 2]
+
+### Recommendations
+1. [คำแนะนำ 1]
+2. [คำแนะนำ 2]
+
+### Final Verdict
+[ผู้อ่านจะ satisfied หรือไม่ และเพราะอะไร]
+```
+
+---
+
+## Red Flags (สัญญาณอันตราย)
+
+### ผู้อ่านจะไม่พอใจถ้า:
+```
+❌ "It was all a dream"
+❌ ตัวเอกตายโดยไม่มีความหมาย
+❌ ตัวร้ายหนีไป (ไม่มี sequel)
+❌ คู่รักไม่ได้อยู่ด้วยกัน (ใน Romance)
+❌ ความลับไม่ถูกเปิดเผย (ใน Mystery)
+❌ Deus ex machina
+❌ จบรีบเกินไป
+❌ หลายคำถามไม่ได้ตอบ
+```
+
+---
+
+## Checklist
+
+- [ ] ตรวจ genre expectations
+- [ ] ตรวจ promise fulfillment
+- [ ] ประเมิน emotional payoff
+- [ ] คาดการณ์ reader reaction
+- [ ] หา red flags
+- [ ] มีคำแนะนำปรับปรุง

@@ -1,0 +1,160 @@
+{
+  "$schema": "Content Calendar Template",
+  "version": "1.0",
+  "description": "ปฏิทิน Content สำหรับโปรโมทนิยาย",
+
+  "weekly_template": {
+    "monday": [
+      {
+        "time": "12:00",
+        "platform": "facebook",
+        "content_type": "quote_card",
+        "description": "Quote จากนิยาย + CTA LINE"
+      },
+      {
+        "time": "20:00",
+        "platform": "twitter",
+        "content_type": "engagement",
+        "description": "คำถาม/Poll เกี่ยวกับนิยาย"
+      }
+    ],
+    "tuesday": [
+      {
+        "time": "12:00",
+        "platform": "line",
+        "content_type": "broadcast",
+        "description": "แจ้งตอนใหม่ (ถ้ามี)"
+      },
+      {
+        "time": "19:00",
+        "platform": "instagram",
+        "content_type": "teaser",
+        "description": "Teaser ตอนหน้า"
+      },
+      {
+        "time": "21:00",
+        "platform": "tiktok",
+        "content_type": "video",
+        "description": "Video teaser/Behind the scenes"
+      }
+    ],
+    "wednesday": [
+      {
+        "time": "18:00",
+        "platform": "facebook",
+        "content_type": "behind_scenes",
+        "description": "เบื้องหลังการเขียน"
+      }
+    ],
+    "thursday": [
+      {
+        "time": "11:00",
+        "platform": "instagram",
+        "content_type": "story_poll",
+        "description": "Poll ใน Story"
+      },
+      {
+        "time": "12:00",
+        "platform": "twitter",
+        "content_type": "thread",
+        "description": "Thread แนะนำนิยาย"
+      }
+    ],
+    "friday": [
+      {
+        "time": "12:00",
+        "platform": "all",
+        "content_type": "new_chapter",
+        "description": "โปรโมทตอนใหม่ทุกแพลตฟอร์ม"
+      },
+      {
+        "time": "18:00",
+        "platform": "line",
+        "content_type": "broadcast",
+        "description": "Broadcast ตอนใหม่"
+      }
+    ],
+    "saturday": [
+      {
+        "time": "14:00",
+        "platform": "tiktok",
+        "content_type": "fun_content",
+        "description": "Content สนุกๆ เกี่ยวกับนิยาย"
+      },
+      {
+        "time": "20:00",
+        "platform": "instagram",
+        "content_type": "character_spotlight",
+        "description": "แนะนำตัวละคร"
+      }
+    ],
+    "sunday": [
+      {
+        "time": "18:00",
+        "platform": "line",
+        "content_type": "weekly_recap",
+        "description": "สรุปประจำสัปดาห์"
+      },
+      {
+        "time": "21:00",
+        "platform": "facebook",
+        "content_type": "thank_you",
+        "description": "ขอบคุณผู้อ่าน"
+      }
+    ]
+  },
+
+  "special_events": {
+    "new_novel_launch": {
+      "day_minus_7": ["teaser_campaign_start"],
+      "day_minus_3": ["cover_reveal"],
+      "day_minus_1": ["countdown", "sneak_peek"],
+      "launch_day": ["all_platform_blast", "line_broadcast", "ads_boost"],
+      "day_plus_1": ["reader_reactions", "thank_you"]
+    },
+    "novel_completion": {
+      "final_chapter": ["emotional_post", "thank_you", "recap_thread"],
+      "day_after": ["reader_farewell", "next_project_tease"]
+    },
+    "milestone": {
+      "1000_reads": ["thank_you_post", "giveaway"],
+      "followers_milestone": ["celebration_post"]
+    }
+  },
+
+  "content_ratio": {
+    "teaser_promo": "30%",
+    "behind_scenes": "20%",
+    "engagement": "25%",
+    "direct_promo": "15%",
+    "community": "10%"
+  },
+
+  "platform_specific": {
+    "facebook": {
+      "best_times": ["12:00", "18:00", "21:00"],
+      "post_frequency": "1-2 times/day",
+      "content_focus": ["long_form", "images", "videos"]
+    },
+    "instagram": {
+      "best_times": ["11:00", "19:00", "21:00"],
+      "post_frequency": "1 post + 3-5 stories/day",
+      "content_focus": ["aesthetics", "stories", "reels"]
+    },
+    "tiktok": {
+      "best_times": ["12:00", "17:00", "21:00"],
+      "post_frequency": "1-2 videos/day",
+      "content_focus": ["short_video", "trends", "storytelling"]
+    },
+    "twitter": {
+      "best_times": ["08:00", "12:00", "20:00"],
+      "post_frequency": "3-5 tweets/day",
+      "content_focus": ["quick_updates", "threads", "engagement"]
+    },
+    "line": {
+      "best_times": ["12:00", "18:00", "20:00"],
+      "broadcast_frequency": "3-4 times/week max",
+      "content_focus": ["announcements", "exclusive", "direct_link"]
+    }
+  }
+}

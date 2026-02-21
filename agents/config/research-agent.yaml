@@ -1,0 +1,272 @@
+# ===========================================
+# Novel Empire Research Agent Configuration
+# Market Trends & Genre Analysis Specialist
+# ===========================================
+
+agent:
+  id: "research-001"
+  name: "NovelTrendResearcher"
+  role: "Market Research Specialist"
+  model: "claude-sonnet-4"
+  description: "AI ที่เชี่ยวชาญด้านการวิเคราะห์เทรนด์ตลาดนิยาย กระแส และความต้องการของผู้อ่าน"
+  team: "research"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - analyze_market_trends          # วิเคราะห์เทรนด์ตลาด
+  - track_popular_genres           # ติดตามแนวนิยายยอดนิยม
+  - monitor_reading_platforms      # ติดตามแพลตฟอร์มอ่านนิยาย
+  - analyze_competitor_content     # วิเคราะห์คู่แข่ง
+  - identify_emerging_trends       # ค้นหาเทรนด์ใหม่
+  - generate_trend_reports         # สร้างรายงานเทรนด์
+  - recommend_novel_concepts       # แนะนำแนวคิดนิยายใหม่
+  - audience_analysis              # วิเคราะห์กลุ่มเป้าหมาย
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "trend-analysis"
+    path: "agents/skills/trend-analysis.md"
+  - name: "platform-research"
+    path: "agents/skills/platform-research.md"
+  - name: "audience-insights"
+    path: "agents/skills/audience-insights.md"
+  - name: "competitive-analysis"
+    path: "agents/skills/competitive-analysis.md"
+
+# ===========================================
+# Data Sources to Monitor
+# ===========================================
+data_sources:
+  thai_platforms:
+    - name: "Dek-D"
+      url: "https://www.dek-d.com/writer/"
+      track: ["trending", "new_releases", "top_viewed", "categories"]
+
+    - name: "Readawrite"
+      url: "https://www.readawrite.com/"
+      track: ["bestsellers", "new_stories", "popular_tags"]
+
+    - name: "MEB (Me Books)"
+      url: "https://www.mebmarket.com/"
+      track: ["ebook_rankings", "new_releases", "promotions"]
+
+    - name: "Joylada"
+      url: "https://www.joylada.com/"
+      track: ["chat_fiction", "trending_stories"]
+
+    - name: "FictionLog"
+      url: "https://fictionlog.co/"
+      track: ["top_stories", "new_writers"]
+
+  international_platforms:
+    - name: "Wattpad"
+      url: "https://www.wattpad.com/"
+      track: ["hot_stories", "paid_stories", "trending_tags"]
+
+    - name: "Webnovel"
+      url: "https://www.webnovel.com/"
+      track: ["rankings", "new_releases", "completed"]
+
+  social_media:
+    - name: "Twitter/X"
+      hashtags: ["#นิยาย", "#นิยายไทย", "#อ่านนิยาย", "#นิยายรัก", "#นิยายวาย", "#นิยายBL"]
+
+    - name: "TikTok"
+      hashtags: ["#booktok", "#นิยายน่าอ่าน", "#รีวิวนิยาย", "#แนะนำนิยาย"]
+
+# ===========================================
+# Analysis Categories
+# ===========================================
+analysis_categories:
+  genres:
+    - romance_contemporary      # โรแมนซ์ร่วมสมัย
+    - romance_ceo              # รักกับ CEO
+    - romance_enemy_to_lovers  # จากศัตรูกลายเป็นคนรัก
+    - bl_boys_love             # Boys Love / วาย
+    - gl_girls_love            # Girls Love / ยูริ
+    - fantasy_eastern          # แฟนตาซีตะวันออก (จีน/เกาหลี)
+    - fantasy_western          # แฟนตาซีตะวันตก
+    - horror_thriller          # สยองขวัญ/ระทึกขวัญ
+    - mystery_detective        # ลึกลับ/สืบสวน
+    - historical_fiction       # อิงประวัติศาสตร์
+    - isekai_reincarnation     # ข้ามภพ/เกิดใหม่
+    - system_game_elements     # มีระบบเกม
+    - slice_of_life            # ชีวิตประจำวัน
+    - comedy                   # ตลก
+    - action_adventure         # แอคชั่น/ผจญภัย
+
+  tropes:
+    - enemies_to_lovers
+    - fake_dating
+    - second_chance
+    - forbidden_love
+    - secret_identity
+    - childhood_friends
+    - love_triangle
+    - redemption_arc
+    - found_family
+    - slow_burn
+    - forced_proximity
+    - age_gap
+    - boss_employee
+    - contract_marriage
+    - revenge_plot
+
+  reader_demographics:
+    - age_groups: ["13-17", "18-24", "25-34", "35-44", "45+"]
+    - gender: ["female", "male", "other"]
+    - reading_habits: ["daily", "weekly", "casual"]
+    - spending: ["free_only", "occasional_paid", "regular_paid"]
+
+# ===========================================
+# Report Types
+# ===========================================
+report_types:
+  weekly_trend_report:
+    frequency: "weekly"
+    includes:
+      - top_10_trending_genres
+      - rising_tropes
+      - platform_highlights
+      - social_media_buzz
+      - recommendation_for_next_week
+
+  monthly_market_analysis:
+    frequency: "monthly"
+    includes:
+      - genre_performance_comparison
+      - new_trend_identification
+      - reader_preference_shifts
+      - competitor_analysis
+      - strategic_recommendations
+
+  genre_deep_dive:
+    frequency: "on_demand"
+    includes:
+      - genre_history_and_evolution
+      - current_state_analysis
+      - top_performers_in_genre
+      - successful_tropes
+      - gap_analysis
+      - opportunity_identification
+
+  new_concept_proposal:
+    frequency: "on_demand"
+    includes:
+      - market_opportunity_analysis
+      - target_audience_profile
+      - recommended_genre_mix
+      - suggested_tropes
+      - unique_selling_points
+      - risk_assessment
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  inbox: "agents/messages/research-agent/"
+  outbox: "agents/messages/"
+  can_message:
+    - "ceo-001"
+    - "mgr-claude-001"
+    - "mgr-n8n-001"
+  report_to: "ceo-001"
+
+# ===========================================
+# Output Locations
+# ===========================================
+outputs:
+  reports: "Data/research-reports/"
+  trend_data: "Data/trend-data/"
+  recommendations: "Data/recommendations/"
+
+# ===========================================
+# Schedule
+# ===========================================
+schedule:
+  daily_scan:
+    time: "09:00"
+    timezone: "Asia/Bangkok"
+    tasks:
+      - scan_platform_trending
+      - check_social_media_hashtags
+
+  weekly_report:
+    day: "Monday"
+    time: "10:00"
+    timezone: "Asia/Bangkok"
+    tasks:
+      - compile_weekly_trend_report
+      - send_to_ceo
+
+  monthly_analysis:
+    day: 1  # First day of month
+    time: "10:00"
+    timezone: "Asia/Bangkok"
+    tasks:
+      - generate_monthly_market_analysis
+      - update_genre_rankings
+      - send_to_all_managers
+
+# ===========================================
+# Alert Thresholds
+# ===========================================
+alerts:
+  trending_spike:
+    description: "แจ้งเตือนเมื่อมีแนวนิยายหรือ trope ที่กำลังมาแรงผิดปกติ"
+    threshold: "50% increase in mentions"
+    notify: ["ceo-001"]
+
+  new_trend_detected:
+    description: "แจ้งเตือนเมื่อพบเทรนด์ใหม่ที่น่าสนใจ"
+    notify: ["ceo-001", "mgr-claude-001"]
+
+  competitor_release:
+    description: "แจ้งเตือนเมื่อคู่แข่งปล่อยผลงานใหม่ที่น่าสนใจ"
+    notify: ["ceo-001"]
+
+# ===========================================
+# Prompt Templates
+# ===========================================
+prompts:
+  trend_analysis: |
+    วิเคราะห์เทรนด์นิยายในตลาดไทยและสากล:
+
+    1. แนวนิยายที่กำลังมาแรง:
+       - ระบุ 5 แนวที่ได้รับความนิยมสูงสุด
+       - อธิบายเหตุผลที่ได้รับความนิยม
+       - ระบุ tropes ที่ใช้บ่อย
+
+    2. กลุ่มผู้อ่านเป้าหมาย:
+       - วิเคราะห์พฤติกรรมการอ่าน
+       - ความต้องการที่ยังไม่ได้รับการตอบสนอง
+
+    3. โอกาสในตลาด:
+       - ช่องว่างที่สามารถเติมเต็มได้
+       - แนวผสมที่น่าสนใจ
+
+    4. คำแนะนำ:
+       - แนวนิยายที่ควรผลิต
+       - Timing ที่เหมาะสม
+
+  concept_recommendation: |
+    สร้างแนวคิดนิยายใหม่ที่ตรงกับเทรนด์ตลาด:
+
+    ข้อมูลตลาด: {market_data}
+
+    สร้างแนวคิดนิยาย 3 เรื่องที่:
+    1. ตรงกับความต้องการของตลาดปัจจุบัน
+    2. มีความแตกต่างจากคู่แข่ง
+    3. มีโอกาสประสบความสำเร็จสูง
+
+    สำหรับแต่ละแนวคิด ระบุ:
+    - ชื่อเรื่อง (ชั่วคราว)
+    - แนว/Genre
+    - Tropes หลัก
+    - กลุ่มเป้าหมาย
+    - จุดขาย (USP)
+    - ความเสี่ยงและโอกาส

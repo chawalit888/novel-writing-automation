@@ -1,0 +1,305 @@
+# Elements Library สำหรับหน้าปก
+
+## องค์ประกอบตกแต่งที่ใช้ได้ (ไม่ติดลิขสิทธิ์)
+
+---
+
+## 1. Shapes & Patterns (รูปทรงและลวดลาย)
+
+### Geometric
+```
+- geometric lines
+- abstract triangles
+- hexagon pattern
+- circular frames
+- diamond shapes
+- minimal grid pattern
+- concentric circles
+- intersecting lines
+```
+
+### Organic
+```
+- flowing curves
+- wave patterns
+- smoke wisps
+- water ripples
+- cloud shapes
+- wind swirls
+- organic blobs
+```
+
+---
+
+## 2. Decorative Elements (ตกแต่ง)
+
+### Borders & Frames
+```
+- ornate golden frame
+- thin elegant border
+- corner flourishes
+- decorative dividers
+- art deco frame
+- vintage border
+- minimalist line frame
+```
+
+### Flourishes
+```
+- calligraphic swirls
+- decorative scrollwork
+- elegant flourishes
+- ribbon curls
+- ornamental divider
+- typographic ornaments
+```
+
+---
+
+## 3. Symbolic Elements (สัญลักษณ์)
+
+### Romance
+```
+- abstract heart shapes
+- floating rose petals
+- ribbon swirls
+- love letter silhouette
+- ring silhouette
+- champagne bubbles
+- soft sparkles
+```
+
+### Power / Mafia
+```
+- crown silhouette
+- chain pattern
+- rose with thorns (silhouette)
+- dagger silhouette
+- throne silhouette
+- lion crest (abstract)
+- playing card suits
+```
+
+### Fantasy / Magic
+```
+- crescent moon
+- star constellation
+- magical sparkles
+- crystal shapes
+- mystical symbols
+- aurora lights
+- celestial orbs
+- compass rose
+```
+
+### Horror
+```
+- abstract blood splatter
+- cracked texture
+- shattered glass pattern
+- dark fog/mist
+- spider web pattern
+- bare tree silhouette
+- raven silhouette
+```
+
+### Chinese / Asian
+```
+- cloud pattern (traditional)
+- lotus flower silhouette
+- Chinese knot pattern
+- wave pattern
+- bamboo silhouette
+- plum blossom pattern
+- dragon scale pattern (abstract)
+- phoenix feather (abstract)
+```
+
+### Thai
+```
+- Lai Thai pattern
+- lotus motif
+- Kanok pattern
+- temple silhouette
+- Garuda symbol (simplified)
+- Bai Sema shape
+- traditional border
+```
+
+---
+
+## 4. Textures (พื้นผิว)
+
+### Fabric
+```
+- silk texture
+- velvet texture
+- lace pattern
+- brocade pattern
+- satin sheen
+- linen texture
+```
+
+### Material
+```
+- marble texture
+- leather texture
+- paper texture
+- wood grain
+- metal brushed
+- concrete minimal
+```
+
+### Effect
+```
+- grunge texture
+- distressed overlay
+- noise grain
+- watercolor wash
+- ink splatter
+- gradient overlay
+```
+
+---
+
+## 5. Light Effects (แสง)
+
+### Soft
+```
+- soft bokeh
+- gentle glow
+- sunlight rays
+- golden hour light
+- moonlight glow
+- candlelight flicker
+```
+
+### Dramatic
+```
+- spotlight effect
+- rim lighting
+- lens flare
+- neon glow
+- ethereal mist
+- light particles
+```
+
+### Magical
+```
+- floating sparkles
+- stardust
+- fairy lights
+- aurora effect
+- magical particles
+- glowing orbs
+```
+
+---
+
+## 6. Natural Elements (ธรรมชาติ - abstract only)
+
+### Flora (พืช)
+```
+- floating petals
+- leaf silhouettes
+- flower silhouette
+- vine pattern
+- branch silhouette
+- grass silhouette
+```
+
+### Celestial (ท้องฟ้า)
+```
+- stars scattered
+- moon phases
+- sun rays
+- cloud wisps
+- galaxy swirl
+- constellation dots
+```
+
+### Weather
+```
+- rain drops pattern
+- snow flakes
+- lightning bolt
+- mist/fog
+- wind lines
+```
+
+---
+
+## วิธีใช้ใน Prompt
+
+### Format
+```
+[element type] [position] [style modifier]
+```
+
+### ตัวอย่าง
+```
+golden crown silhouette centered at top
+floating rose petals scattered
+soft bokeh lights in background
+ornate corner flourishes in gold
+crescent moon symbol upper right
+abstract heart shapes subtle pattern
+```
+
+---
+
+## องค์ประกอบตาม Position
+
+### Top Area
+```
+- crown
+- moon
+- stars
+- title text
+- decorative header
+```
+
+### Center
+```
+- main title
+- central symbol
+- frame
+```
+
+### Bottom Area
+```
+- author name
+- subtitle
+- decorative footer
+- base elements
+```
+
+### Corners
+```
+- corner flourishes
+- decorative corners
+- accent symbols
+```
+
+### Background
+```
+- texture
+- gradient
+- pattern
+- scattered elements
+```
+
+---
+
+## ❌ ห้ามใช้
+
+```
+- รูปคน/ใบหน้า
+- ตัวละครจากนิยาย/อนิเมะ/หนัง
+- โลโก้ยี่ห้อ
+- ภาพถ่ายจริง
+- งานศิลปะที่มีลิขสิทธิ์
+- รูปดารา/นักแสดง
+- ฉากจากซีรีส์/หนัง
+- ตัวการ์ตูน
+```

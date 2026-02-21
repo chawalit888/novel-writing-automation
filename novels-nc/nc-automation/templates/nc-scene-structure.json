@@ -1,0 +1,123 @@
+{
+  "$schema": "NC Scene Structure Template",
+  "version": "1.0",
+  "description": "โครงสร้างฉาก NC สำหรับใช้กับ Ollama + Claude Translation",
+
+  "scene_structure": {
+    "buildup": {
+      "percentage": "20-25%",
+      "thai_name": "ช่วงสร้างอารมณ์",
+      "elements": [
+        "Tension ระหว่างตัวละคร",
+        "สบตา / ความใกล้ชิด",
+        "บทสนทนาที่มีนัยยะ",
+        "Physical proximity เพิ่มขึ้น"
+      ],
+      "example_beats": [
+        "สบตากัน - หัวใจเต้นแรง",
+        "สัมผัสโดยบังเอิญ",
+        "ความตึงเครียดในอากาศ",
+        "คำพูดที่ทำให้ใจสั่น"
+      ]
+    },
+
+    "initiation": {
+      "percentage": "10-15%",
+      "thai_name": "จุดเริ่มต้น",
+      "elements": [
+        "First kiss / First move",
+        "การขอความยินยอม (สำคัญ!)",
+        "Moment of decision",
+        "Breaking the tension"
+      ],
+      "example_beats": [
+        "จูบแรก",
+        "กอดแน่น",
+        "คำพูดยืนยันความต้องการ",
+        "ปล่อยให้สัญชาตญาณนำทาง"
+      ]
+    },
+
+    "rising_action": {
+      "percentage": "25-30%",
+      "thai_name": "ช่วงค่อยๆ เข้มข้น",
+      "elements": [
+        "ค่อยๆ เพิ่มความเข้มข้น",
+        "Sensory details เยอะขึ้น",
+        "Internal reactions",
+        "Physical descriptions"
+      ],
+      "pacing": "เริ่มช้า → เร็วขึ้นเรื่อยๆ"
+    },
+
+    "peak": {
+      "percentage": "20-25%",
+      "thai_name": "จุดสูงสุด",
+      "elements": [
+        "Climax ของฉาก",
+        "อารมณ์สูงสุด",
+        "ประโยคสั้น รวดเร็ว",
+        "Sensory overload"
+      ],
+      "writing_style": "ประโยคสั้น fragments เยอะ"
+    },
+
+    "aftermath": {
+      "percentage": "10-15%",
+      "thai_name": "หลังจบ",
+      "elements": [
+        "Emotional intimacy",
+        "Pillow talk",
+        "Physical closeness",
+        "Character bonding"
+      ],
+      "importance": "สร้างความผูกพัน ไม่ใช่แค่ physical"
+    }
+  },
+
+  "scene_types": {
+    "tender": {
+      "thai_name": "อ่อนโยน/หวาน",
+      "characteristics": [
+        "ช้า นุ่มนวล",
+        "เน้นอารมณ์มากกว่า physical",
+        "สบตาบ่อย",
+        "คำพูดหวาน"
+      ],
+      "suitable_for": ["คู่รักที่รักกัน", "First time ที่ทั้งคู่พร้อม", "Reunion"]
+    },
+
+    "passionate": {
+      "thai_name": "เร่าร้อน/รุนแรง",
+      "characteristics": [
+        "จังหวะเร็ว",
+        "ความต้องการสูง",
+        "Urgency",
+        "Cannot hold back"
+      ],
+      "suitable_for": ["Tension ที่สะสมนาน", "Make-up หลังทะเลาะ", "Forbidden love"]
+    },
+
+    "rough": {
+      "thai_name": "ดิบ/หยาบ",
+      "characteristics": [
+        "Dominance/submission",
+        "Power play",
+        "เข้มข้น aggressive",
+        "แต่ยังต้องมี consent"
+      ],
+      "suitable_for": ["Enemies to lovers", "Mafia/CEO ที่ dominant", "Anger turned passion"]
+    },
+
+    "sensual": {
+      "thai_name": "เย้ายวน/ยั่วยุ",
+      "characteristics": [
+        "Slow burn",
+        "Teasing",
+        "Building anticipation",
+        "ไม่รีบร้อน"
+      ],
+      "suitable_for": ["Seduction", "Experienced lovers", "Power play แบบละเอียด"]
+    }
+  }
+}

@@ -1,0 +1,102 @@
+สร้างตัวละครสำหรับนิยายสยองขวัญในรูปแบบ JSON
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- จำนวนตัวละครที่ต้องการ: {{num_characters}}
+- Setting: {{setting}}
+- ประเภท Horror: {{horror_type}} (supernatural/psychological/monster)
+
+## Requirements
+
+### Protagonist
+- ต้อง relatable และ likeable
+- มี vulnerability ที่เหมาะกับ horror
+- Smart แต่ไม่ genre-savvy เกินไป
+- มีเหตุผลที่ต้องอยู่ในสถานการณ์
+- มี past trauma หรือ fear ที่เชื่อมกับ horror
+
+### Supporting Characters
+- แต่ละคนมี role ชัดเจน
+- บางคนอาจตาย (make it matter)
+- มี secret หรือ hidden agenda
+- ไม่ควรเป็น obvious "cannon fodder"
+
+### The Threat (ถ้ามี physical form)
+- ไม่ต้องอธิบายทุกอย่าง
+- มีกฎ/ข้อจำกัด
+- เชื่อมกับ protagonist somehow
+
+## Output Format (JSON)
+```json
+{
+  "characters": [
+    {
+      "id": "char-001",
+      "name": "ชื่อ",
+      "age": 28,
+      "gender": "male/female",
+      "role": "protagonist/survivor/victim/skeptic/believer",
+      "occupation": "อาชีพ",
+      "survival_likelihood": "high/medium/low",
+
+      "personality": {
+        "traits": ["trait1", "trait2"],
+        "strengths": ["useful for survival"],
+        "flaws": ["could get them killed"],
+        "coping_mechanism": "วิธีรับมือกับความกลัว"
+      },
+
+      "appearance": {
+        "description": "คำอธิบายสั้น",
+        "distinctive_features": []
+      },
+
+      "psychology": {
+        "greatest_fear": "ความกลัวที่สุด",
+        "past_trauma": "trauma ในอดีต",
+        "mental_state": "สภาพจิตใจ",
+        "breaking_point": "จุดที่จะพัง"
+      },
+
+      "background": {
+        "brief_history": "ประวัติสั้น",
+        "connection_to_horror": "เชื่อมกับ horror อย่างไร",
+        "secrets": ["ความลับ"],
+        "regrets": ["สิ่งที่เสียใจ"]
+      },
+
+      "role_in_story": {
+        "function": "หน้าที่ในเรื่อง",
+        "death_potential": "มีโอกาสตายไหม/อย่างไร",
+        "key_scenes": ["ฉากสำคัญ"]
+      },
+
+      "relationships": {
+        "char_id": "ความสัมพันธ์/tension"
+      },
+
+      "survival_skills": ["skill1", "skill2"],
+      "fatal_flaw": "จุดอ่อนที่อาจทำให้ตาย"
+    }
+  ],
+
+  "the_horror": {
+    "name": "ชื่อ/ฉายา (ถ้ามี)",
+    "type": "ghost/demon/monster/human/psychological",
+    "origin": "ที่มา",
+    "rules": ["กฎที่ต้องปฏิบัติตาม"],
+    "weaknesses": ["จุดอ่อน (หายาก)"],
+    "connection_to_protagonist": "เชื่อมกับตัวเอกอย่างไร",
+    "what_it_represents": "represent อะไร (thematically)"
+  }
+}
+```
+
+## เกณฑ์คุณภาพ
+- ผู้อ่านต้องห่วงตัวละคร
+- ทุกคนมี reason to stay
+- Deaths ต้อง meaningful
+- Horror ต้องมี rules
+- มี tension ระหว่างตัวละคร
+
+สร้างตัวละครที่ผู้อ่านจะห่วง และกลัวเมื่อพวกเขาตกอยู่ในอันตราย

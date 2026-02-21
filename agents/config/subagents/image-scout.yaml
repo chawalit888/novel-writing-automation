@@ -1,0 +1,213 @@
+# ===========================================
+# Image Scout Subagent Configuration
+# ผู้เชี่ยวชาญหารูป Stock Photo
+# ===========================================
+
+agent:
+  id: "cover-scout-001"
+  name: "ImageScout"
+  role: "Subagent"
+  team: "cover-design"
+  model: "claude-sonnet-4"
+  description: "ผู้เชี่ยวชาญในการหารูป Stock Photo ที่เหมาะกับปกนิยาย"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-cover-001"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - วิเคราะห์ brief เพื่อกำหนด keyword
+  - ค้นหารูปจากแหล่ง Stock Photo ฟรี
+  - ตรวจสอบ license ให้ใช้เชิงพาณิชย์ได้
+  - เลือกรูปที่เหมาะกับ mood และ character
+  - ส่งมอบ options ให้ผู้จัดการตัดสินใจ
+
+# ===========================================
+# Stock Photo Sources
+# ===========================================
+sources:
+  free_commercial:
+    - name: "Unsplash"
+      url: "https://unsplash.com"
+      license: "Unsplash License (free commercial use)"
+      search_tips:
+        - "ใช้ keyword ภาษาอังกฤษเท่านั้น"
+        - "เพิ่ม 'portrait' สำหรับรูปคน"
+        - "เพิ่ม 'dark' หรือ 'moody' สำหรับแนว NC"
+
+    - name: "Pexels"
+      url: "https://www.pexels.com"
+      license: "Pexels License (free commercial use)"
+      search_tips:
+        - "มีรูป Asian model เยอะกว่า"
+        - "ใช้ filter 'Orientation: Portrait'"
+
+    - name: "Pixabay"
+      url: "https://www.pixabay.com"
+      license: "Pixabay License (check each image)"
+      search_tips:
+        - "⚠️ ตรวจสอบ license แต่ละรูป"
+        - "บางรูปมีข้อจำกัด AI modification"
+
+  paid_premium:
+    - name: "Shutterstock"
+      url: "https://www.shutterstock.com"
+      note: "ต้องซื้อ license"
+
+    - name: "Adobe Stock"
+      url: "https://stock.adobe.com"
+      note: "ต้องซื้อ license"
+
+# ===========================================
+# Search Strategy by Genre
+# ===========================================
+genre_keywords:
+  mafia_romance:
+    character_male:
+      - "man black suit"
+      - "businessman dark portrait"
+      - "man mysterious shadow"
+      - "bodyguard suit"
+      - "asian man formal"
+    character_female:
+      - "woman elegant dress"
+      - "woman confident portrait"
+      - "woman black dress"
+      - "asian woman beautiful"
+    mood:
+      - "dark romantic"
+      - "luxury car"
+      - "city night"
+      - "moody atmosphere"
+
+  fantasy:
+    character:
+      - "fantasy portrait"
+      - "mystical woman"
+      - "warrior portrait"
+    mood:
+      - "magical forest"
+      - "castle dramatic"
+      - "ethereal light"
+
+  romance:
+    character:
+      - "couple romantic"
+      - "love portrait"
+      - "romantic embrace"
+    mood:
+      - "sunset romantic"
+      - "soft light couple"
+      - "dreamy atmosphere"
+
+  horror:
+    character:
+      - "mysterious figure"
+      - "dark silhouette"
+    mood:
+      - "haunted house"
+      - "dark forest"
+      - "foggy mysterious"
+
+  bl_gl:
+    character:
+      - "two men portrait"
+      - "two women portrait"
+      - "friends close"
+    mood:
+      - "intimate atmosphere"
+      - "soft romantic"
+
+# ===========================================
+# Image Selection Criteria
+# ===========================================
+selection_criteria:
+  required:
+    - license_commercial_use: true
+    - resolution_min: "1200x1800"
+    - no_watermark: true
+
+  preferred:
+    - no_clear_face: "ปลอดภัยกว่าสำหรับปก"
+    - match_character_description: true
+    - mood_consistent: true
+
+  avoid:
+    - "รูปที่ห้าม AI modification"
+    - "รูปที่มีใบหน้าชัดเจน (ยกเว้นมี model release)"
+    - "รูปที่มี brand/logo ชัดเจน"
+    - "รูปคุณภาพต่ำ"
+
+# ===========================================
+# Output Format
+# ===========================================
+output:
+  format: "markdown"
+  template: |
+    # Image Options for: {{novel_title}}
+
+    ## Option 1: {{description}}
+    - **Source:** {{source}}
+    - **URL:** {{url}}
+    - **License:** {{license}}
+    - **Keywords used:** {{keywords}}
+    - **Why suitable:** {{reason}}
+
+    ## Option 2: ...
+
+  deliver_to: "{{project_path}}/covers/images/"
+
+  required_fields:
+    - source_url
+    - license_type
+    - download_link
+    - keywords_used
+    - suitability_reason
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  steps:
+    - receive_brief
+    - analyze_requirements
+    - generate_keywords
+    - search_sources
+    - filter_by_license
+    - select_top_options
+    - document_choices
+    - submit_to_manager
+
+  timeout_minutes: 30
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-cover-001"
+  reports_to:
+    - "mgr-cover-001"
+
+  status_updates:
+    on_start: true
+    on_completion: true
+    on_error: true
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_no_suitable_images:
+    - try_alternative_keywords
+    - try_different_sources
+    - report_to_manager_with_suggestions
+
+  on_license_unclear:
+    - skip_image
+    - note_in_report
+    - suggest_paid_alternatives

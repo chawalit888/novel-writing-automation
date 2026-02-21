@@ -1,0 +1,188 @@
+{
+  "name": "QC Scorer",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "qc-score",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json.body;\n\nconst chapterContent = input.chapter_content || '';\nconst chapterNumber = input.chapter_number || 1;\nconst novelTitle = input.novel_title || 'Untitled';\nconst genre = input.genre || 'romantic-comedy';\nconst characters = input.characters || [];\nconst previousSummary = input.previous_summary || '';\n\n// Basic validation\nconst charCount = chapterContent.replace(/\\s/g, '').length;\nconst MIN_CHARS = 4800;\nconst MAX_CHARS = 6000;\n\nconst systemPrompt = `คุณคือผู้เชี่ยวชาญด้าน Quality Control สำหรับนิยายไทย\n\nหน้าที่ของคุณคือประเมินคุณภาพบทนิยายตามเกณฑ์ต่อไปนี้:\n\n1. ความยาว (Length) - 20 คะแนน\n   - ผ่านเกณฑ์ ${MIN_CHARS}-${MAX_CHARS} ตัวอักษร = 20 คะแนน\n   - ขาด/เกินเล็กน้อย (±500) = 10 คะแนน\n   - ขาด/เกินมาก = 0 คะแนน\n\n2. ความต่อเนื่อง (Continuity) - 20 คะแนน\n   - ต่อเนื่องจากตอนก่อนหน้าอย่างลื่นไหล\n   - ไม่มีข้อขัดแย้งกับเหตุการณ์ที่ผ่านมา\n\n3. คุณภาพการเขียน (Writing Quality) - 20 คะแนน\n   - ภาษาสละสลวย\n   - Show don't tell\n   - บทสนทนาเป็นธรรมชาติ\n\n4. ความสอดคล้องของตัวละคร (Character Consistency) - 20 คะแนน\n   - บุคลิกตรงกับที่กำหนด\n   - คำพูดเหมาะสมกับตัวละคร\n   - การกระทำสมเหตุสมผล\n\n5. Hook/Cliffhanger - 20 คะแนน\n   - จบตอนด้วย hook ที่น่าสนใจ\n   - ทำให้อยากอ่านต่อ`;\n\nconst userPrompt = `ประเมินคุณภาพบทนิยายต่อไปนี้:\n\n## ข้อมูลเรื่อง:\n- ชื่อเรื่อง: ${novelTitle}\n- ตอนที่: ${chapterNumber}\n- แนว: ${genre}\n\n## ตัวละคร:\n${JSON.stringify(characters, null, 2)}\n\n## สรุปตอนที่แล้ว:\n${previousSummary}\n\n## เนื้อหาที่ต้องประเมิน:\n${chapterContent}\n\n## สถิติ:\n- จำนวนตัวอักษร (ไม่รวม whitespace): ${charCount}\n- เกณฑ์: ${MIN_CHARS}-${MAX_CHARS} ตัวอักษร\n\n## คำสั่ง:\nให้คะแนนและความเห็นในรูปแบบ JSON:\n\n\\`\\`\\`json\n{\n  \"scores\": {\n    \"length\": { \"score\": 0-20, \"comment\": \"ความเห็น\" },\n    \"continuity\": { \"score\": 0-20, \"comment\": \"ความเห็น\" },\n    \"writing_quality\": { \"score\": 0-20, \"comment\": \"ความเห็น\" },\n    \"character_consistency\": { \"score\": 0-20, \"comment\": \"ความเห็น\" },\n    \"hook\": { \"score\": 0-20, \"comment\": \"ความเห็น\" }\n  },\n  \"total_score\": 0-100,\n  \"pass\": true/false,\n  \"overall_comment\": \"ความเห็นภาพรวม\",\n  \"suggestions\": [\"ข้อเสนอแนะ 1\", \"ข้อเสนอแนะ 2\"]\n}\n\\`\\`\\`\n\nเกณฑ์ผ่าน: 70 คะแนนขึ้นไป`;\n\nreturn {\n  novel_title: novelTitle,\n  chapter_number: chapterNumber,\n  character_count: charCount,\n  meets_length_requirement: charCount >= MIN_CHARS && charCount <= MAX_CHARS,\n  system_prompt: systemPrompt,\n  user_prompt: userPrompt\n};"
+      },
+      "id": "prepare-qc",
+      "name": "Prepare QC Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "claude-sonnet-4-20250514",
+          "mode": "list"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.user_prompt }}"
+            }
+          ]
+        },
+        "options": {
+          "systemMessage": "={{ $json.system_prompt }}",
+          "maxTokensToSample": 2048,
+          "temperature": 0.3
+        }
+      },
+      "id": "anthropic-qc",
+      "name": "Claude QC Scorer",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [690, 300],
+      "credentials": {
+        "anthropicApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Anthropic API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst content = input.text || input.content || '';\n\nlet qcResult = null;\nlet parseError = null;\n\ntry {\n  const jsonMatch = content.match(/```json\\s*([\\s\\S]*?)```/) || \n                    content.match(/\\{[\\s\\S]*\"scores\"[\\s\\S]*\\}/);\n  \n  if (jsonMatch) {\n    const jsonStr = jsonMatch[1] || jsonMatch[0];\n    qcResult = JSON.parse(jsonStr);\n  } else {\n    qcResult = JSON.parse(content);\n  }\n} catch (e) {\n  parseError = e.message;\n}\n\nconst prevData = $('Prepare QC Prompt').item.json;\n\nreturn {\n  success: qcResult !== null,\n  novel_title: prevData.novel_title,\n  chapter_number: prevData.chapter_number,\n  character_count: prevData.character_count,\n  meets_length_requirement: prevData.meets_length_requirement,\n  qc_result: qcResult,\n  parse_error: parseError,\n  raw_response: content\n};"
+      },
+      "id": "parse-qc",
+      "name": "Parse QC Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.success }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-parse",
+      "name": "Parse Success?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1130, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"novel_title\": \"{{ $json.novel_title }}\",\n  \"chapter_number\": {{ $json.chapter_number }},\n  \"character_count\": {{ $json.character_count }},\n  \"meets_length_requirement\": {{ $json.meets_length_requirement }},\n  \"qc_result\": {{ JSON.stringify($json.qc_result) }}\n}",
+        "options": {}
+      },
+      "id": "response-success",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": false,\n  \"error\": \"Failed to parse QC result\",\n  \"parse_error\": \"{{ $json.parse_error }}\",\n  \"raw_response\": {{ JSON.stringify($json.raw_response) }}\n}",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "response-fail",
+      "name": "Fail Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare QC Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare QC Prompt": {
+      "main": [
+        [
+          {
+            "node": "Claude QC Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude QC Scorer": {
+      "main": [
+        [
+          {
+            "node": "Parse QC Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse QC Result": {
+      "main": [
+        [
+          {
+            "node": "Parse Success?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Success?": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fail Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    {
+      "name": "novel-writing"
+    },
+    {
+      "name": "quality-control"
+    }
+  ]
+}

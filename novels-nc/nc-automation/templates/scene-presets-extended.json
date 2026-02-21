@@ -1,0 +1,165 @@
+{
+  "$schema": "Extended Scene Presets for NC",
+  "version": "1.0",
+  "description": "Presets เพิ่มเติมสำหรับฉาก NC หลากหลายแนว",
+
+  "presets": {
+    "office_late_night": {
+      "name": "Office Late Night",
+      "thai_name": "ทำงานดึก",
+      "char_a": "Boss",
+      "char_a_desc": "CEO หนุ่ม หล่อเข้ม ทำงานหนัก ไม่เคยสนใจใคร",
+      "char_b": "Secretary",
+      "char_b_desc": "เลขาสาวสวย ฉลาด ทำงานด้วยกันมา 2 ปี",
+      "relationship": "Professional tension ที่สะสมมานาน วันนี้ต้องทำงานดึกด้วยกัน",
+      "setting": "ห้องทำงาน CEO ชั้นบนสุด วิวเมืองยามค่ำคืน",
+      "trigger": "ไฟดับ เทียนริมหน้าต่าง บรรยากาศเปลี่ยน",
+      "intensity": 8,
+      "scene_type": "passionate",
+      "style": "mixed",
+      "word_count": 3500
+    },
+
+    "rain_confession": {
+      "name": "Rainy Day Confession",
+      "thai_name": "สารภาพรักวันฝนตก",
+      "char_a": "Senior",
+      "char_a_desc": "รุ่นพี่มหาลัย หล่อ เป็นที่หมายปองของทุกคน",
+      "char_b": "Junior",
+      "char_b_desc": "รุ่นน้อง น่ารัก ชอบรุ่นพี่มานาน ไม่กล้าบอก",
+      "relationship": "รุ่นพี่-รุ่นน้อง แอบชอบกันทั้งคู่แต่ไม่มีใครกล้าเริ่มก่อน",
+      "setting": "ห้องพักของรุ่นพี่ หลังฝนตกหนัก เสื้อเปียก",
+      "trigger": "รุ่นพี่ถอดเสื้อให้ใส่ แล้วสบตากัน",
+      "intensity": 7,
+      "scene_type": "tender",
+      "style": "mixed",
+      "word_count": 3000
+    },
+
+    "revenge_seduction": {
+      "name": "Revenge Seduction",
+      "thai_name": "ล่อลวงเพื่อแก้แค้น",
+      "char_a": "Villain",
+      "char_a_desc": "ชายหนุ่มที่มาแก้แค้น หล่อร้าย วางแผนทุกอย่าง",
+      "char_b": "Target",
+      "char_b_desc": "ลูกสาวศัตรู สวย ไร้เดียงสา ไม่รู้ความจริง",
+      "relationship": "เขาวางแผนล่อลวงเธอ แต่ไม่คิดว่าจะตกหลุมรักจริง",
+      "setting": "โรงแรมหรู คืนเดียวที่ไม่ควรเกิดขึ้น",
+      "trigger": "เธอรู้ความจริง แต่กลับไม่โกรธ กลับถามว่า 'แล้วตอนนี้ล่ะ?'",
+      "intensity": 9,
+      "scene_type": "passionate",
+      "style": "mixed",
+      "word_count": 4000
+    },
+
+    "best_friend_line": {
+      "name": "Crossing the Line",
+      "thai_name": "ข้ามเส้นมิตรภาพ",
+      "char_a": "Best Friend A",
+      "char_a_desc": "เพื่อนสนิทมา 10 ปี แอบชอบอีกคนมาตลอด",
+      "char_b": "Best Friend B",
+      "char_b_desc": "เพิ่งเลิกกับแฟน กำลังเจ็บปวด ต้องการคนอยู่ด้วย",
+      "relationship": "เพื่อนสนิทที่รู้จักกันดีที่สุด คืนนี้ทุกอย่างเปลี่ยนไป",
+      "setting": "อพาร์ตเมนต์เล็กๆ ดึกมาก ดื่มไวน์ด้วยกัน",
+      "trigger": "B ร้องไห้ A ปลอบ แล้วก็หยุดไม่อยู่",
+      "intensity": 7,
+      "scene_type": "tender",
+      "style": "literary",
+      "word_count": 3500
+    },
+
+    "gl_senior_junior": {
+      "name": "GL Senior x Junior",
+      "thai_name": "GL รุ่นพี่รุ่นน้อง",
+      "char_a": "P'Fern",
+      "char_a_desc": "รุ่นพี่สาว สวยเท่ เป็นที่หมายปองของทุกคน",
+      "char_b": "Nong Pim",
+      "char_b_desc": "รุ่นน้องน่ารัก ตกหลุมรักรุ่นพี่ตั้งแต่วันแรก",
+      "relationship": "รุ่นพี่ดูแลรุ่นน้องมาตลอด วันนี้รุ่นน้องกล้าสารภาพ",
+      "setting": "ห้องพักรุ่นพี่ หลังงานเลี้ยงส่ง ทั้งคู่เมาเล็กน้อย",
+      "trigger": "รุ่นน้องจูบก่อน รุ่นพี่ไม่ได้ผลัก",
+      "intensity": 7,
+      "scene_type": "tender",
+      "style": "mixed",
+      "word_count": 3000
+    },
+
+    "bl_hate_to_love": {
+      "name": "BL Hate to Love",
+      "thai_name": "BL จากเกลียดเป็นรัก",
+      "char_a": "Earth",
+      "char_a_desc": "หนุ่มหยิ่ง CEO รุ่นใหม่ ไม่ชอบหน้าคู่แข่ง",
+      "char_b": "Mix",
+      "char_b_desc": "คู่แข่งทางธุรกิจ หล่อไม่แพ้กัน ชอบแหย่ให้โมโห",
+      "relationship": "เกลียดกันมาตลอด แต่ tension มันแปลก",
+      "setting": "ห้องประชุมหลังทะเลาะกันหนัก ประตูล็อค",
+      "trigger": "ทะเลาะจนจูบ จูบจนหยุดไม่อยู่",
+      "intensity": 9,
+      "scene_type": "rough",
+      "style": "casual",
+      "word_count": 4000
+    },
+
+    "doctor_patient": {
+      "name": "Doctor x Patient (Recovered)",
+      "thai_name": "หมอกับคนไข้เก่า",
+      "char_a": "Dr. Tee",
+      "char_a_desc": "หมอหนุ่ม หล่อ ใจดี รักษาเธอจนหาย",
+      "char_b": "Fah",
+      "char_b_desc": "อดีตคนไข้ หายดีแล้ว กลับมาหาหมอด้วยเหตุผลอื่น",
+      "relationship": "หมอ-คนไข้ที่ไม่ควรมีอะไรกัน แต่ความรู้สึกมันห้ามไม่ได้",
+      "setting": "คลินิกส่วนตัว หลังเวลาทำการ",
+      "trigger": "เธอมาหาตอนดึก ไม่ได้ป่วย แค่อยากเจอ",
+      "intensity": 8,
+      "scene_type": "passionate",
+      "style": "mixed",
+      "word_count": 3500
+    },
+
+    "bodyguard_princess": {
+      "name": "Bodyguard x Heiress",
+      "thai_name": "บอดี้การ์ดกับทายาท",
+      "char_a": "Kong",
+      "char_a_desc": "บอดี้การ์ดมืออาชีพ เย็นชา หล่อคม",
+      "char_b": "Namfon",
+      "char_b_desc": "ทายาทตระกูลใหญ่ สวย ดื้อ ชอบแหย่บอดี้การ์ด",
+      "relationship": "เขาต้องปกป้องเธอ แต่เธอชอบทำให้เขาเสียสติ",
+      "setting": "ห้องพักโรงแรมหรู ระหว่างเดินทางไปประชุม",
+      "trigger": "มีคนบุกมา เขาพาเธอหนี กอดกันในที่แคบ",
+      "intensity": 9,
+      "scene_type": "passionate",
+      "style": "mixed",
+      "word_count": 4000
+    }
+  },
+
+  "quick_settings": {
+    "locations": [
+      "ห้องนอนหรู แสงเทียน",
+      "ออฟฟิศชั้นบน วิวเมือง",
+      "โรงแรม 5 ดาว",
+      "อพาร์ตเมนต์เล็กๆ",
+      "บ้านริมทะเล",
+      "คอนโดชั้นสูง",
+      "ห้องพักในวัง",
+      "เต็นท์กลางป่า"
+    ],
+    "triggers": [
+      "ฝนตก เสื้อเปียก",
+      "เมาเล็กน้อย",
+      "ทะเลาะแล้วคืนดี",
+      "อยู่ด้วยกันสองต่อสอง",
+      "ใกล้จะพลัดพรากจากกัน",
+      "รู้ความจริงที่ซ่อนไว้",
+      "หึงหวง",
+      "ต้องแสร้งเป็นคู่รัก"
+    ],
+    "atmospheres": [
+      "โรแมนติก อบอุ่น",
+      "ตึงเครียด เร่าร้อน",
+      "อ่อนโยน ซึ้งกินใจ",
+      "ดิบ รุนแรง",
+      "ลึกลับ ยั่วยุ"
+    ]
+  }
+}

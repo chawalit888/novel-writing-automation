@@ -1,0 +1,154 @@
+{
+  "$schema": "Romantic Comedy Character Archetypes",
+  "version": "1.0",
+
+  "lead_archetypes": {
+    "female_leads": [
+      {
+        "name": "The Career Woman",
+        "traits": ["ambitious", "organized", "workaholic"],
+        "flaw": "puts work before relationships",
+        "arc": "learns work-life balance",
+        "pairs_well_with": ["The Free Spirit", "The Charmer"]
+      },
+      {
+        "name": "The Dreamer",
+        "traits": ["creative", "optimistic", "scattered"],
+        "flaw": "head in the clouds, unrealistic",
+        "arc": "grounds dreams in reality",
+        "pairs_well_with": ["The Pragmatist", "The Grump"]
+      },
+      {
+        "name": "The Cynic",
+        "traits": ["sarcastic", "guarded", "independent"],
+        "flaw": "afraid to trust/love again",
+        "arc": "opens heart to love",
+        "pairs_well_with": ["The Romantic", "The Persistent"]
+      },
+      {
+        "name": "The Girl Next Door",
+        "traits": ["kind", "relatable", "overlooked"],
+        "flaw": "lacks confidence, people-pleaser",
+        "arc": "finds her voice",
+        "pairs_well_with": ["The Popular Guy", "The Best Friend"]
+      }
+    ],
+    "male_leads": [
+      {
+        "name": "The Grump",
+        "traits": ["grouchy", "secretly soft", "protective"],
+        "flaw": "pushes people away",
+        "arc": "softens and opens up",
+        "pairs_well_with": ["The Sunshine", "The Dreamer"]
+      },
+      {
+        "name": "The Charmer",
+        "traits": ["flirtatious", "confident", "commitment-phobe"],
+        "flaw": "afraid of real intimacy",
+        "arc": "learns to be vulnerable",
+        "pairs_well_with": ["The Cynic", "The Career Woman"]
+      },
+      {
+        "name": "The Nerd",
+        "traits": ["smart", "awkward", "sweet"],
+        "flaw": "lacks confidence socially",
+        "arc": "comes out of shell",
+        "pairs_well_with": ["The Popular Girl", "The Outgoing One"]
+      },
+      {
+        "name": "The Golden Retriever",
+        "traits": ["friendly", "loyal", "enthusiastic"],
+        "flaw": "too trusting, doormat tendencies",
+        "arc": "learns boundaries",
+        "pairs_well_with": ["The Cynic", "The Ice Queen"]
+      }
+    ]
+  },
+
+  "supporting_characters": {
+    "best_friend_types": [
+      {
+        "name": "The Cheerleader",
+        "role": "encourages protagonist to take risks",
+        "comedic_function": "over-enthusiastic about romance"
+      },
+      {
+        "name": "The Sarcastic Sidekick",
+        "role": "voice of reason with wit",
+        "comedic_function": "commentary on romantic situations"
+      },
+      {
+        "name": "The Mess",
+        "role": "makes protagonist look put-together",
+        "comedic_function": "disaster relationship history"
+      }
+    ],
+    "obstacles": [
+      {
+        "name": "The Ex",
+        "role": "represents past/what protagonist doesn't want",
+        "comedic_function": "awkward encounters"
+      },
+      {
+        "name": "The Rival",
+        "role": "competition for love interest",
+        "comedic_function": "over-the-top perfect or terrible"
+      },
+      {
+        "name": "The Disapproving Parent",
+        "role": "external pressure",
+        "comedic_function": "embarrassing situations"
+      }
+    ],
+    "helpers": [
+      {
+        "name": "The Matchmaker",
+        "role": "pushes leads together",
+        "comedic_function": "schemes and plans"
+      },
+      {
+        "name": "The Wise Elder",
+        "role": "gives relationship advice",
+        "comedic_function": "outdated or surprisingly progressive views"
+      }
+    ]
+  },
+
+  "couple_dynamics": {
+    "classic_pairings": [
+      {
+        "pair": "Grumpy x Sunshine",
+        "dynamic": "one melts the other",
+        "conflict_source": "different outlooks on life"
+      },
+      {
+        "pair": "Enemies to Lovers",
+        "dynamic": "hate becomes passion",
+        "conflict_source": "initial animosity, pride"
+      },
+      {
+        "pair": "Opposites Attract",
+        "dynamic": "balance each other",
+        "conflict_source": "different lifestyles"
+      },
+      {
+        "pair": "Best Friends to Lovers",
+        "dynamic": "already comfortable, fear of ruining friendship",
+        "conflict_source": "fear of change"
+      }
+    ]
+  },
+
+  "character_growth_templates": {
+    "protagonist_arc": {
+      "start": "has a flaw that prevents love",
+      "middle": "love interest challenges the flaw",
+      "end": "overcomes flaw, deserves love"
+    },
+    "love_interest_arc": {
+      "start": "may also have walls/issues",
+      "middle": "protagonist brings out their best",
+      "end": "both grow together"
+    }
+  }
+}

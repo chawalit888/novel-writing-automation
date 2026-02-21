@@ -1,0 +1,127 @@
+ตรวจสอบความสอดคล้อง (Consistency) ของบทนิยาย
+
+## ข้อมูลที่ต้องตรวจ
+
+### บทที่ตรวจ
+{{chapter_content}}
+
+### ข้อมูลตัวละคร
+{{characters_data}}
+
+### บทก่อนหน้า (สรุป)
+{{previous_chapters_summary}}
+
+### World Rules
+{{world_rules}}
+
+### Timeline
+{{timeline_data}}
+
+## หมวดการตรวจสอบ
+
+### 1. Character Consistency
+ตรวจว่าตัวละครทำตัวสอดคล้องกับ:
+- บุคลิกที่กำหนด
+- Speech pattern
+- ระดับความสามารถ
+- ความรู้ที่มี (ไม่รู้สิ่งที่ไม่ควรรู้)
+- Relationship dynamics
+
+### 2. Timeline Consistency
+- ลำดับเหตุการณ์ถูกต้อง
+- เวลาที่ผ่านไปสมเหตุสมผล
+- ไม่ขัดแย้งกับบทก่อน
+- การอ้างอิงวัน/เวลาถูกต้อง
+
+### 3. World Consistency
+- กฎของโลกถูกรักษา
+- Magic/power ตามกฎที่ตั้งไว้
+- สถานที่ตรงกับคำอธิบาย
+- ระยะทาง/เวลาเดินทางสมเหตุสมผล
+
+### 4. Plot Consistency
+- ต่อเนื่องจากบทก่อน
+- ตัวละครรู้เฉพาะสิ่งที่ควรรู้
+- ไม่มี plot holes
+
+### 5. Detail Consistency
+- ชื่อตัวละครถูกต้อง
+- รายละเอียดรูปลักษณ์ตรง
+- Objects/items ที่กล่าวถึง consistent
+
+## Output Format (JSON)
+```json
+{
+  "consistency_score": 0-100,
+
+  "character_issues": [
+    {
+      "character": "ชื่อตัวละคร",
+      "issue_type": "personality/knowledge/ability/speech",
+      "severity": "critical/major/minor",
+      "description": "คำอธิบาย",
+      "expected": "สิ่งที่ควรเป็น",
+      "found": "สิ่งที่พบ",
+      "location": "ตำแหน่งในบท"
+    }
+  ],
+
+  "timeline_issues": [
+    {
+      "issue_type": "sequence/duration/reference",
+      "severity": "critical/major/minor",
+      "description": "คำอธิบาย",
+      "conflict_with": "ขัดแย้งกับอะไร"
+    }
+  ],
+
+  "world_issues": [
+    {
+      "issue_type": "rule_violation/geography/logic",
+      "severity": "critical/major/minor",
+      "description": "คำอธิบาย",
+      "rule_broken": "กฎที่ละเมิด"
+    }
+  ],
+
+  "plot_issues": [
+    {
+      "issue_type": "continuity/logic/hole",
+      "severity": "critical/major/minor",
+      "description": "คำอธิบาย"
+    }
+  ],
+
+  "detail_issues": [
+    {
+      "type": "name/appearance/object",
+      "description": "คำอธิบาย",
+      "expected": "ที่ถูกต้อง",
+      "found": "ที่พบ"
+    }
+  ],
+
+  "summary": {
+    "total_issues": 0,
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "pass": true/false
+  },
+
+  "recommendations": [
+    "คำแนะนำการแก้ไข"
+  ]
+}
+```
+
+## เกณฑ์
+- **Critical:** ขัดแย้งชัดเจน ต้องแก้
+- **Major:** ไม่สอดคล้อง ควรแก้
+- **Minor:** ไม่เป็นปัญหาใหญ่ แก้ได้
+
+## Pass/Fail
+- **Pass:** ไม่มี critical, major < 3
+- **Fail:** มี critical หรือ major >= 3
+
+ตรวจสอบอย่างละเอียดและรายงานทุก issue ที่พบ

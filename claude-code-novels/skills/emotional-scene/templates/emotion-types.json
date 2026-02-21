@@ -1,0 +1,204 @@
+{
+  "$schema": "Emotion Types Template",
+  "version": "1.0",
+  "description": "Template สำหรับกำหนดประเภทอารมณ์ในฉาก",
+
+  "emotion_categories": {
+    "romance": {
+      "thai_name": "ความรัก/โรแมนติก",
+      "intensity_levels": ["แอบชอบ", "ตกหลุมรัก", "รักลึกซึ้ง", "รักหมดใจ"],
+      "situations": [
+        "first_meeting",
+        "accidental_touch",
+        "almost_kiss",
+        "first_kiss",
+        "confession",
+        "jealousy",
+        "caring_when_sick",
+        "reunion"
+      ],
+      "physical_cues": [
+        "หัวใจเต้นแรง",
+        "แก้มร้อนผ่าว",
+        "หลบตา",
+        "สบตาค้าง",
+        "มือสั่น",
+        "กลืนน้ำลาย",
+        "หายใจไม่ทั่วท้อง",
+        "ขนลุก"
+      ],
+      "internal_thoughts": [
+        "ทำไมหัวใจต้องเต้นแรงขนาดนี้",
+        "อย่ามองมาสิ",
+        "ทำไมต้องเป็นเขา/เธอ",
+        "แค่อยู่ใกล้ก็ใจสั่น"
+      ]
+    },
+
+    "sadness": {
+      "thai_name": "ความเศร้า/สูญเสีย",
+      "intensity_levels": ["เศร้าเล็กน้อย", "เสียใจ", "เศร้าลึก", "แตกสลาย"],
+      "situations": [
+        "farewell",
+        "death",
+        "heartbreak",
+        "loss",
+        "painful_truth",
+        "separation",
+        "sacrifice"
+      ],
+      "physical_cues": [
+        "น้ำตาไหล",
+        "เสียงสั่นเครือ",
+        "แน่นหน้าอก",
+        "ขาอ่อน",
+        "หายใจไม่ออก",
+        "มือกำแน่น",
+        "ตัวสั่น",
+        "ทรุดลง"
+      ],
+      "internal_thoughts": [
+        "ทำไมต้องเป็นแบบนี้",
+        "มันจบแล้วจริงๆ เหรอ",
+        "ไม่อยากเชื่อ",
+        "เจ็บจนร้องไห้ไม่ออก"
+      ]
+    },
+
+    "anger": {
+      "thai_name": "ความโกรธ/แค้น",
+      "intensity_levels": ["หงุดหงิด", "โกรธ", "เดือดดาล", "คลั่งแค้น"],
+      "situations": [
+        "betrayal",
+        "insult",
+        "protecting_loved_one",
+        "injustice",
+        "confrontation",
+        "revenge"
+      ],
+      "physical_cues": [
+        "กำปั้นบีบแน่น",
+        "ขากรรไกรเกร็ง",
+        "ตาเป็นประกาย",
+        "เสียงดังขึ้น",
+        "หน้าแดง",
+        "ตัวสั่นด้วยความโกรธ",
+        "เลือดเดือด"
+      ],
+      "internal_thoughts": [
+        "ไม่มีวันให้อภัย",
+        "ต้องชดใช้",
+        "ปล่อยให้รอดไม่ได้",
+        "ทำได้ยังไง"
+      ]
+    },
+
+    "fear": {
+      "thai_name": "ความกลัว/หวาดผวา",
+      "intensity_levels": ["กังวล", "กลัว", "หวาดผวา", "สยองขวัญ"],
+      "situations": [
+        "danger",
+        "supernatural",
+        "waiting_for_bad_news",
+        "hiding",
+        "being_chased",
+        "unknown_threat"
+      ],
+      "physical_cues": [
+        "หัวใจเต้นรัว",
+        "เหงื่อเย็น",
+        "ขาแข็ง",
+        "หายใจเร็ว",
+        "กลืนน้ำลายไม่ลง",
+        "ขนลุก",
+        "ตัวแข็ง"
+      ],
+      "internal_thoughts": [
+        "อย่ามา อย่ามา",
+        "ทำไงดี",
+        "หนีไม่ทัน",
+        "มันอยู่ตรงนั้น"
+      ]
+    },
+
+    "joy": {
+      "thai_name": "ความสุข/ดีใจ",
+      "intensity_levels": ["พอใจ", "ดีใจ", "ปลื้มปีติ", "สุขล้นเหลือ"],
+      "situations": [
+        "good_news",
+        "reunion",
+        "success",
+        "being_loved",
+        "dream_come_true",
+        "surprise"
+      ],
+      "physical_cues": [
+        "ยิ้มกว้าง",
+        "น้ำตาแห่งความสุข",
+        "กระโดดโลดเต้น",
+        "กอดแน่น",
+        "หัวเราะ",
+        "หัวใจเต้นแรง"
+      ],
+      "internal_thoughts": [
+        "เป็นจริงแล้ว",
+        "ไม่อยากเชื่อ",
+        "นี่ไม่ใช่ฝันใช่ไหม",
+        "ขอบคุณ"
+      ]
+    },
+
+    "despair": {
+      "thai_name": "ความสิ้นหวัง",
+      "intensity_levels": ["ท้อแท้", "หมดหวัง", "สิ้นหวัง", "ว่างเปล่า"],
+      "situations": [
+        "failure",
+        "rejection",
+        "big_mistake",
+        "losing_everything",
+        "no_way_out",
+        "broken"
+      ],
+      "physical_cues": [
+        "ตาว่างเปล่า",
+        "ไม่มีแรง",
+        "นั่งทรุด",
+        "ไม่ร้องไห้",
+        "เสียงแหบ",
+        "ไร้ชีวิตชีวา"
+      ],
+      "internal_thoughts": [
+        "จบแล้ว",
+        "ไม่มีทางออก",
+        "ไม่เหลืออะไรแล้ว",
+        "เจ็บเกินกว่าจะรู้สึก"
+      ]
+    }
+  },
+
+  "scene_template": {
+    "emotion_type": "",
+    "intensity_level": "",
+    "characters_involved": [],
+    "situation": "",
+    "location": "",
+    "time_of_day": "",
+    "weather_atmosphere": "",
+    "trigger_event": "",
+    "physical_cues_to_use": [],
+    "internal_thoughts": [],
+    "sensory_details": {
+      "sight": "",
+      "sound": "",
+      "smell": "",
+      "touch": "",
+      "taste": ""
+    },
+    "emotional_arc": {
+      "starting_emotion": "",
+      "peak_emotion": "",
+      "ending_emotion": ""
+    },
+    "notes": ""
+  }
+}

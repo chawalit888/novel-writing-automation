@@ -1,0 +1,763 @@
+{
+  "topics": [
+    {
+      "id": 5,
+      "title": "ความแตกต่างระหว่างนิยายอีโรติกกับนิยาย NC",
+      "category": "educational",
+      "keywords": [
+        "นิยายอีโรติก",
+        "นิยายอิโรติก"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 6,
+      "title": "รีวิว: ท่านประธานหัวใจไลฟ์สด - Dark Romance สุดหวาน",
+      "category": "review",
+      "keywords": [
+        "รีวิวนิยาย",
+        "นิยายรัก"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 9,
+      "title": "วิธีเขียนนิยาย NC ให้น่าสนใจและขายดี",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "นิยาย nc"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 10,
+      "title": "นิยายอีโรติคเกาหลี: 8 เรื่องยอดนิยมที่ต้องอ่าน",
+      "category": "listicle",
+      "keywords": [
+        "อีโรติคเกาหลี",
+        "อิโรติกเกาหลี"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 11,
+      "title": "คำศัพท์นิยายที่ควรรู้: NC, R, M, 18+ แปลว่าอะไร",
+      "category": "educational",
+      "keywords": [
+        "นิยาย",
+        "นวนิยาย"
+      ],
+      "target_word_count": 1400,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 12,
+      "title": "รีวิว: สวาทลับคุณหนูมาเฟีย - โคตรดาร์ก โคตรหวาน",
+      "category": "review",
+      "keywords": [
+        "นิยายมาเฟีย",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 14,
+      "title": "เทคนิคสร้างตัวละครนิยายให้น่าจดจำ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "ตัวละคร"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 15,
+      "title": "นิยาย NC30: ทำไมต้องมีคำเตือนอายุ?",
+      "category": "educational",
+      "keywords": [
+        "นิยายnc30",
+        "นิยายผู้ใหญ่"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 16,
+      "title": "5 นักเขียนนิยาย NC ไทยที่ห้ามพลาด",
+      "category": "listicle",
+      "keywords": [
+        "นักเขียน",
+        "คุณหนูจอมหื่น"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 17,
+      "title": "วิเคราะห์ตัวละคร: เจ้าชายเพลย์บอยแห่ง Dark Romance",
+      "category": "review",
+      "keywords": [
+        "วิเคราะห์",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 19,
+      "title": "15 บทนิยายโรแมนติกหวานใจที่ต้องอ่าน",
+      "category": "listicle",
+      "keywords": [
+        "บท",
+        "นิยายโรแมนติก"
+      ],
+      "target_word_count": 2100,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 20,
+      "title": "Tropes ยอดนิยมในนิยาย NC ที่คนชอบอ่าน",
+      "category": "educational",
+      "keywords": [
+        "trope",
+        "นิยาย nc"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 21,
+      "title": "9 นิยาย NC ฟรีที่อ่านออนไลน์ได้ทั้งเรื่อง",
+      "category": "listicle",
+      "keywords": [
+        "นิยายncฟรี",
+        "อ่านนิยายออนไลน์ฟรี"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 22,
+      "title": "รีวิว: สัญญารักลับห้องประธาน - Office Romance สุดหวาน",
+      "category": "review",
+      "keywords": [
+        "รีวิวนิยาย",
+        "office romance"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 23,
+      "title": "วิธีเขียนฉาก NC ให้ดูเป็นธรรมชาติ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "nc"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 24,
+      "title": "นิยายอีโรติก 20: คำแนะนำสำหรับผู้อ่านใหม่",
+      "category": "educational",
+      "keywords": [
+        "นิยายอิโรติก20",
+        "นิยายผู้ใหญ่"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 25,
+      "title": "6 เว็บอ่านนิยายไทย ที่นักอ่านควรรู้จัก",
+      "category": "listicle",
+      "keywords": [
+        "นิยายไทย",
+        "อ่านนิยายออนไลน์"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 26,
+      "title": "รีวิว: คุณหนูร้อนรักกับนายมาเฟีย - Chemistry ล้นหน้า",
+      "category": "review",
+      "keywords": [
+        "มาเฟีย",
+        "นิยายรัก"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 27,
+      "title": "10 นิยายออนไลน์ยอดนิยม ที่กำลังฮิต 2026",
+      "category": "listicle",
+      "keywords": [
+        "นิยายออนไลน์",
+        "อ่านนิยาย"
+      ],
+      "target_word_count": 2000,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 28,
+      "title": "เทรนด์นิยายไทย 2026: Dark Romance กำลังมาแรง",
+      "category": "educational",
+      "keywords": [
+        "นิยายไทย",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 29,
+      "title": "วิธีเขียนนิยายให้จบ: เคล็ดลับจากนักเขียนมืออาชีพ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "นักเขียน"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 30,
+      "title": "อ่านนิยายอีโรติกฟรี: แพลตฟอร์มไหนดีที่สุด?",
+      "category": "educational",
+      "keywords": [
+        "อ่านนิยายอีโรติกฟรี",
+        "อ่านนิยายฟรี"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 31,
+      "title": "8 นิยาย NC25 ที่ห้ามพลาดในปีนี้",
+      "category": "listicle",
+      "keywords": [
+        "นิยาย25",
+        "นิยาย nc"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 32,
+      "title": "รีวิว: สืบสวาท-รักซ่อนคดี - Mystery Romance สุดระทึก",
+      "category": "review",
+      "keywords": [
+        "รีวิว",
+        "mystery"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 33,
+      "title": "เรื่องเล่าอิโรติก vs นิยายอีโรติก: ต่างกันอย่างไร?",
+      "category": "educational",
+      "keywords": [
+        "เรื่องเล่าอิโรติก",
+        "นิยายอีโรติก"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 34,
+      "title": "12 คำพูดหวาน จากนิยายรักยอดนิยม",
+      "category": "listicle",
+      "keywords": [
+        "นิยายรัก",
+        "คำพูด"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 35,
+      "title": "วิธีสร้าง Plot Twist ในนิยายให้ผู้อ่านตะลึง",
+      "category": "how-to",
+      "keywords": [
+        "plot",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 36,
+      "title": "นิยายอิโรติกนิยาย: พัฒนาการและความนิยมในไทย",
+      "category": "educational",
+      "keywords": [
+        "อิโรติกนิยาย",
+        "นิยายไทย"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 37,
+      "title": "Top 10 นักเขียนนิยายไทยที่ต้องติดตาม 2026",
+      "category": "listicle",
+      "keywords": [
+        "นักเขียน",
+        "นิยายไทย"
+      ],
+      "target_word_count": 2000,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 38,
+      "title": "รีวิร: จอมเจี้ยบมันผม - Comedy Romance สุดฮา",
+      "category": "review",
+      "keywords": [
+        "comedy",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 39,
+      "title": "อ่านนิยายออนไลน์: แพลตฟอร์มไหนเหมาะกับคุณ?",
+      "category": "educational",
+      "keywords": [
+        "อ่านนิยายออนไลน์",
+        "แพลตฟอร์ม"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 40,
+      "title": "7 Tropes Dark Romance ที่ทำให้หัวใจเต้นแรง",
+      "category": "listicle",
+      "keywords": [
+        "dark romance",
+        "trope"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 41,
+      "title": "เทคนิคเขียน Dialogue ในนิยายให้เป็นธรรมชาติ",
+      "category": "how-to",
+      "keywords": [
+        "dialogue",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 42,
+      "title": "นิยายอิโรติค: ประวัติและวิวัฒนาการในวรรณคดีไทย",
+      "category": "educational",
+      "keywords": [
+        "อิโรติค",
+        "วรรณคดี"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 43,
+      "title": "9 นิยายรักหวานแหว๋ว ที่อ่านแล้วยิ้มไม่หุบ",
+      "category": "listicle",
+      "keywords": [
+        "นิยายรัก",
+        "หวาน"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 44,
+      "title": "รีวิว: บ่วงลับสวาทผู้จัดการกับ Producer - Office Love",
+      "category": "review",
+      "keywords": [
+        "office",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 45,
+      "title": "NC Story: เว็บอ่านนิยาย NC ที่คุณต้องรู้จัก",
+      "category": "educational",
+      "keywords": [
+        "NC Story",
+        "เว็บนิยาย"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 46,
+      "title": "10 ฉากโรแมนติก จากนิยายยอดนิยมที่ต้องจดจำ",
+      "category": "listicle",
+      "keywords": [
+        "โรแมนติก",
+        "ฉาก"
+      ],
+      "target_word_count": 2000,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 47,
+      "title": "วิธีเขียนนิยายให้ขายดี: เคล็ดลับจากประสบการณ์จริง",
+      "category": "how-to",
+      "keywords": [
+        "ขายนิยาย",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 48,
+      "title": "คุณหนูจอมหื่น: นักเขียนนิยาย NC ที่กำลังมาแรง",
+      "category": "educational",
+      "keywords": [
+        "คุณหนูจอมหื่น",
+        "นักเขียน"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 49,
+      "title": "8 นิยายมาเฟีย Dark Romance ที่โหดจัดหนักจัด",
+      "category": "listicle",
+      "keywords": [
+        "มาเฟีย",
+        "dark romance"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 1
+    },
+    {
+      "id": 50,
+      "title": "รีวิว: ซอยลับบนรันเวย์ - Fashion Romance สุดหรู",
+      "category": "review",
+      "keywords": [
+        "fashion",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 51,
+      "title": "ความแตกต่างระหว่างนิยายไทยกับนิยายแปล",
+      "category": "educational",
+      "keywords": [
+        "นิยายไทย",
+        "นิยายแปล"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 52,
+      "title": "11 Anti-Hero ในนิยาย NC ที่เจ้าชู้แต่น่ารัก",
+      "category": "listicle",
+      "keywords": [
+        "anti-hero",
+        "ตัวละคร"
+      ],
+      "target_word_count": 2000,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 53,
+      "title": "เทคนิคการสร้าง World Building ในนิยาย",
+      "category": "how-to",
+      "keywords": [
+        "world building",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1700,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 54,
+      "title": "เทรนด์นิยายโรแมนติก 2026: อะไรกำลังฮิต?",
+      "category": "educational",
+      "keywords": [
+        "เทรนด์",
+        "นิยายโรแมนติก"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 55,
+      "title": "6 นิยาย Enemies to Lovers ที่หวานจนใจละลาย",
+      "category": "listicle",
+      "keywords": [
+        "enemies to lovers",
+        "trope"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 56,
+      "title": "รีวิว: เกิดใหม่ยุวสวาทมาเฟีย - Reborn Romance สุดมันส์",
+      "category": "review",
+      "keywords": [
+        "reborn",
+        "มาเฟีย"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 57,
+      "title": "วิธีเลือกอ่านนิยาย NC ให้เหมาะกับตัวเอง",
+      "category": "educational",
+      "keywords": [
+        "เลือกนิยาย",
+        "nc"
+      ],
+      "target_word_count": 1500,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 58,
+      "title": "10 นิยาย Second Chance Romance ที่ต้องอ่าน",
+      "category": "listicle",
+      "keywords": [
+        "second chance",
+        "romance"
+      ],
+      "target_word_count": 1900,
+      "status": "pending",
+      "priority": 2
+    },
+    {
+      "id": 59,
+      "title": "จากไอเดียสู่นวนิยาย: ขั้นตอนการเขียนนิยาย",
+      "category": "how-to",
+      "keywords": [
+        "นวนิยาย",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1800,
+      "status": "pending",
+      "priority": 3
+    },
+    {
+      "id": 60,
+      "title": "ทำไม Dark Romance ถึงได้รับความนิยมมากขึ้น?",
+      "category": "educational",
+      "keywords": [
+        "dark romance",
+        "ความนิยม"
+      ],
+      "target_word_count": 1600,
+      "status": "pending",
+      "priority": 1
+    }
+  ],
+  "completed": [
+    {
+      "id": 7,
+      "title": "ธันวลัย vs Dek-D vs ReadAWrite: แพลตฟอร์มไหนดีกว่ากัน?",
+      "category": "educational",
+      "keywords": [
+        "Tunwalai",
+        "อ่านนิยายออนไลน์"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T22:12:36.665005",
+      "completed_at": "2026-02-21T22:12:36.665008",
+      "file_path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novel-promo-site/src/content/blog/ธนวลย-vs-dek-d-vs-readawrite-แพลตฟอรมไหนดกวากน.md"
+    },
+    {
+      "id": 8,
+      "title": "12 นิยายรัก NC สุดเข้มข้น ห้ามพลาด",
+      "category": "listicle",
+      "keywords": [
+        "นิยายรัก",
+        "นิยายnc"
+      ],
+      "target_word_count": 2200,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T22:18:53.657316",
+      "completed_at": "2026-02-21T22:18:53.657320",
+      "file_path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novel-promo-site/src/content/blog/12-นยายรก-nc-สดเขมขน-หามพลาด.json"
+    },
+    {
+      "id": 13,
+      "title": "10 นิยายรักโรแมนติก น่าอ่าน ประจำปี 2026",
+      "category": "listicle",
+      "keywords": [
+        "นิยายโรแมนติก",
+        "อ่านนิยายรัก"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T22:30:36.551542",
+      "completed_at": "2026-02-21T22:30:36.551548",
+      "file_path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novel-promo-site/src/content/blog/10-นิยายรักโรแมนติก-น่าอ่าน-ประจำปี-2026.json"
+    },
+    {
+      "id": 18,
+      "title": "ธันวลัย คืออะไร? คู่มือแพลตฟอร์มอ่านนิยายยอดนิยม",
+      "category": "educational",
+      "keywords": [
+        "Tunwalai",
+        "อ่านนิยาย"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T22:37:12.697025",
+      "completed_at": "2026-02-21T22:37:12.697028",
+      "file_path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novel-promo-site/src/content/blog/niyai.json"
+    }
+  ],
+  "failed": [
+    {
+      "id": 1,
+      "title": "นิยาย NC คืออะไร? คู่มือฉบับสมบูรณ์ 2026",
+      "category": "educational",
+      "keywords": [
+        "นิยาย nc",
+        "นิยายnc",
+        "nc คืออะไร"
+      ],
+      "target_word_count": 1800,
+      "status": "failed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T21:34:52.858825",
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "failed_at": "2026-02-21T21:34:52.858835"
+    },
+    {
+      "id": 2,
+      "title": "10 นิยายมาเฟีย NC ยอดนิยม ที่ต้องอ่าน 2026",
+      "category": "listicle",
+      "keywords": [
+        "นิยายncมาเฟีย",
+        "นิยายมาเฟีย"
+      ],
+      "target_word_count": 2000,
+      "status": "failed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T21:35:15.686279",
+      "error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-pro-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "failed_at": "2026-02-21T21:35:15.686286"
+    },
+    {
+      "id": 3,
+      "title": "Dark Romance คืออะไร? ทำไมถึงฮิตในปี 2026",
+      "category": "educational",
+      "keywords": [
+        "dark romance",
+        "นิยายรัก"
+      ],
+      "target_word_count": 1600,
+      "status": "failed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T21:35:50.259153",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "failed_at": "2026-02-21T21:35:50.259160"
+    },
+    {
+      "id": 4,
+      "title": "7 เว็บอ่านนิยายฟรีจบเล่ม ที่ดีที่สุด",
+      "category": "listicle",
+      "keywords": [
+        "อ่านนิยายฟรีจบเล่ม",
+        "อ่านนิยายฟรี"
+      ],
+      "target_word_count": 1800,
+      "status": "failed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T21:36:20.431015",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "failed_at": "2026-02-21T21:36:20.431026"
+    }
+  ],
+  "stats": {
+    "total": 60,
+    "educational": 18,
+    "listicle": 24,
+    "review": 12,
+    "how_to": 6,
+    "pending": 52,
+    "completed": 4,
+    "failed": 4
+  }
+}

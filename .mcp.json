@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "google-sheets": {
+      "command": "/Users/chawalitnoi/.local/bin/uvx",
+      "args": ["mcp-google-sheets@latest"],
+      "env": {
+        "CREDENTIALS_PATH": "/Users/chawalitnoi/.config/mcp-google-sheets/credentials.json",
+        "TOKEN_PATH": "/Users/chawalitnoi/.config/mcp-google-sheets/token.json"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@brave/brave-search-mcp-server"],
+      "env": {
+        "BRAVE_API_KEY": "BSAb0PlGkom12Z4gRFCVF4hVQh7afrc"
+      }
+    }
+  }
+}

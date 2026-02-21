@@ -1,0 +1,255 @@
+# ===========================================
+# N8n Writer Subagent Configuration
+# High-Volume Chapter Writing Specialist
+# ===========================================
+
+agent:
+  id: "n8n-writer-001"
+  name: "N8nWriter"
+  role: "Subagent"
+  team: "n8n"
+  model: "varies_by_genre"  # Dynamic model selection
+  description: "Writes chapters at scale using multiple AI models via n8n"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-n8n-001"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "chapter-writing"
+    prompts:
+      standard: "n8n-novels/prompts/chapter-writing/standard.txt"
+      opening: "n8n-novels/prompts/chapter-writing/opening.txt"
+      climax: "n8n-novels/prompts/chapter-writing/climax.txt"
+
+  - name: "batch-writing"
+    description: "Write multiple chapters in parallel"
+
+# ===========================================
+# N8n Workflows
+# ===========================================
+workflows:
+  chapter_writer_gemini:
+    workflow_id: "chapter-writer-gemini"
+    model: "gemini-pro"
+    best_for: ["romantic-comedy", "light-fantasy"]
+    trigger_type: "webhook"
+    webhook_path: "/webhook/write-chapter-gemini"
+
+  chapter_writer_gpt:
+    workflow_id: "chapter-writer-gpt"
+    model: "gpt-4o"
+    best_for: ["fantasy", "mystery"]
+    trigger_type: "webhook"
+    webhook_path: "/webhook/write-chapter-gpt"
+
+  chapter_writer_claude:
+    workflow_id: "chapter-writer-claude"
+    model: "claude-haiku"
+    best_for: ["horror", "bl-gl", "drama"]
+    trigger_type: "webhook"
+    webhook_path: "/webhook/write-chapter-claude"
+
+  batch_writer:
+    workflow_id: "batch-writer"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/batch-write"
+    max_parallel: 5
+
+  daily_scheduler:
+    workflow_id: "daily-scheduler"
+    trigger_type: "cron"
+    schedule: "0 0 * * *"  # Midnight daily
+    timezone: "Asia/Bangkok"
+
+# ===========================================
+# Model Selection Logic
+# ===========================================
+model_selection:
+  by_genre:
+    romantic-comedy:
+      primary: "gemini-pro"
+      backup: "gpt-4o-mini"
+
+    fantasy:
+      primary: "gpt-4o"
+      backup: "claude-haiku"
+
+    horror:
+      primary: "claude-haiku"
+      backup: "gpt-4o"
+
+    mystery:
+      primary: "gpt-4o"
+      backup: "claude-haiku"
+
+    bl-gl:
+      primary: "claude-haiku"
+      backup: "gemini-pro"
+
+  by_chapter_type:
+    opening:
+      boost_creativity: true
+      temperature: 0.85
+
+    standard:
+      temperature: 0.75
+
+    climax:
+      boost_emotion: true
+      temperature: 0.8
+
+# ===========================================
+# Writing Configuration
+# ===========================================
+writing:
+  chapter:
+    word_targets:
+      romantic-comedy: {min: 3000, max: 5000, target: 4000}
+      fantasy: {min: 4000, max: 7000, target: 5500}
+      horror: {min: 3000, max: 5000, target: 4000}
+      mystery: {min: 3500, max: 6000, target: 4500}
+      bl-gl: {min: 3000, max: 5500, target: 4000}
+
+  style:
+    language: "thai"
+    avoid:
+      - placeholders
+      - incomplete_sentences
+      - repetitive_phrases
+      - english_mixing
+
+# ===========================================
+# Batch Processing
+# ===========================================
+batch:
+  max_parallel_chapters: 5
+  chapters_per_day: 15
+
+  queue_management:
+    priority_order:
+      - deadline_projects
+      - scheduled_projects
+      - backlog
+
+  rate_limiting:
+    gemini:
+      requests_per_minute: 60
+      tokens_per_minute: 1000000
+
+    gpt:
+      requests_per_minute: 60
+      tokens_per_minute: 800000
+
+    claude:
+      requests_per_minute: 40
+      tokens_per_minute: 400000
+
+# ===========================================
+# Output Specifications
+# ===========================================
+outputs:
+  chapter:
+    format: "txt"
+    encoding: "utf-8"
+    path: "{{project_path}}/chapters/chapter_{{chapter_num}}.txt"
+
+    metadata:
+      path: "{{project_path}}/metadata/chapter_{{chapter_num}}.json"
+      includes:
+        - word_count
+        - model_used
+        - generation_time
+        - cost
+        - timestamp
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-n8n-001"
+  reports_to:
+    - "mgr-n8n-001"
+
+  progress_reporting:
+    batch_progress: true
+    individual_chapter: false  # Too noisy
+
+  alerts:
+    on_failure: true
+    on_rate_limit: true
+    on_batch_complete: true
+
+# ===========================================
+# Database Integration
+# ===========================================
+database:
+  connection: "postgresql://n8n:password@localhost:5432/n8n_novels"
+
+  tables:
+    chapters:
+      insert_on: "write_complete"
+      update_on: "qc_complete"
+      fields:
+        - project_id
+        - chapter_number
+        - content
+        - word_count
+        - model_used
+        - status
+        - generation_cost
+        - created_at
+        - updated_at
+
+    api_usage:
+      log_on: "every_call"
+      fields:
+        - provider
+        - model
+        - tokens_used
+        - cost
+        - timestamp
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_api_error:
+    retry_count: 3
+    retry_delay_seconds: 10
+    switch_to_backup: true
+
+  on_rate_limit:
+    wait_seconds: 60
+    switch_model: true
+    notify_manager: false
+
+  on_quality_rejection:
+    regenerate: true
+    max_regenerations: 3
+    if_max_reached: "flag_for_review"
+
+  on_timeout:
+    timeout_seconds: 300  # 5 minutes per chapter
+    action: "retry_with_shorter_target"
+
+# ===========================================
+# Cost Tracking
+# ===========================================
+costs:
+  track_per_chapter: true
+  track_per_model: true
+
+  budget_awareness:
+    warn_at_percent: 80
+    stop_at_percent: 100
+
+  estimated_costs:
+    gemini_chapter: 0.02  # USD
+    gpt_chapter: 0.08
+    claude_chapter: 0.03

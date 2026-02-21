@@ -1,0 +1,181 @@
+# Typography Cover Prompt Generator
+
+## Context Variables
+- {{title}}: ชื่อเรื่องนิยาย
+- {{genre}}: แนวนิยาย
+- {{mood}}: อารมณ์ (romantic, dark, mysterious, bright)
+- {{color_preference}}: สีที่ต้องการ (ถ้ามี)
+- {{subtitle}}: tagline/แนว (optional)
+
+---
+
+## Prompt Template
+
+คุณคือ Prompt Engineer สำหรับ AI Image Generator สร้าง prompt หน้าปกนิยายแบบ Typography-Focused
+
+### ข้อมูล:
+- ชื่อเรื่อง: {{title}}
+- แนว: {{genre}}
+- อารมณ์: {{mood}}
+- สี: {{color_preference}}
+- Subtitle: {{subtitle}}
+
+---
+
+## Genre-Specific Prompts
+
+### Romance / Rom-Com
+```
+Elegant romantic book cover design,
+soft [pink/peach/lavender] gradient background,
+[floating petals/heart confetti/ribbon swirls] abstract elements,
+typography-focused design,
+title text "{{title}}" in [elegant gold script/rose gold cursive] font,
+centered composition, romantic pastel color scheme,
+[subtle sparkles/soft bokeh lights/decorative flourishes],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+### Mafia / Dark Romance
+```
+Dark luxury book cover design,
+solid [black/deep burgundy/navy] background with [subtle leather/velvet] texture,
+[golden crown/rose silhouette/chain pattern] decorative element,
+typography-focused design,
+title text "{{title}}" in [bold gold metallic/silver chrome/elegant serif] font,
+dramatic centered composition, [black and gold/red and black] color scheme,
+[ornate border/corner flourishes/subtle sparkle],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+### Fantasy / Isekai / Historical
+```
+Mystical [Eastern/Western] fantasy book cover design,
+[deep purple to blue gradient/starry night/golden silk texture] background,
+[crescent moon/star constellation/lotus flower/cloud pattern] symbolic elements,
+typography-focused design,
+title text "{{title}}" in [ornate silver/traditional gold/magical glowing] font,
+ethereal centered composition, [purple gold/jade gold/celestial] color scheme,
+[mystical mist/floating lights/traditional patterns],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+### CEO / Modern / Office
+```
+Minimalist modern book cover design,
+clean [white/charcoal gray/navy blue] solid background,
+[geometric lines/abstract city skyline/minimal shapes] subtle elements,
+typography-focused design,
+title text "{{title}}" in [bold sans-serif/sleek modern/clean professional] font,
+sophisticated centered composition, [black white/navy gold/monochrome] color scheme,
+[thin gold line accents/subtle grid pattern],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+### Horror / Thriller / Mystery
+```
+Dark atmospheric book cover design,
+[textured black/foggy gray/deep crimson] grunge background,
+[abstract blood splatter/cracked texture/shadow effects] unsettling elements,
+typography-focused design,
+title text "{{title}}" in [distressed/sharp edged/horror style] font,
+ominous centered composition, [black red/dark gray/blood crimson] color scheme,
+[scratched texture/eerie glow/dark vignette],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, gore, anime, photo, watermark
+```
+
+### BL / GL / LGBTQ+
+```
+Dreamy romantic book cover design,
+soft [blue to pink gradient/lavender to rose/rainbow subtle] background,
+[intertwined ribbons/twin stars/abstract hearts] symbolic elements,
+typography-focused design,
+title text "{{title}}" in [modern elegant/soft script/clean romantic] font,
+tender centered composition, [pastel rainbow/blue pink/purple rose] color scheme,
+[soft light effects/gentle sparkles/flowing lines],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+### Palace / Chinese Historical / Thai Historical
+```
+Regal traditional book cover design,
+rich [red silk/gold brocade/jade green] textured background,
+[traditional cloud pattern/lotus motif/royal crest/Chinese knot] cultural elements,
+typography-focused design,
+title text "{{title}}" in [traditional brush/elegant Chinese/ornate Thai] style font,
+imperial centered composition, [red gold/jade gold/royal purple] color scheme,
+[embroidery pattern/traditional border/auspicious symbols],
+square format 900x900, high quality professional design,
+no people, no faces, no characters, abstract only
+
+--negative: people, faces, characters, anime, photo, watermark
+```
+
+---
+
+## Color Combinations
+
+| แนว | Primary | Secondary | Accent |
+|-----|---------|-----------|--------|
+| Romance | #FFB6C1 (Pink) | #FFDAB9 (Peach) | #FFD700 (Gold) |
+| Mafia | #000000 (Black) | #8B0000 (Dark Red) | #FFD700 (Gold) |
+| Fantasy | #4B0082 (Indigo) | #191970 (Midnight) | #C0C0C0 (Silver) |
+| CEO | #2F4F4F (Dark Slate) | #FFFFFF (White) | #B8860B (Dark Gold) |
+| Horror | #1C1C1C (Dark) | #8B0000 (Blood) | #696969 (Gray) |
+| BL/GL | #E6E6FA (Lavender) | #FFB6C1 (Pink) | #87CEEB (Sky Blue) |
+| Palace | #DC143C (Crimson) | #FFD700 (Gold) | #228B22 (Forest) |
+
+---
+
+## รูปแบบ Output
+
+```
+## Cover Prompt: {{title}}
+
+### Genre
+{{genre}}
+
+### Full Prompt
+[Generated prompt here]
+
+### Negative Prompt
+people, faces, characters, anime, realistic photo,
+copyrighted content, logos, watermark, low quality, blurry
+
+### Settings for Nanobanana Pro
+- Size: 900 x 900
+- Style: [Recommended style preset]
+- Quality: High
+- Seed: Random
+
+### Preview Description
+[อธิบายว่าหน้าปกจะมีหน้าตาอย่างไร]
+```
+
+---
+
+## Checklist
+
+- [ ] ไม่มี people, faces, characters
+- [ ] ชื่อเรื่องใส่ถูกต้อง
+- [ ] สีเหมาะกับแนว
+- [ ] มี negative prompt
+- [ ] ขนาด 900x900

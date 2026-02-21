@@ -1,0 +1,241 @@
+# ===========================================
+# Prompt Engineer Subagent Configuration
+# ผู้เชี่ยวชาญเขียน Prompt สำหรับ AI Enhance
+# ===========================================
+
+agent:
+  id: "cover-prompt-001"
+  name: "PromptEngineer"
+  role: "Subagent"
+  team: "cover-design"
+  model: "claude-sonnet-4"
+  description: "ผู้เชี่ยวชาญในการเขียน Prompt สำหรับ AI Image Enhancement"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-cover-001"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - วิเคราะห์ brief และรูปต้นฉบับ
+  - เขียน prompt สำหรับ AI enhance (ไม่ใช่ generate)
+  - ปรับ prompt ให้เหมาะกับ tool ที่ใช้
+  - แนะนำ settings สำหรับแต่ละ tool
+  - สร้าง prompt หลายแบบให้เลือก
+
+# ===========================================
+# Supported AI Tools
+# ===========================================
+ai_tools:
+  leonardo_ai:
+    name: "Leonardo AI / นโนบาน่าโปร"
+    modes:
+      - name: "Canvas"
+        use_for: "รวมรูป, แต่ง composition"
+        recommended: true
+      - name: "Image to Image"
+        use_for: "enhance รูปเดียว"
+        settings:
+          init_strength: "0.2-0.35"
+          guidance_scale: "7-10"
+    prompt_style: "descriptive, detailed"
+
+  midjourney:
+    name: "Midjourney"
+    modes:
+      - name: "Blend"
+        use_for: "รวมรูป"
+      - name: "Vary (Subtle)"
+        use_for: "enhance เล็กน้อย"
+    prompt_style: "concise, keywords"
+    special_params:
+      - "--ar 2:3"
+      - "--style raw"
+
+  dalle:
+    name: "DALL-E 3"
+    modes:
+      - name: "Edit"
+        use_for: "แก้ไขบางส่วน"
+    prompt_style: "natural language"
+
+  canva:
+    name: "Canva"
+    modes:
+      - name: "Magic Edit"
+        use_for: "แก้ไขเล็กน้อย"
+      - name: "Filters"
+        use_for: "ปรับ mood/color"
+    note: "ไม่ใช่ AI generate ใช้ได้กับ ธันวลัย"
+
+# ===========================================
+# Prompt Templates by Genre
+# ===========================================
+prompt_templates:
+  # Default: 900x900 (1:1 square)
+  default_aspect_ratio: "1:1 square"
+  default_dimensions: "900x900"
+
+  mafia_romance:
+    combine_two_photos: |
+      Combine two photos into a romantic book cover composition.
+      Left/back: {{male_description}} (bodyguard/mafia).
+      Right/front: {{female_description}} (elegant/powerful).
+      Dark moody atmosphere, cinematic lighting.
+      Color palette: {{colors}}.
+      Film noir aesthetic, dramatic shadows.
+      Professional book cover style.
+      Aspect ratio 1:1 square (900x900).
+      Leave space at bottom for title text.
+
+    enhance_single: |
+      Enhance photo, keep original pose and outfit exactly the same.
+      Add cinematic color grading: deep shadows, {{color_tone}} highlights.
+      Dark romantic atmosphere, film noir mood.
+      Do not change the person's face, clothing, or pose.
+      Only adjust lighting, contrast, and color mood.
+      Output size: 900x900 square.
+
+  fantasy:
+    combine: |
+      Fantasy book cover composition.
+      {{character_description}}.
+      Magical atmosphere, ethereal lighting.
+      Color palette: {{colors}}.
+      Epic fantasy style, dramatic and mystical.
+      Aspect ratio 1:1 square (900x900).
+
+  romance:
+    combine: |
+      Romantic book cover composition.
+      {{characters_description}}.
+      Soft romantic lighting, warm tones.
+      Color palette: {{colors}}.
+      Dreamy atmosphere, emotional mood.
+      Aspect ratio 1:1 square (900x900).
+
+# ===========================================
+# Prompt Structure Guide
+# ===========================================
+prompt_structure:
+  sections:
+    - name: "Action"
+      description: "สิ่งที่ต้องการให้ AI ทำ"
+      examples:
+        - "Combine two photos"
+        - "Enhance photo"
+        - "Add cinematic color grading"
+
+    - name: "Subject"
+      description: "รายละเอียดภาพ/คน"
+      examples:
+        - "man in black suit"
+        - "woman in elegant dress"
+
+    - name: "Mood/Atmosphere"
+      description: "บรรยากาศที่ต้องการ"
+      examples:
+        - "dark moody atmosphere"
+        - "romantic soft lighting"
+        - "film noir aesthetic"
+
+    - name: "Colors"
+      description: "โทนสีที่ต้องการ"
+      examples:
+        - "deep blacks, dark red highlights, golden rim light"
+        - "warm sunset tones"
+
+    - name: "Style"
+      description: "สไตล์ภาพรวม"
+      examples:
+        - "professional book cover style"
+        - "cinematic"
+        - "dramatic shadows"
+
+    - name: "Technical"
+      description: "ข้อกำหนดทางเทคนิค"
+      examples:
+        - "Aspect ratio 2:3 portrait"
+        - "Leave space for text"
+
+  important_notes:
+    - "ใช้ภาษาอังกฤษเท่านั้น"
+    - "เน้นย้ำ 'keep original' สำหรับ enhance"
+    - "ระบุสิ่งที่ห้ามเปลี่ยน (face, pose, outfit)"
+    - "บอก aspect ratio เสมอ"
+
+# ===========================================
+# Output Format
+# ===========================================
+output:
+  format: "markdown"
+  template: |
+    # AI Prompts for: {{novel_title}}
+
+    ## Recommended Tool: {{tool_name}}
+    **Mode:** {{mode}}
+
+    ### Settings:
+    {{settings}}
+
+    ---
+
+    ## Prompt Option 1 (Recommended):
+    ```
+    {{prompt_1}}
+    ```
+
+    ## Prompt Option 2 (Alternative):
+    ```
+    {{prompt_2}}
+    ```
+
+    ---
+
+    ## Usage Instructions:
+    {{instructions}}
+
+  deliver_to: "{{project_path}}/covers/prompts/"
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  steps:
+    - receive_brief_and_images
+    - analyze_source_images
+    - determine_best_tool
+    - write_main_prompt
+    - write_alternative_prompts
+    - add_tool_specific_settings
+    - document_usage_instructions
+    - submit_to_manager
+
+  timeout_minutes: 20
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-cover-001"
+  reports_to:
+    - "mgr-cover-001"
+
+  status_updates:
+    on_start: true
+    on_completion: true
+    on_error: true
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_prompt_not_working:
+    - adjust_strength_settings
+    - try_simpler_prompt
+    - try_different_tool
+    - report_to_manager

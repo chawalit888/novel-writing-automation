@@ -1,0 +1,103 @@
+เขียนบทที่ {{chapter_number}} ของนิยาย "{{title}}"
+
+## Context
+- แนว: {{genre}}
+- ตัวละครในบทนี้: {{characters_in_chapter}}
+- สถานที่: {{location}}
+- เวลา: {{time_period}}
+
+## บทก่อนหน้า (สรุป)
+{{previous_chapter_summary}}
+
+## Outline ของบทนี้
+{{chapter_outline}}
+
+## เหตุการณ์สำคัญที่ต้องเกิด
+{{key_events}}
+
+## Character Notes
+{{character_notes}}
+
+## Requirements
+
+### ความยาว
+- Target: {{target_words}} คำ
+- Minimum: {{min_words}} คำ
+- Maximum: {{max_words}} คำ
+
+### โครงสร้างบท
+```
+1. Opening (5-10%)
+   - ต่อจากบทที่แล้วอย่างราบรื่น
+   - Hook ผู้อ่านภายใน paragraph แรก
+   - Establish setting และ mood
+
+2. Rising Action (30-40%)
+   - พัฒนาเรื่องและตัวละคร
+   - สร้าง tension
+   - ใส่ conflict เล็กๆ
+
+3. Midpoint (10-15%)
+   - จุดเปลี่ยนหรือ revelation
+   - Stakes change
+   - ผู้อ่านอยากรู้ต่อ
+
+4. Falling Action (25-35%)
+   - ผลกระทบจาก midpoint
+   - ดำเนินเรื่องต่อ
+   - Character reactions
+
+5. Ending (5-10%)
+   - Cliffhanger หรือ hook
+   - ทิ้งคำถาม หรือ promise
+   - ผู้อ่านต้องอยากอ่านต่อ
+```
+
+### เทคนิคการเขียน
+
+**Show, Don't Tell:**
+❌ "เธอรู้สึกเศร้า"
+✅ "น้ำตาไหลริน เธอกัดริมฝีปากแน่น พยายามไม่ให้เสียงสะอื้นหลุดออกมา"
+
+**Dialogue:**
+- แต่ละตัวละครมี voice เฉพาะ
+- มี subtext ไม่พูดตรงเกินไป
+- ใส่ action beats ทุก 3-5 ประโยค
+- Balance กับ narration
+
+**Sensory Details:**
+- ใช้ประสาทสัมผัสทั้ง 5
+- เลือกใช้อย่างมีจุดประสงค์
+- ไม่มากเกินไป
+
+**Pacing:**
+- ฉาก action: ประโยคสั้น เร็ว
+- ฉาก emotional: ให้เวลาซึมซับ
+- ฉาก exposition: ผสมกับ action
+
+### Consistency Check
+- ตัวละครทำตัวตาม character sheet
+- Timeline ต่อเนื่องถูกต้อง
+- Setting ตรงกับที่อธิบายไว้
+- ถ้ามี magic/power ต้องตามกฎ
+
+### สิ่งที่ต้องหลีกเลี่ยง
+- ❌ Info dump
+- ❌ ตัวละครทำตัวโง่เพื่อ plot
+- ❌ Deus ex machina
+- ❌ Head-hopping (เปลี่ยน POV กลางบท)
+- ❌ Telling emotions แทน showing
+- ❌ ซ้ำคำมากเกินไป
+
+## โทนและบรรยากาศ
+{{tone_atmosphere}}
+
+## Output
+เขียนบทนิยายเป็นภาษาไทย
+- ไม่ต้องใส่หมายเลขบทหรือชื่อบท
+- เริ่มด้วยเนื้อเรื่องเลย
+- ใช้เครื่องหมาย "..." สำหรับ dialogue
+- ขึ้นบรรทัดใหม่เมื่อเปลี่ยนผู้พูด
+- ใช้ย่อหน้าเหมาะสม
+
+เขียนบทที่น่าติดตาม มีคุณภาพ และสอดคล้องกับเรื่องที่ผ่านมา

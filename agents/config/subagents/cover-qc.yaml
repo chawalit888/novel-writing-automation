@@ -1,0 +1,267 @@
+# ===========================================
+# Cover QC Subagent Configuration
+# ผู้ตรวจสอบคุณภาพปกนิยาย
+# ===========================================
+
+agent:
+  id: "cover-qc-001"
+  name: "CoverQC"
+  role: "Subagent"
+  team: "cover-design"
+  model: "claude-sonnet-4"
+  description: "ผู้ตรวจสอบคุณภาพปกนิยายก่อนส่งมอบ"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-cover-001"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - ตรวจสอบคุณภาพภาพ (resolution, clarity)
+  - ตรวจสอบ text readability
+  - ตรวจสอบความเหมาะสมกับแนวเรื่อง
+  - ตรวจสอบ platform requirements
+  - ตรวจสอบ license compliance
+  - ให้คะแนนและข้อเสนอแนะ
+
+# ===========================================
+# QC Checklist
+# ===========================================
+checklist:
+  technical:
+    - item: "Resolution"
+      requirement: "ไม่ต่ำกว่า 600x900 px"
+      weight: 10
+
+    - item: "File Size"
+      requirement: "ไม่เกิน 2MB (ธันวลัย) / 5MB (อื่นๆ)"
+      weight: 5
+
+    - item: "File Format"
+      requirement: "JPG หรือ PNG"
+      weight: 5
+
+    - item: "No Artifacts"
+      requirement: "ไม่มี pixelation, blur, หรือ AI artifacts"
+      weight: 15
+
+  visual:
+    - item: "Color Balance"
+      requirement: "สีสมดุล ไม่มืด/สว่างเกินไป"
+      weight: 10
+
+    - item: "Composition"
+      requirement: "องค์ประกอบสมดุล มี focal point"
+      weight: 10
+
+    - item: "Genre Match"
+      requirement: "เข้ากับแนวเรื่อง"
+      weight: 15
+
+  typography:
+    - item: "Title Readability"
+      requirement: "ชื่อเรื่องอ่านได้ชัดเจน"
+      weight: 15
+
+    - item: "Font Appropriate"
+      requirement: "Font เหมาะกับแนวเรื่อง"
+      weight: 5
+
+    - item: "Text Contrast"
+      requirement: "text ตัดกับ background ชัดเจน"
+      weight: 10
+
+  compliance:
+    - item: "License Valid"
+      requirement: "รูปภาพมี license ใช้เชิงพาณิชย์ได้"
+      weight: 20
+
+    - item: "Platform Rules"
+      requirement: "ผ่านกฎของ platform (เช่น ห้าม AI art)"
+      weight: 20
+
+    - item: "No Copyright Issues"
+      requirement: "ไม่ละเมิดลิขสิทธิ์"
+      weight: 20
+
+# ===========================================
+# Platform-Specific Checks
+# ===========================================
+platform_checks:
+  thanwalai:
+    rules:
+      - "ห้ามใช้รูป AI generate ทั้งภาพ"
+      - "AI enhance ได้"
+      - "ต้องมี license stock photo"
+    detection_check:
+      - "ดูว่ามีลักษณะ AI art หรือไม่"
+      - "ตรวจสอบ: นิ้วมือ, texture แปลก, องค์ประกอบลอย"
+
+  readawrite:
+    rules:
+      - "ไม่มีข้อจำกัด AI art"
+    notes:
+      - "แต่ควรมีคุณภาพดี"
+
+# ===========================================
+# Scoring System
+# ===========================================
+scoring:
+  scale: "0-100"
+
+  grades:
+    - grade: "A"
+      range: "90-100"
+      action: "ผ่าน พร้อมใช้งาน"
+
+    - grade: "B"
+      range: "80-89"
+      action: "ผ่าน แนะนำปรับปรุงเล็กน้อย"
+
+    - grade: "C"
+      range: "70-79"
+      action: "ผ่านแบบมีเงื่อนไข ต้องแก้ไข"
+
+    - grade: "D"
+      range: "60-69"
+      action: "ไม่ผ่าน ต้องแก้ไขหลายจุด"
+
+    - grade: "F"
+      range: "0-59"
+      action: "ไม่ผ่าน ต้องทำใหม่"
+
+  pass_threshold: 70
+  recommended_threshold: 85
+
+# ===========================================
+# Common Issues & Solutions
+# ===========================================
+common_issues:
+  - issue: "ชื่อเรื่องอ่านยาก"
+    solutions:
+      - "เพิ่ม gradient overlay"
+      - "เพิ่ม text shadow"
+      - "เปลี่ยนสี text"
+      - "ย้ายตำแหน่ง text"
+
+  - issue: "รูปมืดเกินไป"
+    solutions:
+      - "เพิ่ม brightness"
+      - "ใช้ rim light effect"
+      - "เพิ่ม accent color"
+
+  - issue: "ดู AI generated"
+    solutions:
+      - "ลด AI strength"
+      - "ใช้รูป stock มากขึ้น"
+      - "แก้ไข artifacts manually"
+
+  - issue: "ไม่เข้ากับแนวเรื่อง"
+    solutions:
+      - "ปรับ color scheme"
+      - "เปลี่ยน font"
+      - "หารูปใหม่"
+
+# ===========================================
+# Output Format
+# ===========================================
+output:
+  format: "markdown"
+  template: |
+    # Cover QC Report
+
+    ## Novel: {{novel_title}}
+    ## Date: {{date}}
+    ## Reviewer: CoverQC Agent
+
+    ---
+
+    ## Overall Score: {{score}}/100 (Grade: {{grade}})
+
+    **Status:** {{status}}
+
+    ---
+
+    ## Technical Checks
+    | Item | Status | Score | Notes |
+    |------|--------|-------|-------|
+    {{technical_table}}
+
+    ## Visual Checks
+    | Item | Status | Score | Notes |
+    |------|--------|-------|-------|
+    {{visual_table}}
+
+    ## Typography Checks
+    | Item | Status | Score | Notes |
+    |------|--------|-------|-------|
+    {{typography_table}}
+
+    ## Compliance Checks
+    | Item | Status | Score | Notes |
+    |------|--------|-------|-------|
+    {{compliance_table}}
+
+    ---
+
+    ## Issues Found
+    {{issues_list}}
+
+    ## Recommendations
+    {{recommendations}}
+
+    ---
+
+    ## Verdict
+    {{verdict}}
+
+  deliver_to: "{{project_path}}/covers/qc/"
+
+# ===========================================
+# Workflow
+# ===========================================
+workflow:
+  steps:
+    - receive_final_cover
+    - run_technical_checks
+    - run_visual_checks
+    - run_typography_checks
+    - run_compliance_checks
+    - calculate_score
+    - identify_issues
+    - write_recommendations
+    - submit_report
+
+  timeout_minutes: 15
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-cover-001"
+  reports_to:
+    - "mgr-cover-001"
+
+  status_updates:
+    on_start: true
+    on_completion: true
+    on_error: true
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_critical_failure:
+    - reject_cover
+    - detail_issues
+    - suggest_fixes
+    - report_to_manager
+
+  on_minor_issues:
+    - pass_with_conditions
+    - list_improvements
+    - report_to_manager

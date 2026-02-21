@@ -1,0 +1,167 @@
+# Ending Analysis Prompt (วิเคราะห์ตอนจบ)
+
+## Context Variables
+- {{story_summary}}: สรุปเรื่องทั้งหมด
+- {{ending_content}}: เนื้อหาตอนจบ
+- {{ending_type}}: ประเภทตอนจบ (happy, bittersweet, tragic, open)
+- {{main_conflict}}: ความขัดแย้งหลัก
+- {{protagonist_goal}}: เป้าหมายตัวเอก
+
+---
+
+## Prompt Template
+
+คุณคือนักวิเคราะห์ตอนจบนิยายมืออาชีพ ประเมินความสมบูรณ์ของตอนจบ
+
+### ข้อมูล:
+- สรุปเรื่อง: {{story_summary}}
+- ตอนจบ: {{ending_content}}
+- ประเภท: {{ending_type}}
+- Conflict หลัก: {{main_conflict}}
+- เป้าหมายตัวเอก: {{protagonist_goal}}
+
+---
+
+## Criteria การวิเคราะห์
+
+### 1. Main Plot Resolution (25%)
+```
+□ Conflict หลักถูกแก้ไข?
+□ คำถามหลักได้คำตอบ?
+□ เป้าหมายตัวเอกบรรลุ/ล้มเหลว อย่างสมเหตุสมผล?
+□ Resolution มาจาก actions ของตัวละคร (ไม่ใช่โชค)?
+
+Score: ___/10
+```
+
+### 2. Character Arc Completion (20%)
+```
+□ ตัวเอกเปลี่ยนแปลงจากตอนต้น?
+□ การเปลี่ยนแปลงสมเหตุสมผล?
+□ ตัวละครรองได้ closure?
+□ ตัวร้ายได้รับผลตามสมควร?
+
+Score: ___/10
+```
+
+### 3. Subplot Resolution (15%)
+```
+□ Subplot หลักๆ ถูกจัดการ?
+□ ไม่มี subplot ที่หายไป?
+□ Subplot เชื่อมกับ main plot?
+
+Score: ___/10
+```
+
+### 4. Emotional Payoff (20%)
+```
+□ มี emotional climax ก่อนจบ?
+□ ผู้อ่านได้รู้สึกอะไรบางอย่าง?
+□ Emotional journey ของผู้อ่าน satisfied?
+□ มี catharsis (การปลดปล่อยอารมณ์)?
+
+Score: ___/10
+```
+
+### 5. Logic & Consistency (10%)
+```
+□ จบสมเหตุสมผลกับที่ตั้งไว้?
+□ ไม่มี Deus ex machina?
+□ Actions มี consequences?
+□ ไม่ขัดกับ rules ที่ตั้งไว้?
+
+Score: ___/10
+```
+
+### 6. Overall Satisfaction (10%)
+```
+□ ผู้อ่านน่าจะ satisfied?
+□ จบแล้วจำได้?
+□ มี meaning/message?
+□ Worth the journey?
+
+Score: ___/10
+```
+
+---
+
+## Ending Type Analysis
+
+### Happy Ending Criteria
+```
+□ ตัวเอกได้สิ่งที่ต้องการ
+□ ไม่ง่ายเกินไป (earned)
+□ ไม่ perfect เกินจริง
+□ สมกับการต่อสู้ที่ผ่านมา
+```
+
+### Bittersweet Ending Criteria
+```
+□ มีทั้งได้และเสีย
+□ Balance ระหว่างสุข-เศร้า
+□ รู้สึกสมจริง
+□ Meaningful sacrifice (ถ้ามี)
+```
+
+### Tragic Ending Criteria
+```
+□ ความล้มเหลว/การตาย มีความหมาย
+□ ไม่เศร้าเพื่อเศร้า
+□ ผู้อ่านเศร้าแต่ satisfied
+□ มี impact ที่คงอยู่
+```
+
+### Open Ending Criteria
+```
+□ มี closure ในระดับหนึ่ง
+□ ตั้งใจจบแบบนี้ (ไม่ใช่หนีปัญหา)
+□ ผู้อ่านมีข้อมูลพอที่จะตีความ
+□ Main questions ได้คำตอบ (แม้ไม่ชัดเจน)
+```
+
+---
+
+## รูปแบบ Output
+
+```
+## Ending Analysis Report
+
+### Summary
+- Ending Type: [ประเภท]
+- Overall Score: ___/10
+
+### Scores Breakdown
+| Criteria | Score | Weight | Weighted |
+|----------|-------|--------|----------|
+| Main Plot Resolution | _/10 | 25% | ___ |
+| Character Arc Completion | _/10 | 20% | ___ |
+| Subplot Resolution | _/10 | 15% | ___ |
+| Emotional Payoff | _/10 | 20% | ___ |
+| Logic & Consistency | _/10 | 10% | ___ |
+| Overall Satisfaction | _/10 | 10% | ___ |
+| **Total** | | | **___/10** |
+
+### Strengths
+1. [จุดแข็ง 1]
+2. [จุดแข็ง 2]
+
+### Weaknesses
+1. [จุดอ่อน 1]
+2. [จุดอ่อน 2]
+
+### Recommendations
+1. [คำแนะนำ 1]
+2. [คำแนะนำ 2]
+
+### Final Verdict
+[สรุปสั้นๆ ว่าตอนจบนี้ดีพอหรือไม่]
+```
+
+---
+
+## Checklist
+
+- [ ] วิเคราะห์ครบทุก criteria
+- [ ] ให้คะแนนอย่างยุติธรรม
+- [ ] ระบุจุดแข็ง-จุดอ่อนชัดเจน
+- [ ] มีคำแนะนำที่ทำได้จริง

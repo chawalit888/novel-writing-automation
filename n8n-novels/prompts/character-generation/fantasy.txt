@@ -1,0 +1,107 @@
+สร้างตัวละครสำหรับนิยายแฟนตาซีในรูปแบบ JSON
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- จำนวนตัวละครที่ต้องการ: {{num_characters}}
+- Setting: {{setting}}
+- Magic System: {{magic_system}}
+
+## Requirements
+
+### Protagonist
+- อายุ: 16-25 ปี
+- มีพรสวรรค์/ชะตากรรมพิเศษ
+- เริ่มต้นจากระดับต่ำ (room to grow)
+- มี flaw ที่ต้องเอาชนะ
+- มี motivation ชัดเจน
+
+### Antagonist
+- มีเหตุผลที่เชื่อว่าตัวเองถูก
+- ระดับพลังสูงกว่า protagonist (ตอนเริ่ม)
+- มี backstory ที่ทำให้เข้าใจได้
+- เป็นภาพสะท้อนของ protagonist
+
+### Mentor
+- มีความรู้/พลังสูง
+- มีเหตุผลที่ช่วย protagonist
+- อาจมีความลับ
+
+### Allies
+- แต่ละคนมีจุดแข็งต่างกัน
+- ช่วย complement protagonist
+- มี arc ของตัวเอง
+
+## Output Format (JSON)
+```json
+{
+  "characters": [
+    {
+      "id": "char-001",
+      "name": "ชื่อ",
+      "title": "ฉายา/ตำแหน่ง (ถ้ามี)",
+      "age": 18,
+      "gender": "male/female",
+      "race": "มนุษย์/อื่นๆ",
+      "role": "protagonist/antagonist/mentor/ally",
+      "class": "นักรบ/นักเวทย์/etc",
+
+      "personality": {
+        "traits": ["trait1", "trait2", "trait3"],
+        "strengths": ["strength1", "strength2"],
+        "flaws": ["flaw1", "flaw2"],
+        "beliefs": ["belief1"]
+      },
+
+      "appearance": {
+        "height": "",
+        "build": "",
+        "hair": "",
+        "eyes": "",
+        "distinctive_features": [],
+        "typical_attire": ""
+      },
+
+      "abilities": {
+        "power_type": "ประเภทพลัง",
+        "current_level": "ระดับปัจจุบัน",
+        "potential": "ศักยภาพสูงสุด",
+        "skills": ["skill1", "skill2"],
+        "limitations": ["limitation1"],
+        "signature_move": "ท่าไม้ตาย"
+      },
+
+      "background": {
+        "origin": "ถิ่นกำเนิด",
+        "family": "ครอบครัว",
+        "training": "การฝึกฝน",
+        "defining_moment": "เหตุการณ์สำคัญ",
+        "secrets": ["ความลับ"]
+      },
+
+      "motivation": {
+        "goal": "เป้าหมาย",
+        "fear": "ความกลัว",
+        "lie_they_believe": "สิ่งที่เชื่อผิดๆ"
+      },
+
+      "character_arc": {
+        "starting_point": "จุดเริ่มต้น",
+        "growth": "การเติบโต",
+        "end_point": "จุดจบ"
+      },
+
+      "speech_pattern": "",
+      "catchphrase": ""
+    }
+  ]
+}
+```
+
+## เกณฑ์คุณภาพ
+- Power levels ต้องสมดุล
+- ทุกคนมี agency ของตัวเอง
+- Antagonist ต้องมีเหตุผล ไม่ใช่แค่ "ชั่ว"
+- มี potential สำหรับ character development
+- สอดคล้องกับ world building
+
+สร้างตัวละครที่มีความลึก น่าสนใจ และสอดคล้องกับโลกแฟนตาซี

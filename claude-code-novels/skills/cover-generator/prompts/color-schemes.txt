@@ -1,0 +1,223 @@
+# Color Schemes สำหรับหน้าปกนิยาย
+
+## ชุดสีตามแนวนิยาย
+
+---
+
+### 1. Romance / รักหวาน
+
+#### Soft Romance
+```
+Background: soft pink gradient (#FFE4E1 to #FFF0F5)
+Text: rose gold (#B76E79)
+Accent: champagne gold (#F7E7CE)
+```
+
+#### Passionate Romance
+```
+Background: blush pink (#DE5D83)
+Text: cream white (#FFFDD0)
+Accent: deep rose (#C21E56)
+```
+
+#### Sweet Romance
+```
+Background: peach cream (#FFDAB9 to #FFE4C4)
+Text: warm brown (#8B4513)
+Accent: coral (#FF7F50)
+```
+
+---
+
+### 2. Mafia / Dark Romance
+
+#### Classic Mafia
+```
+Background: pure black (#000000)
+Text: metallic gold (#FFD700)
+Accent: blood red (#8B0000)
+```
+
+#### Luxury Mafia
+```
+Background: deep burgundy (#800020)
+Text: champagne (#F7E7CE)
+Accent: gold (#D4AF37)
+```
+
+#### Modern Mafia
+```
+Background: charcoal (#36454F)
+Text: silver (#C0C0C0)
+Accent: crimson (#DC143C)
+```
+
+---
+
+### 3. Fantasy / Isekai
+
+#### Mystical Purple
+```
+Background: gradient (#4B0082 to #191970)
+Text: silver glow (#E8E8E8)
+Accent: starlight gold (#FFE4B5)
+```
+
+#### Celestial Blue
+```
+Background: midnight blue (#191970)
+Text: moonlight silver (#D3D3D3)
+Accent: ethereal cyan (#00CED1)
+```
+
+#### Magic Forest
+```
+Background: deep emerald (#046307 to #004225)
+Text: gold (#FFD700)
+Accent: fairy light (#7FFFD4)
+```
+
+---
+
+### 4. CEO / Modern
+
+#### Corporate Black
+```
+Background: pure black (#000000)
+Text: white (#FFFFFF)
+Accent: gold line (#B8860B)
+```
+
+#### Executive Gray
+```
+Background: slate gray (#708090)
+Text: white (#FFFFFF)
+Accent: navy (#000080)
+```
+
+#### Minimal White
+```
+Background: off-white (#FAFAFA)
+Text: charcoal (#333333)
+Accent: gold (#C9A227)
+```
+
+---
+
+### 5. Horror / Thriller
+
+#### Blood Horror
+```
+Background: pitch black (#0D0D0D)
+Text: blood red (#8B0000)
+Accent: dark gray (#4A4A4A)
+```
+
+#### Psychological Thriller
+```
+Background: dark gray (#1C1C1C)
+Text: pale white (#E5E5E5)
+Accent: cold blue (#4682B4)
+```
+
+#### Gothic Horror
+```
+Background: deep purple (#301934)
+Text: bone white (#F9F6EE)
+Accent: crimson (#990000)
+```
+
+---
+
+### 6. BL / GL
+
+#### Soft BL (Blue-focused)
+```
+Background: gradient (#87CEEB to #E6E6FA)
+Text: navy (#1C3A6E)
+Accent: rose (#FF69B4)
+```
+
+#### Sweet GL (Pink-focused)
+```
+Background: gradient (#FFB6C1 to #E6E6FA)
+Text: deep purple (#4B0082)
+Accent: soft blue (#ADD8E6)
+```
+
+#### Modern LGBTQ+
+```
+Background: soft rainbow gradient
+Text: white (#FFFFFF)
+Accent: gold (#FFD700)
+```
+
+---
+
+### 7. Palace / Historical Chinese
+
+#### Imperial Red
+```
+Background: vermillion red (#E34234)
+Text: gold (#FFD700)
+Accent: jade green (#00A86B)
+```
+
+#### Royal Purple
+```
+Background: imperial purple (#66023C)
+Text: gold (#D4AF37)
+Accent: cream (#FFFDD0)
+```
+
+#### Jade Dynasty
+```
+Background: jade green (#00A36C)
+Text: gold (#FFD700)
+Accent: pearl white (#F0EAD6)
+```
+
+---
+
+### 8. Thai Historical / วังหลวง
+
+#### Royal Thai Gold
+```
+Background: deep red (#A51931)
+Text: Thai gold (#EEBA30)
+Accent: white (#FFFFFF)
+```
+
+#### Ayutthaya
+```
+Background: terracotta (#C04000)
+Text: antique gold (#CFB53B)
+Accent: cream (#FFF8DC)
+```
+
+#### Rattanakosin
+```
+Background: royal blue (#002366)
+Text: gold (#FFD700)
+Accent: red (#FF0000)
+```
+
+---
+
+## Prompt Format สำหรับสี
+
+```
+[color name] (#HEX) gradient/solid background
+[color name] (#HEX) text color
+[color name] (#HEX) accent elements
+```
+
+---
+
+## ตัวอย่างใช้ใน Prompt
+
+```
+deep burgundy (#800020) solid background with subtle velvet texture,
+champagne (#F7E7CE) elegant serif title text,
+gold (#D4AF37) decorative crown accent
+```

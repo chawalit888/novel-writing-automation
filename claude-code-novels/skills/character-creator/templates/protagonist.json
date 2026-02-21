@@ -1,0 +1,100 @@
+{
+  "$schema": "Protagonist Character Template",
+  "version": "1.0",
+
+  "basic_info": {
+    "name": "",
+    "name_meaning": "",
+    "age": 0,
+    "gender": "",
+    "occupation": "",
+    "social_status": ""
+  },
+
+  "appearance": {
+    "height": "",
+    "build": "",
+    "hair": "",
+    "eyes": "",
+    "distinguishing_features": [],
+    "typical_clothing": "",
+    "first_impression": ""
+  },
+
+  "personality": {
+    "core_traits": [],
+    "strengths": [],
+    "flaws": [],
+    "quirks": [],
+    "habits": [],
+    "pet_peeves": []
+  },
+
+  "psychology": {
+    "want": "",
+    "need": "",
+    "fear": "",
+    "lie_they_believe": "",
+    "ghost": "",
+    "wound": ""
+  },
+
+  "background": {
+    "birthplace": "",
+    "family": {
+      "parents": "",
+      "siblings": "",
+      "family_dynamics": ""
+    },
+    "childhood": "",
+    "defining_moments": [],
+    "education_training": "",
+    "secrets": []
+  },
+
+  "abilities": {
+    "skills": [],
+    "talents": [],
+    "powers": [],
+    "power_level": "",
+    "limitations": []
+  },
+
+  "relationships": {
+    "family": [],
+    "friends": [],
+    "enemies": [],
+    "romantic": "",
+    "mentors": []
+  },
+
+  "voice": {
+    "speech_pattern": "",
+    "vocabulary_level": "",
+    "favorite_phrases": [],
+    "things_they_never_say": [],
+    "accent_dialect": ""
+  },
+
+  "character_arc": {
+    "starting_point": "",
+    "catalyst": "",
+    "midpoint_shift": "",
+    "dark_moment": "",
+    "transformation": "",
+    "ending_state": ""
+  },
+
+  "story_role": {
+    "function": "protagonist",
+    "theme_representation": "",
+    "subplot_involvement": [],
+    "key_scenes": []
+  },
+
+  "notes": {
+    "inspiration": "",
+    "writing_reminders": [],
+    "potential_developments": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "Supporting Character Template",
+  "version": "1.0",
+
+  "basic_info": {
+    "name": "",
+    "age": 0,
+    "gender": "",
+    "occupation": "",
+    "relation_to_protagonist": ""
+  },
+
+  "appearance": {
+    "brief_description": "",
+    "distinguishing_features": [],
+    "typical_clothing": ""
+  },
+
+  "personality": {
+    "core_traits": [],
+    "strengths": [],
+    "flaws": [],
+    "quirks": []
+  },
+
+  "background": {
+    "brief_history": "",
+    "key_events": [],
+    "secrets": []
+  },
+
+  "motivation": {
+    "primary_goal": "",
+    "what_they_want_from_protagonist": ""
+  },
+
+  "voice": {
+    "speech_pattern": "",
+    "favorite_phrases": [],
+    "distinct_mannerisms": []
+  },
+
+  "story_function": {
+    "role": "",
+    "scenes_involved": [],
+    "how_they_help_protagonist": "",
+    "potential_conflict": ""
+  },
+
+  "relationships": {
+    "with_protagonist": "",
+    "with_other_characters": []
+  },
+
+  "notes": {
+    "writing_reminders": [],
+    "do_not_forget": []
+  }
+}

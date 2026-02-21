@@ -1,0 +1,58 @@
+เขียนฉากบทสนทนาระหว่าง {{characters}}
+
+## Context
+- เรื่อง: {{title}}
+- สถานที่: {{location}}
+- สถานการณ์: {{situation}}
+- ความสัมพันธ์ระหว่างตัวละคร: {{relationship}}
+- อารมณ์/บรรยากาศ: {{mood}}
+
+## เป้าหมายของฉากนี้
+{{scene_goals}}
+
+## Character Voices
+
+### {{character_1_name}}
+- บุคลิก: {{character_1_personality}}
+- วิธีพูด: {{character_1_speech_pattern}}
+- สิ่งที่ต้องการ: {{character_1_wants}}
+
+### {{character_2_name}}
+- บุคลิก: {{character_2_personality}}
+- วิธีพูด: {{character_2_speech_pattern}}
+- สิ่งที่ต้องการ: {{character_2_wants}}
+
+## Requirements
+
+### Dialogue Techniques
+1. **Subtext** - ตัวละครไม่ควรพูดตรงๆ ทุกอย่าง
+2. **Distinct Voices** - แต่ละคนมีวิธีพูดเฉพาะ
+3. **Action Beats** - ใส่การเคลื่อนไหว/gesture ระหว่าง dialogue
+4. **Tension** - มี conflict หรือ tension บางอย่าง
+5. **Progression** - บทสนทนาต้องไปข้างหน้า
+
+### Format
+- ใช้ "..." สำหรับ dialogue
+- ใส่ action beats ทุก 3-5 ประโยค dialogue
+- อย่าใช้ said alternatives มากเกินไป
+- ใส่ internal thought เป็นระยะ
+
+### สิ่งที่ต้องหลีกเลี่ยง
+- ❌ Talking heads (dialogue ไม่มี action)
+- ❌ On-the-nose dialogue (พูดตรงเกินไป)
+- ❌ Info dump ผ่าน dialogue
+- ❌ ทุกคนพูดเหมือนกัน
+- ❌ Dialogue tags ซ้ำซาก
+
+### สิ่งที่ควรทำ
+- ✅ ใช้ silence และ pause
+- ✅ ตัวละครขัดจังหวะกัน
+- ✅ มี underlying tension
+- ✅ Reveal character ผ่านคำพูด
+- ✅ Move plot forward
+
+## ความยาว
+ประมาณ {{word_count}} คำ
+
+## Output
+เขียนฉากบทสนทนาภาษาไทย รวม action beats และ internal thoughts

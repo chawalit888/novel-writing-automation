@@ -1,0 +1,88 @@
+{
+  "$schema": "NC Distribution Rules",
+  "version": "1.0",
+  "description": "กฎการกระจายฉาก NC ในนิยาย",
+
+  "distribution_rules": {
+    "nc_chapter_percentage": {
+      "minimum": 35,
+      "maximum": 45,
+      "description": "เปอร์เซ็นต์ของตอนที่ต้องมีฉาก NC (35-45% ของจำนวนตอนทั้งหมด)"
+    },
+    "calculation_example": {
+      "total_chapters_10": {
+        "min_nc_chapters": 4,
+        "max_nc_chapters": 5
+      },
+      "total_chapters_20": {
+        "min_nc_chapters": 7,
+        "max_nc_chapters": 9
+      },
+      "total_chapters_30": {
+        "min_nc_chapters": 11,
+        "max_nc_chapters": 14
+      },
+      "total_chapters_50": {
+        "min_nc_chapters": 18,
+        "max_nc_chapters": 23
+      }
+    }
+  },
+
+  "chapter_title_format": {
+    "nc_indicator_required": true,
+    "format": "ตอนที่ {chapter_number} {title} [{rating}]",
+    "examples": [
+      "ตอนที่ 3 ธีจัดในรถ [NC25+]",
+      "ตอนที่ 7 คืนแรกที่ห้องพัก [NC20]",
+      "ตอนที่ 12 ความลับในห้องน้ำ [NC30+]",
+      "ตอนที่ 15 เช้าวันใหม่ [NC20]"
+    ],
+    "rating_tags": {
+      "NC20": "รายละเอียดปานกลาง 50% อารมณ์ - 50% physical",
+      "NC25+": "รายละเอียดชัดเจน ไม่อ้อมค้อม",
+      "NC30+": "รายละเอียดเข้มข้นมาก ไม่กั๊ก"
+    }
+  },
+
+  "placement_strategy": {
+    "recommended_pattern": {
+      "first_nc_chapter": "ไม่ควรเร็วเกินไป แนะนำหลังตอนที่ 3-5",
+      "spacing": "ไม่ควรมี NC ติดกันเกิน 2 ตอน ยกเว้นช่วง climax",
+      "escalation": "ค่อยๆ เพิ่มระดับ rating ตามพัฒนาการของความสัมพันธ์",
+      "climax_zone": "ช่วง 70-85% ของเรื่อง ควรมี NC เข้มข้นที่สุด"
+    },
+    "distribution_example_20_chapters": {
+      "chapters_1_5": {
+        "nc_count": "0-1 ตอน",
+        "suggested_rating": "NC20",
+        "note": "ช่วง setup ยังไม่ต้องเยอะ เริ่มที่ NC20"
+      },
+      "chapters_6_10": {
+        "nc_count": "2-3 ตอน",
+        "suggested_rating": "NC20-NC25+",
+        "note": "เริ่มพัฒนาความสัมพันธ์"
+      },
+      "chapters_11_15": {
+        "nc_count": "3-4 ตอน",
+        "suggested_rating": "NC25+-NC30+",
+        "note": "ช่วง climax ความสัมพันธ์เข้มข้น"
+      },
+      "chapters_16_20": {
+        "nc_count": "2-3 ตอน",
+        "suggested_rating": "NC20-NC30+",
+        "note": "ช่วง resolution ยังมี NC แต่เริ่มลดลง"
+      }
+    }
+  },
+
+  "validation": {
+    "auto_check": true,
+    "warnings": {
+      "below_minimum": "ฉาก NC น้อยกว่า 35% - ควรเพิ่มอีก {needed} ตอน",
+      "above_maximum": "ฉาก NC มากกว่า 45% - ควรลด {excess} ตอน",
+      "missing_rating_tag": "ตอน {chapter} ไม่มี rating tag ในชื่อตอน",
+      "consecutive_nc_warning": "มี NC ติดกันเกิน 3 ตอน (ตอนที่ {start}-{end})"
+    }
+  }
+}

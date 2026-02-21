@@ -1,0 +1,116 @@
+{
+  "$schema": "Mystery Clue Tracking Template",
+  "version": "1.0",
+
+  "crime_details": {
+    "type": "",
+    "victim": "",
+    "time_of_crime": "",
+    "location": "",
+    "method": "",
+    "motive": "",
+    "culprit": ""
+  },
+
+  "clues": [
+    {
+      "id": "CLUE-001",
+      "type": "physical",
+      "description": "",
+      "found_in_chapter": 0,
+      "found_by": "",
+      "significance": "",
+      "points_to": "",
+      "is_red_herring": false,
+      "hidden_by": ""
+    }
+  ],
+
+  "suspects": [
+    {
+      "name": "",
+      "role": "",
+      "motive": "",
+      "opportunity": "",
+      "alibi": "",
+      "alibi_verified": false,
+      "alibi_holes": [],
+      "secrets": [],
+      "red_herrings": [],
+      "clues_pointing_to": [],
+      "clues_exonerating": [],
+      "introduced_in_chapter": 0,
+      "guilt_likelihood": ""
+    }
+  ],
+
+  "timeline": {
+    "day_of_crime": [
+      {
+        "time": "",
+        "event": "",
+        "characters_involved": [],
+        "witnesses": [],
+        "location": ""
+      }
+    ],
+    "days_before": [
+      {
+        "date": "",
+        "significant_events": []
+      }
+    ]
+  },
+
+  "alibis": [
+    {
+      "suspect": "",
+      "claimed_whereabouts": "",
+      "time_period": "",
+      "corroborated_by": "",
+      "evidence": "",
+      "holes": [],
+      "verified": false
+    }
+  ],
+
+  "red_herrings": [
+    {
+      "id": "RH-001",
+      "description": "",
+      "points_to_suspect": "",
+      "real_explanation": "",
+      "revealed_in_chapter": 0
+    }
+  ],
+
+  "investigation_progress": [
+    {
+      "chapter": 0,
+      "clues_found": [],
+      "suspects_interviewed": [],
+      "detective_theory": "",
+      "reader_should_think": ""
+    }
+  ],
+
+  "reveal_order": {
+    "clues_to_mention_in_reveal": [],
+    "order_of_deduction": [],
+    "final_proof": ""
+  },
+
+  "loose_ends": [
+    {
+      "question": "",
+      "answer": "",
+      "resolved_in_chapter": 0
+    }
+  ],
+
+  "notes": {
+    "writing_reminders": [],
+    "clues_not_yet_planted": [],
+    "potential_plot_holes": []
+  }
+}

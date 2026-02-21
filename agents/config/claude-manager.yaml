@@ -1,0 +1,172 @@
+# ===========================================
+# Claude Code Manager Agent Configuration
+# Premium Quality Team Leader
+# ===========================================
+
+agent:
+  id: "mgr-claude-001"
+  name: "ClaudeCodeManager"
+  role: "Manager"
+  team: "claude-code"
+  model: "claude-sonnet-4"
+  description: "Manages the premium quality novel writing team using Claude Code"
+
+# ===========================================
+# Team Structure
+# ===========================================
+team:
+  name: "Claude Code Premium Team"
+  focus: "High-quality, carefully crafted novels"
+  capacity: "3-5 novels simultaneously"
+
+  subagents:
+    - id: "claude-writer-001"
+      config: "agents/config/subagents/claude-writer.yaml"
+    - id: "claude-quality-001"
+      config: "agents/config/subagents/claude-quality.yaml"
+
+# ===========================================
+# Responsibilities
+# ===========================================
+responsibilities:
+  - receive_tasks_from_ceo
+  - create_project_structure
+  - assign_tasks_to_subagents
+  - review_quality
+  - manage_timeline
+  - report_progress
+  - handle_revisions
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "project-management"
+    description: "Create and manage novel projects"
+  - name: "quality-review"
+    description: "Review and approve chapter quality"
+  - name: "timeline-tracking"
+    description: "Track project progress and deadlines"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  inbox: "agents/messages/claude-manager/"
+  reports_to: "ceo-001"
+  manages:
+    - "claude-writer-001"
+    - "claude-quality-001"
+
+# ===========================================
+# Project Workflow
+# ===========================================
+workflow:
+  new_project:
+    steps:
+      - action: "create_project_folder"
+        path: "claude-code-novels/projects/{{project_id}}/"
+
+      - action: "assign_character_creation"
+        to: "claude-writer-001"
+        skill: "character-creator"
+        wait_for_completion: true
+
+      - action: "review_characters"
+        approval_required: true
+
+      - action: "assign_plot_creation"
+        to: "claude-writer-001"
+        skill: "plot-manager"
+        wait_for_completion: true
+
+      - action: "review_plot"
+        approval_required: true
+
+      - action: "start_writing_loop"
+
+  writing_loop:
+    per_chapter:
+      - action: "assign_chapter_writing"
+        to: "claude-writer-001"
+        skill: "novel-writer"
+
+      - action: "assign_quality_check"
+        to: "claude-quality-001"
+        skill: "consistency-checker"
+
+      - action: "evaluate_result"
+        if_pass: "save_and_continue"
+        if_fail: "request_revision"
+        max_revisions: 3
+
+# ===========================================
+# Quality Standards
+# ===========================================
+quality:
+  minimum_score: 80
+
+  criteria:
+    - name: "character_consistency"
+      weight: 25
+      minimum: 75
+
+    - name: "plot_coherence"
+      weight: 25
+      minimum: 75
+
+    - name: "writing_quality"
+      weight: 30
+      minimum: 80
+
+    - name: "genre_adherence"
+      weight: 20
+      minimum: 70
+
+  chapter_requirements:
+    min_words: 4000
+    max_words: 6000
+    target_words: 5000
+
+# ===========================================
+# Resource Paths
+# ===========================================
+resources:
+  skills_dir: "claude-code-novels/skills/"
+  templates_dir: "claude-code-novels/templates/"
+  tools_dir: "claude-code-novels/tools/"
+  projects_dir: "claude-code-novels/projects/"
+
+# ===========================================
+# Reporting
+# ===========================================
+reporting:
+  to: "ceo-001"
+  frequency: "daily"
+
+  include:
+    - active_projects
+    - chapters_completed_today
+    - average_quality_score
+    - issues_encountered
+    - tomorrow_plan
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_writer_failure:
+    - retry_count: 2
+    - if_still_fails: "escalate_to_ceo"
+
+  on_quality_failure:
+    - request_revision: true
+    - max_revisions: 3
+    - if_still_fails: "escalate_to_ceo"
+
+# ===========================================
+# Logging
+# ===========================================
+logging:
+  path: "agents/logs/claude-team.log"
+  level: "INFO"

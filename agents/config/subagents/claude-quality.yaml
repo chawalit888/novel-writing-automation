@@ -1,0 +1,234 @@
+# ===========================================
+# Claude Quality Subagent Configuration
+# Premium Quality Assurance Specialist
+# ===========================================
+
+agent:
+  id: "claude-quality-001"
+  name: "ClaudeQuality"
+  role: "Subagent"
+  team: "claude-code"
+  model: "claude-sonnet-4"
+  description: "Quality assurance specialist for premium novels"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-claude-001"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  # Consistency Checking
+  - name: "consistency-checker"
+    path: "claude-code-novels/skills/consistency-checker/SKILL.md"
+    rules:
+      - "claude-code-novels/skills/consistency-checker/rules/character-rules.json"
+      - "claude-code-novels/skills/consistency-checker/rules/world-rules.json"
+
+# ===========================================
+# Tools
+# ===========================================
+tools:
+  - name: "consistency_checker"
+    path: "claude-code-novels/tools/consistency_checker.py"
+    usage: "python tools/consistency_checker.py {{project_path}} --start {{start_chapter}} --end {{end_chapter}}"
+
+  - name: "stats_tracker"
+    path: "claude-code-novels/tools/stats_tracker.py"
+    usage: "python tools/stats_tracker.py {{project_path}}"
+
+# ===========================================
+# Quality Checks
+# ===========================================
+checks:
+  # Character Consistency
+  character:
+    - name: "personality_consistent"
+      description: "Character acts according to established traits"
+      severity: "major"
+
+    - name: "speech_pattern_consistent"
+      description: "Character speaks in their established voice"
+      severity: "minor"
+
+    - name: "background_consistent"
+      description: "No contradictions with character history"
+      severity: "major"
+
+    - name: "abilities_consistent"
+      description: "Skills/powers match established levels"
+      severity: "critical"
+
+  # Timeline Consistency
+  timeline:
+    - name: "event_sequence"
+      description: "Events happen in logical order"
+      severity: "critical"
+
+    - name: "time_passage"
+      description: "Time passes consistently"
+      severity: "major"
+
+    - name: "age_consistency"
+      description: "Character ages match timeline"
+      severity: "major"
+
+  # World Consistency
+  world:
+    - name: "magic_rules"
+      description: "Magic system follows established rules"
+      severity: "critical"
+
+    - name: "geography"
+      description: "Locations and distances are consistent"
+      severity: "major"
+
+    - name: "culture"
+      description: "Cultural elements remain consistent"
+      severity: "minor"
+
+  # Plot Consistency
+  plot:
+    - name: "cause_effect"
+      description: "Events have logical causes and effects"
+      severity: "major"
+
+    - name: "setups_payoffs"
+      description: "Planted elements are resolved"
+      severity: "major"
+
+    - name: "character_knowledge"
+      description: "Characters only know what they should"
+      severity: "critical"
+
+# ===========================================
+# Scoring System
+# ===========================================
+scoring:
+  categories:
+    character_consistency:
+      weight: 25
+      minimum: 75
+
+    timeline_consistency:
+      weight: 20
+      minimum: 80
+
+    world_consistency:
+      weight: 20
+      minimum: 75
+
+    plot_consistency:
+      weight: 25
+      minimum: 80
+
+    writing_quality:
+      weight: 10
+      minimum: 70
+
+  overall:
+    pass_threshold: 80
+    excellent_threshold: 90
+
+  severity_impact:
+    critical: -20
+    major: -10
+    minor: -5
+
+# ===========================================
+# Review Process
+# ===========================================
+review_process:
+  steps:
+    - gather_references:
+        - characters.json
+        - world.json
+        - timeline.json
+        - previous_chapters
+
+    - analyze_chapter:
+        - list_characters_appearing
+        - list_events
+        - list_locations
+        - list_time_references
+        - list_magic_usage
+
+    - cross_reference:
+        - compare_with_rules
+        - check_timeline
+        - verify_character_behavior
+
+    - generate_report:
+        - list_issues_by_severity
+        - calculate_score
+        - provide_recommendations
+
+# ===========================================
+# Report Format
+# ===========================================
+report:
+  format: "markdown"
+
+  template: |
+    # Quality Report: {{chapter_title}}
+
+    ## Summary
+    - **Overall Score:** {{score}}/100
+    - **Status:** {{status}}
+    - **Issues Found:** {{issue_count}}
+
+    ## Issues by Severity
+
+    ### Critical ({{critical_count}})
+    {{critical_issues}}
+
+    ### Major ({{major_count}})
+    {{major_issues}}
+
+    ### Minor ({{minor_count}})
+    {{minor_issues}}
+
+    ## Recommendations
+    {{recommendations}}
+
+    ## Verdict
+    {{verdict}}
+
+  verdicts:
+    approved: "score >= 80 AND critical_count == 0"
+    needs_revision: "score >= 60 AND score < 80"
+    rejected: "score < 60 OR critical_count > 0"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-claude-001"
+  reports_to:
+    - "mgr-claude-001"
+
+  on_critical_issue:
+    notify_immediately: true
+    include_details: true
+
+# ===========================================
+# Output Paths
+# ===========================================
+outputs:
+  reports: "{{project_path}}/qc-reports/"
+  logs: "agents/logs/claude-quality.log"
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_missing_reference:
+    action: "request_from_manager"
+    timeout_seconds: 60
+
+  on_analysis_error:
+    action: "partial_report"
+    notify: true

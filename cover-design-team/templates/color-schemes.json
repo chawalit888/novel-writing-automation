@@ -1,0 +1,157 @@
+{
+  "color_schemes": {
+    "mafia_romance": {
+      "name": "Mafia Romance",
+      "description": "Dark, luxurious, dangerous love",
+      "colors": {
+        "primary": "#1a1a1a",
+        "secondary": "#8B0000",
+        "accent": "#D4AF37",
+        "text_primary": "#F5F5DC",
+        "text_secondary": "#FFFFFF"
+      },
+      "mood": ["dark", "luxurious", "dangerous", "passionate"],
+      "suitable_for": ["มาเฟีย", "ผู้ชายเลว", "รักร้าย", "18+", "NC"]
+    },
+
+    "dark_romance": {
+      "name": "Dark Romance",
+      "description": "Mysterious, intense, forbidden",
+      "colors": {
+        "primary": "#0d0d0d",
+        "secondary": "#4a0e0e",
+        "accent": "#c9a227",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#d4d4d4"
+      },
+      "mood": ["mysterious", "intense", "forbidden"],
+      "suitable_for": ["รักต้องห้าม", "รักเร้นลับ", "NC"]
+    },
+
+    "sweet_romance": {
+      "name": "Sweet Romance",
+      "description": "Warm, soft, lovely",
+      "colors": {
+        "primary": "#fff5f5",
+        "secondary": "#ffb6c1",
+        "accent": "#ff69b4",
+        "text_primary": "#4a4a4a",
+        "text_secondary": "#8b4557"
+      },
+      "mood": ["warm", "soft", "sweet"],
+      "suitable_for": ["โรแมนซ์", "รักหวาน", "คอมเมดี้"]
+    },
+
+    "fantasy_epic": {
+      "name": "Fantasy Epic",
+      "description": "Magical, grand, mystical",
+      "colors": {
+        "primary": "#1a1a3e",
+        "secondary": "#4a0080",
+        "accent": "#FFD700",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#e6e6fa"
+      },
+      "mood": ["magical", "epic", "mystical"],
+      "suitable_for": ["แฟนตาซี", "ต่างโลก", "เวทมนตร์"]
+    },
+
+    "bl_soft": {
+      "name": "BL Soft",
+      "description": "Gentle, emotional, intimate",
+      "colors": {
+        "primary": "#1e3a5f",
+        "secondary": "#4a90d9",
+        "accent": "#87ceeb",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#e6f0ff"
+      },
+      "mood": ["gentle", "emotional", "intimate"],
+      "suitable_for": ["BL", "วาย", "ชายรักชาย"]
+    },
+
+    "bl_dark": {
+      "name": "BL Dark",
+      "description": "Intense, passionate, dramatic",
+      "colors": {
+        "primary": "#1a1a2e",
+        "secondary": "#16213e",
+        "accent": "#e94560",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#a0a0a0"
+      },
+      "mood": ["intense", "passionate", "dramatic"],
+      "suitable_for": ["BL NC", "วาย 18+"]
+    },
+
+    "gl_soft": {
+      "name": "GL Soft",
+      "description": "Delicate, romantic, feminine",
+      "colors": {
+        "primary": "#2d1f3d",
+        "secondary": "#9b59b6",
+        "accent": "#e8b4d8",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#f0e6f5"
+      },
+      "mood": ["delicate", "romantic", "feminine"],
+      "suitable_for": ["GL", "ยูริ", "หญิงรักหญิง"]
+    },
+
+    "horror": {
+      "name": "Horror",
+      "description": "Creepy, dark, unsettling",
+      "colors": {
+        "primary": "#0d0d0d",
+        "secondary": "#1a1a1a",
+        "accent": "#8B0000",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#808080"
+      },
+      "mood": ["creepy", "dark", "unsettling"],
+      "suitable_for": ["สยองขวัญ", "ผี", "ระทึกขวัญ"]
+    },
+
+    "thriller": {
+      "name": "Thriller",
+      "description": "Tense, mysterious, gripping",
+      "colors": {
+        "primary": "#1c1c1c",
+        "secondary": "#2c3e50",
+        "accent": "#e74c3c",
+        "text_primary": "#FFFFFF",
+        "text_secondary": "#bdc3c7"
+      },
+      "mood": ["tense", "mysterious", "gripping"],
+      "suitable_for": ["ลึกลับ", "สืบสวน", "ฆาตกรรม"]
+    },
+
+    "historical": {
+      "name": "Historical",
+      "description": "Classic, elegant, timeless",
+      "colors": {
+        "primary": "#2c1810",
+        "secondary": "#8b4513",
+        "accent": "#daa520",
+        "text_primary": "#f5f5dc",
+        "text_secondary": "#d2b48c"
+      },
+      "mood": ["classic", "elegant", "timeless"],
+      "suitable_for": ["ย้อนยุค", "จีนโบราณ", "ประวัติศาสตร์"]
+    },
+
+    "comedy": {
+      "name": "Comedy",
+      "description": "Bright, fun, cheerful",
+      "colors": {
+        "primary": "#fff8e7",
+        "secondary": "#ffd93d",
+        "accent": "#ff6b6b",
+        "text_primary": "#2d3436",
+        "text_secondary": "#636e72"
+      },
+      "mood": ["bright", "fun", "cheerful"],
+      "suitable_for": ["คอมเมดี้", "ตลก", "เบาสมอง"]
+    }
+  }
+}

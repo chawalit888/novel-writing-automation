@@ -1,0 +1,120 @@
+# ===========================================
+# Content Creator Subagent
+# สร้าง Content โปรโมทนิยาย
+# ===========================================
+
+agent:
+  id: "content-creator-001"
+  name: "ContentCreator"
+  role: "Subagent"
+  team: "marketing"
+  model: "claude-sonnet-4"
+  description: "สร้าง content โปรโมทนิยายทุกรูปแบบ"
+
+reports_to: "mgr-marketing-001"
+
+# ===========================================
+# Content Types
+# ===========================================
+content_types:
+  quote_cards:
+    description: "Quote จากนิยายบนภาพสวย"
+    specs:
+      size: "1080x1080"
+      format: "png/jpg"
+    sources:
+      - "ประโยคเด็ดจากนิยาย"
+      - "บทสนทนาโดน"
+      - "คำคมตัวละคร"
+
+  teasers:
+    description: "ตัวอย่างเนื้อหาดึงดูด"
+    types:
+      - "text_teaser"
+      - "video_teaser"
+      - "audio_teaser"
+    length: "50-150 คำ"
+
+  chapter_announcements:
+    description: "ประกาศตอนใหม่"
+    includes:
+      - "ชื่อตอน"
+      - "Teaser 2-3 บรรทัด"
+      - "ลิงก์อ่าน"
+      - "CTA เข้า LINE"
+
+  character_spotlights:
+    description: "แนะนำตัวละคร"
+    includes:
+      - "รูป/ภาพประกอบ"
+      - "ชื่อ + บุคลิก"
+      - "Quote ของตัวละคร"
+
+  polls_questions:
+    description: "สร้าง engagement"
+    types:
+      - "ทายเหตุการณ์"
+      - "เลือกทีม"
+      - "ถามความเห็น"
+
+  behind_the_scenes:
+    description: "เบื้องหลังการเขียน"
+    topics:
+      - "Inspiration"
+      - "กระบวนการเขียน"
+      - "ตอบคำถามแฟน"
+
+# ===========================================
+# Templates
+# ===========================================
+templates:
+  new_chapter:
+    title: "📖 ตอนใหม่มาแล้ว!"
+    body: |
+      {{novel_name}} ตอนที่ {{chapter_number}}
+      「{{chapter_title}}」
+
+      {{teaser_text}}
+
+      📚 อ่านเลย: {{read_link}}
+      📱 Add LINE รับแจ้งเตือน: {{line_link}}
+
+      #{{novel_hashtag}} #นิยาย #{{genre}}
+
+  quote_card:
+    format: |
+      "{{quote_text}}"
+
+      — {{character_name}}, {{novel_name}}
+
+      ติดตามเรื่องนี้ได้ที่ LINE 👆
+
+  teaser:
+    format: |
+      {{teaser_text}}
+
+      ...อยากรู้ต่อไหม? 👀
+
+      📱 Add LINE อ่านก่อนใคร!
+      {{line_link}}
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "teaser-writer"
+    path: "marketing-team/skills/teaser-writer/SKILL.md"
+
+  - name: "quote-extractor"
+    path: "marketing-team/skills/quote-extractor/SKILL.md"
+
+  - name: "caption-writer"
+    path: "marketing-team/skills/caption-writer/SKILL.md"
+
+# ===========================================
+# Output
+# ===========================================
+outputs:
+  content: "marketing-team/content/"
+  quotes: "marketing-team/content/quotes/"
+  teasers: "marketing-team/content/teasers/"

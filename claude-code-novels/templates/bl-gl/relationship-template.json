@@ -1,0 +1,201 @@
+{
+  "$schema": "BL/GL Relationship Development Template",
+  "version": "1.0",
+
+  "characters": {
+    "lead_1": {
+      "name": "",
+      "age": 0,
+      "personality": [],
+      "background": "",
+      "sexuality_status": "",
+      "relationship_history": "",
+      "what_they_want_from_relationship": "",
+      "fears_about_relationships": "",
+      "arc": ""
+    },
+    "lead_2": {
+      "name": "",
+      "age": 0,
+      "personality": [],
+      "background": "",
+      "sexuality_status": "",
+      "relationship_history": "",
+      "what_they_want_from_relationship": "",
+      "fears_about_relationships": "",
+      "arc": ""
+    }
+  },
+
+  "relationship_dynamic": {
+    "type": "",
+    "power_balance": "",
+    "complementary_traits": [],
+    "contrasting_traits": [],
+    "source_of_chemistry": "",
+    "source_of_conflict": ""
+  },
+
+  "development_stages": {
+    "stage_1_strangers": {
+      "how_they_meet": "",
+      "first_impressions": {
+        "lead_1_thinks": "",
+        "lead_2_thinks": ""
+      },
+      "chapters": ""
+    },
+    "stage_2_acquaintances": {
+      "why_they_keep_meeting": "",
+      "what_changes": "",
+      "first_hints_of_attraction": "",
+      "chapters": ""
+    },
+    "stage_3_friends": {
+      "bonding_over": "",
+      "vulnerable_moments": [],
+      "growing_attraction": "",
+      "chapters": ""
+    },
+    "stage_4_tension": {
+      "awareness_of_feelings": "",
+      "denial_or_acceptance": "",
+      "almost_moments": [],
+      "chapters": ""
+    },
+    "stage_5_confession": {
+      "who_confesses": "",
+      "how": "",
+      "reaction": "",
+      "chapters": ""
+    },
+    "stage_6_together": {
+      "relationship_style": "",
+      "challenges_together": [],
+      "growth_together": "",
+      "chapters": ""
+    }
+  },
+
+  "obstacles": {
+    "internal": [
+      {
+        "character": "",
+        "obstacle": "",
+        "how_overcome": "",
+        "chapter": ""
+      }
+    ],
+    "external": [
+      {
+        "type": "",
+        "description": "",
+        "how_overcome": "",
+        "chapter": ""
+      }
+    ]
+  },
+
+  "key_scenes": {
+    "first_meaningful_interaction": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    },
+    "first_vulnerable_moment": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    },
+    "first_physical_contact": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    },
+    "confession_scene": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    },
+    "first_kiss": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    },
+    "major_conflict": {
+      "chapter": 0,
+      "description": "",
+      "resolution": ""
+    },
+    "commitment_moment": {
+      "chapter": 0,
+      "description": "",
+      "emotional_impact": ""
+    }
+  },
+
+  "physical_intimacy_progression": {
+    "content_rating": "",
+    "progression": [
+      {
+        "stage": "accidental touches",
+        "chapter": 0
+      },
+      {
+        "stage": "intentional touches",
+        "chapter": 0
+      },
+      {
+        "stage": "first kiss",
+        "chapter": 0
+      }
+    ],
+    "notes": ""
+  },
+
+  "supporting_relationships": {
+    "allies": [
+      {
+        "name": "",
+        "relationship_to": "",
+        "role_in_romance": ""
+      }
+    ],
+    "obstacles": [
+      {
+        "name": "",
+        "relationship_to": "",
+        "why_obstacle": ""
+      }
+    ]
+  },
+
+  "emotional_arc": {
+    "lead_1_emotional_journey": [
+      {
+        "chapter_range": "",
+        "emotional_state": "",
+        "key_realization": ""
+      }
+    ],
+    "lead_2_emotional_journey": [
+      {
+        "chapter_range": "",
+        "emotional_state": "",
+        "key_realization": ""
+      }
+    ]
+  },
+
+  "themes": {
+    "primary_theme": "",
+    "secondary_themes": [],
+    "how_relationship_explores_themes": ""
+  },
+
+  "notes": {
+    "writing_reminders": [],
+    "things_to_research": [],
+    "sensitivity_considerations": []
+  }
+}

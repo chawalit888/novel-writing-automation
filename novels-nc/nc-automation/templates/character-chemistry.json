@@ -1,0 +1,94 @@
+{
+  "$schema": "Character Chemistry Template for NC",
+  "version": "1.0",
+  "description": "Template สำหรับสร้าง Chemistry ระหว่างตัวละครในฉาก NC",
+
+  "character_a": {
+    "name": "",
+    "age": 0,
+    "personality": {
+      "dominant_traits": [],
+      "in_intimate_moments": "",
+      "vulnerabilities": []
+    },
+    "physical": {
+      "build": "",
+      "distinctive_features": [],
+      "scent": "",
+      "voice_quality": ""
+    },
+    "intimate_style": {
+      "role": "",
+      "preferences": [],
+      "turn_ons": [],
+      "things_they_say": []
+    }
+  },
+
+  "character_b": {
+    "name": "",
+    "age": 0,
+    "personality": {
+      "dominant_traits": [],
+      "in_intimate_moments": "",
+      "vulnerabilities": []
+    },
+    "physical": {
+      "build": "",
+      "distinctive_features": [],
+      "scent": "",
+      "voice_quality": ""
+    },
+    "intimate_style": {
+      "role": "",
+      "preferences": [],
+      "turn_ons": [],
+      "things_they_say": []
+    }
+  },
+
+  "relationship_dynamics": {
+    "relationship_type": "",
+    "power_dynamic": "",
+    "history": "",
+    "unresolved_tension": "",
+    "what_they_want_from_each_other": {
+      "character_a_wants": "",
+      "character_b_wants": ""
+    },
+    "obstacles": []
+  },
+
+  "chemistry_elements": {
+    "physical_attraction": {
+      "what_a_notices_about_b": [],
+      "what_b_notices_about_a": [],
+      "magnetic_moments": []
+    },
+    "emotional_connection": {
+      "shared_experiences": [],
+      "vulnerabilities_shown": [],
+      "trust_level": ""
+    },
+    "tension_builders": [
+      "สบตาแล้วหลบ",
+      "สัมผัสโดยบังเอิญ",
+      "อยู่ใกล้กันในที่แคบ",
+      "เกือบจูบแต่มีคนมาขัด"
+    ]
+  },
+
+  "dialogue_samples": {
+    "flirting": [],
+    "during_intimate_moment": [],
+    "afterglow": []
+  },
+
+  "scene_specific": {
+    "location": "",
+    "time": "",
+    "atmosphere": "",
+    "trigger_for_scene": "",
+    "emotional_stakes": ""
+  }
+}

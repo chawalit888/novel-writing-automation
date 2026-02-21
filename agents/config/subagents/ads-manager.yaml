@@ -1,0 +1,195 @@
+# ===========================================
+# Ads Manager Subagent
+# จัดการโฆษณา Facebook/TikTok
+# ===========================================
+
+agent:
+  id: "ads-manager-001"
+  name: "AdsManager"
+  role: "Subagent"
+  team: "marketing"
+  model: "claude-sonnet-4"
+  description: "จัดการโฆษณาเพื่อพาคนเข้า LINE OA"
+
+reports_to: "mgr-marketing-001"
+
+# ===========================================
+# Budget Strategy
+# ===========================================
+budget:
+  monthly: 5000  # บาท
+  daily_average: 165  # บาท
+
+  allocation:
+    facebook_ig: 2500  # 50%
+    tiktok: 1500  # 30%
+    reserve: 1000  # 20% สำหรับ boost
+
+  rules:
+    - "ไม่ใช้เกินงบรายวัน"
+    - "Boost เฉพาะโพสต์ที่ perform ดี"
+    - "หยุด ads ที่ไม่ได้ผลภายใน 3 วัน"
+
+# ===========================================
+# Campaign Objectives
+# ===========================================
+objectives:
+  primary: "LINE OA Followers"
+  secondary: "Engagement"
+
+  conversion_goals:
+    cost_per_line_follower: "<25 บาท"
+    click_through_rate: ">2%"
+    engagement_rate: ">5%"
+
+# ===========================================
+# Facebook/Instagram Ads
+# ===========================================
+facebook_ads:
+  campaign_types:
+    line_conversion:
+      objective: "Conversions"
+      optimization: "Landing Page Views"
+      cta: "Add LINE"
+      budget: "50-100 บาท/วัน"
+
+    engagement:
+      objective: "Engagement"
+      optimization: "Post Engagement"
+      cta: "Learn More"
+      budget: "30-50 บาท/วัน"
+
+  targeting:
+    age: "18-45"
+    gender: "all"  # ปรับตามแนวนิยาย
+    interests:
+      romance:
+        - "นิยาย"
+        - "อ่านหนังสือ"
+        - "Joylada"
+        - "Dek-D"
+        - "นิยายรัก"
+      bl_gl:
+        - "BL"
+        - "Y Series"
+        - "GL"
+        - "ซีรีส์วาย"
+      fantasy:
+        - "Fantasy"
+        - "นิยายแฟนตาซี"
+        - "เกม RPG"
+
+    locations: ["Thailand"]
+    languages: ["Thai"]
+
+  ad_formats:
+    - "Single Image"
+    - "Carousel"
+    - "Video (15-30 sec)"
+    - "Story"
+
+  best_practices:
+    - "ใช้รูปที่ดึงดูด (ปกนิยาย/Quote)"
+    - "Copy สั้น กระชับ มี CTA ชัด"
+    - "ทดสอบ A/B อย่างน้อย 2 versions"
+    - "Monitor ทุกวัน ปรับถ้าจำเป็น"
+
+# ===========================================
+# TikTok Ads
+# ===========================================
+tiktok_ads:
+  campaign_types:
+    traffic:
+      objective: "Traffic"
+      optimization: "Click"
+      cta: "Add LINE"
+      budget: "50 บาท/วัน"
+
+    video_views:
+      objective: "Video Views"
+      optimization: "6-second views"
+      budget: "30 บาท/วัน"
+
+  targeting:
+    age: "18-35"
+    interests:
+      - "Books & Literature"
+      - "Entertainment"
+      - "Drama"
+    behaviors:
+      - "Video Viewers"
+      - "Engaged Shoppers"
+
+  ad_formats:
+    - "In-Feed Video (15-60 sec)"
+    - "Spark Ads (boost organic)"
+
+  creative_tips:
+    - "Hook ใน 3 วินาทีแรก"
+    - "ใช้เสียง/เพลงที่กำลังฮิต"
+    - "แนว storytelling ได้ผลดี"
+    - "CTA ท้ายคลิป"
+
+# ===========================================
+# A/B Testing Framework
+# ===========================================
+ab_testing:
+  elements_to_test:
+    - "Headlines"
+    - "Images/Videos"
+    - "CTA buttons"
+    - "Targeting"
+    - "Placements"
+
+  rules:
+    - "ทดสอบทีละ 1 element"
+    - "รันอย่างน้อย 3-5 วัน"
+    - "ใช้งบเท่ากันทั้ง 2 versions"
+    - "เลือก winner ที่ CPR ต่ำกว่า"
+
+# ===========================================
+# Reporting
+# ===========================================
+reporting:
+  daily:
+    - "Spend"
+    - "Impressions"
+    - "Clicks"
+    - "CTR"
+    - "CPC"
+
+  weekly:
+    - "Total LINE Followers จาก ads"
+    - "Cost per LINE Follower"
+    - "Top performing ads"
+    - "Recommendations"
+
+  metrics_dashboard:
+    - metric: "Ad Spend"
+      target: "≤ งบที่กำหนด"
+    - metric: "CTR"
+      target: ">2%"
+    - metric: "CPC"
+      target: "<5 บาท"
+    - metric: "Cost per LINE Follower"
+      target: "<25 บาท"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "ad-copywriter"
+    path: "marketing-team/skills/ad-copywriter/SKILL.md"
+
+  - name: "audience-targeter"
+    path: "marketing-team/skills/audience-targeter/SKILL.md"
+
+  - name: "budget-optimizer"
+    path: "marketing-team/skills/budget-optimizer/SKILL.md"
+
+# ===========================================
+# Output
+# ===========================================
+outputs:
+  ad_copies: "marketing-team/content/ads/"
+  reports: "marketing-team/reports/ads/"

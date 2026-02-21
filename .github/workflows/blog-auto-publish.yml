@@ -1,0 +1,42 @@
+name: Auto-Generate Blog Post
+
+on:
+  schedule:
+    # 10:00 UTC = 17:00 ICT (บทความแรก)
+    - cron: '0 10 * * *'
+    # 16:00 UTC = 23:00 ICT (บทความที่สอง)
+    - cron: '0 16 * * *'
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: Generate blog post
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          python scripts/generate-blog-post.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Blog Bot"
+          git config user.email "bot@nc-story.com"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "🤖 Auto-generate blog post [$(date +'%Y-%m-%d %H:%M')]"
+          git push

@@ -1,0 +1,107 @@
+สร้างโครงเรื่องหลัก (Master Outline) สำหรับนิยาย
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- แนว: {{genre}}
+- จำนวนบทเป้าหมาย: {{target_chapters}}
+- ตัวละคร: {{characters_summary}}
+- Setting: {{setting}}
+
+## Requirements
+
+### โครงสร้างหลัก (Three-Act Structure)
+
+**ACT 1 (25% - บทที่ 1-{{act1_end}}):**
+- Setup และแนะนำโลก
+- แนะนำ protagonist และ supporting characters
+- Inciting incident
+- Plot Point 1 (เข้าสู่ Act 2)
+
+**ACT 2A (25% - บทที่ {{act2a_start}}-{{midpoint}}):**
+- Rising action
+- Tests และ challenges
+- Character development
+- Midpoint (turning point สำคัญ)
+
+**ACT 2B (25% - บทที่ {{act2b_start}}-{{act2_end}}):**
+- Complications เพิ่มขึ้น
+- Stakes raise
+- All is lost moment
+- Dark night of the soul
+- Plot Point 2 (เข้าสู่ Act 3)
+
+**ACT 3 (25% - บทที่ {{act3_start}}-{{target_chapters}}):**
+- Final preparation
+- Climax
+- Resolution
+- New equilibrium
+
+## Output Format
+```
+# Master Outline: {{title}}
+
+## Premise
+[1-2 ประโยค สรุปเรื่อง]
+
+## Theme
+[Theme หลักของเรื่อง]
+
+## Central Conflict
+[Conflict หลัก]
+
+## Character Arcs
+### [Character Name]
+- Start: [สถานะเริ่มต้น]
+- End: [สถานะจบ]
+- Key change: [การเปลี่ยนแปลงสำคัญ]
+
+---
+
+## ACT 1: [ชื่อ Act]
+
+### Chapter 1: [ชื่อบท]
+- POV: [ตัวละคร]
+- Location: [สถานที่]
+- Events:
+  - [เหตุการณ์ 1]
+  - [เหตุการณ์ 2]
+- Character development: [การพัฒนาตัวละคร]
+- End hook: [ทิ้งท้าย]
+
+### Chapter 2: [ชื่อบท]
+...
+
+[ต่อไปจนครบทุกบท]
+
+---
+
+## SUBPLOTS
+
+### Subplot A: [ชื่อ]
+- Type: [ประเภท]
+- Characters involved: [ตัวละคร]
+- Arc: [beginning → middle → end]
+- Chapters: [บทที่เกี่ยวข้อง]
+
+---
+
+## KEY SCENES
+1. [ฉากสำคัญ 1] - บทที่ X
+2. [ฉากสำคัญ 2] - บทที่ X
+...
+
+## SETUPS AND PAYOFFS
+- Setup: [X] (บทที่ Y) → Payoff: [Z] (บทที่ W)
+...
+```
+
+## เกณฑ์คุณภาพ
+- ทุกบทต้องมี purpose
+- Pacing เหมาะสม
+- Character arcs สอดคล้องกับ plot
+- Subplots support main theme
+- มี setup สำหรับทุก payoff
+- Climax ตอบ central conflict
+- Resolution satisfying
+
+สร้างโครงเรื่องที่ครบถ้วน ละเอียด และน่าติดตาม

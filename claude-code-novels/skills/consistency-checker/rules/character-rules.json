@@ -1,0 +1,186 @@
+{
+  "$schema": "Character Consistency Rules",
+  "version": "1.0",
+
+  "personality_checks": {
+    "description": "ตรวจว่าตัวละครทำตัวตามบุคลิก",
+    "rules": [
+      {
+        "id": "CHAR-001",
+        "name": "personality_match",
+        "description": "การกระทำและคำพูดต้องสอดคล้องกับ core traits",
+        "severity": "major",
+        "check": "Compare actions with character.personality.core_traits"
+      },
+      {
+        "id": "CHAR-002",
+        "name": "flaw_manifestation",
+        "description": "Flaws ต้องแสดงออกมาอย่างสม่ำเสมอ",
+        "severity": "major",
+        "check": "Flaws should appear at least once per arc"
+      },
+      {
+        "id": "CHAR-003",
+        "name": "strength_consistency",
+        "description": "Strengths ต้องไม่หายไปหรือเพิ่มขึ้นโดยไม่มีเหตุผล",
+        "severity": "major",
+        "check": "Strengths should be consistent or have explained growth"
+      }
+    ]
+  },
+
+  "speech_checks": {
+    "description": "ตรวจว่าตัวละครพูดตาม speech pattern",
+    "rules": [
+      {
+        "id": "SPEECH-001",
+        "name": "vocabulary_level",
+        "description": "ระดับภาษาต้องตรงกับ education/background",
+        "severity": "minor",
+        "check": "Vocabulary matches character.voice.vocabulary_level"
+      },
+      {
+        "id": "SPEECH-002",
+        "name": "speech_pattern",
+        "description": "รูปแบบการพูดต้องสอดคล้อง",
+        "severity": "minor",
+        "check": "Check for character-specific phrases and patterns"
+      },
+      {
+        "id": "SPEECH-003",
+        "name": "distinct_voices",
+        "description": "ตัวละครต่างคนต้องพูดต่างกัน",
+        "severity": "major",
+        "check": "Each character should have distinguishable dialogue"
+      }
+    ]
+  },
+
+  "knowledge_checks": {
+    "description": "ตรวจว่าตัวละครรู้เฉพาะสิ่งที่ควรรู้",
+    "rules": [
+      {
+        "id": "KNOW-001",
+        "name": "information_access",
+        "description": "ไม่รู้สิ่งที่ไม่ได้ถูกบอก/พบเจอ",
+        "severity": "critical",
+        "check": "Track what each character learns and when"
+      },
+      {
+        "id": "KNOW-002",
+        "name": "skill_knowledge",
+        "description": "ทักษะต้องได้เรียนรู้ก่อนใช้",
+        "severity": "critical",
+        "check": "Skills must be established before use"
+      },
+      {
+        "id": "KNOW-003",
+        "name": "memory_consistency",
+        "description": "จำเหตุการณ์ที่ควรจำ",
+        "severity": "major",
+        "check": "Characters remember significant events"
+      }
+    ]
+  },
+
+  "ability_checks": {
+    "description": "ตรวจว่าความสามารถสอดคล้อง",
+    "rules": [
+      {
+        "id": "ABIL-001",
+        "name": "power_level",
+        "description": "ระดับพลังต้องสอดคล้องกับที่ establish",
+        "severity": "critical",
+        "check": "Power demonstrations match established level"
+      },
+      {
+        "id": "ABIL-002",
+        "name": "skill_progression",
+        "description": "ทักษะเพิ่มขึ้นอย่างสมเหตุสมผล",
+        "severity": "major",
+        "check": "Skill improvements require training/experience"
+      },
+      {
+        "id": "ABIL-003",
+        "name": "limitation_respect",
+        "description": "ข้อจำกัดที่กำหนดต้องถูกรักษา",
+        "severity": "critical",
+        "check": "Established limitations are not violated"
+      }
+    ]
+  },
+
+  "relationship_checks": {
+    "description": "ตรวจความสัมพันธ์ระหว่างตัวละคร",
+    "rules": [
+      {
+        "id": "REL-001",
+        "name": "relationship_status",
+        "description": "ความสัมพันธ์ต้องตรงกับที่พัฒนามา",
+        "severity": "major",
+        "check": "Relationship status matches development"
+      },
+      {
+        "id": "REL-002",
+        "name": "interaction_history",
+        "description": "อ้างอิงเหตุการณ์ที่เกิดขึ้นร่วมกันถูกต้อง",
+        "severity": "major",
+        "check": "Shared history is referenced correctly"
+      },
+      {
+        "id": "REL-003",
+        "name": "relationship_change",
+        "description": "การเปลี่ยนแปลงความสัมพันธ์ต้องมีเหตุผล",
+        "severity": "major",
+        "check": "Relationship changes are justified"
+      }
+    ]
+  },
+
+  "physical_checks": {
+    "description": "ตรวจรายละเอียดทางกายภาพ",
+    "rules": [
+      {
+        "id": "PHYS-001",
+        "name": "appearance_consistency",
+        "description": "รูปลักษณ์ต้องตรงกับที่อธิบายไว้",
+        "severity": "minor",
+        "check": "Physical descriptions match character sheet"
+      },
+      {
+        "id": "PHYS-002",
+        "name": "injury_tracking",
+        "description": "บาดเจ็บต้องใช้เวลาหาย",
+        "severity": "major",
+        "check": "Injuries heal at reasonable rate"
+      },
+      {
+        "id": "PHYS-003",
+        "name": "physical_limits",
+        "description": "ข้อจำกัดทางกายภาพต้องถูกรักษา",
+        "severity": "major",
+        "check": "Physical feats are within character capability"
+      }
+    ]
+  },
+
+  "arc_checks": {
+    "description": "ตรวจ character arc",
+    "rules": [
+      {
+        "id": "ARC-001",
+        "name": "arc_progression",
+        "description": "Character arc ต้องพัฒนาอย่างสมเหตุสมผล",
+        "severity": "major",
+        "check": "Arc progression follows planned trajectory"
+      },
+      {
+        "id": "ARC-002",
+        "name": "change_justification",
+        "description": "การเปลี่ยนแปลงตัวละครต้องมีเหตุผล",
+        "severity": "major",
+        "check": "Character changes are earned through story events"
+      }
+    ]
+  }
+}

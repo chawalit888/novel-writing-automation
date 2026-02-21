@@ -1,0 +1,283 @@
+# ===========================================
+# N8n Quality Subagent Configuration
+# High-Volume Quality Control Specialist
+# ===========================================
+
+agent:
+  id: "n8n-quality-001"
+  name: "N8nQuality"
+  role: "Subagent"
+  team: "n8n"
+  model: "gemini-flash"  # Fast and cost-effective for QC
+  description: "Quality control specialist for high-volume novel production"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-n8n-001"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "qc-scoring"
+    prompt: "n8n-novels/prompts/quality-control/scoring.txt"
+
+  - name: "consistency-check"
+    prompt: "n8n-novels/prompts/quality-control/consistency-check.txt"
+
+  - name: "grammar-check"
+    prompt: "n8n-novels/prompts/quality-control/grammar-check.txt"
+
+# ===========================================
+# N8n Workflows
+# ===========================================
+workflows:
+  qc_basic:
+    workflow_id: "qc-basic"
+    layer: 1
+    description: "Basic automated checks"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/qc-basic"
+
+    checks:
+      - name: "word_count"
+        type: "range"
+        min: 2500
+        max: 8000
+
+      - name: "no_placeholders"
+        type: "regex"
+        patterns:
+          - "\\[.*?\\]"
+          - "{{.*?}}"
+          - "TODO"
+          - "PLACEHOLDER"
+
+      - name: "format_correct"
+        type: "structure"
+        requirements:
+          - "has_paragraphs"
+          - "no_empty_sections"
+
+    pass_requirement: "all_checks_pass"
+
+  qc_ai_scorer:
+    workflow_id: "qc-ai-scorer"
+    layer: 2
+    description: "AI-powered quality scoring"
+    model: "gemini-flash"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/qc-score"
+
+    scoring_criteria:
+      grammar:
+        weight: 20
+        prompt_key: "grammar_assessment"
+
+      character_consistency:
+        weight: 20
+        prompt_key: "character_assessment"
+
+      plot_coherence:
+        weight: 20
+        prompt_key: "plot_assessment"
+
+      emotional_impact:
+        weight: 20
+        prompt_key: "emotion_assessment"
+
+      genre_appropriateness:
+        weight: 20
+        prompt_key: "genre_assessment"
+
+    pass_threshold: 70
+
+  qc_deep_check:
+    workflow_id: "qc-deep-check"
+    layer: 3
+    description: "Deep analysis for flagged chapters"
+    model: "claude-haiku"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/qc-deep"
+
+    triggers:
+      - "score < 80"
+      - "manual_request"
+
+    analysis:
+      - consistency_deep
+      - grammar_detailed
+      - style_analysis
+      - improvement_suggestions
+
+# ===========================================
+# 5-Layer QC Pipeline
+# ===========================================
+pipeline:
+  layer_1:
+    name: "Basic Checks"
+    workflow: "qc-basic"
+    automated: true
+    pass_action: "proceed_to_layer_2"
+    fail_action: "reject_immediately"
+
+  layer_2:
+    name: "AI Scoring"
+    workflow: "qc-ai-scorer"
+    automated: true
+    pass_action: "approve_if_score_gte_80"
+    conditional_action: "proceed_to_layer_3_if_score_70_to_79"
+    fail_action: "flag_for_regeneration"
+
+  layer_3:
+    name: "Deep Analysis"
+    workflow: "qc-deep-check"
+    automated: true
+    only_if: "score_between_70_and_79"
+    pass_action: "approve_with_notes"
+    fail_action: "flag_for_layer_4"
+
+  layer_4:
+    name: "Expert Review"
+    model: "gpt-4o"
+    automated: false
+    only_if: "flagged_from_layer_3"
+    action: "detailed_review_and_recommendation"
+
+  layer_5:
+    name: "Human Review"
+    automated: false
+    only_if: "flagged_from_layer_4_or_manual"
+    action: "human_makes_final_decision"
+
+# ===========================================
+# Scoring System
+# ===========================================
+scoring:
+  scale: 100
+
+  verdicts:
+    approve:
+      condition: "score >= 80"
+      action: "mark_approved"
+
+    approve_with_notes:
+      condition: "score >= 70 AND score < 80"
+      action: "mark_approved_with_suggestions"
+
+    review:
+      condition: "score >= 60 AND score < 70"
+      action: "flag_for_review"
+
+    regenerate:
+      condition: "score < 60"
+      action: "request_regeneration"
+
+  flags:
+    placeholder_detected:
+      severity: "critical"
+      action: "reject"
+
+    word_count_violation:
+      severity: "major"
+      action: "flag"
+
+    consistency_issue:
+      severity: "major"
+      action: "review"
+
+    grammar_errors_high:
+      severity: "minor"
+      action: "note"
+
+# ===========================================
+# Output Specifications
+# ===========================================
+outputs:
+  qc_report:
+    format: "json"
+    path: "{{project_path}}/qc-reports/chapter_{{chapter_num}}_qc.json"
+
+    schema:
+      chapter_id: "string"
+      timestamp: "datetime"
+      layer_results:
+        layer_1: "object"
+        layer_2: "object"
+        layer_3: "object"
+      overall_score: "number"
+      verdict: "string"
+      issues: "array"
+      suggestions: "array"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-n8n-001"
+  reports_to:
+    - "mgr-n8n-001"
+
+  alerts:
+    on_critical_issue: true
+    on_batch_complete: true
+    daily_summary: true
+
+# ===========================================
+# Database Integration
+# ===========================================
+database:
+  connection: "postgresql://n8n:password@localhost:5432/n8n_novels"
+
+  tables:
+    quality_scores:
+      insert_on: "qc_complete"
+      fields:
+        - chapter_id
+        - qc_layer
+        - grammar_score
+        - character_score
+        - plot_score
+        - emotion_score
+        - genre_score
+        - overall_score
+        - verdict
+        - issues_json
+        - suggestions_json
+        - reviewed_at
+
+# ===========================================
+# Performance Metrics
+# ===========================================
+metrics:
+  track:
+    - chapters_reviewed_today
+    - average_score_today
+    - approval_rate
+    - regeneration_rate
+    - processing_time
+
+  targets:
+    daily_reviews: 50
+    approval_rate: 80  # percent
+    avg_processing_time: 30  # seconds
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_api_error:
+    retry_count: 2
+    fallback_to_basic_check: true
+
+  on_timeout:
+    timeout_seconds: 60
+    action: "use_cached_rules"
+
+  on_model_unavailable:
+    switch_to_backup: true
+    backup_models:
+      - "gpt-4o-mini"
+      - "gemini-pro"

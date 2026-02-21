@@ -1,0 +1,132 @@
+# ===========================================
+# Social Media Manager Subagent
+# จัดการโพสต์ทุกแพลตฟอร์ม
+# ===========================================
+
+agent:
+  id: "social-media-001"
+  name: "SocialMediaManager"
+  role: "Subagent"
+  team: "marketing"
+  model: "claude-haiku-3"
+  description: "จัดการโพสต์และ engagement ทุกแพลตฟอร์ม"
+
+reports_to: "mgr-marketing-001"
+
+# ===========================================
+# Platforms
+# ===========================================
+platforms:
+  facebook:
+    page_name: ""  # กรอกชื่อเพจ
+    post_types:
+      - "image_post"
+      - "video"
+      - "story"
+      - "reel"
+    best_times: ["12:00", "18:00", "21:00"]
+    hashtags_limit: 3-5
+
+  instagram:
+    account: ""
+    post_types:
+      - "feed_post"
+      - "story"
+      - "reel"
+    best_times: ["11:00", "19:00", "21:00"]
+    hashtags_limit: 20-30
+
+  tiktok:
+    account: ""
+    post_types:
+      - "video"
+      - "slideshow"
+    best_times: ["12:00", "17:00", "21:00"]
+    hashtags_limit: 3-5
+
+  twitter:
+    account: ""
+    post_types:
+      - "tweet"
+      - "thread"
+      - "quote"
+    best_times: ["08:00", "12:00", "20:00"]
+    hashtags_limit: 2-3
+
+# ===========================================
+# Posting Schedule Template
+# ===========================================
+weekly_schedule:
+  monday:
+    - platform: "facebook"
+      time: "12:00"
+      type: "quote_card"
+    - platform: "twitter"
+      time: "20:00"
+      type: "engagement"
+
+  tuesday:
+    - platform: "instagram"
+      time: "19:00"
+      type: "teaser"
+    - platform: "tiktok"
+      time: "21:00"
+      type: "video"
+
+  wednesday:
+    - platform: "facebook"
+      time: "18:00"
+      type: "behind_scenes"
+
+  thursday:
+    - platform: "instagram"
+      time: "11:00"
+      type: "poll_story"
+    - platform: "twitter"
+      time: "12:00"
+      type: "thread"
+
+  friday:
+    - platform: "all"
+      time: "varies"
+      type: "new_chapter_promo"
+
+  saturday:
+    - platform: "tiktok"
+      time: "17:00"
+      type: "fun_content"
+
+  sunday:
+    - platform: "instagram"
+      time: "21:00"
+      type: "recap_week"
+
+# ===========================================
+# CTA Templates (พาเข้า LINE)
+# ===========================================
+cta_templates:
+  - "📱 ติดตามใน LINE รับแจ้งเตือนตอนใหม่ก่อนใคร! [ลิงก์]"
+  - "💬 เข้า LINE OA คุยกับนักเขียนได้เลย! [ลิงก์]"
+  - "🔔 กด Add LINE ไม่พลาดทุกตอน! [ลิงก์]"
+  - "📚 อยากอ่านต่อ? กดลิงก์ใน LINE เลย! [ลิงก์]"
+  - "❤️ ชอบใจก็ Add LINE มารอตอนใหม่ด้วยกัน! [ลิงก์]"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "caption-writer"
+    path: "marketing-team/skills/caption-writer/SKILL.md"
+
+  - name: "hashtag-generator"
+    path: "marketing-team/skills/hashtag-generator/SKILL.md"
+
+  - name: "engagement-responder"
+    path: "marketing-team/skills/engagement-responder/SKILL.md"
+
+# ===========================================
+# Output
+# ===========================================
+outputs:
+  posts: "marketing-team/content/posts/"
+  calendar: "marketing-team/calendar/"

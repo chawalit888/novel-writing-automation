@@ -1,0 +1,79 @@
+สร้างตัวละครสำหรับนิยายโรแมนติกคอมเมดี้ในรูปแบบ JSON
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- จำนวนตัวละครที่ต้องการ: {{num_characters}}
+- Setting: {{setting}}
+
+## Requirements
+
+### ตัวละครหลัก (Protagonist)
+- อายุ: 22-30 ปี
+- มีบุคลิกที่น่ารัก มีเสน่ห์
+- มี flaw ที่ขัดขวางความรัก
+- มีอาชีพ/เป้าหมายชัดเจน
+- มี chemistry potential กับ love interest
+
+### Love Interest
+- มีบุคลิกที่ complement กับ protagonist
+- มี backstory น่าสนใจ
+- มี flaw ของตัวเอง
+- สร้าง tension และ attraction ได้
+
+### Supporting Characters
+- Best friend ที่ช่วยและให้คำปรึกษา
+- อาจมี rival หรือ obstacle character
+
+## Output Format (JSON)
+```json
+{
+  "characters": [
+    {
+      "id": "char-001",
+      "name": "ชื่อภาษาไทย",
+      "name_meaning": "ความหมายของชื่อ",
+      "age": 25,
+      "gender": "female/male",
+      "role": "protagonist/love_interest/supporting",
+      "occupation": "อาชีพ",
+      "personality": {
+        "traits": ["trait1", "trait2", "trait3"],
+        "strengths": ["strength1", "strength2"],
+        "flaws": ["flaw1", "flaw2"],
+        "quirks": ["quirk1"]
+      },
+      "appearance": {
+        "height": "สูง/กลาง/เตี้ย",
+        "build": "ผอม/ปกติ/ท้วม",
+        "distinctive_features": ["feature1"],
+        "style": "สไตล์การแต่งตัว"
+      },
+      "background": {
+        "family": "ครอบครัว",
+        "education": "การศึกษา",
+        "past_relationships": "ประวัติความรัก",
+        "defining_moment": "เหตุการณ์ที่หล่อหลอมตัวละคร"
+      },
+      "motivation": {
+        "want": "สิ่งที่คิดว่าต้องการ",
+        "need": "สิ่งที่ต้องการจริงๆ",
+        "fear": "ความกลัว"
+      },
+      "speech_pattern": "รูปแบบการพูด",
+      "favorite_phrases": ["วลีที่ชอบใช้"],
+      "relationship_with_others": {
+        "char_id": "ความสัมพันธ์"
+      }
+    }
+  ]
+}
+```
+
+## เกณฑ์คุณภาพ
+- ชื่อต้องมีความหมายเหมาะกับบุคลิก
+- บุคลิกต้องชัดเจนและแตกต่างกัน
+- มี chemistry potential ระหว่างคู่หลัก
+- Flaws ต้องมีผลต่อเรื่อง
+- Background ต้อง shape บุคลิก
+
+สร้างตัวละครตามข้อกำหนดข้างต้น ให้มีความลึกและน่าสนใจ

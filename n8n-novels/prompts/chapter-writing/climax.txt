@@ -1,0 +1,113 @@
+เขียนบท Climax ของนิยาย "{{title}}"
+
+## ข้อมูลเรื่อง
+- แนว: {{genre}}
+- บทที่: {{chapter_number}} (Climax)
+- ตัวละครหลัก: {{main_characters}}
+
+## Context
+{{story_context}}
+
+## เหตุการณ์ที่ต้องเกิดในบท Climax
+{{climax_events}}
+
+## Character Arcs ที่ต้อง Resolve
+{{character_arcs}}
+
+## Requirements สำหรับบท Climax
+
+### เป้าหมายหลัก
+1. **Peak Tension** - จุดสูงสุดของความตึงเครียด
+2. **Final Confrontation** - เผชิญหน้าครั้งสุดท้าย
+3. **Character Resolution** - Arc ของตัวละครสมบูรณ์
+4. **Theme Payoff** - Theme ของเรื่องชัดเจน
+5. **Satisfying** - ตอบคำถามที่ผู้อ่านรอ
+
+### โครงสร้าง Climax
+```
+1. Build-up (10-15%)
+   - การเตรียมตัวสุดท้าย
+   - Tension สูงขึ้นเรื่อยๆ
+   - Stakes ชัดเจน
+
+2. Point of No Return (10%)
+   - ไม่มีทางย้อนกลับ
+   - Protagonist ต้องเผชิญ
+
+3. The Confrontation (40-50%)
+   - เผชิญหน้ากับ antagonist/obstacle
+   - ใช้ทุกอย่างที่เรียนรู้มา
+   - มีทั้งชนะและแพ้เล็กๆ
+   - Seems all is lost moment
+
+4. The Turn (15-20%)
+   - Protagonist ตัดสินใจสำคัญ
+   - Inner conflict resolved
+   - ใช้ lesson ที่เรียนรู้
+
+5. Victory/Resolution (15-20%)
+   - ผลลัพธ์ของการเผชิญหน้า
+   - Emotional release
+   - ผู้อ่านได้รับ catharsis
+```
+
+### เทคนิคสำหรับ Climax
+
+**Pacing:**
+- เริ่มช้า แล้วเร็วขึ้น
+- ใช้ประโยคสั้นในช่วง intense
+- ให้ moment to breathe
+- Rhythm: tension-release-tension
+
+**Emotional Impact:**
+- Stakes ต้องรู้สึกได้
+- Sacrifice/cost of victory
+- Callback to earlier moments
+- Character growth visible
+
+**Genre-Specific:**
+
+*Romance:*
+- Grand gesture หรือ confession
+- Obstacles finally overcome
+- Emotional vulnerability
+
+*Fantasy:*
+- Final battle
+- Power/skill mastery
+- Theme through action
+
+*Horror:*
+- Final confrontation with evil
+- Cost of survival
+- Victory may be pyrrhic
+
+*Mystery:*
+- The reveal
+- All clues come together
+- Confrontation with culprit
+
+### สิ่งที่ต้องหลีกเลี่ยง
+- ❌ Deus ex machina
+- ❌ ตัวละครชนะง่ายเกินไป
+- ❌ ข้าม emotional beats
+- ❌ ไม่ตอบคำถามที่ตั้งไว้
+- ❌ Protagonist ไม่ได้ทำอะไร
+
+### สิ่งที่ต้องทำ
+- ✅ ให้ protagonist เป็นคน solve
+- ✅ มี cost/sacrifice
+- ✅ Use everything set up
+- ✅ Theme เด่นชัด
+- ✅ Emotional catharsis
+
+## ความยาว
+- Target: {{target_words}} คำ
+- อาจยาวกว่าปกติได้ถ้าจำเป็น
+
+## Output
+เขียนบท Climax ที่:
+- เต็มไปด้วย tension และ emotion
+- Resolve conflicts ที่สร้างมาตลอดเรื่อง
+- ให้ความรู้สึก satisfying
+- ภาษาไทย ไม่ต้องใส่หมายเลขบท

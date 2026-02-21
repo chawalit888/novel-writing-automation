@@ -1,0 +1,218 @@
+# ===========================================
+# N8n Generator Subagent Configuration
+# Character and Plot Generation Specialist
+# ===========================================
+
+agent:
+  id: "n8n-generator-001"
+  name: "N8nGenerator"
+  role: "Subagent"
+  team: "n8n"
+  model: "gemini-pro"  # Good for creative generation
+  description: "Generates characters and plot outlines via n8n workflows"
+
+# ===========================================
+# Reports To
+# ===========================================
+reports_to: "mgr-n8n-001"
+
+# ===========================================
+# Skills
+# ===========================================
+skills:
+  - name: "character-generation"
+    prompts:
+      fantasy: "n8n-novels/prompts/character-generation/fantasy.txt"
+      horror: "n8n-novels/prompts/character-generation/horror.txt"
+      romantic: "n8n-novels/prompts/character-generation/romantic.txt"
+      mystery: "n8n-novels/prompts/character-generation/mystery.txt"
+      bl-gl: "n8n-novels/prompts/character-generation/bl-gl.txt"
+
+  - name: "plot-outlining"
+    prompts:
+      master: "n8n-novels/prompts/plot-outlining/master-outline.txt"
+
+# ===========================================
+# N8n Workflows
+# ===========================================
+workflows:
+  character_generator:
+    workflow_id: "character-generator"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/character-generator"
+
+    inputs:
+      - title
+      - genre
+      - num_characters
+      - setting
+      - tone
+
+    outputs:
+      - characters_json
+      - relationship_map
+
+    timeout_seconds: 120
+
+  plot_outliner:
+    workflow_id: "plot-outliner"
+    trigger_type: "webhook"
+    webhook_path: "/webhook/plot-outliner"
+
+    inputs:
+      - title
+      - genre
+      - characters_json
+      - num_chapters
+      - story_premise
+
+    outputs:
+      - outline_json
+      - chapter_summaries
+      - arc_breakdown
+
+    timeout_seconds: 180
+
+# ===========================================
+# Generation Parameters by Genre
+# ===========================================
+generation_params:
+  fantasy:
+    model: "gemini-pro"
+    temperature: 0.8
+    character_count: 5-8
+    world_building: true
+
+  horror:
+    model: "claude-haiku"
+    temperature: 0.7
+    character_count: 4-6
+    atmosphere_focus: true
+
+  romantic-comedy:
+    model: "gemini-pro"
+    temperature: 0.9
+    character_count: 4-6
+    chemistry_focus: true
+
+  mystery:
+    model: "gpt-4o"
+    temperature: 0.6
+    character_count: 6-10
+    clue_system: true
+
+  bl-gl:
+    model: "claude-haiku"
+    temperature: 0.75
+    character_count: 4-6
+    relationship_depth: true
+
+# ===========================================
+# Output Specifications
+# ===========================================
+outputs:
+  characters:
+    format: "json"
+    path: "{{project_path}}/characters.json"
+
+    schema:
+      id: "string"
+      name: "string"
+      age: "number"
+      gender: "string"
+      role: "string"
+      personality: "object"
+      appearance: "object"
+      background: "object"
+      relationships: "array"
+
+  outline:
+    format: "json"
+    path: "{{project_path}}/outline.json"
+
+    schema:
+      title: "string"
+      genre: "string"
+      premise: "string"
+      acts: "array"
+      chapters: "array"
+      arcs: "object"
+
+# ===========================================
+# Quality Validation
+# ===========================================
+validation:
+  characters:
+    required_fields:
+      - id
+      - name
+      - role
+      - personality
+
+    min_characters: 3
+    max_characters: 15
+
+    checks:
+      - "unique_names"
+      - "valid_relationships"
+      - "complete_profiles"
+
+  outline:
+    required_fields:
+      - title
+      - chapters
+
+    min_chapters: 10
+    max_chapters: 50
+
+    checks:
+      - "chapter_sequence"
+      - "arc_completeness"
+      - "conflict_present"
+
+# ===========================================
+# Communication
+# ===========================================
+communication:
+  receives_from:
+    - "mgr-n8n-001"
+  reports_to:
+    - "mgr-n8n-001"
+
+  status_updates:
+    on_workflow_start: true
+    on_workflow_complete: true
+    on_error: true
+
+# ===========================================
+# Database Integration
+# ===========================================
+database:
+  connection: "postgresql://n8n:password@localhost:5432/n8n_novels"
+
+  tables:
+    characters:
+      insert_on: "generation_complete"
+      fields: ["project_id", "character_data", "created_at"]
+
+    outlines:
+      insert_on: "generation_complete"
+      fields: ["project_id", "outline_type", "outline_content", "created_at"]
+
+# ===========================================
+# Error Handling
+# ===========================================
+error_handling:
+  on_api_error:
+    retry_count: 3
+    retry_delay: 10
+    switch_model: true
+
+  on_validation_fail:
+    regenerate: true
+    max_attempts: 2
+    notify_manager: true
+
+  on_timeout:
+    save_partial: true
+    notify_manager: true

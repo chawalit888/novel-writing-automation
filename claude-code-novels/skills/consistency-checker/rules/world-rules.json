@@ -1,0 +1,221 @@
+{
+  "$schema": "World Consistency Rules",
+  "version": "1.0",
+
+  "magic_system_checks": {
+    "description": "ตรวจความสอดคล้องของระบบ magic/power",
+    "rules": [
+      {
+        "id": "MAGIC-001",
+        "name": "rule_adherence",
+        "description": "การใช้ magic ต้องตามกฎที่กำหนด",
+        "severity": "critical",
+        "check": "All magic use follows established rules"
+      },
+      {
+        "id": "MAGIC-002",
+        "name": "cost_consistency",
+        "description": "ต้นทุนการใช้ magic ต้องสอดคล้อง",
+        "severity": "critical",
+        "check": "Magic costs are consistent (mana, stamina, etc.)"
+      },
+      {
+        "id": "MAGIC-003",
+        "name": "limitation_respect",
+        "description": "ข้อจำกัดของ magic ต้องถูกรักษา",
+        "severity": "critical",
+        "check": "Magic limitations are not violated"
+      },
+      {
+        "id": "MAGIC-004",
+        "name": "power_scaling",
+        "description": "ระดับพลัง magic ต้องสมเหตุสมผล",
+        "severity": "major",
+        "check": "Power levels scale appropriately"
+      }
+    ]
+  },
+
+  "geography_checks": {
+    "description": "ตรวจความสอดคล้องทางภูมิศาสตร์",
+    "rules": [
+      {
+        "id": "GEO-001",
+        "name": "location_consistency",
+        "description": "คำอธิบายสถานที่ต้องตรงกัน",
+        "severity": "major",
+        "check": "Location descriptions match previous mentions"
+      },
+      {
+        "id": "GEO-002",
+        "name": "distance_time",
+        "description": "เวลาเดินทางต้องสมเหตุสมผลกับระยะทาง",
+        "severity": "major",
+        "check": "Travel time matches distance and method"
+      },
+      {
+        "id": "GEO-003",
+        "name": "direction_consistency",
+        "description": "ทิศทางต้องสอดคล้องกัน",
+        "severity": "major",
+        "check": "Directional references are consistent"
+      },
+      {
+        "id": "GEO-004",
+        "name": "climate_consistency",
+        "description": "สภาพอากาศต้องตรงกับที่ตั้ง",
+        "severity": "minor",
+        "check": "Weather matches location and season"
+      }
+    ]
+  },
+
+  "timeline_checks": {
+    "description": "ตรวจความสอดคล้องของ timeline",
+    "rules": [
+      {
+        "id": "TIME-001",
+        "name": "sequence_order",
+        "description": "ลำดับเหตุการณ์ต้องถูกต้อง",
+        "severity": "critical",
+        "check": "Events occur in correct chronological order"
+      },
+      {
+        "id": "TIME-002",
+        "name": "duration_logic",
+        "description": "ระยะเวลาต้องสมเหตุสมผล",
+        "severity": "major",
+        "check": "Time durations are logical"
+      },
+      {
+        "id": "TIME-003",
+        "name": "date_consistency",
+        "description": "วันที่ที่กล่าวถึงต้องตรงกัน",
+        "severity": "major",
+        "check": "Mentioned dates are consistent"
+      },
+      {
+        "id": "TIME-004",
+        "name": "parallel_events",
+        "description": "เหตุการณ์ที่เกิดพร้อมกันต้องไม่ขัดแย้ง",
+        "severity": "major",
+        "check": "Simultaneous events don't conflict"
+      },
+      {
+        "id": "TIME-005",
+        "name": "age_tracking",
+        "description": "อายุตัวละครต้องถูกต้อง",
+        "severity": "minor",
+        "check": "Character ages match timeline"
+      }
+    ]
+  },
+
+  "society_checks": {
+    "description": "ตรวจความสอดคล้องของสังคมและวัฒนธรรม",
+    "rules": [
+      {
+        "id": "SOC-001",
+        "name": "social_structure",
+        "description": "โครงสร้างสังคมต้องสอดคล้อง",
+        "severity": "major",
+        "check": "Social hierarchy and structure are consistent"
+      },
+      {
+        "id": "SOC-002",
+        "name": "cultural_practices",
+        "description": "ขนบธรรมเนียมต้องตรงกับที่กำหนด",
+        "severity": "minor",
+        "check": "Cultural practices match established norms"
+      },
+      {
+        "id": "SOC-003",
+        "name": "economic_logic",
+        "description": "ระบบเศรษฐกิจต้องสมเหตุสมผล",
+        "severity": "minor",
+        "check": "Economic references are consistent"
+      },
+      {
+        "id": "SOC-004",
+        "name": "political_structure",
+        "description": "ระบบการเมืองต้องสอดคล้อง",
+        "severity": "major",
+        "check": "Political systems operate consistently"
+      }
+    ]
+  },
+
+  "technology_checks": {
+    "description": "ตรวจความสอดคล้องของเทคโนโลยี",
+    "rules": [
+      {
+        "id": "TECH-001",
+        "name": "tech_level",
+        "description": "ระดับเทคโนโลยีต้องสอดคล้อง",
+        "severity": "major",
+        "check": "Technology level matches world setting"
+      },
+      {
+        "id": "TECH-002",
+        "name": "tool_availability",
+        "description": "เครื่องมือที่ใช้ต้องมีอยู่ในโลกนั้น",
+        "severity": "major",
+        "check": "Tools and devices exist in the world"
+      },
+      {
+        "id": "TECH-003",
+        "name": "anachronism",
+        "description": "ไม่มี anachronism",
+        "severity": "major",
+        "check": "No anachronistic elements"
+      }
+    ]
+  },
+
+  "history_checks": {
+    "description": "ตรวจความสอดคล้องของประวัติศาสตร์โลก",
+    "rules": [
+      {
+        "id": "HIST-001",
+        "name": "historical_reference",
+        "description": "อ้างอิงประวัติศาสตร์ถูกต้อง",
+        "severity": "major",
+        "check": "Historical references are accurate"
+      },
+      {
+        "id": "HIST-002",
+        "name": "world_event_consistency",
+        "description": "เหตุการณ์ในอดีตต้องตรงกัน",
+        "severity": "major",
+        "check": "Past events are consistently referenced"
+      }
+    ]
+  },
+
+  "logic_checks": {
+    "description": "ตรวจความสมเหตุสมผลทั่วไป",
+    "rules": [
+      {
+        "id": "LOGIC-001",
+        "name": "cause_effect",
+        "description": "เหตุและผลต้องสัมพันธ์กัน",
+        "severity": "major",
+        "check": "Cause and effect are logical"
+      },
+      {
+        "id": "LOGIC-002",
+        "name": "physics_consistency",
+        "description": "ฟิสิกส์ของโลกต้องสอดคล้อง",
+        "severity": "major",
+        "check": "World physics are consistent"
+      },
+      {
+        "id": "LOGIC-003",
+        "name": "exception_documentation",
+        "description": "ข้อยกเว้นต้องมีการอธิบาย",
+        "severity": "minor",
+        "check": "Exceptions to rules are documented"
+      }
+    ]
+  }
+}

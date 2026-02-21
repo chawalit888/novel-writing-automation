@@ -1,0 +1,190 @@
+{
+  "name": "Novel Chapter Writer",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "write-chapter",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract input data\nconst input = $input.first().json.body;\n\nconst novelTitle = input.novel_title || 'Untitled';\nconst chapterNumber = input.chapter_number || 1;\nconst genre = input.genre || 'romantic-comedy';\nconst previousChapterSummary = input.previous_summary || '';\nconst plotOutline = input.plot_outline || '';\nconst characters = input.characters || [];\nconst chapterOutline = input.chapter_outline || '';\n\n// Build the prompt\nconst systemPrompt = `คุณคือนักเขียนนิยายมืออาชีพ เชี่ยวชาญในการเขียนนิยายแนว ${genre} ภาษาไทย\n\nกฎสำคัญ:\n1. ความยาวต้องอยู่ระหว่าง 4,800-6,000 ตัวอักษร (บังคับ)\n2. จบตอนด้วย cliffhanger หรือ hook ที่ทำให้อยากอ่านต่อ\n3. ใช้ภาษาไทยที่สละสลวย อ่านง่าย\n4. Show don't tell - แสดงอารมณ์ผ่านการกระทำ ไม่ใช่บอกตรงๆ\n5. บทสนทนาต้องเป็นธรรมชาติ ตรงกับบุคลิกตัวละคร`;\n\nconst userPrompt = `เขียนนิยาย \"${novelTitle}\" ตอนที่ ${chapterNumber}\n\n## ข้อมูลตัวละคร:\n${JSON.stringify(characters, null, 2)}\n\n## โครงเรื่องตอนนี้:\n${chapterOutline}\n\n## สรุปตอนที่แล้ว:\n${previousChapterSummary}\n\n## คำสั่ง:\n1. เขียนเนื้อเรื่องตอนที่ ${chapterNumber} ความยาว 4,800-6,000 ตัวอักษร\n2. เริ่มต้นให้ต่อเนื่องจากตอนที่แล้ว\n3. จบด้วย cliffhanger หรือ hook\n4. ตั้งชื่อตอนให้ดึงดูด\n\nเริ่มเขียนเลย:`;\n\nreturn {\n  novel_title: novelTitle,\n  chapter_number: chapterNumber,\n  genre: genre,\n  system_prompt: systemPrompt,\n  user_prompt: userPrompt\n};"
+      },
+      "id": "prepare-prompt",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "claude-sonnet-4-20250514",
+          "mode": "list",
+          "cachedResultName": "claude-sonnet-4-20250514"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.user_prompt }}"
+            }
+          ]
+        },
+        "options": {
+          "systemMessage": "={{ $json.system_prompt }}",
+          "maxTokensToSample": 4096,
+          "temperature": 0.8
+        }
+      },
+      "id": "anthropic-chat",
+      "name": "Claude Writer",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [690, 300],
+      "credentials": {
+        "anthropicApi": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Anthropic API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the generated chapter\nconst input = $input.first().json;\nconst chapterContent = input.text || input.content || '';\n\n// Count characters\nconst charCount = chapterContent.length;\nconst charCountNoSpace = chapterContent.replace(/\\s/g, '').length;\n\n// Check if meets requirements\nconst MIN_CHARS = 4800;\nconst MAX_CHARS = 6000;\nconst meetsMinimum = charCountNoSpace >= MIN_CHARS;\nconst meetsMaximum = charCountNoSpace <= MAX_CHARS;\nconst isValid = meetsMinimum && meetsMaximum;\n\n// Extract chapter title (first line usually)\nconst lines = chapterContent.split('\\n');\nlet chapterTitle = '';\nfor (const line of lines) {\n  if (line.trim().length > 0) {\n    chapterTitle = line.trim().replace(/^[#\\s]+/, '').replace(/^ตอนที่\\s*\\d+[:\\s]*/i, '');\n    break;\n  }\n}\n\nreturn {\n  chapter_content: chapterContent,\n  chapter_title: chapterTitle,\n  character_count: charCount,\n  character_count_no_space: charCountNoSpace,\n  meets_minimum: meetsMinimum,\n  meets_maximum: meetsMaximum,\n  is_valid: isValid,\n  validation_message: isValid \n    ? `✅ ผ่าน (${charCountNoSpace} ตัวอักษร)` \n    : `❌ ไม่ผ่าน (${charCountNoSpace} ตัวอักษร) - ต้องการ ${MIN_CHARS}-${MAX_CHARS}`\n};"
+      },
+      "id": "validate-output",
+      "name": "Validate & Count",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [910, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.is_valid }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "check-valid",
+      "name": "Is Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [1130, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"novel_title\": \"{{ $('Prepare Prompt').item.json.novel_title }}\",\n  \"chapter_number\": {{ $('Prepare Prompt').item.json.chapter_number }},\n  \"chapter_title\": \"{{ $json.chapter_title }}\",\n  \"content\": {{ JSON.stringify($json.chapter_content) }},\n  \"character_count\": {{ $json.character_count_no_space }},\n  \"validation\": \"{{ $json.validation_message }}\"\n}",
+        "options": {}
+      },
+      "id": "response-success",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 200]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": false,\n  \"error\": \"Content length validation failed\",\n  \"character_count\": {{ $json.character_count_no_space }},\n  \"validation\": \"{{ $json.validation_message }}\",\n  \"content\": {{ JSON.stringify($json.chapter_content) }}\n}",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "response-fail",
+      "name": "Fail Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1350, 400]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "Claude Writer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Writer": {
+      "main": [
+        [
+          {
+            "node": "Validate & Count",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Count": {
+      "main": [
+        [
+          {
+            "node": "Is Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Valid?": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fail Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "novel-writing"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-01-01T00:00:00.000Z",
+  "versionId": "1"
+}

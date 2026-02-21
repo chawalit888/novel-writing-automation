@@ -1,0 +1,183 @@
+{
+  "$schema": "Fantasy World Building Template",
+  "version": "1.0",
+
+  "world_basics": {
+    "name": "",
+    "type": "",
+    "era": "",
+    "technology_level": "",
+    "tone": ""
+  },
+
+  "geography": {
+    "continents": [],
+    "major_regions": [
+      {
+        "name": "",
+        "climate": "",
+        "terrain": "",
+        "notable_features": [],
+        "inhabitants": ""
+      }
+    ],
+    "major_cities": [
+      {
+        "name": "",
+        "location": "",
+        "population": "",
+        "notable_for": "",
+        "ruling_power": ""
+      }
+    ],
+    "travel_times": {
+      "notes": "Record travel times between major locations"
+    }
+  },
+
+  "magic_system": {
+    "name": "",
+    "source": "",
+    "types_of_magic": [],
+    "who_can_use": "",
+    "how_its_learned": "",
+    "rules": [],
+    "limitations": [],
+    "costs": "",
+    "societal_view": "",
+    "power_levels": {
+      "novice": "",
+      "intermediate": "",
+      "advanced": "",
+      "master": "",
+      "legendary": ""
+    },
+    "forbidden_magic": []
+  },
+
+  "races_species": [
+    {
+      "name": "",
+      "appearance": "",
+      "traits": [],
+      "culture": "",
+      "abilities": [],
+      "weaknesses": [],
+      "relations_with_others": ""
+    }
+  ],
+
+  "political_structure": {
+    "major_powers": [
+      {
+        "name": "",
+        "type": "",
+        "ruler": "",
+        "territory": "",
+        "strengths": [],
+        "weaknesses": [],
+        "relations": ""
+      }
+    ],
+    "conflicts": [],
+    "alliances": []
+  },
+
+  "religion_beliefs": {
+    "major_religions": [
+      {
+        "name": "",
+        "deities": [],
+        "beliefs": "",
+        "practices": [],
+        "followers": "",
+        "influence": ""
+      }
+    ],
+    "myths_legends": [],
+    "prophecies": []
+  },
+
+  "history": {
+    "creation_myth": "",
+    "ages_eras": [],
+    "major_events": [
+      {
+        "name": "",
+        "when": "",
+        "what_happened": "",
+        "consequences": ""
+      }
+    ],
+    "recent_history": ""
+  },
+
+  "economy": {
+    "currency": "",
+    "major_trades": [],
+    "valuable_resources": [],
+    "economic_powers": []
+  },
+
+  "culture_society": {
+    "social_hierarchy": [],
+    "customs": [],
+    "taboos": [],
+    "coming_of_age": "",
+    "marriage_customs": "",
+    "death_customs": ""
+  },
+
+  "technology": {
+    "level": "",
+    "notable_inventions": [],
+    "magic_tech_interaction": "",
+    "weapons_available": [],
+    "transportation": []
+  },
+
+  "creatures_monsters": [
+    {
+      "name": "",
+      "type": "",
+      "habitat": "",
+      "abilities": [],
+      "weaknesses": [],
+      "danger_level": ""
+    }
+  ],
+
+  "important_organizations": [
+    {
+      "name": "",
+      "type": "",
+      "purpose": "",
+      "structure": "",
+      "notable_members": [],
+      "headquarters": "",
+      "influence": ""
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "",
+      "spoken_by": "",
+      "writing_system": "",
+      "common_phrases": []
+    }
+  ],
+
+  "story_relevant": {
+    "key_locations": [],
+    "key_artifacts": [],
+    "key_knowledge": [],
+    "plot_relevant_history": []
+  },
+
+  "notes": {
+    "inspirations": [],
+    "things_to_research": [],
+    "potential_expansions": []
+  }
+}

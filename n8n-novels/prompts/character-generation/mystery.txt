@@ -1,0 +1,158 @@
+สร้างตัวละครสำหรับนิยายสืบสวน/Mystery ในรูปแบบ JSON
+
+## ข้อมูลเรื่อง
+- ชื่อเรื่อง: {{title}}
+- ประเภท Crime: {{crime_type}} (murder/theft/disappearance)
+- จำนวนผู้ต้องสงสัย: {{num_suspects}}
+- Setting: {{setting}}
+
+## Requirements
+
+### Detective/Investigator
+- มีเหตุผลที่สืบคดีนี้
+- มี method การสืบสวน
+- มีจุดแข็งและจุดอ่อน
+- Backstory ที่น่าสนใจ
+- อาจมี personal stake
+
+### Victim (ถ้ามี)
+- มีเหตุผลที่ถูกทำร้าย
+- เชื่อมโยงกับผู้ต้องสงสัยทุกคน
+- มีความลับ
+
+### Suspects
+- แต่ละคนมี motive
+- แต่ละคนมี opportunity
+- แต่ละคนมี alibi (แต่มีรู)
+- แต่ละคนมีความลับ
+- Red herring สำหรับแต่ละคน
+
+### The Culprit
+- Motive ที่สมเหตุสมผล
+- Alibi ที่ดูดีแต่มีจุดอ่อน
+- ไม่ควรเป็นตัวเลือกที่ obvious ที่สุด
+- ต้องถูกแนะนำตั้งแต่ต้นเรื่อง
+
+## Output Format (JSON)
+```json
+{
+  "crime_details": {
+    "type": "ประเภท",
+    "victim": "เหยื่อ",
+    "method": "วิธีการ",
+    "time": "เวลาที่เกิด",
+    "location": "สถานที่",
+    "motive": "แรงจูงใจ"
+  },
+
+  "characters": [
+    {
+      "id": "detective-001",
+      "name": "ชื่อ",
+      "age": 0,
+      "role": "detective",
+      "occupation": "อาชีพ",
+
+      "personality": {
+        "traits": [],
+        "detective_style": "วิธีการสืบสวน",
+        "strengths": [],
+        "flaws": []
+      },
+
+      "background": {
+        "why_they_investigate": "ทำไมถึงสืบคดีนี้",
+        "past_cases": "",
+        "personal_life": ""
+      },
+
+      "methods": ["วิธีการสืบ"]
+    },
+
+    {
+      "id": "victim-001",
+      "name": "ชื่อ",
+      "age": 0,
+      "role": "victim",
+      "occupation": "",
+
+      "personality": {
+        "traits": [],
+        "reputation": "ชื่อเสียง/ภาพลักษณ์",
+        "true_nature": "ตัวตนจริง"
+      },
+
+      "connections": {
+        "suspect_1": "ความสัมพันธ์",
+        "suspect_2": "ความสัมพันธ์"
+      },
+
+      "secrets": ["ความลับ"],
+      "enemies": ["ศัตรู"],
+      "what_they_knew": "รู้อะไรที่อาจทำให้ถูกฆ่า"
+    },
+
+    {
+      "id": "suspect-001",
+      "name": "ชื่อ",
+      "age": 0,
+      "role": "suspect",
+      "is_culprit": false,
+      "occupation": "",
+
+      "personality": {
+        "traits": [],
+        "public_persona": "",
+        "private_self": ""
+      },
+
+      "motive": {
+        "apparent": "แรงจูงใจที่เห็นได้",
+        "actual": "แรงจูงใจจริง",
+        "strength": "strong/moderate/weak"
+      },
+
+      "opportunity": {
+        "whereabouts": "อยู่ที่ไหนตอนเกิดเหตุ",
+        "could_have_done_it": true/false,
+        "how": "ทำได้อย่างไร"
+      },
+
+      "alibi": {
+        "claimed": "อ้างว่า",
+        "verified_by": "ใครยืนยัน",
+        "holes": ["จุดอ่อนของ alibi"]
+      },
+
+      "secrets": ["ความลับที่ซ่อน"],
+      "red_herring": "สิ่งที่ทำให้ดูน่าสงสัย",
+
+      "connection_to_victim": "",
+      "what_they_know": "รู้อะไรเกี่ยวกับคดี"
+    }
+  ],
+
+  "culprit_reveal": {
+    "culprit_id": "suspect-XXX",
+    "real_motive": "",
+    "how_they_did_it": "",
+    "alibi_breakdown": "",
+    "clues_pointing_to_them": ["clue1", "clue2"]
+  },
+
+  "clue_distribution": {
+    "chapter_X": "clue that will be planted",
+    "chapter_Y": "another clue"
+  }
+}
+```
+
+## เกณฑ์คุณภาพ
+- Fair play: ผู้อ่านได้ clues ครบ
+- ทุก suspect มี motive ที่ believable
+- Culprit ไม่ obvious แต่ make sense
+- Alibis มีช่องโหว่ที่สมเหตุสมผล
+- Red herrings ไม่ cheating
+- Detective ไม่รู้มากกว่าผู้อ่าน
+
+สร้างตัวละครที่ทำให้ผู้อ่านสนุกกับการเดาว่าใครเป็นคนร้าย

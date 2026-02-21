@@ -1,0 +1,270 @@
+{
+  "_README": "ไฟล์นี้สำหรับกรอก Platform URLs ของนิยายแต่ละเรื่อง",
+  "_INSTRUCTIONS": "ใส่ directory name ของนิยายเป็น key แล้วกรอก platform URLs ที่ลงไว้แล้ว",
+  "_EXAMPLE": {
+    "novels/1-ท่านประธานหัวใจไลฟ์สด": {
+      "slug": "than-prathan-jai-live-sod",
+      "folderName": "ท่านประธานหัวใจไลฟ์สด",
+      "platforms": {
+        "tunwalai": "https://www.tunwalai.com/story/12345",
+        "readawrite": "https://www.readawrite.com/novel/12345",
+        "dekd": "https://www.dek-d.com/novel/12345"
+      },
+      "primaryPlatform": "tunwalai"
+    }
+  },
+  "_NOTE": "ลบ _README, _INSTRUCTIONS, _EXAMPLE ออกได้เมื่อเริ่มใช้งานจริง หรือทิ้งไว้ก็ได้",
+  "novels/1-ท่านประธานหัวใจไลฟ์สด": {
+    "slug": "than-prathan-jai-live-sod",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/884736",
+      "readawrite": "https://www.readawrite.com/a/3ec3a0f9bef3c7f017ce96ff24e6f10d?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "ท่านประธานหัวใจไลฟ์สด"
+  },
+  "novels/2-ท่านประธานวายร้ายหัวใจเย็นชา": {
+    "slug": "than-prathan-waiyai-huajai-yencha",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/884685",
+      "readawrite": "https://www.readawrite.com/a/6e4f083e28773489272e7333296b957a?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "ท่านประธานวายร้ายหัวใจเย็นชา"
+  },
+  "novels/3-รุ่นพี่วิศวะ-รักนี้คำนวณไม่ได้": {
+    "slug": "runpee-witsawa-rak-kamnuan",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/884788",
+      "readawrite": "https://www.readawrite.com/a/7f1cccc1ad58cd872b81b6d73b22d440?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "รุ่นพี่วิศวะ-รักนี้คำนวณไม่ได้"
+  },
+  "novels/4-ท่านประธานครับ รักไม่อยู่ในสัญญาจ้าง": {
+    "slug": "than-prathan-rak-mai-nai-sanya",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/884785",
+      "readawrite": "https://www.readawrite.com/a/1a040b9e3c781161296ebaed6b9afe8a?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "ท่านประธานครับ รักไม่อยู่ในสัญญาจ้าง"
+  },
+  "novels/5-รุ่นพี่CEO-รักนี้โครงสร้างไม่พัง": {
+    "slug": "runpee-ceo-rak-krongsakang",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/884818",
+      "readawrite": "https://www.readawrite.com/a/6e0209fbea5d058883e4e09b07f070cc?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "รุ่นพี่CEO-รักนี้โครงสร้างไม่พัง"
+  },
+  "novels/6-ผัวผีของฉันเป็นท่านประธาน": {
+    "slug": "pua-pee-pen-than-prathan",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885013",
+      "readawrite": "https://www.readawrite.com/a/4661654e15084529ba14af91a272c53c?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "ผัวผีของฉันเป็นท่านประธาน"
+  },
+  "novels/7-ท่านประธานหมื่นล้านหลงรักยัยคนตาย": {
+    "slug": "than-prathan-muenlan-khon-tai",
+    "platforms": {
+      "tunwalai": "",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "",
+    "folderName": "ท่านประธานหมื่นล้านหลงรักยัยคนตาย"
+  },
+  "novels/8-รอยจูบจากเงา": {
+    "slug": "roi-joop-jak-ngao",
+    "platforms": {
+      "tunwalai": "",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "",
+    "folderName": "รอยจูบจากเงา"
+  },
+  "novels/9-หลงภพ ณ วังหลวง": {
+    "slug": "long-pop-na-wang-luang",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885018",
+      "readawrite": "https://www.readawrite.com/a/e0fbe25c757ff612d66096af3c0a76f6?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "หลงภพ ณ วังหลวง"
+  },
+  "novels/10-คืนนั้นท้องลูกมาเฟีย": {
+    "slug": "kuen-nan-thong-look-mafia",
+    "platforms": {
+      "tunwalai": "",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "",
+    "folderName": "คืนนั้นท้องลูกมาเฟีย"
+  },
+  "novels-nc/2. สวาทลับคุณหนูมาเฟีย": {
+    "slug": "sawat-lub-khunnoo-mafia",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885141",
+      "readawrite": "https://www.readawrite.com/a/2168f10068d2edcc9942537ea7680ec6?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สวาทลับคุณหนูมาเฟีย"
+  },
+  "novels-nc/3. สัญญารักลับห้องประธาน": {
+    "slug": "sanya-rak-lub-hong-prathan",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885143",
+      "readawrite": "https://www.readawrite.com/a/f0620af2a75ce4b06b85fd12a2383feb?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สัญญารักลับห้องประธาน"
+  },
+  "novels-nc/4. คุณหนูร้อนรักกับนายมาเฟีย-ภาค2": {
+    "slug": "khunnoo-ron-rak-mafia-s2",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/273140",
+      "readawrite": "https://www.readawrite.com/a/5f2faa2e07a518bc224b3f059c7223c0?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "คุณหนูร้อนรักกับนายมาเฟีย-ภาค2"
+  },
+  "novels-nc/5. ยั่วสวาทพ่อเลี้ยง": {
+    "slug": "yua-sawat-por-liang",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885666",
+      "readawrite": "https://www.readawrite.com/a/f8fd9234f9e557a0d5fe88117661131e?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "ยั่วสวาทพ่อเลี้ยง"
+  },
+  "novels-nc/6. สวาทหลังจอ-เจ้าชายเพลย์บอย": {
+    "slug": "sawat-lung-jor-jao-chai-playboy",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/886529",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สวาทหลังจอ-เจ้าชายเพลย์บอย"
+  },
+  "novels-nc/7. หมอสูติ-หัวใจไม่ตายด้าน": {
+    "slug": "mor-sooti-huajai-mai-taidan",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885900",
+      "readawrite": "https://www.readawrite.com/a/7882eb38f3ca7ef9ce2fe17604c8de89?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "หมอสูติ-หัวใจไม่ตายด้าน"
+  },
+  "novels-nc/8. สาวแว่นป้ายแดง-ท่านประธานสอนรัก": {
+    "slug": "sao-waen-paydaeng-than-prathan-sonrak",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885891",
+      "readawrite": "https://www.readawrite.com/a/af308f2972c5e0eec7499f96268b02ed?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สาวแว่นป้ายแดง-ท่านประธานสอนรัก"
+  },
+  "novels-nc/9. เบื้องหลังสวาท-ผู้จัดการกับโปรดิวเซอร์": {
+    "slug": "bueang-lung-sawat-poo-jatkan-kub-producer",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/885934",
+      "readawrite": "https://www.readawrite.com/a/0a8e076fff149b35580ff9e8b3609285?preview=1",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "เบื้องหลังสวาท-ผู้จัดการกับโปรดิวเซอร์"
+  },
+  "novels-nc/10. จูบลับ-บนรันเวย์": {
+    "slug": "joob-lub-bon-runway",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/886534",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "จูบลับ-บนรันเวย์"
+  },
+  "novels-nc/11. สวาทลับในวังหลวง": {
+    "slug": "sawat-lub-nai-wang-luang",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/886822",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สวาทลับในวังหลวง"
+  },
+  "novels-nc/12. สืบสวาท-รักซ่อนคดี": {
+    "slug": "sueb-sawat-rak-son-kadi",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/886824",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "สืบสวาท-รักซ่อนคดี"
+  },
+  "novels-nc/13. เกิดใหม่ยั่วสวาทมาเฟีย": {
+    "slug": "koet-mai-yua-sawat-mafia",
+    "platforms": {
+      "tunwalai": "https://www.tunwalai.com/story/886949",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "tunwalai",
+    "folderName": "เกิดใหม่ยั่วสวาทมาเฟีย"
+  },
+  "novels-nc/14. พันธนาการรัตติกาล": {
+    "slug": "pantanakan-rattikan",
+    "platforms": {
+      "tunwalai": "",
+      "readawrite": "",
+      "dekd": "",
+      "fictionlog": ""
+    },
+    "primaryPlatform": "",
+    "folderName": "พันธนาการรัตติกาล"
+  }
+}
