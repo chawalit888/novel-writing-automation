@@ -193,18 +193,6 @@
       "priority": 2
     },
     {
-      "id": 27,
-      "title": "10 นิยายออนไลน์ยอดนิยม ที่กำลังฮิต 2026",
-      "category": "listicle",
-      "keywords": [
-        "นิยายออนไลน์",
-        "อ่านนิยาย"
-      ],
-      "target_word_count": 2000,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 28,
       "title": "เทรนด์นิยายไทย 2026: Dark Romance กำลังมาแรง",
       "category": "educational",
@@ -691,6 +679,21 @@
       "_updated_at": "2026-02-21T16:47:16.879001",
       "completed_at": "2026-02-21T16:47:16.879006",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/6-niyai.json"
+    },
+    {
+      "id": 27,
+      "title": "10 นิยายออนไลน์ยอดนิยม ที่กำลังฮิต 2026",
+      "category": "listicle",
+      "keywords": [
+        "นิยายออนไลน์",
+        "อ่านนิยาย"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T17:15:51.693058",
+      "completed_at": "2026-02-21T17:15:51.693063",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-niyai-2026.json"
     }
   ],
   "failed": [
@@ -762,8 +765,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 50,
-    "completed": 6,
+    "pending": 49,
+    "completed": 7,
     "failed": 4
   }
 }
