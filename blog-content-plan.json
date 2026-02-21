@@ -181,18 +181,6 @@
       "priority": 2
     },
     {
-      "id": 25,
-      "title": "6 เว็บอ่านนิยายไทย ที่นักอ่านควรรู้จัก",
-      "category": "listicle",
-      "keywords": [
-        "นิยายไทย",
-        "อ่านนิยายออนไลน์"
-      ],
-      "target_word_count": 1800,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 26,
       "title": "รีวิว: คุณหนูร้อนรักกับนายมาเฟีย - Chemistry ล้นหน้า",
       "category": "review",
@@ -688,6 +676,21 @@
       "_updated_at": "2026-02-21T16:35:11.574320",
       "completed_at": "2026-02-21T16:35:11.574324",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/9-niyai-nc.json"
+    },
+    {
+      "id": 25,
+      "title": "6 เว็บอ่านนิยายไทย ที่นักอ่านควรรู้จัก",
+      "category": "listicle",
+      "keywords": [
+        "นิยายไทย",
+        "อ่านนิยายออนไลน์"
+      ],
+      "target_word_count": 1800,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T16:47:16.879001",
+      "completed_at": "2026-02-21T16:47:16.879006",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/6-niyai.json"
     }
   ],
   "failed": [
@@ -759,8 +762,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 51,
-    "completed": 5,
+    "pending": 50,
+    "completed": 6,
     "failed": 4
   }
 }
