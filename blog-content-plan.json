@@ -145,18 +145,6 @@
       "priority": 2
     },
     {
-      "id": 21,
-      "title": "9 นิยาย NC ฟรีที่อ่านออนไลน์ได้ทั้งเรื่อง",
-      "category": "listicle",
-      "keywords": [
-        "นิยายncฟรี",
-        "อ่านนิยายออนไลน์ฟรี"
-      ],
-      "target_word_count": 1900,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 22,
       "title": "รีวิว: สัญญารักลับห้องประธาน - Office Romance สุดหวาน",
       "category": "review",
@@ -685,6 +673,21 @@
       "_updated_at": "2026-02-21T22:37:12.697025",
       "completed_at": "2026-02-21T22:37:12.697028",
       "file_path": "/Users/chawalitnoi/Projects/Novel Writing Automation Project/novel-promo-site/src/content/blog/niyai.json"
+    },
+    {
+      "id": 21,
+      "title": "9 นิยาย NC ฟรีที่อ่านออนไลน์ได้ทั้งเรื่อง",
+      "category": "listicle",
+      "keywords": [
+        "นิยายncฟรี",
+        "อ่านนิยายออนไลน์ฟรี"
+      ],
+      "target_word_count": 1900,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-21T16:35:11.574320",
+      "completed_at": "2026-02-21T16:35:11.574324",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/9-niyai-nc.json"
     }
   ],
   "failed": [
@@ -756,8 +759,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 52,
-    "completed": 4,
+    "pending": 51,
+    "completed": 5,
     "failed": 4
   }
 }
