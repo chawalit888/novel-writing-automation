@@ -313,18 +313,6 @@
       "priority": 3
     },
     {
-      "id": 39,
-      "title": "อ่านนิยายออนไลน์: แพลตฟอร์มไหนเหมาะกับคุณ?",
-      "category": "educational",
-      "keywords": [
-        "อ่านนิยายออนไลน์",
-        "แพลตฟอร์ม"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 40,
       "title": "7 Tropes Dark Romance ที่ทำให้หัวใจเต้นแรง",
       "category": "listicle",
@@ -697,6 +685,21 @@
       "_updated_at": "2026-02-22T03:55:32.107389",
       "completed_at": "2026-02-22T03:55:32.107394",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyaierotic-sud.json"
+    },
+    {
+      "id": 39,
+      "title": "อ่านนิยายออนไลน์: แพลตฟอร์มไหนเหมาะกับคุณ?",
+      "category": "educational",
+      "keywords": [
+        "อ่านนิยายออนไลน์",
+        "แพลตฟอร์ม"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-22T10:56:12.199975",
+      "completed_at": "2026-02-22T10:56:12.199985",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
     }
   ],
   "failed": [
@@ -768,8 +771,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 48,
-    "completed": 8,
+    "pending": 47,
+    "completed": 9,
     "failed": 4
   }
 }
