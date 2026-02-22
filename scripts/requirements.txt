@@ -1,3 +1,7 @@
 # Blog Post Generator Dependencies
 google-genai>=1.0.0          # Gemini API (new package)
 requests>=2.31.0             # HTTP requests for Unsplash
+
+# Social Media Auto-Post Dependencies
+tweepy>=4.14.0               # Twitter/X API
+requests                     # Line OA API (already included above)
