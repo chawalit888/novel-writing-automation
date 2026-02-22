@@ -217,18 +217,6 @@
       "priority": 3
     },
     {
-      "id": 30,
-      "title": "อ่านนิยายอีโรติกฟรี: แพลตฟอร์มไหนดีที่สุด?",
-      "category": "educational",
-      "keywords": [
-        "อ่านนิยายอีโรติกฟรี",
-        "อ่านนิยายฟรี"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 31,
       "title": "8 นิยาย NC25 ที่ห้ามพลาดในปีนี้",
       "category": "listicle",
@@ -694,6 +682,21 @@
       "_updated_at": "2026-02-21T17:15:51.693058",
       "completed_at": "2026-02-21T17:15:51.693063",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-niyai-2026.json"
+    },
+    {
+      "id": 30,
+      "title": "อ่านนิยายอีโรติกฟรี: แพลตฟอร์มไหนดีที่สุด?",
+      "category": "educational",
+      "keywords": [
+        "อ่านนิยายอีโรติกฟรี",
+        "อ่านนิยายฟรี"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-22T03:55:32.107389",
+      "completed_at": "2026-02-22T03:55:32.107394",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyaierotic-sud.json"
     }
   ],
   "failed": [
@@ -765,8 +768,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 49,
-    "completed": 7,
+    "pending": 48,
+    "completed": 8,
     "failed": 4
   }
 }
