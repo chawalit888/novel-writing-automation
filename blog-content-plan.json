@@ -373,18 +373,6 @@
       "priority": 2
     },
     {
-      "id": 45,
-      "title": "NC Story: เว็บอ่านนิยาย NC ที่คุณต้องรู้จัก",
-      "category": "educational",
-      "keywords": [
-        "NC Story",
-        "เว็บนิยาย"
-      ],
-      "target_word_count": 1500,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 46,
       "title": "10 ฉากโรแมนติก จากนิยายยอดนิยมที่ต้องจดจำ",
       "category": "listicle",
@@ -700,6 +688,21 @@
       "_updated_at": "2026-02-22T10:56:12.199975",
       "completed_at": "2026-02-22T10:56:12.199985",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
+    },
+    {
+      "id": 45,
+      "title": "NC Story: เว็บอ่านนิยาย NC ที่คุณต้องรู้จัก",
+      "category": "educational",
+      "keywords": [
+        "NC Story",
+        "เว็บนิยาย"
+      ],
+      "target_word_count": 1500,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-22T17:02:01.645401",
+      "completed_at": "2026-02-22T17:02:01.645406",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/nc-story-niyai-nc.json"
     }
   ],
   "failed": [
@@ -771,8 +774,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 47,
-    "completed": 9,
+    "pending": 46,
+    "completed": 10,
     "failed": 4
   }
 }
