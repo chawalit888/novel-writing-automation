@@ -397,18 +397,6 @@
       "priority": 3
     },
     {
-      "id": 49,
-      "title": "8 นิยายมาเฟีย Dark Romance ที่โหดจัดหนักจัด",
-      "category": "listicle",
-      "keywords": [
-        "มาเฟีย",
-        "dark romance"
-      ],
-      "target_word_count": 1900,
-      "status": "pending",
-      "priority": 1
-    },
-    {
       "id": 50,
       "title": "รีวิว: ซอยลับบนรันเวย์ - Fashion Romance สุดหรู",
       "category": "review",
@@ -706,6 +694,21 @@
       "_updated_at": "2026-02-23T11:57:02.051629",
       "completed_at": "2026-02-23T11:57:02.051634",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai-nc.json"
+    },
+    {
+      "id": 49,
+      "title": "8 นิยายมาเฟีย Dark Romance ที่โหดจัดหนักจัด",
+      "category": "listicle",
+      "keywords": [
+        "มาเฟีย",
+        "dark romance"
+      ],
+      "target_word_count": 1900,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-23T19:45:50.564191",
+      "completed_at": "2026-02-23T19:45:50.564195",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/8-niyaimafia-dark-romance.json"
     }
   ],
   "failed": [
@@ -777,8 +780,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 45,
-    "completed": 11,
+    "pending": 44,
+    "completed": 12,
     "failed": 4
   }
 }
