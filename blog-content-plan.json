@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 5,
-      "title": "ความแตกต่างระหว่างนิยายอีโรติกกับนิยาย NC",
-      "category": "educational",
-      "keywords": [
-        "นิยายอีโรติก",
-        "นิยายอิโรติก"
-      ],
-      "target_word_count": 1500,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 6,
       "title": "รีวิว: ท่านประธานหัวใจไลฟ์สด - Dark Romance สุดหวาน",
       "category": "review",
@@ -712,6 +700,21 @@
       "_updated_at": "2026-02-24T11:59:32.728134",
       "completed_at": "2026-02-24T11:59:32.728139",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/dark-romance.json"
+    },
+    {
+      "id": 5,
+      "title": "ความแตกต่างระหว่างนิยายอีโรติกกับนิยาย NC",
+      "category": "educational",
+      "keywords": [
+        "นิยายอีโรติก",
+        "นิยายอิโรติก"
+      ],
+      "target_word_count": 1500,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-24T19:34:25.560608",
+      "completed_at": "2026-02-24T19:34:25.560613",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyaieroticniyai-nc.json"
     }
   ],
   "failed": [
@@ -783,8 +786,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 43,
-    "completed": 13,
+    "pending": 42,
+    "completed": 14,
     "failed": 4
   }
 }
