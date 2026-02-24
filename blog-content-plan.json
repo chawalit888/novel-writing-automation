@@ -515,18 +515,6 @@
       "target_word_count": 1800,
       "status": "pending",
       "priority": 3
-    },
-    {
-      "id": 60,
-      "title": "ทำไม Dark Romance ถึงได้รับความนิยมมากขึ้น?",
-      "category": "educational",
-      "keywords": [
-        "dark romance",
-        "ความนิยม"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 1
     }
   ],
   "completed": [
@@ -709,6 +697,21 @@
       "_updated_at": "2026-02-23T19:45:50.564191",
       "completed_at": "2026-02-23T19:45:50.564195",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/8-niyaimafia-dark-romance.json"
+    },
+    {
+      "id": 60,
+      "title": "ทำไม Dark Romance ถึงได้รับความนิยมมากขึ้น?",
+      "category": "educational",
+      "keywords": [
+        "dark romance",
+        "ความนิยม"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 1,
+      "_updated_at": "2026-02-24T11:59:32.728134",
+      "completed_at": "2026-02-24T11:59:32.728139",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/dark-romance.json"
     }
   ],
   "failed": [
@@ -780,8 +783,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 44,
-    "completed": 12,
+    "pending": 43,
+    "completed": 13,
     "failed": 4
   }
 }
