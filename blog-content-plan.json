@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 6,
-      "title": "รีวิว: ท่านประธานหัวใจไลฟ์สด - Dark Romance สุดหวาน",
-      "category": "review",
-      "keywords": [
-        "รีวิวนิยาย",
-        "นิยายรัก"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 9,
       "title": "วิธีเขียนนิยาย NC ให้น่าสนใจและขายดี",
       "category": "how-to",
@@ -715,6 +703,21 @@
       "_updated_at": "2026-02-24T19:34:25.560608",
       "completed_at": "2026-02-24T19:34:25.560613",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyaieroticniyai-nc.json"
+    },
+    {
+      "id": 6,
+      "title": "รีวิว: ท่านประธานหัวใจไลฟ์สด - Dark Romance สุดหวาน",
+      "category": "review",
+      "keywords": [
+        "รีวิวนิยาย",
+        "นิยายรัก"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-25T11:57:01.731330",
+      "completed_at": "2026-02-25T11:57:01.731336",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/dark-romance-sud.json"
     }
   ],
   "failed": [
@@ -786,8 +789,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 42,
-    "completed": 14,
+    "pending": 41,
+    "completed": 15,
     "failed": 4
   }
 }
