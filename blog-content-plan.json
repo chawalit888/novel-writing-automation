@@ -13,18 +13,6 @@
       "priority": 3
     },
     {
-      "id": 12,
-      "title": "รีวิว: สวาทลับคุณหนูมาเฟีย - โคตรดาร์ก โคตรหวาน",
-      "category": "review",
-      "keywords": [
-        "นิยายมาเฟีย",
-        "dark romance"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 14,
       "title": "เทคนิคสร้างตัวละครนิยายให้น่าจดจำ",
       "category": "how-to",
@@ -724,6 +712,21 @@
       "_updated_at": "2026-02-26T11:58:28.482325",
       "completed_at": "2026-02-26T11:58:28.482330",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/18-niyai-nc-r-m-18.json"
+    },
+    {
+      "id": 12,
+      "title": "รีวิว: สวาทลับคุณหนูมาเฟีย - โคตรดาร์ก โคตรหวาน",
+      "category": "review",
+      "keywords": [
+        "นิยายมาเฟีย",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-26T18:11:02.232614",
+      "completed_at": "2026-02-26T18:11:02.232619",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/mafia.json"
     }
   ],
   "failed": [
@@ -795,8 +798,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 39,
-    "completed": 17,
+    "pending": 38,
+    "completed": 18,
     "failed": 4
   }
 }
