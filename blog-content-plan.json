@@ -25,18 +25,6 @@
       "priority": 3
     },
     {
-      "id": 16,
-      "title": "5 นักเขียนนิยาย NC ไทยที่ห้ามพลาด",
-      "category": "listicle",
-      "keywords": [
-        "นักเขียน",
-        "คุณหนูจอมหื่น"
-      ],
-      "target_word_count": 1800,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 17,
       "title": "วิเคราะห์ตัวละคร: เจ้าชายเพลย์บอยแห่ง Dark Romance",
       "category": "review",
@@ -730,6 +718,21 @@
       "_updated_at": "2026-02-27T11:47:40.176423",
       "completed_at": "2026-02-27T11:47:40.176428",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/30-niyai-nc30.json"
+    },
+    {
+      "id": 16,
+      "title": "5 นักเขียนนิยาย NC ไทยที่ห้ามพลาด",
+      "category": "listicle",
+      "keywords": [
+        "นักเขียน",
+        "คุณหนูจอมหื่น"
+      ],
+      "target_word_count": 1800,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-27T17:57:50.188724",
+      "completed_at": "2026-02-27T17:57:50.188729",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/5-niyai-nc-hamphlad.json"
     }
   ],
   "failed": [
@@ -801,8 +804,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 37,
-    "completed": 19,
+    "pending": 36,
+    "completed": 20,
     "failed": 4
   }
 }
