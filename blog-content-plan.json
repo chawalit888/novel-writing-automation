@@ -25,18 +25,6 @@
       "priority": 3
     },
     {
-      "id": 15,
-      "title": "นิยาย NC30: ทำไมต้องมีคำเตือนอายุ?",
-      "category": "educational",
-      "keywords": [
-        "นิยายnc30",
-        "นิยายผู้ใหญ่"
-      ],
-      "target_word_count": 1500,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 16,
       "title": "5 นักเขียนนิยาย NC ไทยที่ห้ามพลาด",
       "category": "listicle",
@@ -727,6 +715,21 @@
       "_updated_at": "2026-02-26T18:11:02.232614",
       "completed_at": "2026-02-26T18:11:02.232619",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/mafia.json"
+    },
+    {
+      "id": 15,
+      "title": "นิยาย NC30: ทำไมต้องมีคำเตือนอายุ?",
+      "category": "educational",
+      "keywords": [
+        "นิยายnc30",
+        "นิยายผู้ใหญ่"
+      ],
+      "target_word_count": 1500,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-27T11:47:40.176423",
+      "completed_at": "2026-02-27T11:47:40.176428",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/30-niyai-nc30.json"
     }
   ],
   "failed": [
@@ -798,8 +801,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 38,
-    "completed": 18,
+    "pending": 37,
+    "completed": 19,
     "failed": 4
   }
 }
