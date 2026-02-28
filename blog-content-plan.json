@@ -37,18 +37,6 @@
       "priority": 3
     },
     {
-      "id": 20,
-      "title": "Tropes ยอดนิยมในนิยาย NC ที่คนชอบอ่าน",
-      "category": "educational",
-      "keywords": [
-        "trope",
-        "นิยาย nc"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 22,
       "title": "รีวิว: สัญญารักลับห้องประธาน - Office Romance สุดหวาน",
       "category": "review",
@@ -736,6 +724,21 @@
       "_updated_at": "2026-02-28T10:49:56.753721",
       "completed_at": "2026-02-28T10:49:56.753725",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/15-niyairomantic.json"
+    },
+    {
+      "id": 20,
+      "title": "Tropes ยอดนิยมในนิยาย NC ที่คนชอบอ่าน",
+      "category": "educational",
+      "keywords": [
+        "trope",
+        "นิยาย nc"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-28T16:53:50.923490",
+      "completed_at": "2026-02-28T16:53:50.923495",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/tropes-niyai-nc.json"
     }
   ],
   "failed": [
@@ -807,8 +810,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 35,
-    "completed": 21,
+    "pending": 34,
+    "completed": 22,
     "failed": 4
   }
 }
