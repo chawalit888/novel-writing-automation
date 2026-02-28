@@ -37,18 +37,6 @@
       "priority": 3
     },
     {
-      "id": 19,
-      "title": "15 บทนิยายโรแมนติกหวานใจที่ต้องอ่าน",
-      "category": "listicle",
-      "keywords": [
-        "บท",
-        "นิยายโรแมนติก"
-      ],
-      "target_word_count": 2100,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 20,
       "title": "Tropes ยอดนิยมในนิยาย NC ที่คนชอบอ่าน",
       "category": "educational",
@@ -733,6 +721,21 @@
       "_updated_at": "2026-02-27T17:57:50.188724",
       "completed_at": "2026-02-27T17:57:50.188729",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/5-niyai-nc-hamphlad.json"
+    },
+    {
+      "id": 19,
+      "title": "15 บทนิยายโรแมนติกหวานใจที่ต้องอ่าน",
+      "category": "listicle",
+      "keywords": [
+        "บท",
+        "นิยายโรแมนติก"
+      ],
+      "target_word_count": 2100,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-02-28T10:49:56.753721",
+      "completed_at": "2026-02-28T10:49:56.753725",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/15-niyairomantic.json"
     }
   ],
   "failed": [
@@ -804,8 +807,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 36,
-    "completed": 20,
+    "pending": 35,
+    "completed": 21,
     "failed": 4
   }
 }
