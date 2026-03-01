@@ -37,18 +37,6 @@
       "priority": 3
     },
     {
-      "id": 22,
-      "title": "รีวิว: สัญญารักลับห้องประธาน - Office Romance สุดหวาน",
-      "category": "review",
-      "keywords": [
-        "รีวิวนิยาย",
-        "office romance"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 23,
       "title": "วิธีเขียนฉาก NC ให้ดูเป็นธรรมชาติ",
       "category": "how-to",
@@ -739,6 +727,21 @@
       "_updated_at": "2026-02-28T16:53:50.923490",
       "completed_at": "2026-02-28T16:53:50.923495",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/tropes-niyai-nc.json"
+    },
+    {
+      "id": 22,
+      "title": "รีวิว: สัญญารักลับห้องประธาน - Office Romance สุดหวาน",
+      "category": "review",
+      "keywords": [
+        "รีวิวนิยาย",
+        "office romance"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-01T10:53:50.032564",
+      "completed_at": "2026-03-01T10:53:50.032569",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/rak-office-romance-sud.json"
     }
   ],
   "failed": [
@@ -810,8 +813,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 34,
-    "completed": 22,
+    "pending": 33,
+    "completed": 23,
     "failed": 4
   }
 }
