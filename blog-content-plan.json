@@ -49,18 +49,6 @@
       "priority": 3
     },
     {
-      "id": 24,
-      "title": "นิยายอีโรติก 20: คำแนะนำสำหรับผู้อ่านใหม่",
-      "category": "educational",
-      "keywords": [
-        "นิยายอิโรติก20",
-        "นิยายผู้ใหญ่"
-      ],
-      "target_word_count": 1500,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 26,
       "title": "รีวิว: คุณหนูร้อนรักกับนายมาเฟีย - Chemistry ล้นหน้า",
       "category": "review",
@@ -742,6 +730,21 @@
       "_updated_at": "2026-03-01T10:53:50.032564",
       "completed_at": "2026-03-01T10:53:50.032569",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/rak-office-romance-sud.json"
+    },
+    {
+      "id": 24,
+      "title": "นิยายอีโรติก 20: คำแนะนำสำหรับผู้อ่านใหม่",
+      "category": "educational",
+      "keywords": [
+        "นิยายอิโรติก20",
+        "นิยายผู้ใหญ่"
+      ],
+      "target_word_count": 1500,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-01T16:56:27.819112",
+      "completed_at": "2026-03-01T16:56:27.819117",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/20-niyaierotic-20.json"
     }
   ],
   "failed": [
@@ -813,8 +816,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 33,
-    "completed": 23,
+    "pending": 32,
+    "completed": 24,
     "failed": 4
   }
 }
