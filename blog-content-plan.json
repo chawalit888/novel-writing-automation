@@ -49,18 +49,6 @@
       "priority": 3
     },
     {
-      "id": 28,
-      "title": "เทรนด์นิยายไทย 2026: Dark Romance กำลังมาแรง",
-      "category": "educational",
-      "keywords": [
-        "นิยายไทย",
-        "dark romance"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 29,
       "title": "วิธีเขียนนิยายให้จบ: เคล็ดลับจากนักเขียนมืออาชีพ",
       "category": "how-to",
@@ -748,6 +736,21 @@
       "_updated_at": "2026-03-02T11:40:21.814012",
       "completed_at": "2026-03-02T11:40:21.814017",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/rakmafia-chemistry.json"
+    },
+    {
+      "id": 28,
+      "title": "เทรนด์นิยายไทย 2026: Dark Romance กำลังมาแรง",
+      "category": "educational",
+      "keywords": [
+        "นิยายไทย",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-02T18:03:37.819103",
+      "completed_at": "2026-03-02T18:03:37.819107",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/2026-niyai-2026-dark-romance.json"
     }
   ],
   "failed": [
@@ -819,8 +822,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 31,
-    "completed": 25,
+    "pending": 30,
+    "completed": 26,
     "failed": 4
   }
 }
