@@ -61,18 +61,6 @@
       "priority": 3
     },
     {
-      "id": 31,
-      "title": "8 นิยาย NC25 ที่ห้ามพลาดในปีนี้",
-      "category": "listicle",
-      "keywords": [
-        "นิยาย25",
-        "นิยาย nc"
-      ],
-      "target_word_count": 1900,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 32,
       "title": "รีวิว: สืบสวาท-รักซ่อนคดี - Mystery Romance สุดระทึก",
       "category": "review",
@@ -751,6 +739,21 @@
       "_updated_at": "2026-03-02T18:03:37.819103",
       "completed_at": "2026-03-02T18:03:37.819107",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/2026-niyai-2026-dark-romance.json"
+    },
+    {
+      "id": 31,
+      "title": "8 นิยาย NC25 ที่ห้ามพลาดในปีนี้",
+      "category": "listicle",
+      "keywords": [
+        "นิยาย25",
+        "นิยาย nc"
+      ],
+      "target_word_count": 1900,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-03T11:48:14.520043",
+      "completed_at": "2026-03-03T11:48:14.520047",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/8-niyai-nc25-hamphlad.json"
     }
   ],
   "failed": [
@@ -822,8 +825,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 30,
-    "completed": 26,
+    "pending": 29,
+    "completed": 27,
     "failed": 4
   }
 }
