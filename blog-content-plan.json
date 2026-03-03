@@ -61,18 +61,6 @@
       "priority": 3
     },
     {
-      "id": 32,
-      "title": "รีวิว: สืบสวาท-รักซ่อนคดี - Mystery Romance สุดระทึก",
-      "category": "review",
-      "keywords": [
-        "รีวิว",
-        "mystery"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 33,
       "title": "เรื่องเล่าอิโรติก vs นิยายอีโรติก: ต่างกันอย่างไร?",
       "category": "educational",
@@ -754,6 +742,21 @@
       "_updated_at": "2026-03-03T11:48:14.520043",
       "completed_at": "2026-03-03T11:48:14.520047",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/8-niyai-nc25-hamphlad.json"
+    },
+    {
+      "id": 32,
+      "title": "รีวิว: สืบสวาท-รักซ่อนคดี - Mystery Romance สุดระทึก",
+      "category": "review",
+      "keywords": [
+        "รีวิว",
+        "mystery"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-03T18:06:17.237393",
+      "completed_at": "2026-03-03T18:06:17.237398",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/rak-mystery-romance-sud.json"
     }
   ],
   "failed": [
@@ -825,8 +828,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 29,
-    "completed": 27,
+    "pending": 28,
+    "completed": 28,
     "failed": 4
   }
 }
