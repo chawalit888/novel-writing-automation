@@ -85,18 +85,6 @@
       "priority": 3
     },
     {
-      "id": 36,
-      "title": "นิยายอิโรติกนิยาย: พัฒนาการและความนิยมในไทย",
-      "category": "educational",
-      "keywords": [
-        "อิโรติกนิยาย",
-        "นิยายไทย"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 37,
       "title": "Top 10 นักเขียนนิยายไทยที่ต้องติดตาม 2026",
       "category": "listicle",
@@ -760,6 +748,21 @@
       "_updated_at": "2026-03-04T11:20:35.448464",
       "completed_at": "2026-03-04T11:20:35.448469",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/vs-niyaierotic.json"
+    },
+    {
+      "id": 36,
+      "title": "นิยายอิโรติกนิยาย: พัฒนาการและความนิยมในไทย",
+      "category": "educational",
+      "keywords": [
+        "อิโรติกนิยาย",
+        "นิยายไทย"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-04T18:03:39.612843",
+      "completed_at": "2026-03-04T18:03:39.612848",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyainiyai.json"
     }
   ],
   "failed": [
@@ -831,8 +834,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 27,
-    "completed": 29,
+    "pending": 26,
+    "completed": 30,
     "failed": 4
   }
 }
