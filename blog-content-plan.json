@@ -97,18 +97,6 @@
       "priority": 3
     },
     {
-      "id": 40,
-      "title": "7 Tropes Dark Romance ที่ทำให้หัวใจเต้นแรง",
-      "category": "listicle",
-      "keywords": [
-        "dark romance",
-        "trope"
-      ],
-      "target_word_count": 1800,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 41,
       "title": "เทคนิคเขียน Dialogue ในนิยายให้เป็นธรรมชาติ",
       "category": "how-to",
@@ -766,6 +754,21 @@
       "_updated_at": "2026-03-05T11:49:55.389572",
       "completed_at": "2026-03-05T11:49:55.389577",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-top-10-niyai-2026.json"
+    },
+    {
+      "id": 40,
+      "title": "7 Tropes Dark Romance ที่ทำให้หัวใจเต้นแรง",
+      "category": "listicle",
+      "keywords": [
+        "dark romance",
+        "trope"
+      ],
+      "target_word_count": 1800,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-05T19:47:48.742055",
+      "completed_at": "2026-03-05T19:47:48.742060",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/7-tropes-dark-romance.json"
     }
   ],
   "failed": [
@@ -837,8 +840,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 25,
-    "completed": 31,
+    "pending": 24,
+    "completed": 32,
     "failed": 4
   }
 }
