@@ -85,18 +85,6 @@
       "priority": 3
     },
     {
-      "id": 37,
-      "title": "Top 10 นักเขียนนิยายไทยที่ต้องติดตาม 2026",
-      "category": "listicle",
-      "keywords": [
-        "นักเขียน",
-        "นิยายไทย"
-      ],
-      "target_word_count": 2000,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 38,
       "title": "รีวิร: จอมเจี้ยบมันผม - Comedy Romance สุดฮา",
       "category": "review",
@@ -763,6 +751,21 @@
       "_updated_at": "2026-03-04T18:03:39.612843",
       "completed_at": "2026-03-04T18:03:39.612848",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyainiyai.json"
+    },
+    {
+      "id": 37,
+      "title": "Top 10 นักเขียนนิยายไทยที่ต้องติดตาม 2026",
+      "category": "listicle",
+      "keywords": [
+        "นักเขียน",
+        "นิยายไทย"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-05T11:49:55.389572",
+      "completed_at": "2026-03-05T11:49:55.389577",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-top-10-niyai-2026.json"
     }
   ],
   "failed": [
@@ -834,8 +837,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 26,
-    "completed": 30,
+    "pending": 25,
+    "completed": 31,
     "failed": 4
   }
 }
