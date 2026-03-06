@@ -121,18 +121,6 @@
       "priority": 3
     },
     {
-      "id": 43,
-      "title": "9 นิยายรักหวานแหว๋ว ที่อ่านแล้วยิ้มไม่หุบ",
-      "category": "listicle",
-      "keywords": [
-        "นิยายรัก",
-        "หวาน"
-      ],
-      "target_word_count": 1900,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 44,
       "title": "รีวิว: บ่วงลับสวาทผู้จัดการกับ Producer - Office Love",
       "category": "review",
@@ -769,6 +757,21 @@
       "_updated_at": "2026-03-05T19:47:48.742055",
       "completed_at": "2026-03-05T19:47:48.742060",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/7-tropes-dark-romance.json"
+    },
+    {
+      "id": 43,
+      "title": "9 นิยายรักหวานแหว๋ว ที่อ่านแล้วยิ้มไม่หุบ",
+      "category": "listicle",
+      "keywords": [
+        "นิยายรัก",
+        "หวาน"
+      ],
+      "target_word_count": 1900,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-06T11:06:47.593815",
+      "completed_at": "2026-03-06T11:06:47.593820",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/9-niyairak.json"
     }
   ],
   "failed": [
@@ -840,8 +843,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 24,
-    "completed": 32,
+    "pending": 23,
+    "completed": 33,
     "failed": 4
   }
 }
