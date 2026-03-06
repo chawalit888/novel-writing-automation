@@ -121,18 +121,6 @@
       "priority": 3
     },
     {
-      "id": 44,
-      "title": "รีวิว: บ่วงลับสวาทผู้จัดการกับ Producer - Office Love",
-      "category": "review",
-      "keywords": [
-        "office",
-        "รีวิว"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 46,
       "title": "10 ฉากโรแมนติก จากนิยายยอดนิยมที่ต้องจดจำ",
       "category": "listicle",
@@ -772,6 +760,21 @@
       "_updated_at": "2026-03-06T11:06:47.593815",
       "completed_at": "2026-03-06T11:06:47.593820",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/9-niyairak.json"
+    },
+    {
+      "id": 44,
+      "title": "รีวิว: บ่วงลับสวาทผู้จัดการกับ Producer - Office Love",
+      "category": "review",
+      "keywords": [
+        "office",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-06T17:57:39.102897",
+      "completed_at": "2026-03-06T17:57:39.102901",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/producer-office-love.json"
     }
   ],
   "failed": [
@@ -843,8 +846,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 23,
-    "completed": 33,
+    "pending": 22,
+    "completed": 34,
     "failed": 4
   }
 }
