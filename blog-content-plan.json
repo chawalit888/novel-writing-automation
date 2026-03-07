@@ -121,18 +121,6 @@
       "priority": 3
     },
     {
-      "id": 46,
-      "title": "10 ฉากโรแมนติก จากนิยายยอดนิยมที่ต้องจดจำ",
-      "category": "listicle",
-      "keywords": [
-        "โรแมนติก",
-        "ฉาก"
-      ],
-      "target_word_count": 2000,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 47,
       "title": "วิธีเขียนนิยายให้ขายดี: เคล็ดลับจากประสบการณ์จริง",
       "category": "how-to",
@@ -775,6 +763,21 @@
       "_updated_at": "2026-03-06T17:57:39.102897",
       "completed_at": "2026-03-06T17:57:39.102901",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/producer-office-love.json"
+    },
+    {
+      "id": 46,
+      "title": "10 ฉากโรแมนติก จากนิยายยอดนิยมที่ต้องจดจำ",
+      "category": "listicle",
+      "keywords": [
+        "โรแมนติก",
+        "ฉาก"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-07T10:51:31.740915",
+      "completed_at": "2026-03-07T10:51:31.740922",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-romantic-niyai.json"
     }
   ],
   "failed": [
@@ -846,8 +849,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 22,
-    "completed": 34,
+    "pending": 21,
+    "completed": 35,
     "failed": 4
   }
 }
