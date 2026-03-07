@@ -133,18 +133,6 @@
       "priority": 3
     },
     {
-      "id": 50,
-      "title": "รีวิว: ซอยลับบนรันเวย์ - Fashion Romance สุดหรู",
-      "category": "review",
-      "keywords": [
-        "fashion",
-        "รีวิว"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 51,
       "title": "ความแตกต่างระหว่างนิยายไทยกับนิยายแปล",
       "category": "educational",
@@ -778,6 +766,21 @@
       "_updated_at": "2026-03-07T10:51:31.740915",
       "completed_at": "2026-03-07T10:51:31.740922",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-romantic-niyai.json"
+    },
+    {
+      "id": 50,
+      "title": "รีวิว: ซอยลับบนรันเวย์ - Fashion Romance สุดหรู",
+      "category": "review",
+      "keywords": [
+        "fashion",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-07T16:55:12.418716",
+      "completed_at": "2026-03-07T16:55:12.418721",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/fashion-romance-sud.json"
     }
   ],
   "failed": [
@@ -849,8 +852,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 21,
-    "completed": 35,
+    "pending": 20,
+    "completed": 36,
     "failed": 4
   }
 }
