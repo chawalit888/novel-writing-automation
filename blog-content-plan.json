@@ -145,18 +145,6 @@
       "priority": 3
     },
     {
-      "id": 52,
-      "title": "11 Anti-Hero ในนิยาย NC ที่เจ้าชู้แต่น่ารัก",
-      "category": "listicle",
-      "keywords": [
-        "anti-hero",
-        "ตัวละคร"
-      ],
-      "target_word_count": 2000,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 53,
       "title": "เทคนิคการสร้าง World Building ในนิยาย",
       "category": "how-to",
@@ -781,6 +769,21 @@
       "_updated_at": "2026-03-07T16:55:12.418716",
       "completed_at": "2026-03-07T16:55:12.418721",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/fashion-romance-sud.json"
+    },
+    {
+      "id": 52,
+      "title": "11 Anti-Hero ในนิยาย NC ที่เจ้าชู้แต่น่ารัก",
+      "category": "listicle",
+      "keywords": [
+        "anti-hero",
+        "ตัวละคร"
+      ],
+      "target_word_count": 2000,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-08T10:54:06.150109",
+      "completed_at": "2026-03-08T10:54:06.150114",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/11-anti-hero-niyai-nc-rak.json"
     }
   ],
   "failed": [
@@ -852,8 +855,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 20,
-    "completed": 36,
+    "pending": 19,
+    "completed": 37,
     "failed": 4
   }
 }
