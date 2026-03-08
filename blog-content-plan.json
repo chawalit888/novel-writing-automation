@@ -157,18 +157,6 @@
       "priority": 3
     },
     {
-      "id": 54,
-      "title": "เทรนด์นิยายโรแมนติก 2026: อะไรกำลังฮิต?",
-      "category": "educational",
-      "keywords": [
-        "เทรนด์",
-        "นิยายโรแมนติก"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 55,
       "title": "6 นิยาย Enemies to Lovers ที่หวานจนใจละลาย",
       "category": "listicle",
@@ -784,6 +772,21 @@
       "_updated_at": "2026-03-08T10:54:06.150109",
       "completed_at": "2026-03-08T10:54:06.150114",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/11-anti-hero-niyai-nc-rak.json"
+    },
+    {
+      "id": 54,
+      "title": "เทรนด์นิยายโรแมนติก 2026: อะไรกำลังฮิต?",
+      "category": "educational",
+      "keywords": [
+        "เทรนด์",
+        "นิยายโรแมนติก"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-08T16:57:43.392169",
+      "completed_at": "2026-03-08T16:57:43.392173",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/2026-niyairomantic-2026.json"
     }
   ],
   "failed": [
@@ -855,8 +858,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 19,
-    "completed": 37,
+    "pending": 18,
+    "completed": 38,
     "failed": 4
   }
 }
