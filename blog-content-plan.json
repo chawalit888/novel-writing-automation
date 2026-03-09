@@ -157,18 +157,6 @@
       "priority": 3
     },
     {
-      "id": 56,
-      "title": "รีวิว: เกิดใหม่ยุวสวาทมาเฟีย - Reborn Romance สุดมันส์",
-      "category": "review",
-      "keywords": [
-        "reborn",
-        "มาเฟีย"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 57,
       "title": "วิธีเลือกอ่านนิยาย NC ให้เหมาะกับตัวเอง",
       "category": "educational",
@@ -790,6 +778,21 @@
       "_updated_at": "2026-03-09T10:42:01.769969",
       "completed_at": "2026-03-09T10:42:01.769974",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/6-niyai-enemies-to-lovers.json"
+    },
+    {
+      "id": 56,
+      "title": "รีวิว: เกิดใหม่ยุวสวาทมาเฟีย - Reborn Romance สุดมันส์",
+      "category": "review",
+      "keywords": [
+        "reborn",
+        "มาเฟีย"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-09T17:03:58.333033",
+      "completed_at": "2026-03-09T17:03:58.333038",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/mafia-reborn-romance-sud.json"
     }
   ],
   "failed": [
@@ -861,8 +864,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 17,
-    "completed": 39,
+    "pending": 16,
+    "completed": 40,
     "failed": 4
   }
 }
