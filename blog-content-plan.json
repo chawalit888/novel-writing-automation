@@ -157,18 +157,6 @@
       "priority": 3
     },
     {
-      "id": 55,
-      "title": "6 นิยาย Enemies to Lovers ที่หวานจนใจละลาย",
-      "category": "listicle",
-      "keywords": [
-        "enemies to lovers",
-        "trope"
-      ],
-      "target_word_count": 1800,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 56,
       "title": "รีวิว: เกิดใหม่ยุวสวาทมาเฟีย - Reborn Romance สุดมันส์",
       "category": "review",
@@ -787,6 +775,21 @@
       "_updated_at": "2026-03-08T16:57:43.392169",
       "completed_at": "2026-03-08T16:57:43.392173",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/2026-niyairomantic-2026.json"
+    },
+    {
+      "id": 55,
+      "title": "6 นิยาย Enemies to Lovers ที่หวานจนใจละลาย",
+      "category": "listicle",
+      "keywords": [
+        "enemies to lovers",
+        "trope"
+      ],
+      "target_word_count": 1800,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-09T10:42:01.769969",
+      "completed_at": "2026-03-09T10:42:01.769974",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/6-niyai-enemies-to-lovers.json"
     }
   ],
   "failed": [
@@ -858,8 +861,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 18,
-    "completed": 38,
+    "pending": 17,
+    "completed": 39,
     "failed": 4
   }
 }
