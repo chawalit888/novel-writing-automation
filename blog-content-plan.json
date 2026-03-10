@@ -157,18 +157,6 @@
       "priority": 3
     },
     {
-      "id": 58,
-      "title": "10 นิยาย Second Chance Romance ที่ต้องอ่าน",
-      "category": "listicle",
-      "keywords": [
-        "second chance",
-        "romance"
-      ],
-      "target_word_count": 1900,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 59,
       "title": "จากไอเดียสู่นวนิยาย: ขั้นตอนการเขียนนิยาย",
       "category": "how-to",
@@ -796,6 +784,21 @@
       "_updated_at": "2026-03-10T10:35:36.533312",
       "completed_at": "2026-03-10T10:35:36.533320",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai-nc.json"
+    },
+    {
+      "id": 58,
+      "title": "10 นิยาย Second Chance Romance ที่ต้องอ่าน",
+      "category": "listicle",
+      "keywords": [
+        "second chance",
+        "romance"
+      ],
+      "target_word_count": 1900,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-10T17:02:58.148580",
+      "completed_at": "2026-03-10T17:02:58.148586",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/10-niyai-second-chance-romance.json"
     }
   ],
   "failed": [
@@ -867,8 +870,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 15,
-    "completed": 41,
+    "pending": 14,
+    "completed": 42,
     "failed": 4
   }
 }
