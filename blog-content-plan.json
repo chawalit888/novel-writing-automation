@@ -157,18 +157,6 @@
       "priority": 3
     },
     {
-      "id": 57,
-      "title": "วิธีเลือกอ่านนิยาย NC ให้เหมาะกับตัวเอง",
-      "category": "educational",
-      "keywords": [
-        "เลือกนิยาย",
-        "nc"
-      ],
-      "target_word_count": 1500,
-      "status": "pending",
-      "priority": 2
-    },
-    {
       "id": 58,
       "title": "10 นิยาย Second Chance Romance ที่ต้องอ่าน",
       "category": "listicle",
@@ -793,6 +781,21 @@
       "_updated_at": "2026-03-09T17:03:58.333033",
       "completed_at": "2026-03-09T17:03:58.333038",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/mafia-reborn-romance-sud.json"
+    },
+    {
+      "id": 57,
+      "title": "วิธีเลือกอ่านนิยาย NC ให้เหมาะกับตัวเอง",
+      "category": "educational",
+      "keywords": [
+        "เลือกนิยาย",
+        "nc"
+      ],
+      "target_word_count": 1500,
+      "status": "completed",
+      "priority": 2,
+      "_updated_at": "2026-03-10T10:35:36.533312",
+      "completed_at": "2026-03-10T10:35:36.533320",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai-nc.json"
     }
   ],
   "failed": [
@@ -864,8 +867,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 16,
-    "completed": 40,
+    "pending": 15,
+    "completed": 41,
     "failed": 4
   }
 }
