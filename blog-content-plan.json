@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 14,
-      "title": "เทคนิคสร้างตัวละครนิยายให้น่าจดจำ",
-      "category": "how-to",
-      "keywords": [
-        "เขียนนิยาย",
-        "ตัวละคร"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 17,
       "title": "วิเคราะห์ตัวละคร: เจ้าชายเพลย์บอยแห่ง Dark Romance",
       "category": "review",
@@ -802,6 +790,21 @@
       "_updated_at": "2026-03-11T10:35:31.478144",
       "completed_at": "2026-03-11T10:35:31.478171",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai-nc.json"
+    },
+    {
+      "id": 14,
+      "title": "เทคนิคสร้างตัวละครนิยายให้น่าจดจำ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "ตัวละคร"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-11T17:03:34.241377",
+      "completed_at": "2026-03-11T17:03:34.241382",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
     }
   ],
   "failed": [
@@ -873,8 +876,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 13,
-    "completed": 43,
+    "pending": 12,
+    "completed": 44,
     "failed": 4
   }
 }
