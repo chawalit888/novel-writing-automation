@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 17,
-      "title": "วิเคราะห์ตัวละคร: เจ้าชายเพลย์บอยแห่ง Dark Romance",
-      "category": "review",
-      "keywords": [
-        "วิเคราะห์",
-        "dark romance"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 23,
       "title": "วิธีเขียนฉาก NC ให้ดูเป็นธรรมชาติ",
       "category": "how-to",
@@ -805,6 +793,21 @@
       "_updated_at": "2026-03-11T17:03:34.241377",
       "completed_at": "2026-03-11T17:03:34.241382",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
+    },
+    {
+      "id": 17,
+      "title": "วิเคราะห์ตัวละคร: เจ้าชายเพลย์บอยแห่ง Dark Romance",
+      "category": "review",
+      "keywords": [
+        "วิเคราะห์",
+        "dark romance"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-12T10:34:55.251380",
+      "completed_at": "2026-03-12T10:34:55.251385",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/dark-romance.json"
     }
   ],
   "failed": [
@@ -876,8 +879,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 12,
-    "completed": 44,
+    "pending": 11,
+    "completed": 45,
     "failed": 4
   }
 }
