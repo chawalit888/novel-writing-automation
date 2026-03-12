@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 23,
-      "title": "วิธีเขียนฉาก NC ให้ดูเป็นธรรมชาติ",
-      "category": "how-to",
-      "keywords": [
-        "เขียนนิยาย",
-        "nc"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 29,
       "title": "วิธีเขียนนิยายให้จบ: เคล็ดลับจากนักเขียนมืออาชีพ",
       "category": "how-to",
@@ -808,6 +796,21 @@
       "_updated_at": "2026-03-12T10:34:55.251380",
       "completed_at": "2026-03-12T10:34:55.251385",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/dark-romance.json"
+    },
+    {
+      "id": 23,
+      "title": "วิธีเขียนฉาก NC ให้ดูเป็นธรรมชาติ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "nc"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-12T17:05:54.535107",
+      "completed_at": "2026-03-12T17:05:54.535112",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/nc.json"
     }
   ],
   "failed": [
@@ -879,8 +882,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 11,
-    "completed": 45,
+    "pending": 10,
+    "completed": 46,
     "failed": 4
   }
 }
