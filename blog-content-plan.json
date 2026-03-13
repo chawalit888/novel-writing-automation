@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 29,
-      "title": "วิธีเขียนนิยายให้จบ: เคล็ดลับจากนักเขียนมืออาชีพ",
-      "category": "how-to",
-      "keywords": [
-        "เขียนนิยาย",
-        "นักเขียน"
-      ],
-      "target_word_count": 1800,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 34,
       "title": "12 คำพูดหวาน จากนิยายรักยอดนิยม",
       "category": "listicle",
@@ -811,6 +799,21 @@
       "_updated_at": "2026-03-12T17:05:54.535107",
       "completed_at": "2026-03-12T17:05:54.535112",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/nc.json"
+    },
+    {
+      "id": 29,
+      "title": "วิธีเขียนนิยายให้จบ: เคล็ดลับจากนักเขียนมืออาชีพ",
+      "category": "how-to",
+      "keywords": [
+        "เขียนนิยาย",
+        "นักเขียน"
+      ],
+      "target_word_count": 1800,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-13T10:32:33.994036",
+      "completed_at": "2026-03-13T10:32:33.994041",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
     }
   ],
   "failed": [
@@ -882,8 +885,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 10,
-    "completed": 46,
+    "pending": 9,
+    "completed": 47,
     "failed": 4
   }
 }
