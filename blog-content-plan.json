@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 34,
-      "title": "12 คำพูดหวาน จากนิยายรักยอดนิยม",
-      "category": "listicle",
-      "keywords": [
-        "นิยายรัก",
-        "คำพูด"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 35,
       "title": "วิธีสร้าง Plot Twist ในนิยายให้ผู้อ่านตะลึง",
       "category": "how-to",
@@ -814,6 +802,21 @@
       "_updated_at": "2026-03-13T10:32:33.994036",
       "completed_at": "2026-03-13T10:32:33.994041",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/niyai.json"
+    },
+    {
+      "id": 34,
+      "title": "12 คำพูดหวาน จากนิยายรักยอดนิยม",
+      "category": "listicle",
+      "keywords": [
+        "นิยายรัก",
+        "คำพูด"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-13T16:53:11.106626",
+      "completed_at": "2026-03-13T16:53:11.106631",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/12-niyairak.json"
     }
   ],
   "failed": [
@@ -885,8 +888,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 9,
-    "completed": 47,
+    "pending": 8,
+    "completed": 48,
     "failed": 4
   }
 }
