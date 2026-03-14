@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 35,
-      "title": "วิธีสร้าง Plot Twist ในนิยายให้ผู้อ่านตะลึง",
-      "category": "how-to",
-      "keywords": [
-        "plot",
-        "เขียนนิยาย"
-      ],
-      "target_word_count": 1700,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 38,
       "title": "รีวิร: จอมเจี้ยบมันผม - Comedy Romance สุดฮา",
       "category": "review",
@@ -817,6 +805,21 @@
       "_updated_at": "2026-03-13T16:53:11.106626",
       "completed_at": "2026-03-13T16:53:11.106631",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/12-niyairak.json"
+    },
+    {
+      "id": 35,
+      "title": "วิธีสร้าง Plot Twist ในนิยายให้ผู้อ่านตะลึง",
+      "category": "how-to",
+      "keywords": [
+        "plot",
+        "เขียนนิยาย"
+      ],
+      "target_word_count": 1700,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-14T10:23:56.509640",
+      "completed_at": "2026-03-14T10:23:56.509644",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/plot-twist-niyai.json"
     }
   ],
   "failed": [
@@ -888,8 +891,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 8,
-    "completed": 48,
+    "pending": 7,
+    "completed": 49,
     "failed": 4
   }
 }
