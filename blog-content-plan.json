@@ -1,18 +1,6 @@
 {
   "topics": [
     {
-      "id": 38,
-      "title": "รีวิร: จอมเจี้ยบมันผม - Comedy Romance สุดฮา",
-      "category": "review",
-      "keywords": [
-        "comedy",
-        "รีวิว"
-      ],
-      "target_word_count": 1600,
-      "status": "pending",
-      "priority": 3
-    },
-    {
       "id": 41,
       "title": "เทคนิคเขียน Dialogue ในนิยายให้เป็นธรรมชาติ",
       "category": "how-to",
@@ -820,6 +808,21 @@
       "_updated_at": "2026-03-14T10:23:56.509640",
       "completed_at": "2026-03-14T10:23:56.509644",
       "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/plot-twist-niyai.json"
+    },
+    {
+      "id": 38,
+      "title": "รีวิร: จอมเจี้ยบมันผม - Comedy Romance สุดฮา",
+      "category": "review",
+      "keywords": [
+        "comedy",
+        "รีวิว"
+      ],
+      "target_word_count": 1600,
+      "status": "completed",
+      "priority": 3,
+      "_updated_at": "2026-03-14T16:42:50.074679",
+      "completed_at": "2026-03-14T16:42:50.074684",
+      "file_path": "/home/runner/work/novel-writing-automation/novel-writing-automation/novel-promo-site/src/content/blog/comedy-romance-sud.json"
     }
   ],
   "failed": [
@@ -891,8 +894,8 @@
     "listicle": 24,
     "review": 12,
     "how_to": 6,
-    "pending": 7,
-    "completed": 49,
+    "pending": 6,
+    "completed": 50,
     "failed": 4
   }
 }
